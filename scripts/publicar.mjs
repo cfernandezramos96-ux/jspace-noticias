@@ -5,12 +5,14 @@
 //   node scripts/publicar.mjs --cuenta                      → comprueba el token: usuario, tipo de cuenta y cupo de publicaciones
 //   node scripts/publicar.mjs --renovar                     → renueva el token (dura 60 días) y lo guarda en .env
 //   node scripts/publicar.mjs --subida <archivo>                → solo sube ese archivo a Cloudinary y muestra la URL (prueba)
+//   node scripts/publicar.mjs --facebook noticias/<carpeta>     → sube a Facebook un post que ya salió en Instagram
 //
 // Lee .env (IG_USER_ID, IG_TOKEN). Las slides salen de la carpeta: slide-NN.jpg (imágenes) o slide-NN.mp4 (carrusel
 // animado), en orden, y la leyenda de leyenda.txt. Las sube a Cloudinary (o a catbox si no está en .env; la API solo
 // acepta URLs públicas; en la nube con un upload preset sin firma), crea los
 // contenedores, espera a que Instagram los procese y publica. Al terminar escribe publicado.json y una línea en
-// noticias/publicadas.md. Nunca imprime el token.
+// noticias/publicadas.md. Después publica lo mismo en la página de Facebook de JSpace (FB_PUBLICAR=no lo apaga).
+// Nunca imprime el token.
 import { readFileSync, writeFileSync, readdirSync, existsSync, appendFileSync } from 'node:fs';
 import { resolve, join, dirname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -45,7 +47,8 @@ const API = FB ? 'https://graph.facebook.com' : 'https://graph.instagram.com';
 // ---------- llamadas a la API (el token va en el cuerpo o en la query, nunca en lo que se imprime) ----------
 async function api(metodo, ruta, params = {}) {
   const url = new URL(ruta.startsWith('http') ? ruta : `${API}/${VER}/${ruta}`);
-  const cuerpo = new URLSearchParams(PROXY ? params : { ...params, access_token: TOKEN });
+  // un access_token en params (el de la página de Facebook) manda sobre el del usuario del sistema
+  const cuerpo = new URLSearchParams(PROXY ? params : { access_token: TOKEN, ...params });
   const res = metodo === 'GET'
     ? await fetch(url + (url.search ? '&' : '?') + cuerpo)
     : await fetch(url, { method: 'POST', body: cuerpo });
@@ -115,8 +118,8 @@ async function publica(carpeta) {
   if (leyenda.length > 2200) falla('la leyenda pasa de 2.200 caracteres');
 
   console.log(`→ subiendo ${slides.length} archivo(s)`);
-  const urls = [];
-  for (const f of slides) urls.push(await sube(join(carpeta, f)));
+  const urls = [], urlDe = {};
+  for (const f of slides) { const u = await sube(join(carpeta, f)); urls.push(u); urlDe[f] = u; }
 
   const media = (url, extra) => url.endsWith('.mp4') ? { media_type: 'VIDEO', video_url: url, ...extra } : { image_url: url, ...extra };
   let contenedor;
@@ -135,11 +138,41 @@ async function publica(carpeta) {
   const { id } = await api('POST', `${USER}/media_publish`, { creation_id: contenedor });
   const { permalink } = await api('GET', id, { fields: 'permalink' });
   const ahora = new Date();
-  writeFileSync(join(carpeta, 'publicado.json'), JSON.stringify({ id, permalink, fecha: ahora.toISOString() }, null, 2));
+  const registro = { id, permalink, fecha: ahora.toISOString() };
+  writeFileSync(join(carpeta, 'publicado.json'), JSON.stringify(registro, null, 2));
+  console.log(`✓ publicado en Instagram: ${permalink}`);
+  // Facebook va después y aparte: si falla, el post de Instagram ya salió y no se repite
+  await enFacebook(carpeta, registro, leyenda, urlDe);
   const n = JSON.parse(readFileSync(join(carpeta, 'noticia.json'), 'utf8'));
   const fecha = ahora.toLocaleString('sv-SE', { timeZone: 'America/Bogota' }).slice(0, 16);
-  appendFileSync(join(RAIZ, 'noticias', 'publicadas.md'), `${fecha} · ${n.titular} · ${n.formato || ''} · ${n.link || ''} · ${permalink}\n`);
-  console.log(`✓ publicado: ${permalink}`);
+  appendFileSync(join(RAIZ, 'noticias', 'publicadas.md'),
+    `${fecha} · ${n.titular} · ${n.formato || ''} · ${n.link || ''} · ${permalink}${registro.facebook ? ` · FB: ${registro.facebook}` : ''}\n`);
+}
+
+// ---------- Facebook: la página de JSpace, con las mismas imágenes y la misma leyenda ----------
+// Varias fotos en un post (Facebook no mezcla fotos y video: de una slide con video se sube su JPG).
+const PAGINA = env.FB_PAGE_ID || '169636513221619';
+async function enFacebook(carpeta, registro, leyenda, urlDe = {}) {
+  if (env.FB_PUBLICAR === 'no') return;
+  try {
+    const { access_token: pt } = await api('GET', PAGINA, { fields: 'access_token' });
+    const jpgs = readdirSync(carpeta).filter((f) => /^slide-\d+\.jpg$/.test(f)).sort();
+    const fotos = [];
+    for (const f of jpgs) {
+      const url = urlDe[f] || await sube(join(carpeta, f));
+      fotos.push((await api('POST', `${PAGINA}/photos`, { url, published: 'false', access_token: pt })).id);
+    }
+    const params = { message: leyenda, access_token: pt };
+    fotos.forEach((fbid, i) => { params[`attached_media[${i}]`] = JSON.stringify({ media_fbid: fbid }); });
+    const { id } = await api('POST', `${PAGINA}/feed`, params);
+    const { permalink_url } = await api('GET', id, { fields: 'permalink_url', access_token: pt });
+    Object.assign(registro, { facebook: permalink_url, facebook_id: id });
+    console.log(`✓ publicado en Facebook: ${permalink_url}`);
+  } catch (e) {
+    registro.facebook_error = e.message;
+    console.error(`✗ Facebook: ${e.message} (Instagram sí salió)`);
+  }
+  writeFileSync(join(carpeta, 'publicado.json'), JSON.stringify(registro, null, 2));
 }
 
 // ---------- cola ----------
@@ -188,6 +221,15 @@ async function renovar() {
 const args = process.argv.slice(2);
 try {
   if (args[0] === '--cuenta') await cuenta();
+  else if (args[0] === '--facebook') {
+    // sube a Facebook un post que ya salió en Instagram (sin repetirlo en Instagram)
+    const c = resolve(args[1] || falla('uso: --facebook noticias/<carpeta>'));
+    if (!existsSync(join(c, 'publicado.json'))) falla('esa noticia no está publicada en Instagram');
+    const reg = JSON.parse(readFileSync(join(c, 'publicado.json'), 'utf8'));
+    if (reg.facebook) falla(`ya está en Facebook: ${reg.facebook}`);
+    delete reg.facebook_error;
+    await enFacebook(c, reg, readFileSync(join(c, 'leyenda.txt'), 'utf8').trim());
+  }
   else if (args[0] === '--subida') console.log(`✓ subida de prueba: ${await sube(resolve(args[1] || falla('uso: --subida <archivo>')))}`);
   else if (args[0] === '--renovar') await renovar();
   else if (args[0] === '--cola') await cola();
