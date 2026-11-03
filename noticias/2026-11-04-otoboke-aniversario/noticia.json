@@ -18,16 +18,14 @@
       "imagen": "escenario.jpg",
       "encuadre": "50% 40%",
       "texto": "Fue su **primera visita a Colombia**, dentro de una gira por Latinoamérica",
-      "nota": "Boro Room, Bogotá | 4 de noviembre de 2025",
-      "caber": true
+      "nota": "Boro Room, Bogotá | 4 de noviembre de 2025"
     },
     {
       "tipo": "historia",
       "imagen": "grupo.jpg",
       "encuadre": "50% 30%",
-      "texto": "El **punk japonés** de Accorinrin, Yoyoyoshie y Kahokiss aterrizó en Bogotá",
-      "nota": "Otoboke Beaver | Bogotá 2025",
-      "caber": true
+      "texto": "El **punk japonés** de Otoboke Beaver aterrizó en Bogotá con Leo en la batería",
+      "nota": "Otoboke Beaver | Bogotá 2025"
     },
     {
       "tipo": "cierre"
