@@ -1,14 +1,33 @@
 {
   "titular": "Ave Mujica estrena el video de \"A Song of Romance\"",
   "link": "https://animecorner.me/ave-mujica-releases-a-song-of-romance-music-video/",
-  "formato": "post",
+  "formato": "carrusel",
   "franja": "jmusic",
   "tema": "jmusic",
   "slides": [
-    { "tipo": "portada", "imagen": "mv2.jpg", "encuadre": "50% 40%", "etiqueta": "Nuevo MV",
+    {
+      "tipo": "portada",
+      "imagen": "mv2.jpg",
+      "encuadre": "50% 40%",
+      "etiqueta": "Nuevo MV",
       "titulo": "**Ave Mujica** estrena el video de \"A Song of Romance\"",
-      "texto": "El tema de la película prima aurora ya tiene MV oficial.", "sombra": 1 },
-    { "tipo": "poster", "imagen": "mv.jpg" },
-    { "tipo": "cierre" }
+      "texto": "El tema de la película prima aurora ya tiene MV oficial.",
+      "sombra": 1
+    },
+    {
+      "tipo": "video",
+      "imagen": "mv2.jpg",
+      "etiqueta": "Video · MV",
+      "titulo": "**Ave Mujica** en \"A Song of Romance\"",
+      "texto": "El video oficial, del tema de la película prima aurora.",
+      "creditos": "© BanG Dream! Project · Video: canal oficial de Ave Mujica"
+    },
+    {
+      "tipo": "poster",
+      "imagen": "mv.jpg"
+    },
+    {
+      "tipo": "cierre"
+    }
   ]
 }
