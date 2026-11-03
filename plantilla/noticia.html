@@ -244,16 +244,20 @@
     const arriba = apila(bl, { top: 120 }) + 40;
     const X = S.texto ? el('div', 'abs medium centro', { lineHeight: '1.32' }, rico(S.texto)) : null;
     if (X) encaja(X, 32, 230, 29);
-    const abajo = H - 280 - (X ? X.offsetHeight + 36 : 0); // FB tapa ~280 px abajo (leyenda y botones)
+    // créditos del video (copyright), chiquitos debajo de la tarjeta
+    const C = S.creditos ? el('div', 'abs medium centro', { fontSize: '24px', opacity: '.75', lineHeight: '1.25' }, rico(S.creditos)) : null;
+    const alturaC = C ? C.offsetHeight + 18 : 0;
+    const abajo = H - 280 - (X ? X.offsetHeight + 36 : 0) - alturaC; // FB tapa ~280 px abajo (leyenda y botones)
     const prop = S.proporcion || 16 / 9, maxW = prop < 1 ? 900 : 1000;
     let h = abajo - arriba, w = Math.round(h * prop);
     if (w > maxW) { w = maxW; h = Math.round(w / prop); }
     w -= w % 2; h -= h % 2; // pares, para el video (yuv420)
     // video y párrafo juntos, centrados en el espacio entre el titular y la zona que tapa Facebook
-    const grupo = h + (X ? X.offsetHeight + 36 : 0), zona = H - 280 - arriba;
+    const grupo = h + alturaC + (X ? X.offsetHeight + 36 : 0), zona = H - 280 - arriba;
     const y = Math.round(arriba + Math.max(0, (zona - grupo) / 2)), x = Math.round(540 - w / 2);
     el('div', 'abs tarjeta', { left: (x - 8) + 'px', top: (y - 8) + 'px', width: (w + 16) + 'px', height: (h + 16) + 'px' });
-    if (X) X.style.top = (y + h + 36) + 'px';
+    if (C) C.style.top = (y + h + 8 + 18) + 'px';
+    if (X) X.style.top = (y + h + alturaC + 36) + 'px';
     window.__hueco = { x, y, w, h };
   } else if (tipo === 'cierre' && COLLAB) {
     // cierre de los carruseles de ElKazuoTV × JSpace: los dos logos grandes sobre los rayos

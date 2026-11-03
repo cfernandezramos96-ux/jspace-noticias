@@ -4,7 +4,7 @@
 // Fondo: el mismo clip desenfocado y oscurecido detrás, con los rayos de JSpace encima (Kazuo, 3 nov 2026);
 // "reel": { "fondo": "negro" } en noticia.json vuelve al fondo negro.
 // Salida: reel.mp4 y reel.jpg (el marco) en la carpeta. noticia.json puede traer "reel": { "titulo", "etiqueta",
-// "texto" } para cambiar lo que sale de la portada y la leyenda.
+// "texto", "creditos" } para cambiar lo que sale de la portada, la leyenda y los créditos de la slide de video.
 import { chromium } from 'playwright';
 import { execFileSync, spawnSync } from 'node:child_process';
 import { readFileSync, existsSync } from 'node:fs';
@@ -32,7 +32,7 @@ const recorte = vistos.sort((a, b) => vistos.filter((r) => r === b).length - vis
 const [cw, ch] = recorte ? recorte.slice(5).split(':').map(Number) : [];
 const RECORTE = recorte && !girado && ch < h - 8 ? `${recorte},` : '';
 const prop = RECORTE ? cw / ch : girado ? h / w : w / h;
-const slide = { tipo: 'reel', etiqueta: portada.etiqueta, titulo: portada.titulo, texto: parrafo, proporcion: prop < 1 ? 4 / 5 : Math.min(prop, 2.4), fondo: 'video', ...(noticia.reel || {}) };
+const slide = { tipo: 'reel', etiqueta: portada.etiqueta, titulo: portada.titulo, texto: parrafo, creditos: ((noticia.slides || []).find((s) => s.tipo === 'video') || {}).creditos, proporcion: prop < 1 ? 4 / 5 : Math.min(prop, 2.4), fondo: 'video', ...(noticia.reel || {}) };
 const FONDO = slide.fondo === 'video';
 
 const chrome = [process.env.CHROME_PATH, 'C:/Program Files/Google/Chrome/Application/chrome.exe'].filter(Boolean).find((p) => existsSync(p));
