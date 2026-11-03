@@ -152,11 +152,17 @@ async function publica(carpeta) {
 // ---------- Facebook: la página de JSpace, con las mismas imágenes y la misma leyenda ----------
 // Varias fotos en un post (Facebook no mezcla fotos y video: de una slide con video se sube su JPG).
 const PAGINA = env.FB_PAGE_ID || '169636513221619';
+// En Facebook van solo las imágenes de la noticia: la slide de cierre («Sigue a @jspaceco_») no tiene sentido ahí
+function slidesFacebook(carpeta) {
+  const tipos = (JSON.parse(readFileSync(join(carpeta, 'noticia.json'), 'utf8')).slides || []).map((s) => s.tipo);
+  return readdirSync(carpeta).filter((f) => /^slide-\d+\.jpg$/.test(f)).sort()
+    .filter((f) => tipos[Number(f.match(/\d+/)[0]) - 1] !== 'cierre');
+}
 async function enFacebook(carpeta, registro, leyenda, urlDe = {}) {
   if (env.FB_PUBLICAR === 'no') return;
   try {
     const { access_token: pt } = await api('GET', PAGINA, { fields: 'access_token' });
-    const jpgs = readdirSync(carpeta).filter((f) => /^slide-\d+\.jpg$/.test(f)).sort();
+    const jpgs = slidesFacebook(carpeta);
     const fotos = [];
     for (const f of jpgs) {
       const url = urlDe[f] || await sube(join(carpeta, f));

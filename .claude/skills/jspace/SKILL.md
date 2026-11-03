@@ -175,7 +175,7 @@ La API **solo acepta JPG y de 4:5 a 1.91:1**: por eso las slides salen a 1080×1
    (la nube la publica a esa hora). Ya: `node scripts/publicar.mjs noticias/<carpeta>` y push.
 4. Si la API devuelve un error, cópialo tal cual a Kazuo y no cambies la leyenda. Los errores de la cola
    quedan en `noticias/<carpeta>/error.txt`.
-5. El script publica también en la **página de Facebook de JSpace** (mismas imágenes y leyenda; las slides de video van como su JPG) y escribe `publicado.json` y la línea de `noticias/publicadas.md` solo. Si Facebook falla, Instagram ya salió: el error queda en `publicado.json` y se reintenta con `node scripts/publicar.mjs --facebook noticias/<carpeta>`.
+5. El script publica también en la **página de Facebook de JSpace** (misma leyenda y las imágenes de la noticia, **sin la slide de cierre**, que en Facebook no tiene sentido; las slides de video van como su JPG) y escribe `publicado.json` y la línea de `noticias/publicadas.md` solo. Si Facebook falla, Instagram ya salió: el error queda en `publicado.json` y se reintenta con `node scripts/publicar.mjs --facebook noticias/<carpeta>`.
 
 Carrusel animado (los MP4 de carrusel-animado, 1080×1350): copia los `slide-NN.mp4` a la carpeta de la
 noticia y el script los usa en vez de los JPG. La API acepta videos e imágenes mezclados, hasta 20.
