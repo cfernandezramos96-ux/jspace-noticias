@@ -2,17 +2,40 @@
   "titular": "Se cumple un año del debut de Shonen Knife en Colombia",
   "link": "https://www.songkick.com/concerts/42714590-destroy-boys-at-relevent-music-hall",
   "formato": "carrusel",
-  "franja": "jmusic",
-  "colaboradores": ["elkazuotv"],
+  "franja": "extra",
+  "colaboradores": [
+    "elkazuotv"
+  ],
   "slides": [
-    { "tipo": "portada", "imagen": "portada.jpg", "encuadre": "50% 0%", "tamano": 78, "posicion": "abajo", "etiqueta": "J-Music · Aniversario",
+    {
+      "tipo": "portada",
+      "imagen": "portada.jpg",
+      "encuadre": "50% 0%",
+      "tamano": 78,
+      "posicion": "abajo",
+      "etiqueta": "J-Music · Aniversario",
       "titulo": "Se cumple **un año** del debut de **Shonen Knife** en Colombia",
-      "texto": "El 7 de diciembre de 2025, en el Relevent Music Hall de Bogotá." },
-    { "tipo": "video", "vertical": true, "imagen": "video1.jpg", "encuadre": "50% 55%",
+      "texto": "El 7 de diciembre de 2025, en el Relevent Music Hall de Bogotá."
+    },
+    {
+      "tipo": "video",
+      "vertical": true,
+      "imagen": "video1.jpg",
+      "encuadre": "50% 55%",
       "titulo": "Así se vivió **esa noche** en Bogotá",
-      "creditos": "Video: JSpace · Foto de portada: Tomoko Ota" },
-    { "tipo": "texto", "titulo": "Nacidas en **Osaka** en 1981",
-      "texto": "Naoko Yamano, Atsuko Yamano y Risa Kawano llevaron su punk pop colorido a Bogotá por primera vez.", "imagen": "disco.jpg", "proporcion": 1, "encuadre": "50% 50%" },
-    { "tipo": "cierre" }
-  ]
+      "creditos": "Video: JSpace · Foto de portada: Tomoko Ota"
+    },
+    {
+      "tipo": "texto",
+      "titulo": "Nacidas en **Osaka** en 1981",
+      "texto": "Naoko Yamano, Atsuko Yamano y Risa Kawano llevaron su punk pop colorido a Bogotá por primera vez.",
+      "imagen": "disco.jpg",
+      "proporcion": 1,
+      "encuadre": "50% 50%"
+    },
+    {
+      "tipo": "cierre"
+    }
+  ],
+  "tema": "jmusic"
 }

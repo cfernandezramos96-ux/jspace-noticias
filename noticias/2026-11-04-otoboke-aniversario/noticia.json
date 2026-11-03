@@ -2,7 +2,7 @@
   "titular": "Se cumple un año del debut de Otoboke Beaver en Colombia",
   "link": "https://www.songkick.com/concerts/42753413-otobokebiba-otoboke-beaver-at-boro-room",
   "formato": "carrusel",
-  "franja": "jmusic",
+  "franja": "extra",
   "slides": [
     {
       "tipo": "portada",
@@ -37,5 +37,6 @@
   "colaboradores": [
     "elkazuotv",
     "bunkawave"
-  ]
+  ],
+  "tema": "jmusic"
 }
