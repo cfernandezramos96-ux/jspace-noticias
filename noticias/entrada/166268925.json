@@ -1,0 +1,12 @@
+{
+  "id": 166268925,
+  "tipo": "instruccion",
+  "sobre": 166268923,
+  "chat": "-5392636724",
+  "de": "kazuo",
+  "texto": "Después de aplicar mi pedido anterior (portada con foto de internet, solo el primer video, marca de agua y texto): este post de Shonen Knife va en collab con ElKazuoTV. Agrega \"colaboradores\": [\"elkazuotv\"] a noticia.json y usa la plantilla de collab de ElKazuoTV (la de los dos logos, ver la sección «Collab con ElKazuoTV» de la skill), también en el marco de la slide de video (vuelve a montar el video con video.mjs después de renderizar). Manda un solo preview con todo.",
+  "links": [],
+  "archivos": [],
+  "responde_a": null,
+  "fecha": "2026-11-03T08:50:00.000Z"
+}
