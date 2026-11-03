@@ -12,6 +12,11 @@ publicados solos por Metricool. El flujo completo está en la skill **/jspace**.
 - `noticias/ideas-AAAA-MM-DD.md`: la lista de la mañana (tarea programada de las 8:00).
 - `noticias/publicadas.md`: registro de lo publicado (para no repetir).
 
+**Hora:** manda la de Bogotá (UTC−5, sin horario de verano). En la nube el reloj está en UTC: antes de decir «hoy»,
+«mañana», un día de la semana o elegir franja, saca la fecha con `TZ=America/Bogota date`. De 19:00 a 24:00 de Bogotá,
+en UTC ya es el día siguiente (ej.: lunes 11:40 p. m. en Bogotá = martes 04:40 UTC). Al equipo, las horas siempre en
+hora de Bogotá.
+
 Reglas: nunca inventar datos; rumores no se publican; un post de JSpace por día; si algo no cuadra, no se
 publica y se avisa. Los carruseles animados de collab ElKazuoTV × JSpace siguen yendo por carrusel-animado,
 con su propio flujo (estático antes, guion literal).
