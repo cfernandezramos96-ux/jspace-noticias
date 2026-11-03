@@ -228,6 +228,25 @@
     if (S.creditos) el('div', 'abs medium centro', { top: '1124px', fontSize: '22px', opacity: '.7' }, rico(S.creditos));
     el('div', 'abs black centro', { top: '1170px', fontSize: '28px', color: 'var(--rojo)' }, '@jspaceco_');
     }
+  } else if (tipo === 'reel') {
+    // reel vertical de Facebook (1080×1920, alto: 1920): arriba el titular de la portada, en medio el video en tarjeta y
+    // abajo un párrafo corto. scripts/reel.mjs monta el clip en el hueco (window.__hueco). Los últimos ~280 px quedan
+    // libres: ahí Facebook pone la leyenda y los botones.
+    rayos();
+    const bl = [[logo(64), 0]];
+    if (S.etiqueta) bl.push([el('div', 'abs black centro', { fontSize: '30px', letterSpacing: '.06em', color: 'var(--rojo)' }, rico(S.etiqueta)), 22]);
+    const T = el('div', 'abs black centro', { lineHeight: '1.02' }, rico(S.titulo)); encaja(T, S.tamano || 70, 300, 46); bl.push([T, 12]);
+    const arriba = apila(bl, { top: 120 }) + 40;
+    const X = S.texto ? el('div', 'abs medium centro', { lineHeight: '1.32' }, rico(S.texto)) : null;
+    if (X) encaja(X, 32, 230, 29);
+    const abajo = H - 280 - (X ? X.offsetHeight + 36 : 0); // FB tapa ~280 px abajo (leyenda y botones)
+    const prop = S.proporcion || 16 / 9, maxW = prop < 1 ? 900 : 1000;
+    let h = abajo - arriba, w = Math.round(h * prop);
+    if (w > maxW) { w = maxW; h = Math.round(w / prop); }
+    const y = Math.round(arriba + (abajo - arriba - h) / 2), x = Math.round(540 - w / 2);
+    el('div', 'abs tarjeta', { left: (x - 8) + 'px', top: (y - 8) + 'px', width: (w + 16) + 'px', height: (h + 16) + 'px' });
+    if (X) X.style.top = (y + h + 36) + 'px';
+    window.__hueco = { x, y, w, h };
   } else if (tipo === 'cierre' && COLLAB) {
     // cierre de los carruseles de ElKazuoTV × JSpace: los dos logos grandes sobre los rayos
     rayos();
