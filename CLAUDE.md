@@ -28,6 +28,10 @@ la palabra clave: ダンス, PV, 主題歌, アニメ化…) y en español; abre
 Oricon, Natalie, animate Times, Dengeki, PR TIMES, la web o la cuenta oficial de la obra). Con que el hecho central esté
 confirmado en una fuente seria, arma el post con lo verificado y deja fuera los detalles que no pudiste confirmar.
 Solo si nada confirma el hecho central, no lo armes y di qué buscaste.
+Un post de la cuenta oficial (X, YouTube, Instagram, TikTok) de la obra, el estudio, la editorial, el artista o el
+seiyuu ES fuente primaria, aunque ningún medio lo haya cubierto. X e Instagram no abren desde la nube: si encuentras el
+enlace de ese post oficial (por el buscador o por otra nota), mándaselo al equipo tal cual, con lo que ya sabes, para
+que lo abra, baje el video y te lo devuelva por el chat; con eso confirmas y armas el post.
 
 **Si un video no se puede bajar** (YouTube bloquea la nube): NUNCA le pidas al equipo el enlace. Búscalo tú (WebSearch
 con `site:youtube.com` + el nombre en japonés o en inglés, o el canal oficial del estudio, la editorial o el artista;
