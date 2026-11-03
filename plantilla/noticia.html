@@ -9,7 +9,9 @@
        poster  · la imagen oficial completa, sin recortar, sobre su versión desenfocada
        texto · dato · cierre · slides de diseño con el estilo de los carruseles de ElKazuoTV (negro con rayos, rojo, línea roja)
      Poppins Black en mayúsculas para titulares, Poppins Medium para el texto. Solo el logo NUEVO de JSpace.
-     Texto entre **dobles asteriscos** = rojo. -->
+     Texto entre **dobles asteriscos** = rojo.
+     Collab con ElKazuoTV (noticia.json con "colaboradores": ["elkazuotv", …]): la plantilla de los carruseles de ElKazuoTV,
+     con la pareja de logos «ElKazuoTV × JSPACE» en vez del logo solo y el cierre oscuro de los dos logos. -->
 <style>
   @font-face { font-family: 'Poppins'; src: url('fuentes/Poppins-Black.ttf') format('truetype'); font-weight: 900; }
   @font-face { font-family: 'Poppins'; src: url('fuentes/Poppins-Bold.ttf') format('truetype'); font-weight: 700; }
@@ -57,10 +59,21 @@
     for (let col = 0, x = -100; x < W + 100; col++, x += 257)
       for (let y = (col % 2 ? 232 : 0) - 464; y < H + 250; y += 464) { g.save(); g.translate(x, y); g.scale(k, k); g.fill(RAYO); g.restore(); }
   }
-  // logo nuevo de JSpace centrado
-  const logo = (alto, top = 0) => { const w = Math.round(alto * LOGO_R); const i = el('img', 'abs', { left: (540 - w / 2) + 'px', top: top + 'px', width: w + 'px', height: alto + 'px' }); i.src = LOGO; return i; };
-  const cabecera = () => logo(64, 44);
-  const pie = (claro) => el('div', 'pie', { color: claro ? 'var(--negro)' : '' }, '@jspaceco_');
+  const COLLAB = (D.noticia?.colaboradores || []).some((u) => /^@?elkazuotv$/i.test(u));
+  // ElKazuoTV × JSPACE (como en sus carruseles): su logo sin recuadro, blanco o negro sobre fondo claro; el de JSpace igual
+  function pareja(alto, top = 0) {
+    const claro = Q.classList.contains('claro'), hk = Math.round(alto * 0.655);
+    const fila = el('div', 'abs', { left: '0', top: top + 'px', width: W + 'px', height: alto + 'px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: Math.round(alto * 0.38) + 'px' });
+    const k = document.createElement('img'); k.src = `marca/kazuo-logo-${claro ? 'negro' : 'blanco'}.svg`; Object.assign(k.style, { height: hk + 'px', width: Math.round(hk * 216.3 / 32.15) + 'px' });
+    const x = document.createElement('div'); x.className = 'black'; x.textContent = '×'; Object.assign(x.style, { fontSize: Math.round(alto * 0.69) + 'px', lineHeight: '1', color: claro ? 'var(--negro)' : 'var(--blanco)', marginTop: '-4px' });
+    const j = document.createElement('img'); j.src = LOGO; Object.assign(j.style, { height: alto + 'px', width: Math.round(alto * LOGO_R) + 'px' });
+    fila.append(k, x, j);
+    return fila;
+  }
+  // logo nuevo de JSpace centrado (en collab, la pareja)
+  const logo = (alto, top = 0) => { if (COLLAB) return pareja(Math.round(alto * 0.8), top); const w = Math.round(alto * LOGO_R); const i = el('img', 'abs', { left: (540 - w / 2) + 'px', top: top + 'px', width: w + 'px', height: alto + 'px' }); i.src = LOGO; return i; };
+  const cabecera = () => COLLAB ? pareja(58, 41) : logo(64, 44);
+  const pie = (claro) => COLLAB ? null : el('div', 'pie', { color: claro ? 'var(--negro)' : '' }, '@jspaceco_');
   // texto que encoge hasta caber en maxH (y sin desbordar el ancho)
   function encaja(e, fs, maxH, min = 28) {
     e.style.fontSize = fs + 'px';
@@ -154,15 +167,28 @@
     const f = el('div', 'abs', { left: '0', top: '0', width: W + 'px', height: H + 'px' });
     const im = document.createElement('img'); im.src = src(S.imagen); Object.assign(im.style, { width: '100%', height: '100%', objectFit: 'contain', display: 'block' }); f.appendChild(im);
   } else if (tipo === 'texto') {
-    // titular + separador + texto + (opcional) tarjeta con imagen de borde blanco (mesa 4)
-    rayos(); cabecera();
+    // titular + separador + texto + (opcional) tarjeta con imagen de borde blanco (mesa 4).
+    // tema: 'claro' = la variante blanca; imagen_arriba: la tarjeta primero y el texto debajo
+    if (S.tema === 'claro') Q.classList.add('claro'); else rayos();
+    cabecera();
     const bl = [];
+    let arriba = 160;
+    if (S.imagen && S.imagen_arriba) {
+      const prop = S.proporcion || 4 / 3; let h = S.alto_imagen || 600; const w = Math.min(900, Math.round(h * prop)); h = Math.round(w / prop);
+      const c = el('div', 'foto tarjeta', { left: (540 - w / 2) + 'px', top: '150px', width: w + 'px', height: h + 'px' });
+      const im = document.createElement('img'); im.src = src(S.imagen); im.style.objectPosition = S.encuadre || '50% 40%'; c.appendChild(im);
+      arriba = 150 + h + 44;
+    }
     const T = el('div', 'abs black centro', { lineHeight: '1.0' }, rico(S.titulo)); encaja(T, S.tamano || 84, 280, 48); bl.push([T, 0]);
     bl.push([el('div', 'sep'), 18]);
     if (S.subtitulo) { const e = el('div', 'abs black centro', { lineHeight: '1.08' }); e.innerHTML = rico(S.subtitulo); encaja(e, 46, 200, 30); bl.push([e, 22]); }
     if (S.texto) { const e = el('div', 'abs medium centro', { lineHeight: '1.3' }); e.innerHTML = rico(S.texto); encaja(e, S.imagen ? 36 : 44, S.imagen ? 270 : 640, 28); bl.push([e, 22]); }
-    const y = apila(bl, { top: 160 });
-    if (S.imagen) {
+    const y = apila(bl, { top: arriba });
+    if (S.imagen_arriba) {
+      // el texto queda centrado en el espacio que deja la tarjeta
+      const d = Math.max(0, (H - 90 - y) / 2);
+      bl.forEach(([b]) => (b.style.top = (parseFloat(b.style.top) + d) + 'px'));
+    } else if (S.imagen) {
       const top = y + 36; let h = Math.min(700, H - 110 - top); const w = Math.min(900, Math.round(h * (S.proporcion || 4 / 3))); if (S.proporcion) h = Math.min(h, Math.round(w / S.proporcion));
       const c = el('div', 'foto tarjeta', { left: (540 - w / 2) + 'px', top: top + 'px', width: w + 'px', height: h + 'px' });
       const im = document.createElement('img'); im.src = src(S.imagen); im.style.objectPosition = S.encuadre || '50% 40%'; c.appendChild(im);
@@ -171,7 +197,7 @@
       const d = Math.max(0, (H - (y - 160)) / 2 - 160 - 20);
       bl.forEach(([b]) => (b.style.top = (parseFloat(b.style.top) + d) + 'px'));
     }
-    pie(false);
+    pie(S.tema === 'claro');
   } else if (tipo === 'dato') {
     // una cifra o palabra gigante en rojo + texto (mesa 2, solo texto)
     rayos(); cabecera();
@@ -196,6 +222,15 @@
     el('div', 'abs tarjeta', { left: '60px', top: '560px', width: '944px', height: '530px', boxSizing: 'content-box' });
     if (S.creditos) el('div', 'abs medium centro', { top: '1124px', fontSize: '22px', opacity: '.7' }, rico(S.creditos));
     el('div', 'abs black centro', { top: '1170px', fontSize: '28px', color: 'var(--rojo)' }, '@jspaceco_');
+  } else if (tipo === 'cierre' && COLLAB) {
+    // cierre de los carruseles de ElKazuoTV × JSpace: los dos logos grandes sobre los rayos
+    rayos();
+    const hk = 76, K = el('img', 'abs', { left: (540 - Math.round(hk * 216.3 / 32.15) / 2) + 'px', width: Math.round(hk * 216.3 / 32.15) + 'px', height: hk + 'px' }); K.src = 'marca/kazuo-logo-blanco.svg';
+    const X = el('div', 'abs black centro r', { fontSize: '64px', lineHeight: '1' }, '×');
+    const hj = 120, J = el('img', 'abs', { left: (540 - Math.round(hj * LOGO_R) / 2) + 'px', width: Math.round(hj * LOGO_R) + 'px', height: hj + 'px' }); J.src = LOGO;
+    const T = el('div', 'abs black centro', { fontSize: '40px', letterSpacing: '.02em' }, rico(S.texto || 'Música japonesa · Anime'));
+    const bl = [[K, 0], [X, 30], [J, 26], [el('div', 'sep'), 46], [T, 30]];
+    apila(bl, { top: Math.round((H - alto(bl)) / 2) });
   } else if (tipo === 'cierre') {
     // variante blanca del cierre: logo grande y la invitación a seguir
     Q.classList.add('claro');

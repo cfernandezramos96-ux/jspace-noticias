@@ -156,6 +156,16 @@ Para noticias con **datos que contar** (de qué trata, staff, estudio, fechas, c
 **Cuál usar:** anuncio corto → post de 3 (portada + póster + cierre). Historia o aniversario → slides `historia`.
 Noticia con datos (staff, cifras, fechas) → carrusel informativo. Tráiler oficial → «tráiler en tarjeta».
 
+### Collab con ElKazuoTV: su plantilla, la de los dos logos (Kazuo, 3 nov 2026)
+
+Si el post va en collab con ElKazuoTV (`"colaboradores": ["elkazuotv", …]` en noticia.json), la plantilla cambia
+sola al estilo de los carruseles de ElKazuoTV × JSpace (los de SCANDAL / Sambomaster): la cabecera «ElKazuoTV ×
+JSPACE» en todas las slides en lugar del logo solo, y el `cierre` oscuro con los dos logos grandes y «Música japonesa
+· Anime» (su `texto` lo cambia). Para que se parezca más a esos carruseles, arma el cuerpo con slides `texto`:
+titular en mayúsculas con palabras en rojo + línea roja + texto + foto en tarjeta de borde blanco;
+`"imagen_arriba": true` pone la tarjeta primero y el texto debajo (alterna las dos disposiciones); `"tema": "claro"`
+es la variante blanca, para una slide que quieras destacar. Sin pie de @ en estas slides.
+
 ### Noticias con video: «tráiler en tarjeta» (referencia: Koryugi, Naruto × Ninku)
 
 Decidido con Kazuo el 3 nov 2026; **aún no construido ni probado: hazlo la primera vez que llegue una noticia con
