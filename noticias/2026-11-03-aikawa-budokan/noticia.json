@@ -1,0 +1,19 @@
+{
+  "titular": "Nanase Aikawa cierra su gira del 30 aniversario en el Budokan",
+  "link": "https://373news.com/news/national/oricon/detail/2490513/",
+  "formato": "carrusel",
+  "franja": "jmusic",
+  "slides": [
+    { "tipo": "portada", "imagen": "foto.jpg", "encuadre": "55% 50%", "etiqueta": "J-Music · 30 años",
+      "titulo": "**Nanase Aikawa** cierra su gira de 30 años en el Budokan",
+      "texto": "Su primer Nippon Budokan en 28 años, con J de LUNA SEA y Marty Friedman.", "sombra": 0.9 },
+    { "tipo": "dato", "antes": "Canciones en el show del 2 de noviembre", "dato": "23",
+      "texto": "Unas 8.000 personas la vieron en el Nippon Budokan." },
+    { "tipo": "texto", "titulo": "Los **invitados**",
+      "subtitulo": "Una noche de celebración",
+      "texto": "**J (LUNA SEA):** cantó con ella y volvió con un ramo de rosas.\n**Marty Friedman:** abrió el encore con la guitarra.\n**Tetsuro Oda:** cerró con ella \"Two of us\"." },
+    { "tipo": "dato", "antes": "Estrenó una canción nueva", "dato": "Shooting stars",
+      "texto": "La escribió junto a su mentor Tetsuro Oda." },
+    { "tipo": "cierre" }
+  ]
+}
