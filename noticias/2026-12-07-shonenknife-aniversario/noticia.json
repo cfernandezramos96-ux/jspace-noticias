@@ -1,0 +1,21 @@
+{
+  "titular": "Se cumple un año del debut de Shonen Knife en Colombia",
+  "link": "https://www.songkick.com/concerts/42714590-destroy-boys-at-relevent-music-hall",
+  "formato": "carrusel",
+  "franja": "jmusic",
+  "slides": [
+    { "tipo": "portada", "imagen": "portada.jpg", "encuadre": "50% 55%", "posicion": "abajo", "etiqueta": "J-Music · Aniversario",
+      "titulo": "Se cumple **un año** del debut de **Shonen Knife** en Colombia",
+      "texto": "El 7 de diciembre de 2025, en el Relevent Music Hall de Bogotá.", "subir": 430 },
+    { "tipo": "historia", "imagen": "bajo.jpg", "encuadre": "50% 55%",
+      "texto": "Fue su **primera vez en Colombia**, junto a los estadounidenses Destroy Boys",
+      "nota": "Relevent Music Hall, Bogotá | 7 de diciembre de 2025", "subir": 240 },
+    { "tipo": "historia", "imagen": "video1.jpg", "encuadre": "50% 55%",
+      "texto": "Así se vivió **esa noche** en Bogotá", "nota": "Video: JSpace", "subir": 240 },
+    { "tipo": "historia", "imagen": "video2.jpg", "encuadre": "50% 55%",
+      "texto": "Punk pop japonés **a todo volumen**", "nota": "Video: JSpace", "subir": 240 },
+    { "tipo": "texto", "titulo": "Nacidas en **Osaka** en 1981",
+      "texto": "Naoko, Atsuko, Risa y Naru llevaron su punk pop colorido a Bogotá por primera vez.", "imagen": "disco.jpg", "proporcion": 1, "encuadre": "50% 50%" },
+    { "tipo": "cierre" }
+  ]
+}
