@@ -7,12 +7,11 @@
     {
       "tipo": "portada",
       "imagen": "nao-cine.jpg",
-      "encuadre": "50% 20%",
-      "alto_imagen": 1040,
+      "encuadre": "57% 50%",
             "etiqueta": "Precure · Cumpleaños",
       "titulo": "**Nao Toyama** baila como Cure Arcana",
       "texto": "Su regalo para Ruruka Moria: el baile del ending.",
-      "sombra": 1
+      "sombra": 0.9
     },
     { "tipo": "poster", "imagen": "baile.jpg" },
     { "tipo": "cierre" }
