@@ -329,6 +329,31 @@ for (const f of readdirSync(DIR).filter((n) => n.endsWith('.resultado.txt'))) {
   console.log(`resultado enviado: ${id}`);
 }
 
+// 5. tiempo máximo: un pedido sin respuesta a los 20 min (la rutina se trabó) se relanza una vez; si a los otros 20
+// sigue igual, se avisa al chat. <id>.reintento.json guarda cuándo se relanzó y si ya se avisó.
+const LIMITE = 20 * 60 * 1000;
+for (const f of readdirSync(DIR).filter((n) => /^\d+\.json$/.test(n))) {
+  const id = f.replace('.json', '');
+  const hay = (s) => existsSync(join(DIR, `${id}.${s}`));
+  if (hay('resultado.txt') || hay('enviado.txt')) continue;
+  const p = lee(f);
+  if (p.tipo !== 'instruccion' && (hay('preview.json') || hay('preview.enviado.json'))) continue;
+  if (!p.fecha || Date.now() - new Date(p.fecha) < LIMITE) continue;
+  const chat = p.chat || PERMITIDOS[0];
+  const r = hay('reintento.json') ? lee(`${id}.reintento.json`) : null;
+  if (!r) {
+    escribe(`${id}.reintento.json`, { fecha: new Date().toISOString() });
+    nuevas++; movimiento = true;
+    if (chat) await tg('sendMessage', { chat_id: chat, text: '⏳ Uno de sus pedidos se me está demorando más de la cuenta. Lo vuelvo a intentar.' });
+    console.log(`reintento: ${id}`);
+  } else if (!r.avisado && Date.now() - new Date(r.fecha) > LIMITE) {
+    escribe(`${id}.reintento.json`, { ...r, avisado: true });
+    movimiento = true;
+    if (chat) await tg('sendMessage', { chat_id: chat, text: `😕 No pude terminar este pedido: «${String(p.texto || '').slice(0, 120)}». Vuelvan a mandármelo o avísenle a Kazuo.` });
+    console.log(`sin respuesta: ${id}`);
+  }
+}
+
 // el workflow despierta la rutina de la nube solo si hay trabajo nuevo para ella (DESPERTAR = archivo de aviso)
 if (nuevas && process.env.DESPERTAR) writeFileSync(process.env.DESPERTAR, String(nuevas));
 
