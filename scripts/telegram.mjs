@@ -19,6 +19,8 @@ const DIR = join(RAIZ, 'noticias', 'entrada');
 const ESTADO = join(DIR, 'estado.json');
 const TOKEN = process.env.TELEGRAM_TOKEN;
 const PERMITIDOS = (process.env.TELEGRAM_CHAT_ID || '').split(',').map((s) => s.trim()).filter(Boolean);
+// el grupo del equipo (los ids de grupo son negativos): ahí van los previews automáticos y los avisos
+const GRUPO = PERMITIDOS.find((c) => c.startsWith('-')) || PERMITIDOS[0];
 if (!TOKEN) { console.error('falta TELEGRAM_TOKEN'); process.exit(1); }
 mkdirSync(DIR, { recursive: true });
 
@@ -290,7 +292,7 @@ for (const f of readdirSync(DIR).filter((n) => /^\d+\.preview\.json$/.test(n))) 
   const id = f.split('.')[0];
   const prev = lee(f);
   const pedido = existsSync(join(DIR, `${id}.json`)) ? lee(`${id}.json`) : null;
-  const chat = pedido?.chat || PERMITIDOS[0];
+  const chat = pedido?.chat || GRUPO;
   if (!chat) continue;
   const carpeta = join(RAIZ, prev.carpeta);
   // un preview nuevo de un post ya aprobado (lo cambiaron): sale de la cola y hay que aprobarlo otra vez
@@ -319,7 +321,7 @@ for (const f of readdirSync(DIR).filter((n) => /^\d+\.preview\.json$/.test(n))) 
       { text: '🎵 Lo subo yo con canción', callback_data: `manual:${id}` },
     ]] },
   });
-  escribe(`${id}.preview.enviado.json`, { ...prev, mensaje: msj.message_id, album });
+  escribe(`${id}.preview.enviado.json`, { ...prev, chat, mensaje: msj.message_id, album });
   unlinkSync(join(DIR, f));
   console.log(`preview enviado: ${id} (${slides.length} slides)`);
   movimiento = true;
@@ -329,7 +331,7 @@ for (const f of readdirSync(DIR).filter((n) => /^\d+\.preview\.json$/.test(n))) 
 for (const f of readdirSync(DIR).filter((n) => n.endsWith('.resultado.txt'))) {
   const id = f.replace('.resultado.txt', '');
   const pedido = existsSync(join(DIR, `${id}.json`)) ? lee(`${id}.json`) : null;
-  const chat = pedido?.chat || PERMITIDOS[0];
+  const chat = pedido?.chat || GRUPO;
   if (!chat) continue;
   await tg('sendMessage', { chat_id: chat, text: readFileSync(join(DIR, f), 'utf8').slice(0, 4000), disable_web_page_preview: false });
   renameSync(join(DIR, f), join(DIR, `${id}.enviado.txt`));
@@ -346,9 +348,9 @@ for (const f of readdirSync(DIR).filter((n) => /^\d+\.preview\.enviado\.json$/.t
 for (const { f, p } of Object.values(ultimoDe)) {
   const id = f.split('.')[0], hay = (s) => existsSync(join(DIR, `${id}.${s}`));
   if (hay('aprobado.json') || hay('descartado.json') || hay('manual.json') || existsSync(join(RAIZ, p.carpeta, 'publicado.json'))) continue;
-  const falta = new Date(p.hora) - Date.now(), chat = PERMITIDOS[0];
+  const falta = new Date(p.hora) - Date.now(), chat = p.chat || GRUPO;
   if (!chat || falta < -12 * 3600e3) continue;
-  const responder = p.mensaje ? { reply_to_message_id: p.mensaje } : {};
+  const responder = p.mensaje ? { reply_to_message_id: p.mensaje, allow_sending_without_reply: 'true' } : {};
   if (falta > 0 && falta <= 3600e3 && !p.recordado) {
     await tg('sendMessage', { chat_id: chat, ...responder, text: `⏰ A las ${hora(p.hora)} toca «${p.titular}» y nadie lo ha aprobado. Si no lo aprueban, no sale.` });
     escribe(f, { ...p, recordado: true }); movimiento = true;
@@ -367,11 +369,11 @@ const leeJson = (f) => { try { return JSON.parse(readFileSync(f, 'utf8')); } cat
 for (const d of readdirSync(NOTICIAS, { withFileTypes: true }).filter((x) => x.isDirectory())) {
   const c = join(NOTICIAS, d.name), prog = join(c, 'programado.json'), pub = join(c, 'publicado.json');
   if (!existsSync(prog) && !existsSync(pub)) continue;
-  const titular = leeJson(join(c, 'noticia.json'))?.titular || d.name, chat = PERMITIDOS[0];
+  const titular = leeJson(join(c, 'noticia.json'))?.titular || d.name, chat = GRUPO;
   if (existsSync(pub)) {
     const p = leeJson(pub);
     if (p && !p.anunciado && Date.now() - new Date(p.fecha) < 6 * 3600e3 && chat) {
-      await tg('sendMessage', { chat_id: chat, text: `✅ Ya salió «${titular}»
+      for (const a of new Set(PERMITIDOS)) await tg('sendMessage', { chat_id: a, text: `✅ Ya salió «${titular}»
 Instagram: ${p.permalink}${p.facebook ? `
 Facebook: ${p.facebook}` : ''}`, disable_web_page_preview: true });
       writeFileSync(pub, JSON.stringify({ ...p, anunciado: true }, null, 2)); movimiento = true;
@@ -402,7 +404,7 @@ for (const f of readdirSync(DIR).filter((n) => /^\d+\.json$/.test(n))) {
   const p = lee(f);
   if (p.tipo !== 'instruccion' && (hay('preview.json') || hay('preview.enviado.json'))) continue;
   if (!p.fecha || Date.now() - new Date(p.fecha) < LIMITE) continue;
-  const chat = p.chat || PERMITIDOS[0];
+  const chat = p.chat || GRUPO;
   const r = hay('reintento.json') ? lee(`${id}.reintento.json`) : null;
   if (!r) {
     escribe(`${id}.reintento.json`, { fecha: new Date().toISOString() });
