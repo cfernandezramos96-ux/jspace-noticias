@@ -1,6 +1,6 @@
 # JSpace · Telegram: revisa el bot cada 5 minutos (GitHub Actions, gratis) y guarda en noticias/entrada/ los links que
 # llegan. Si llegó algo, despierta la rutina «JSpace · Telegram» de la nube (disparador API), que arma el post y deja la
-# respuesta en noticias/entrada/<id>.resultado.txt; ese push vuelve a correr esto y el bot la manda.
+# preview (<id>.preview.json) o la respuesta (<id>.resultado.txt); ese push vuelve a correr esto y el bot los manda.
 # Secretos del repositorio (Settings → Secrets and variables → Actions): TELEGRAM_TOKEN, TELEGRAM_CHAT_ID,
 # RUTINA_TOKEN (el token del disparador API de la rutina; la URL va fija abajo).
 name: JSpace Telegram
@@ -9,7 +9,7 @@ on:
     - cron: '*/5 * * * *'
   workflow_dispatch:
   push:
-    paths: ['noticias/entrada/*.resultado.txt']
+    paths: ['noticias/entrada/*.resultado.txt', 'noticias/entrada/*.preview.json']
 concurrency: telegram
 permissions:
   contents: write
@@ -30,7 +30,7 @@ jobs:
         run: |
           git config user.name "JSpace Bot"
           git config user.email "jspace-bot@users.noreply.github.com"
-          git add noticias/entrada
+          git add noticias
           git diff --cached --quiet || (git commit -m "Telegram: entrada" && (git push || (git pull --rebase && git push)))
       - name: Despertar la rutina
         if: steps.bot.outputs.nuevas != '0' && steps.bot.outputs.nuevas != ''
