@@ -1,0 +1,19 @@
+{
+  "titular": "The Bloodthirsty Bride Devours the King tendrá anime en 2027",
+  "link": "https://www.animenewsnetwork.com/news/2026-11-02/the-bloodthirsty-bride-devours-the-king-manga-gets-tv-anime-in-2027/.243444",
+  "formato": "post",
+  "franja": "anime",
+  "slides": [
+    {
+      "tipo": "portada",
+      "imagen": "visual.png",
+      "encuadre": "50% 40%",
+      "posicion": "abajo",
+      "titulo": "**The Bloodthirsty Bride Devours the King** tendrá anime",
+      "texto": "Llega en 2027: una princesa vampira y un rey que los odia.",
+      "sombra": 1
+    },
+    { "tipo": "poster", "imagen": "visual.png" },
+    { "tipo": "cierre" }
+  ]
+}
