@@ -354,7 +354,41 @@ for (const { f, p } of Object.values(ultimoDe)) {
   }
 }
 
-// 6. tiempo máximo: un pedido sin respuesta a los 20 min (la rutina se trabó) se relanza una vez; si a los otros 20
+// 6. publicación a la hora exacta: las rutinas programadas de la nube arrancan 7-9 min tarde, así que 3 min antes de la
+// hora de un post aprobado el bot despierta la rutina (el disparador API arranca al momento) y ella espera a la hora
+// con `publicar.mjs --cola --esperar`. Cuando sale, el bot avisa al grupo con los links; si a los 15 min no ha salido,
+// avisa y la despierta otra vez. Las rutinas de las 12:30, 15:00, 18:30 y 21:00 quedan de respaldo.
+const NOTICIAS = join(RAIZ, 'noticias');
+const leeJson = (f) => { try { return JSON.parse(readFileSync(f, 'utf8')); } catch { return null; } };
+for (const d of readdirSync(NOTICIAS, { withFileTypes: true }).filter((x) => x.isDirectory())) {
+  const c = join(NOTICIAS, d.name), prog = join(c, 'programado.json'), pub = join(c, 'publicado.json');
+  if (!existsSync(prog) && !existsSync(pub)) continue;
+  const titular = leeJson(join(c, 'noticia.json'))?.titular || d.name, chat = PERMITIDOS[0];
+  if (existsSync(pub)) {
+    const p = leeJson(pub);
+    if (p && !p.anunciado && Date.now() - new Date(p.fecha) < 6 * 3600e3 && chat) {
+      await tg('sendMessage', { chat_id: chat, text: `✅ Ya salió «${titular}»
+Instagram: ${p.permalink}${p.facebook ? `
+Facebook: ${p.facebook}` : ''}`, disable_web_page_preview: true });
+      writeFileSync(pub, JSON.stringify({ ...p, anunciado: true }, null, 2)); movimiento = true;
+    }
+    continue;
+  }
+  const g = leeJson(prog);
+  if (!g?.hora) continue;
+  const falta = new Date(g.hora) - Date.now();
+  if (falta <= 3 * 60e3 && !g.despertado) { // también si lo aprobaron cuando su hora ya había pasado: sale ya
+    writeFileSync(prog, JSON.stringify({ ...g, despertado: new Date().toISOString() }, null, 2));
+    nuevas++; movimiento = true;
+    console.log(`a publicar: ${d.name}`);
+  } else if (g.despertado && Date.now() - new Date(g.despertado) > 15 * 60e3 && !g.avisado && chat) {
+    await tg('sendMessage', { chat_id: chat, text: `⚠️ «${titular}» debía salir a las ${hora(g.hora)} y todavía no ha salido. Lo vuelvo a intentar y les aviso.` });
+    writeFileSync(prog, JSON.stringify({ ...g, avisado: true }, null, 2));
+    nuevas++; movimiento = true;
+  }
+}
+
+// 7. tiempo máximo: un pedido sin respuesta a los 20 min (la rutina se trabó) se relanza una vez; si a los otros 20
 // sigue igual, se avisa al chat. <id>.reintento.json guarda cuándo se relanzó y si ya se avisó.
 const LIMITE = 20 * 60 * 1000;
 for (const f of readdirSync(DIR).filter((n) => /^\d+\.json$/.test(n))) {

@@ -197,11 +197,21 @@ function enCola(carpeta, hhmm) {
   writeFileSync(join(carpeta, 'programado.json'), JSON.stringify({ hora: new Date(t).toISOString() }, null, 2));
   console.log(`✓ en cola para ${new Date(t).toLocaleString('es-CO', { timeZone: 'America/Bogota' })} (hora de Bogotá)`);
 }
-async function cola() {
+// --esperar: si lo próximo de la cola toca en menos de 8 min, espera a su hora y lo publica (el bot despierta la nube
+// un par de minutos antes para que salga puntual)
+async function cola(esperar = false) {
   const dir = join(RAIZ, 'noticias');
-  const pendientes = readdirSync(dir, { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => join(dir, d.name))
-    .filter((c) => existsSync(join(c, 'programado.json')) && !existsSync(join(c, 'publicado.json')))
-    .filter((c) => new Date(JSON.parse(readFileSync(join(c, 'programado.json'), 'utf8')).hora) <= new Date());
+  const enCola = readdirSync(dir, { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => join(dir, d.name))
+    .filter((c) => existsSync(join(c, 'programado.json')) && !existsSync(join(c, 'publicado.json')));
+  const horaDe = (c) => new Date(JSON.parse(readFileSync(join(c, 'programado.json'), 'utf8')).hora);
+  if (esperar) {
+    const proxima = Math.min(...enCola.map((c) => +horaDe(c)).filter((t) => t > Date.now() && t - Date.now() < 8 * 60e3));
+    if (Number.isFinite(proxima)) {
+      console.log(`esperando a las ${new Date(proxima).toLocaleTimeString('es-CO', { timeZone: 'America/Bogota' })} para publicar`);
+      await new Promise((r) => setTimeout(r, proxima - Date.now() + 1000));
+    }
+  }
+  const pendientes = enCola.filter((c) => horaDe(c) <= new Date());
   if (!pendientes.length) return console.log('nada en cola para ahora');
   for (const c of pendientes) {
     try { await publica(c); }
@@ -248,7 +258,7 @@ try {
   }
   else if (args[0] === '--subida') console.log(`✓ subida de prueba: ${await sube(resolve(args[1] || falla('uso: --subida <archivo>')))}`);
   else if (args[0] === '--renovar') await renovar();
-  else if (args[0] === '--cola') await cola();
+  else if (args[0] === '--cola') await cola(args.includes('--esperar'));
   else if (args[0]) {
     const carpeta = resolve(args[0]);
     const i = args.indexOf('--a');
