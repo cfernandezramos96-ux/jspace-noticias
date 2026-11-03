@@ -5,9 +5,9 @@
   "franja": "jmusic",
   "colaboradores": ["elkazuotv"],
   "slides": [
-    { "tipo": "portada", "imagen": "portada.jpg", "encuadre": "50% 30%", "posicion": "abajo", "etiqueta": "J-Music · Aniversario",
+    { "tipo": "portada", "imagen": "portada.jpg", "encuadre": "50% 50%", "alto_imagen": 740, "subir": 90, "tamano": 78, "posicion": "abajo", "etiqueta": "J-Music · Aniversario",
       "titulo": "Se cumple **un año** del debut de **Shonen Knife** en Colombia",
-      "texto": "El 7 de diciembre de 2025, en el Relevent Music Hall de Bogotá.", "subir": 330 },
+      "texto": "El 7 de diciembre de 2025, en el Relevent Music Hall de Bogotá." },
     { "tipo": "video", "vertical": true, "imagen": "video1.jpg", "encuadre": "50% 55%",
       "titulo": "Así se vivió **esa noche** en Bogotá",
       "creditos": "Video: JSpace · Foto de portada: Tomoko Ota" },
