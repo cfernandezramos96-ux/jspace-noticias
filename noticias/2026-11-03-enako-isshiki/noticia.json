@@ -1,0 +1,24 @@
+{
+  "titular": "Enako canta el opening de Isshiki-san Wants to Know About Love",
+  "link": "https://isshikisan-anime.com/news/index00140000.html",
+  "formato": "post",
+  "franja": "jmusic",
+  "tema": "jmusic",
+  "slides": [
+    {
+      "tipo": "portada",
+      "imagen": "pv.jpg",
+      "encuadre": "50% 20%",
+      "etiqueta": "Opening · Enero 2027",
+      "titulo": "**Enako** canta el opening de Isshiki-san Wants to Know About Love",
+      "texto": "La cosplayer también será la voz de Nene Haneshita."
+    },
+    {
+      "tipo": "poster",
+      "imagen": "visual.png"
+    },
+    {
+      "tipo": "cierre"
+    }
+  ]
+}
