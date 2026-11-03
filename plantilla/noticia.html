@@ -106,8 +106,12 @@
     const im = document.createElement('img'); im.src = src(S.imagen); im.style.objectPosition = S.encuadre || '50% 30%'; f.appendChild(im);
     // caber: la foto entera (sin recortar caras) arriba y el resto en negro con degradado para el texto
     if (S.caber) { f.style.background = '#0A0A0A'; im.style.objectFit = 'contain'; im.style.objectPosition = '50% ' + (S.caber === true ? '0%' : S.caber); }
+    // subir: sube la foto N px (el hueco de abajo queda cubierto por el degradado, que se vuelve opaco)
+    if (S.subir) { f.style.background = '#0A0A0A'; im.style.transform = `translateY(-${S.subir}px)`; }
     el('div', 'abs', { left: '0', top: '0', width: W + 'px', height: H + 'px',
-      background: `linear-gradient(180deg, rgba(10,10,10,0) 45%, rgba(10,10,10,${0.85 * (S.sombra ?? 1)}) 70%, rgba(10,10,10,${0.97 * (S.sombra ?? 1)}) 88%)` });
+      background: S.subir
+        ? `linear-gradient(180deg, rgba(10,10,10,0) 38%, rgba(10,10,10,${0.9 * (S.sombra ?? 1)}) 62%, rgba(10,10,10,1) 80%, rgba(10,10,10,1) 100%)`
+        : `linear-gradient(180deg, rgba(10,10,10,0) 45%, rgba(10,10,10,${0.85 * (S.sombra ?? 1)}) 70%, rgba(10,10,10,${0.97 * (S.sombra ?? 1)}) 88%)` });
     const bl = [];
     if (S.circulos?.length) {
       const n = S.circulos.length, d = n > 4 ? 140 : 170, gap = 14, fila = el('div', 'abs', { left: '0', width: W + 'px', height: d + 'px', display: 'flex', justifyContent: 'center', gap: gap + 'px' });
