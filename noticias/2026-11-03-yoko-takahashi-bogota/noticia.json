@@ -1,0 +1,15 @@
+{
+  "titular": "Yoko Takahashi, la voz de Evangelion, llega por primera vez a Bogotá el 19 de noviembre",
+  "link": "https://correocultural.com/2026/10/yoko-takahashi-por-primera-vez-en-colombia/",
+  "formato": "post",
+  "franja": "extra",
+  "tema": "jmusic",
+  "slides": [
+    { "tipo": "portada", "imagen": "evento.jpg", "encuadre": "50% 40%", "alto_imagen": 900, "posicion": "abajo",
+      "etiqueta": "Concierto · Bogotá",
+      "titulo": "**Yoko Takahashi**, la voz de Evangelion, toca en Bogotá el 19 de noviembre",
+      "texto": "Su primera vez en Colombia: jueves 19, 8:30 p. m., Lourdes Music Hall." },
+    { "tipo": "poster", "imagen": "tour.jpg" },
+    { "tipo": "cierre" }
+  ]
+}
