@@ -1,0 +1,20 @@
+{
+  "titular": "Nao Toyama baila el ending de Meitantei Precure como Cure Arcana por su cumpleaños",
+  "link": "https://news.mynavi.jp/article/20261101-5236192/",
+  "formato": "post",
+  "franja": "jmusic",
+  "slides": [
+    {
+      "tipo": "portada",
+      "imagen": "baile.jpg",
+      "encuadre": "78% 50%",
+      "posicion": "abajo",
+      "etiqueta": "Precure · Cumpleaños",
+      "titulo": "**Nao Toyama** baila como Cure Arcana",
+      "texto": "Su regalo para Ruruka Moria: el baile del ending.",
+      "sombra": 1
+    },
+    { "tipo": "poster", "imagen": "baile.jpg" },
+    { "tipo": "cierre" }
+  ]
+}
