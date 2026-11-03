@@ -173,6 +173,20 @@
     if (S.texto) { const e = el('div', 'abs medium centro', { lineHeight: '1.3' }); e.innerHTML = rico(S.texto); encaja(e, 42, 380, 28); bl.push([e, 24]); }
     apila(bl, { top: Math.round((H - alto(bl)) / 2) + 10 });
     pie(false);
+  } else if (tipo === 'video') {
+    // marco del «tráiler en tarjeta»: key visual oscurecido, titular y un hueco 16:9 (x68 y568 944×530) donde
+    // scripts/video.mjs monta el clip con ffmpeg. En el JPG el hueco sale como tarjeta vacía.
+    const fondo = el('div', 'foto', { left: '-60px', top: '-60px', width: (W + 120) + 'px', height: (H + 120) + 'px', filter: 'blur(26px) brightness(.32)' });
+    const b = document.createElement('img'); b.src = src(S.imagen); b.style.objectPosition = S.encuadre || '50% 30%'; fondo.appendChild(b);
+    rayos();
+    const bl = [[logo(64), 0]];
+    if (S.etiqueta) bl.push([el('div', 'abs black centro', { fontSize: '30px', letterSpacing: '.06em', color: 'var(--rojo)' }, rico(S.etiqueta)), 16]);
+    const T = el('div', 'abs black centro', { lineHeight: '1.0' }, rico(S.titulo)); encaja(T, S.tamano || 84, 250, 48); bl.push([T, 14]);
+    if (S.texto) { const e = el('div', 'abs medium centro', { lineHeight: '1.25' }); e.innerHTML = rico(S.texto); encaja(e, 32, 90, 24); bl.push([e, 14]); }
+    apila(bl, { top: 40 });
+    el('div', 'abs tarjeta', { left: '60px', top: '560px', width: '944px', height: '530px', boxSizing: 'content-box' });
+    if (S.creditos) el('div', 'abs medium centro', { top: '1124px', fontSize: '22px', opacity: '.7' }, rico(S.creditos));
+    el('div', 'abs black centro', { top: '1170px', fontSize: '28px', color: 'var(--rojo)' }, '@jspaceco_');
   } else if (tipo === 'cierre') {
     // variante blanca del cierre: logo grande y la invitación a seguir
     Q.classList.add('claro');

@@ -156,7 +156,7 @@ const PAGINA = env.FB_PAGE_ID || '169636513221619';
 function slidesFacebook(carpeta) {
   const tipos = (JSON.parse(readFileSync(join(carpeta, 'noticia.json'), 'utf8')).slides || []).map((s) => s.tipo);
   return readdirSync(carpeta).filter((f) => /^slide-\d+\.jpg$/.test(f)).sort()
-    .filter((f) => tipos[Number(f.match(/\d+/)[0]) - 1] !== 'cierre');
+    .filter((f) => !['cierre', 'video'].includes(tipos[Number(f.match(/\d+/)[0]) - 1]));
 }
 async function enFacebook(carpeta, registro, leyenda, urlDe = {}) {
   if (env.FB_PUBLICAR === 'no') return;
