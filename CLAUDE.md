@@ -21,14 +21,18 @@ skill **/jspace** (`.claude/skills/jspace/SKILL.md`).
 en UTC ya es el día siguiente (ej.: lunes 11:40 p. m. en Bogotá = martes 04:40 UTC). Al equipo, las horas siempre en
 hora de Bogotá.
 
-**Si una fuente no abre** (bloqueo de la nube, página que carga con JavaScript, muro de pago): no te rindas ni pidas
-al equipo el texto. Saca el tema del título o del slug del link y búscalo tú en otras fuentes (Anime Corner, Crunchyroll
-en otros idiomas, Oricon, Natalie por buscador, la web o la cuenta oficial de la obra, PR TIMES, medios en japonés).
-Verifica ahí y arma el post. Solo si de verdad nada lo confirma, no lo publiques y explica qué buscaste.
+**Si una fuente no abre** (bloqueo de la nube, página que carga con JavaScript como Crunchyroll News, muro de pago):
+NUNCA le pidas al equipo que te pegue el texto ni que te busque nada: investigar es tu trabajo. Saca el tema del título
+o del slug del link y haz al menos 6 búsquedas antes de rendirte: en inglés, en japonés (nombre de la obra en japonés +
+la palabra clave: ダンス, PV, 主題歌, アニメ化…) y en español; abre los mejores resultados (Anime Corner, Final Weapon,
+Oricon, Natalie, animate Times, Dengeki, PR TIMES, la web o la cuenta oficial de la obra). Con que el hecho central esté
+confirmado en una fuente seria, arma el post con lo verificado y deja fuera los detalles que no pudiste confirmar.
+Solo si nada confirma el hecho central, no lo armes y di qué buscaste.
 
-**Si un video no se puede bajar** (YouTube bloquea la nube): no le pidas al equipo que busque el enlace. Búscalo tú
-(canal oficial del estudio, la editorial o el artista) y mándale al equipo el enlace exacto para que lo baje y lo
-devuelva por el chat; mientras, deja listo todo lo demás del post.
+**Si un video no se puede bajar** (YouTube bloquea la nube): NUNCA le pidas al equipo el enlace. Búscalo tú (WebSearch
+con `site:youtube.com` + el nombre en japonés o en inglés, o el canal oficial del estudio, la editorial o el artista;
+para Precure, el canal oficial de Toei) y mándale al equipo el enlace exacto del video oficial para que lo baje y lo
+devuelva por el chat; mientras, deja listo todo lo demás del post (y su preview, si el video es opcional).
 
 Reglas: nunca inventar datos; rumores no se publican; si algo no cuadra, no se publica y se avisa. Los carruseles
 animados de collab ElKazuoTV × JSpace siguen yendo por carrusel-animado, con su propio flujo (estático antes, guion
