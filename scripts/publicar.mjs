@@ -51,7 +51,7 @@ async function api(metodo, ruta, params = {}) {
   const cuerpo = new URLSearchParams(PROXY ? params : { access_token: TOKEN, ...params });
   const res = metodo === 'GET'
     ? await fetch(url + (url.search ? '&' : '?') + cuerpo)
-    : await fetch(url, { method: 'POST', body: cuerpo });
+    : await fetch(url, { method: metodo, body: cuerpo });
   const j = await res.json().catch(() => ({}));
   if (!res.ok || j.error) {
     const e = j.error || {};
@@ -166,6 +166,20 @@ async function enFacebook(carpeta, registro, leyenda, urlDe = {}) {
   if (env.FB_PUBLICAR === 'no') return;
   try {
     const { access_token: pt } = await api('GET', PAGINA, { fields: 'access_token' });
+    // post con video: en Facebook sale el reel vertical (reel.mp4, de scripts/reel.mjs), no el carrusel (Kazuo, 3 nov
+    // 2026). Si el reel falla, salen las fotos como siempre y el error queda anotado.
+    if (existsSync(join(carpeta, 'reel.mp4'))) {
+      try {
+        Object.assign(registro, await reelFacebook(join(carpeta, 'reel.mp4'), leyenda, pt, 'PUBLISHED'));
+        delete registro.facebook_reel_error;
+        console.log(`✓ reel publicado en Facebook: ${registro.facebook}`);
+        writeFileSync(join(carpeta, 'publicado.json'), JSON.stringify(registro, null, 2));
+        return;
+      } catch (e) {
+        registro.facebook_reel_error = e.message;
+        console.error(`✗ reel de Facebook: ${e.message} (salen las fotos)`);
+      }
+    }
     const jpgs = slidesFacebook(carpeta);
     const fotos = [];
     for (const f of jpgs) {
@@ -183,6 +197,24 @@ async function enFacebook(carpeta, registro, leyenda, urlDe = {}) {
     console.error(`✗ Facebook: ${e.message} (Instagram sí salió)`);
   }
   writeFileSync(join(carpeta, 'publicado.json'), JSON.stringify(registro, null, 2));
+}
+
+// reel de la página: start → subida por URL (rupload, con el token de la página) → finish → espera a que quede listo
+async function reelFacebook(ruta, leyenda, pt, estado) {
+  const url = await sube(ruta);
+  const { video_id, upload_url } = await api('POST', `${PAGINA}/video_reels`, { upload_phase: 'start', access_token: pt });
+  const r = await fetch(upload_url, { method: 'POST', headers: { Authorization: `OAuth ${pt}`, file_url: url } });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok || !j.success) throw new Error(`subida del reel: ${j.error?.message || j.debug_info?.message || r.status}`);
+  await api('POST', `${PAGINA}/video_reels`, { upload_phase: 'finish', video_id, video_state: estado, description: leyenda, access_token: pt });
+  for (let i = 0; i < 60; i++) {
+    const { status: s = {} } = await api('GET', video_id, { fields: 'status', access_token: pt });
+    if (s.video_status === 'error' || s.processing_phase?.status === 'error') throw new Error(`Facebook no pudo procesar el reel (${JSON.stringify(s.processing_phase?.errors || s.video_status)})`);
+    if (s.video_status === 'ready' && (estado !== 'PUBLISHED' || s.publishing_phase?.status === 'complete')) break;
+    await espera(5000);
+  }
+  const { permalink_url: p } = await api('GET', video_id, { fields: 'permalink_url', access_token: pt });
+  return { facebook: p?.startsWith('/') ? `https://www.facebook.com${p}` : p, facebook_id: video_id, facebook_tipo: 'reel' };
 }
 
 // ---------- cola ----------
@@ -255,6 +287,13 @@ try {
     if (reg.facebook) falla(`ya está en Facebook: ${reg.facebook}`);
     delete reg.facebook_error;
     await enFacebook(c, reg, readFileSync(join(c, 'leyenda.txt'), 'utf8').trim());
+  }
+  else if (args[0] === '--reel-prueba') {
+    // sube un reel como borrador (no sale en la página), comprueba que Facebook lo procesa y lo borra
+    const { access_token: pt } = await api('GET', PAGINA, { fields: 'access_token' });
+    const r = await reelFacebook(resolve(args[1] || falla('uso: --reel-prueba <reel.mp4>')), 'prueba', pt, 'DRAFT');
+    await api('DELETE', r.facebook_id, { access_token: pt }).catch((e) => console.error(`no se pudo borrar el borrador ${r.facebook_id}: ${e.message}`));
+    console.log(`✓ reel de prueba procesado y borrado (${r.facebook_id})`);
   }
   else if (args[0] === '--subida') console.log(`✓ subida de prueba: ${await sube(resolve(args[1] || falla('uso: --subida <archivo>')))}`);
   else if (args[0] === '--renovar') await renovar();

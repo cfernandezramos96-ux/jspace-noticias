@@ -303,8 +303,12 @@ for (const f of readdirSync(DIR).filter((n) => /^\d+\.preview\.json$/.test(n))) 
   const slides = slidesDe(carpeta);
   const { ids: album, pesados } = await mandaArchivos(chat, carpeta, slides); // album: para saber a qué post responden
   if (pesados.length) await tg('sendMessage', { chat_id: chat, text: `⚠️ No pude mandar ${pesados.join(', ')} (pasa de 50 MB, el límite de Telegram), pero sí va en el post.` });
+  // posts con video: en Facebook sale el reel vertical; también va en el preview
+  const reel = join(carpeta, 'reel.mp4');
+  if (existsSync(reel) && statSync(reel).size < 49 * 1024 * 1024)
+    album.push((await tg('sendVideo', { chat_id: chat, caption: '📘 Versión de Facebook (reel)', supports_streaming: 'true' }, { video: reel })).message_id);
   const leyenda = existsSync(join(carpeta, 'leyenda.txt')) ? readFileSync(join(carpeta, 'leyenda.txt'), 'utf8').trim() : '(sin leyenda)';
-  const texto = `👀 Preview: ${prev.titular || basename(carpeta)}\n🕒 Si lo aprueban sale el ${hora(prev.hora)} (${{ jmusic: 'J-music', anime: 'anime', extra: 'extra, aparte de los dos automáticos' }[prev.franja] || prev.franja}), en Instagram y Facebook.\n${prev.nota ? `📝 ${prev.nota}\n` : ''}\n—— Leyenda ——\n${leyenda}`;
+  const texto = `👀 Preview: ${prev.titular || basename(carpeta)}\n🕒 Si lo aprueban sale el ${hora(prev.hora)} (${{ jmusic: 'J-music', anime: 'anime', extra: 'extra, aparte de los dos automáticos' }[prev.franja] || prev.franja}), en Instagram y Facebook${existsSync(join(carpeta, 'reel.mp4')) ? ' (en Facebook como reel)' : ''}.\n${prev.nota ? `📝 ${prev.nota}\n` : ''}\n—— Leyenda ——\n${leyenda}`;
   const msj = await tg('sendMessage', {
     chat_id: chat, text: texto.slice(0, 4000), disable_web_page_preview: true,
     reply_markup: { inline_keyboard: [[

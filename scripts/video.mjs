@@ -3,6 +3,7 @@
 // Salida: slide-NN.mp4 (1080×1350, H.264 + AAC). Correr render.mjs antes (hace slide-NN.jpg, el marco).
 import { execFileSync } from 'node:child_process';
 import { resolve, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { readFileSync, existsSync } from 'node:fs';
 const [carpeta, n, clip, seg = '60'] = process.argv.slice(2);
 if (!carpeta || !n || !clip) { console.error('uso: node scripts/video.mjs noticias/<carpeta> <N> <clip.mp4> [segundos]'); process.exit(1); }
@@ -22,3 +23,9 @@ execFileSync('ffmpeg', ['-y', '-v', 'error', '-loop', '1', '-framerate', '30', '
   '-filter_complex', filtro, '-map', '[o]', '-map', '1:a?', '-c:v', 'libx264', '-preset', 'medium', '-crf', '21', '-r', '30',
   '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-ar', '48000', '-b:a', '160k', '-shortest', '-movflags', '+faststart', salida], { stdio: 'inherit' });
 console.log(salida);
+// la versión de Facebook: el reel vertical con el mismo clip (en Facebook los posts con video salen como reel). Si
+// falla, el post igual sale con fotos en Facebook. Si después cambias la leyenda, vuelve a correr scripts/reel.mjs.
+if (S.reel !== false) {
+  try { execFileSync(process.execPath, [fileURLToPath(new URL('./reel.mjs', import.meta.url)), carpeta, clip, seg], { stdio: 'inherit' }); }
+  catch (e) { console.error(`✗ reel de Facebook: ${e.message}`); }
+}
