@@ -296,7 +296,8 @@ for (const f of readdirSync(DIR).filter((n) => /^\d+\.preview\.json$/.test(n))) 
     unlinkSync(join(DIR, `${id}.aprobado.json`));
     if (existsSync(join(carpeta, 'programado.json'))) unlinkSync(join(carpeta, 'programado.json'));
   }
-  if (existsSync(join(DIR, `${id}.manual.json`))) unlinkSync(join(DIR, `${id}.manual.json`)); // post cambiado: se decide otra vez
+  // post cambiado: se decide otra vez (también si lo habían descartado o lo iban a subir a mano)
+  for (const s of ['manual.json', 'descartado.json']) if (existsSync(join(DIR, `${id}.${s}`))) unlinkSync(join(DIR, `${id}.${s}`));
   const slides = slidesDe(carpeta);
   const { ids: album, pesados } = await mandaArchivos(chat, carpeta, slides); // album: para saber a qué post responden
   if (pesados.length) await tg('sendMessage', { chat_id: chat, text: `⚠️ No pude mandar ${pesados.join(', ')} (pasa de 50 MB, el límite de Telegram), pero sí va en el post.` });
