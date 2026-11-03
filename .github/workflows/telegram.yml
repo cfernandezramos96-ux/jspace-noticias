@@ -2,7 +2,7 @@
 # llegan. Si llegó algo, despierta la rutina «JSpace · Telegram» de la nube (disparador API), que arma el post y deja la
 # respuesta en noticias/entrada/<id>.resultado.txt; ese push vuelve a correr esto y el bot la manda.
 # Secretos del repositorio (Settings → Secrets and variables → Actions): TELEGRAM_TOKEN, TELEGRAM_CHAT_ID,
-# RUTINA_URL y RUTINA_TOKEN (la URL y el token del disparador API de la rutina).
+# RUTINA_TOKEN (el token del disparador API de la rutina; la URL va fija abajo).
 name: JSpace Telegram
 on:
   schedule:
@@ -35,10 +35,9 @@ jobs:
       - name: Despertar la rutina
         if: steps.bot.outputs.nuevas != '0' && steps.bot.outputs.nuevas != ''
         env:
-          RUTINA_URL: ${{ secrets.RUTINA_URL }}
           RUTINA_TOKEN: ${{ secrets.RUTINA_TOKEN }}
         run: |
-          curl -sS --fail-with-body -X POST "$RUTINA_URL" \
+          curl -sS --fail-with-body -X POST https://api.anthropic.com/v1/claude_code/routines/trig_01VSHZEWR9XsE2NfbMkPkUnE/fire \
             -H "Authorization: Bearer $RUTINA_TOKEN" \
             -H "anthropic-beta: experimental-cc-routine-2026-04-01" \
             -H "anthropic-version: 2023-06-01" \
