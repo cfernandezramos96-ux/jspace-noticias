@@ -38,6 +38,15 @@ con `site:youtube.com` + el nombre en japonés o en inglés, o el canal oficial 
 para Precure, el canal oficial de Toei) y mándale al equipo el enlace exacto del video oficial para que lo baje y lo
 devuelva por el chat; mientras, deja listo todo lo demás del post (y su preview, si el video es opcional).
 
+**Imágenes: búscalas tú, el equipo no debe tener que mandarte fotos.** La miniatura de YouTube o la primera imagen que
+salga es el último recurso, nunca la primera opción. Cuando la noticia es de una persona (artista, seiyuu, banda),
+busca fotos buenas de ella: perfil de su agencia o su web oficial, fotos de prensa en las notas de Natalie, Oricon,
+animate Times, Mantan Web, Billboard Japan o Real Sound (abre la nota y saca las URLs de las imágenes en alta; las
+galerías de Natalie traen varias), y el visual o la portada del single o del anime. Baja 3-5 candidatas, míralas todas
+con Read y elige la mejor: nítida, en alta (mínimo 1080 de ancho), la persona de frente o bien encuadrada, que se vea
+bien (ojos abiertos, buena luz, nada cortado por el texto de la portada). Si te piden «otra foto donde se vea mejor»,
+repite la búsqueda con fuentes nuevas, no recortes la misma. Solo fotos oficiales o de prensa, nunca de fans.
+
 Reglas: nunca inventar datos; rumores no se publican; si algo no cuadra, no se publica y se avisa. Los carruseles
 animados de collab ElKazuoTV × JSpace siguen yendo por carrusel-animado, con su propio flujo (estático antes, guion
 literal).
