@@ -28,6 +28,13 @@ const TOKEN = env.IG_TOKEN, USER = env.IG_USER_ID || '17841453083457784'; // el 
 // En la nube el token NO está en el entorno: es un «Network secret» y el proxy de la nube lo añade como
 // `Authorization: Bearer` a cada petición a graph.facebook.com. IG_AUTH=proxy activa ese modo.
 const PROXY = env.IG_AUTH === 'proxy';
+// El fetch de Node no usa HTTPS_PROXY si no se lo piden, y sin el proxy no llega el secreto: en ese caso el script se
+// vuelve a lanzar con NODE_USE_ENV_PROXY=1 (Node ≥ 24) y espera a que termine.
+if (PROXY && process.env.NODE_USE_ENV_PROXY !== '1') {
+  const { spawnSync } = await import('node:child_process');
+  const r = spawnSync(process.execPath, process.argv.slice(1), { stdio: 'inherit', env: { ...process.env, NODE_USE_ENV_PROXY: '1' } });
+  process.exit(r.status ?? 1);
+}
 const falla = (msg) => { console.error('✗ ' + msg); process.exit(1); };
 if (!TOKEN && !PROXY) falla('falta IG_TOKEN en .env (mira .env.example)');
 // Dos tipos de token: el de «inicio de sesión unificado» (usuario del sistema, empieza por EAA, no caduca) va por
