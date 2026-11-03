@@ -219,9 +219,15 @@
     const T = el('div', 'abs black centro', { lineHeight: '1.0' }, rico(S.titulo)); encaja(T, S.tamano || 84, 250, 48); bl.push([T, 14]);
     if (S.texto) { const e = el('div', 'abs medium centro', { lineHeight: '1.25' }); e.innerHTML = rico(S.texto); encaja(e, 32, 90, 24); bl.push([e, 14]); }
     apila(bl, { top: 40 });
+    if (S.vertical) {
+      // clip vertical (9:16): tarjeta 760×960 (x160 y290); video.mjs lo recorta a ese hueco
+      el('div', 'abs tarjeta', { left: '152px', top: '282px', width: '760px', height: '960px', boxSizing: 'content-box' });
+      if (S.creditos) el('div', 'abs medium centro', { top: '1276px', fontSize: '22px', opacity: '.7' }, rico(S.creditos));
+    } else {
     el('div', 'abs tarjeta', { left: '60px', top: '560px', width: '944px', height: '530px', boxSizing: 'content-box' });
     if (S.creditos) el('div', 'abs medium centro', { top: '1124px', fontSize: '22px', opacity: '.7' }, rico(S.creditos));
     el('div', 'abs black centro', { top: '1170px', fontSize: '28px', color: 'var(--rojo)' }, '@jspaceco_');
+    }
   } else if (tipo === 'cierre' && COLLAB) {
     // cierre de los carruseles de ElKazuoTV × JSpace: los dos logos grandes sobre los rayos
     rayos();
