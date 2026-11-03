@@ -1,0 +1,24 @@
+{
+  "titular": "Hiragi-san's House of Vampires tendrá anime",
+  "link": "https://animecorner.me/hiragi-sans-house-of-vampires-gets-anime/",
+  "formato": "post",
+  "slides": [
+    {
+      "tipo": "portada",
+      "imagen": "visual.jpg",
+      "encuadre": "50% 30%",
+      "posicion": "arriba",
+      "etiqueta": "Anime anunciado",
+      "titulo": "**Hiragi-san's**\n**House of Vampires**\ntendrá anime",
+      "texto": "Del manga de la autora de A Couple of Cuckoos.",
+      "sombra": 1
+    },
+    {
+      "tipo": "poster",
+      "imagen": "visual.jpg"
+    },
+    {
+      "tipo": "cierre"
+    }
+  ]
+}
