@@ -146,6 +146,26 @@ Así eran los mejores carruseles de JSpace (Atarashii Gakko, 180 likes: portada 
 - `nota` (opcional): una línea pequeña con fecha o nombre.
 - Estructura: `portada` → 2-4 `historia` (o `poster` / video) → `cierre`. Una imagen distinta en cada slide.
 
+### Noticias con video: «tráiler en tarjeta» (referencia: Koryugi, Naruto × Ninku)
+
+Decidido con Kazuo el 3 nov 2026; **aún no construido ni probado: hazlo la primera vez que llegue una noticia con
+tráiler oficial** y revisa el resultado con cuidado (hojas de fotogramas con ffmpeg, no solo un frame).
+- Diseño fijo durante todo el video: fondo con el key visual oscurecido, arriba el logo de JSpace + etiqueta
+  «Tráiler», el **titular** grande con la serie en rojo y una línea de contexto; en el medio **el tráiler 16:9
+  en una tarjeta** con bordes redondeados (con su audio); debajo los créditos (© del estudio) en pequeño; abajo
+  «@jspaceco_». El tercio inferior del 9:16 queda libre (lo tapan la leyenda y los botones de Reels).
+- Cómo: renderiza el marco como imagen con la plantilla (un tipo de slide nuevo `video`, con el hueco de la
+  tarjeta) y monta el clip con ffmpeg (`scale` al tamaño de la tarjeta + `overlay` en su posición, esquinas
+  redondeadas con una máscara, audio del tráiler, `-c:v libx264 -pix_fmt yuv420p -c:a aac -ar 48000 -movflags +faststart`).
+  Máximo 60-90 s.
+- Salidas: **Reel 1080×1920** para Instagram y Facebook (en `publicar.mjs` falta el tipo REELS: añádelo) y la
+  versión **1080×1350** como `slide-NN.mp4` dentro del carrusel. En Facebook, el post es solo el video con la
+  portada como miniatura.
+- El tráiler: `pip install yt-dlp` y bájalo del canal oficial. Si YouTube bloquea la nube, búscalo en la web
+  oficial o en la cuenta oficial; si no se consigue, haz el post con imágenes y dilo.
+- Efemérides (cumpleaños de personajes, aniversarios): como carrusel de slides `historia`, no con escenas del
+  anime (no hay clips oficiales y es donde más riesgo de derechos hay), salvo que exista un clip oficial.
+
 ### Resumen de la semana (domingos)
 
 El domingo las dos franjas son resúmenes (referencia: Recoanii, «Noticias de anime destacadas de la semana»):
