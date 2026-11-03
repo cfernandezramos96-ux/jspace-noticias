@@ -1,6 +1,7 @@
 # JSpace · Telegram: escucha el bot (GitHub Actions; el repo es público, así que los minutos no se acaban). Cada
 # ejecución dura ~4,5 min en bucle con long polling, así el bot contesta en segundos; el cron la relanza cada 5 min
-# (con atrasos) y, si hubo movimiento en los últimos 30 min, se relanza ella misma al terminar.
+# (con atrasos) y, de 7:00 a 24:00 de Bogotá (o de madrugada si hubo movimiento en 30 min), se relanza ella misma al
+# terminar: así el bot queda escuchando sin que nadie lo lance a mano.
 # En cada vuelta: git pull → scripts/telegram.mjs (mensajes, botones, previews y resultados) → commit y push → si llegó
 # trabajo nuevo, despierta la rutina «JSpace · Telegram» de la nube (disparador API), que arma el post y deja el
 # preview (<id>.preview.json) o la respuesta (<id>.resultado.txt); la siguiente vuelta los manda.
@@ -50,12 +51,13 @@ jobs:
             fi
           done
       - name: Relanzar si hay movimiento
-        # el cron de GitHub se atrasa mucho; mientras haya actividad en los últimos 30 min, la siguiente vuelta
+        # el cron de GitHub se atrasa mucho; la siguiente vuelta
         # arranca en cuanto termina esta (workflow_dispatch sí se puede lanzar con el token del propio workflow)
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           git pull -q --rebase || true
-          if node -e 'const e=require("./noticias/entrada/estado.json"); process.exit(e.ultima && Date.now() - Date.parse(e.ultima) < 30 * 60e3 ? 0 : 1)'; then
+          # de 7:00 a 24:00 (Bogotá) siempre; de madrugada solo si hubo movimiento en los últimos 30 min
+          if node -e 'const e=require("./noticias/entrada/estado.json"); const h=(new Date().getUTCHours()+19)%24; process.exit(h>=7 || (e.ultima && Date.now()-Date.parse(e.ultima)<30*60e3) ? 0 : 1)'; then
             gh workflow run telegram.yml --ref main && echo "relanzado"
-          else echo "sin movimiento: espera al cron"; fi
+          else echo "madrugada sin movimiento: espera al cron"; fi
