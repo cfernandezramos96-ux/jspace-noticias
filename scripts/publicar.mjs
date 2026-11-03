@@ -4,6 +4,7 @@
 //   node scripts/publicar.mjs --cola                        → publica lo que esté en cola y ya toque (lo lanza la tarea de Windows)
 //   node scripts/publicar.mjs --cuenta                      → comprueba el token: usuario, tipo de cuenta y cupo de publicaciones
 //   node scripts/publicar.mjs --renovar                     → renueva el token (dura 60 días) y lo guarda en .env
+//   node scripts/publicar.mjs --subida <archivo>                → solo sube ese archivo a Cloudinary y muestra la URL (prueba)
 //
 // Lee .env (IG_USER_ID, IG_TOKEN). Las slides salen de la carpeta: slide-NN.jpg (imágenes) o slide-NN.mp4 (carrusel
 // animado), en orden, y la leyenda de leyenda.txt. Las sube a Cloudinary (o a catbox si no está en .env; la API solo
@@ -180,6 +181,7 @@ async function renovar() {
 const args = process.argv.slice(2);
 try {
   if (args[0] === '--cuenta') await cuenta();
+  else if (args[0] === '--subida') console.log(`✓ subida de prueba: ${await sube(resolve(args[1] || falla('uso: --subida <archivo>')))}`);
   else if (args[0] === '--renovar') await renovar();
   else if (args[0] === '--cola') await cola();
   else if (args[0]) {
