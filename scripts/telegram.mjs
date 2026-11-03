@@ -48,7 +48,8 @@ if (hook.url) { console.log('el bot tenía un webhook; lo quito para poder leer 
 
 // 1-2. mensajes nuevos y botones pulsados
 let nuevas = 0; // trabajo nuevo para la rutina: si es > 0, el workflow la despierta
-const updates = await tg('getUpdates', { offset: estado.offset, timeout: 0, allowed_updates: ['message', 'callback_query'] });
+// ESPERA = segundos de long polling (el workflow lo llama en bucle): responde en cuanto llega algo
+const updates = await tg('getUpdates', { offset: estado.offset, timeout: Number(process.env.ESPERA || 0), allowed_updates: ['message', 'callback_query'] });
 console.log(`bot @${yo.username} · ${updates.length} mensajes nuevos (pendientes según Telegram: ${hook.pending_update_count})`);
 for (const u of updates) {
   estado.offset = u.update_id + 1;
@@ -157,5 +158,5 @@ for (const f of readdirSync(DIR).filter((n) => n.endsWith('.resultado.txt'))) {
   console.log(`resultado enviado: ${id}`);
 }
 
-// el workflow despierta la rutina de la nube solo si hay trabajo nuevo para ella
-if (process.env.GITHUB_OUTPUT) writeFileSync(process.env.GITHUB_OUTPUT, `nuevas=${nuevas}\n`, { flag: 'a' });
+// el workflow despierta la rutina de la nube solo si hay trabajo nuevo para ella (DESPERTAR = archivo de aviso)
+if (nuevas && process.env.DESPERTAR) writeFileSync(process.env.DESPERTAR, String(nuevas));
