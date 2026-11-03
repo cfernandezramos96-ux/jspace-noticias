@@ -29,6 +29,13 @@ Kazuo (`E:\Claudio\jspace-noticias`) o en una sesión en la nube de Claude Code,
   oficial de la serie o la banda y su cuenta oficial. Si un dato solo sale en una fuente secundaria, dilo.
 - **Al terminar** (carpeta de la noticia lista, en cola o publicada): `git add -A && git commit -m "JSpace: <titular>"`
   y `git push`. Si el push falla por cambios remotos: `git pull --rebase` y otra vez `git push`.
+- **Nada se publica sin aprobación del grupo** (Kazuo, 3 nov 2026, después de que salió un automático que nadie
+  había visto y que debía llevar video). A las **8:00** la rutina elige y ARMA los dos posts del día y los manda al
+  grupo de Telegram como preview (ids `AAAAMMDD01` J-music y `AAAAMMDD02` anime; el domingo también los resúmenes,
+  `03` y `04`). Si un post necesita un video que la nube no puede bajar, deja todo lo demás listo
+  (`noticias/entrada/<id>.espera.json`), manda al grupo el enlace exacto del video y pide que se lo devuelvan; con el
+  video manda el preview con las piezas terminadas. Las rutinas de las 12:30, 15:00, 18:30 y 21:00 solo publican lo
+  aprobado (`programado.json`). El bot recuerda 1 h antes lo que nadie ha aprobado y avisa si no salió.
 - **Dos posts automáticos al día, todos los días (también el domingo)** (decidido con Kazuo el 2 nov 2026):
   - **12:30 · `"franja": "jmusic"`** · J-music y cultura japonesa: bandas, idols, openings, giras por
     Latinoamérica, curiosidades. Es lo que mejor funciona en la cuenta (Atarashii Gakko ×20, BBTS ×3, Yokai ×3).
@@ -195,7 +202,7 @@ tráiler oficial** y revisa el resultado con cuidado (hojas de fotogramas con ff
 
 Los domingos hay dos resúmenes **además** de los dos posts normales del día (referencia: Recoanii, «Noticias de
 anime destacadas de la semana»): **15:00 → J-music de la semana** y **21:00 → anime de la semana**, con el estilo de
-JSpace. Los hace la rutina «JSpace · extras».
+JSpace. Los arma la rutina de las 8:00 y salen solo si el grupo los aprueba.
 
 1. Junta las 5-8 noticias más destacadas de la semana (lunes a domingo) de esa franja: las que publicó JSpace
    (`noticias/publicadas.md`) y las más grandes que no se publicaron (búscalas). Sin rumores.
