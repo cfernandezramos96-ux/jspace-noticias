@@ -121,10 +121,14 @@ async function publica(carpeta) {
   const urls = [], urlDe = {};
   for (const f of slides) { const u = await sube(join(carpeta, f)); urls.push(u); urlDe[f] = u; }
 
+  // Collab de Instagram: noticia.json puede traer "colaboradores": ["elkazuotv"] (les llega la invitación)
+  let colab = [];
+  try { colab = JSON.parse(readFileSync(join(carpeta, 'noticia.json'), 'utf8')).colaboradores || []; } catch {}
+  const conColab = colab.length ? { collaborators: JSON.stringify(colab.map((u) => u.replace(/^@/, ''))) } : {};
   const media = (url, extra) => url.endsWith('.mp4') ? { media_type: 'VIDEO', video_url: url, ...extra } : { image_url: url, ...extra };
   let contenedor;
   if (slides.length === 1) {
-    contenedor = (await api('POST', `${USER}/media`, media(urls[0], { caption: leyenda }))).id;
+    contenedor = (await api('POST', `${USER}/media`, media(urls[0], { caption: leyenda, ...conColab }))).id;
   } else {
     const hijos = [];
     for (let i = 0; i < urls.length; i++) {
@@ -132,7 +136,7 @@ async function publica(carpeta) {
       await listo(id, `slide ${i + 1}`);
       hijos.push(id);
     }
-    contenedor = (await api('POST', `${USER}/media`, { media_type: 'CAROUSEL', children: hijos.join(','), caption: leyenda })).id;
+    contenedor = (await api('POST', `${USER}/media`, { media_type: 'CAROUSEL', children: hijos.join(','), caption: leyenda, ...conColab })).id;
   }
   await listo(contenedor, 'post');
   const { id } = await api('POST', `${USER}/media_publish`, { creation_id: contenedor });
