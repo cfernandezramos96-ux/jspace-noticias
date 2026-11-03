@@ -141,7 +141,8 @@ for (const u of updates) {
       } else aviso = '✏️ Recibido, lo corrijo y les mando el preview nuevo.';
     }
     const ruta = adjunto ? await baja(adjunto, u.update_id, 1, chat, m.message_id) : null;
-    if (adjunto && !ruta && !texto.trim()) continue; // solo venía el archivo y no se pudo bajar (ya se les avisó)
+    // el archivo no se pudo bajar (ya se les avisó): esperamos a que lo vuelvan a mandar, con su mensaje
+    if (adjunto && !ruta) continue;
     escribe(`${u.update_id}.json`, {
       id: u.update_id, tipo: 'instruccion', sobre, chat, de: quien, texto, links,
       archivos: ruta ? [ruta] : [],
