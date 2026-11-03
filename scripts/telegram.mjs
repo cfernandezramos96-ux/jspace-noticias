@@ -63,22 +63,56 @@ for (const u of updates) {
   }
   const links = m.text.match(/https?:\/\/\S+/g) || [];
   const codigos = (m.text.toUpperCase().match(/\b[AB][1-3]\b/g) || []);
-  if (!links.length && !codigos.length) {
-    // órdenes en texto sobre el último preview: «publícalo ya», «cancela»
-    const t = m.text.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
-    const accion = /\b(publica|publicalo|sacalo|subelo|dale|mandalo)\b.*\bya\b|^ya\b/.test(t) ? 'ya'
-      : /\b(cancela|cancelalo|descarta|descartalo|no lo publiques)\b/.test(t) ? 'no' : null;
-    if (accion) {
-      const id = ultimoPreview();
-      if (id) await decide(accion, id, m.from?.first_name || 'alguien', chat, m.message_id);
-      else await tg('sendMessage', { chat_id: chat, reply_to_message_id: m.message_id, text: 'No tengo ningún post pendiente para eso.' });
-      continue;
-    }
-    if (/^\/(start|ayuda|help)/.test(m.text)) await tg('sendMessage', { chat_id: chat, text: '👹 Mándame el link de una noticia o los códigos de la lista del día (por ejemplo A2 B1) y lo armo para JSpace. Antes de publicar les mando el preview para que alguno lo apruebe.' });
+  const quien = m.from?.first_name || 'alguien';
+  // ¿le hablan al bot? respondiendo a un mensaje suyo, mencionándolo o por privado
+  const respuesta = m.reply_to_message?.from?.username === yo.username;
+  const mencion = m.text.toLowerCase().includes(`@${yo.username.toLowerCase()}`);
+  const privado = m.chat.type === 'private';
+  const t = m.text.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  // atajos cortos sobre el último preview: «publícalo ya», «cancela» (los mensajes largos van a la rutina)
+  const corto = t.split(/\s+/).length <= 6 && !links.length;
+  const accion = !corto ? null
+    : /\b(publica|publicalo|sacalo|subelo|dale|mandalo)\b.*\bya\b|^ya\b/.test(t) ? 'ya'
+    : /\b(cancela|cancelalo|descarta|descartalo|no lo publiques)\b/.test(t) ? 'no' : null;
+  if (accion) {
+    const id = sobreQue(m) || ultimoPreview();
+    if (id) await decide(accion, id, quien, chat, m.message_id);
+    else await tg('sendMessage', { chat_id: chat, reply_to_message_id: m.message_id, text: 'No tengo ningún post pendiente para eso.' });
     continue;
   }
+  if (/^\/(start|ayuda|help)/.test(m.text)) {
+    await tg('sendMessage', { chat_id: chat, text: '👹 Mándenme el link de una noticia o los códigos de la lista del día (A2, B1…) y lo armo para JSpace; antes de publicar les mando el preview para que alguno lo apruebe. Para pedir cambios, respondan al preview y explíquenme lo que quieren con sus palabras. Para cualquier otra cosa, menciónenme o respóndanme.' });
+    continue;
+  }
+  if (respuesta || mencion || (privado && !links.length && !codigos.length)) {
+    // instrucción libre: la lee la rutina (Claude) tal cual, con el post al que se refiere
+    const directo = sobreQue(m); // respondió a un preview concreto
+    const sobre = directo || ultimoPreview() || null;
+    let aviso = '✏️ Recibido, lo reviso y les respondo.';
+    if (directo) {
+      const prev = lee(`${sobre}.preview.enviado.json`);
+      const carpeta = join(RAIZ, prev.carpeta);
+      if (existsSync(join(carpeta, 'publicado.json'))) aviso = '✏️ Recibido. Ojo: ese post ya salió, así que no puedo cambiar las imágenes; lo reviso y les digo qué se puede hacer.';
+      else if (existsSync(join(DIR, `${sobre}.aprobado.json`)) && lee(`${sobre}.aprobado.json`).modo === 'cola') {
+        // si lo cambian, vuelve a necesitar aprobación
+        unlinkSync(join(DIR, `${sobre}.aprobado.json`));
+        if (existsSync(join(carpeta, 'programado.json'))) unlinkSync(join(carpeta, 'programado.json'));
+        aviso = '✏️ Recibido, lo corrijo. Lo saqué de la cola: les mando el preview nuevo para aprobarlo otra vez.';
+      } else aviso = '✏️ Recibido, lo corrijo y les mando el preview nuevo.';
+    }
+    escribe(`${u.update_id}.json`, {
+      id: u.update_id, tipo: 'instruccion', sobre, chat, de: quien, texto: m.text, links,
+      responde_a: m.reply_to_message?.text || m.reply_to_message?.caption || null,
+      fecha: new Date(m.date * 1000).toISOString(),
+    });
+    await tg('sendMessage', { chat_id: chat, reply_to_message_id: m.message_id, text: aviso });
+    console.log(`instrucción guardada: ${u.update_id}${sobre ? ` (sobre ${sobre})` : ''}`);
+    nuevas++;
+    continue;
+  }
+  if (!links.length && !codigos.length) continue; // charla del grupo
   escribe(`${u.update_id}.json`, {
-    id: u.update_id, chat, de: m.from?.first_name || '', texto: m.text, links, codigos,
+    id: u.update_id, tipo: 'noticia', chat, de: quien, texto: m.text, links, codigos,
     fecha: new Date(m.date * 1000).toISOString(),
   });
   await tg('sendMessage', { chat_id: chat, reply_to_message_id: m.message_id, text: '📥 Recibido. Lo armo y les mando el preview para que lo aprueben.' });
@@ -91,6 +125,17 @@ writeFileSync(ESTADO, JSON.stringify(estado, null, 2));
 function ultimoPreview() {
   const ids = readdirSync(DIR).filter((n) => /^\d+\.preview\.enviado\.json$/.test(n)).map((n) => Number(n.split('.')[0])).sort((a, b) => b - a);
   return ids.find((id) => !existsSync(join(DIR, `${id}.descartado.json`)) && !existsSync(join(RAIZ, lee(`${id}.preview.enviado.json`).carpeta, 'publicado.json')));
+}
+
+// el preview al que responde un mensaje (al álbum o al texto con los botones)
+function sobreQue(m) {
+  const r = m.reply_to_message?.message_id;
+  if (!r) return null;
+  for (const n of readdirSync(DIR).filter((x) => /^\d+\.preview\.enviado\.json$/.test(x))) {
+    const p = lee(n);
+    if (p.mensaje === r || (p.album || []).includes(r)) return Number(n.split('.')[0]);
+  }
+  return null;
 }
 
 // ✅ / 🚀 / ❌ sobre un preview (botones o texto)
@@ -146,19 +191,26 @@ for (const f of readdirSync(DIR).filter((n) => /^\d+\.preview\.json$/.test(n))) 
   const chat = pedido?.chat || PERMITIDOS[0];
   if (!chat) continue;
   const carpeta = join(RAIZ, prev.carpeta);
+  // un preview nuevo de un post ya aprobado (lo cambiaron): sale de la cola y hay que aprobarlo otra vez
+  if (existsSync(join(DIR, `${id}.aprobado.json`)) && lee(`${id}.aprobado.json`).modo === 'cola') {
+    unlinkSync(join(DIR, `${id}.aprobado.json`));
+    if (existsSync(join(carpeta, 'programado.json'))) unlinkSync(join(carpeta, 'programado.json'));
+  }
   // las mismas slides que publicar.mjs (el MP4 de un slide manda sobre su JPG)
   const porNum = new Map();
   for (const a of readdirSync(carpeta).filter((n) => /^slide-\d+\.(jpg|mp4)$/.test(n)).sort()) {
     const n = a.match(/\d+/)[0]; if (!porNum.has(n) || a.endsWith('.mp4')) porNum.set(n, a);
   }
   const slides = [...porNum.keys()].sort().map((n) => porNum.get(n));
+  const album = []; // ids de las fotos, para saber a qué post responden
   for (let i = 0; i < slides.length; i += 10) { // un álbum de Telegram lleva 10 como máximo
     const tanda = slides.slice(i, i + 10);
     const archivos = Object.fromEntries(tanda.map((a, j) => [`f${j}`, join(carpeta, a)]));
-    await tg('sendMediaGroup', {
+    const fotos = await tg('sendMediaGroup', {
       chat_id: chat,
       media: tanda.map((a, j) => ({ type: a.endsWith('.mp4') ? 'video' : 'photo', media: `attach://f${j}` })),
     }, archivos);
+    album.push(...fotos.map((x) => x.message_id));
   }
   const leyenda = existsSync(join(carpeta, 'leyenda.txt')) ? readFileSync(join(carpeta, 'leyenda.txt'), 'utf8').trim() : '(sin leyenda)';
   const texto = `👀 Preview: ${prev.titular || basename(carpeta)}\n🕒 Si lo aprueban sale el ${hora(prev.hora)} (${prev.franja === 'jmusic' ? 'J-music' : 'anime'}), en Instagram y Facebook.\n${prev.nota ? `📝 ${prev.nota}\n` : ''}\n—— Leyenda ——\n${leyenda}`;
@@ -170,7 +222,7 @@ for (const f of readdirSync(DIR).filter((n) => /^\d+\.preview\.json$/.test(n))) 
       { text: '❌ Descartar', callback_data: `no:${id}` },
     ]] },
   });
-  escribe(`${id}.preview.enviado.json`, { ...prev, mensaje: msj.message_id });
+  escribe(`${id}.preview.enviado.json`, { ...prev, mensaje: msj.message_id, album });
   unlinkSync(join(DIR, f));
   console.log(`preview enviado: ${id} (${slides.length} slides)`);
   movimiento = true;
