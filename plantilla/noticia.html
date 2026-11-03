@@ -97,8 +97,47 @@
     const T = el('div', 'abs black centro', { lineHeight: '1.0', color: tx }, rico(S.titulo)); encaja(T, S.tamano || 92, 400, 56); bl.push([T, S.etiqueta ? 8 : 26]);
     if (S.subtitulo) { const e = el('div', 'abs black centro', { lineHeight: '1.1', color: tx }); e.innerHTML = rico(S.subtitulo); encaja(e, 40, 110, 28); bl.push([e, 14]); }
     if (S.texto) { const e = el('div', 'abs medium centro', { lineHeight: '1.25', color: tx }); e.innerHTML = rico(S.texto); encaja(e, 34, 130, 26); bl.push([e, 18]); }
-    if (D.total > 1) { const e = el('div', 'abs black centro', { fontSize: '26px', color: tx }, 'Desliza <span class="r">→</span>'); bl.push([e, 28]); }
+    if (D.total > 1 && D.indice === 1) { const e = el('div', 'abs black centro', { fontSize: '26px', color: tx }, 'Desliza <span class="r">→</span>'); bl.push([e, 28]); }
     if (arriba) apila(bl, { top: 64 }); else apila(bl, { bottom: H - 60 });
+  } else if (tipo === 'historia') {
+    // contar la noticia en varias slides con poco texto (referencia: Tanuki Media): foto a sangre, UNA frase abajo,
+    // opcionalmente una fila de círculos con personajes o portadas, y el logo pequeño al pie
+    const f = el('div', 'foto', { left: '0', top: '0', width: W + 'px', height: H + 'px' });
+    const im = document.createElement('img'); im.src = src(S.imagen); im.style.objectPosition = S.encuadre || '50% 30%'; f.appendChild(im);
+    el('div', 'abs', { left: '0', top: '0', width: W + 'px', height: H + 'px',
+      background: `linear-gradient(180deg, rgba(10,10,10,0) 45%, rgba(10,10,10,${0.85 * (S.sombra ?? 1)}) 70%, rgba(10,10,10,${0.97 * (S.sombra ?? 1)}) 88%)` });
+    const bl = [];
+    if (S.circulos?.length) {
+      const n = S.circulos.length, d = n > 4 ? 140 : 170, gap = 14, fila = el('div', 'abs', { left: '0', width: W + 'px', height: d + 'px', display: 'flex', justifyContent: 'center', gap: gap + 'px' });
+      S.circulos.forEach((c) => { const k = document.createElement('div'); Object.assign(k.style, { width: d + 'px', height: d + 'px', borderRadius: '50%', overflow: 'hidden', border: '6px solid #fff', boxShadow: '0 10px 30px rgba(0,0,0,.45)', flex: '0 0 auto' });
+        const i = document.createElement('img'); i.src = src(c); Object.assign(i.style, { width: '100%', height: '100%', objectFit: 'cover' }); k.appendChild(i); fila.appendChild(k); });
+      bl.push([fila, 0]);
+    }
+    const T = el('div', 'abs black centro', { lineHeight: '1.08' }, rico(S.texto)); encaja(T, S.tamano || 54, 330, 34); bl.push([T, bl.length ? 34 : 0]);
+    if (S.nota) { const e = el('div', 'abs medium centro', { fontSize: '26px', opacity: '.85' }, '· ' + rico(S.nota) + ' ·'); bl.push([e, 16]); }
+    apila(bl, { bottom: H - 150 });
+    logo(44, H - 44 - 60);
+  } else if (tipo === 'semanal') {
+    // portada del resumen de los domingos (referencia: Recoanii): titular enorme apilado a la izquierda sobre la imagen
+    const f = el('div', 'foto', { left: '0', top: '0', width: W + 'px', height: H + 'px' });
+    const im = document.createElement('img'); im.src = src(S.imagen); im.style.objectPosition = S.encuadre || '70% 30%'; f.appendChild(im);
+    el('div', 'abs', { left: '0', top: '0', width: W + 'px', height: H + 'px',
+      background: 'linear-gradient(90deg, rgba(10,10,10,.92) 0%, rgba(10,10,10,.75) 38%, rgba(10,10,10,0) 70%), linear-gradient(180deg, rgba(10,10,10,0) 70%, rgba(10,10,10,.8) 100%)' });
+    logo(64, 56).style.left = '90px';
+    const T = el('div', 'abs black', { left: '90px', width: '640px', lineHeight: '0.98' }, rico(S.titulo || 'Lo más\n**destacado**\nde la semana')); encaja(T, S.tamano || 104, 560, 60);
+    const G = el('div', 'abs black r', { left: '90px', lineHeight: '0.95', whiteSpace: 'nowrap' }, rico(S.tema || 'Anime')); encaja(G, 150, 170, 80);
+    const R = el('div', 'abs medium', { left: '94px', fontSize: '32px' }, rico(S.rango || ''));
+    apila([[T, 0], [G, 10], [R, 22]], { bottom: H - 150 });
+    const e = el('div', 'abs black', { left: '94px', top: (H - 110) + 'px', fontSize: '26px' }, 'Desliza <span class="r">→</span>');
+  } else if (tipo === 'mosaico') {
+    // cierre del resumen semanal: todas las imágenes de la semana en rejilla
+    rayos();
+    const imgs = (S.imagenes || []).slice(0, 8), cols = 2, filas = Math.ceil(imgs.length / cols), gap = 14;
+    const top = 150, alto = H - top - 190, w = (900 - gap) / 2, h = (alto - gap * (filas - 1)) / filas;
+    imgs.forEach((f, i) => { const c = el('div', 'foto', { left: (90 + (i % cols) * (w + gap)) + 'px', top: (top + Math.floor(i / cols) * (h + gap)) + 'px', width: w + 'px', height: h + 'px', borderRadius: '14px' });
+      const im = document.createElement('img'); im.src = src(f); c.appendChild(im); });
+    cabecera();
+    el('div', 'abs black centro', { top: (H - 150) + 'px', fontSize: '40px' }, rico(S.texto || '¿Cuál fue tu **favorita**?'));
   } else if (tipo === 'poster') {
     // la imagen completa (contain) sobre ella misma desenfocada y oscurecida: así no se corta nada del póster
     const fondo = el('div', 'foto', { left: '-80px', top: '-80px', width: (W + 160) + 'px', height: (H + 160) + 'px', filter: 'blur(40px) brightness(.45)' });

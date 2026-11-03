@@ -129,6 +129,41 @@ la noticia entera en 6-10 palabras («Bocchi the Rock! tendrá nueva película e
 serie en rojo. Una línea debajo con el dato que engancha. Interiores: titular de 2-5 palabras y ≤ 30 palabras
 de texto. Sin emojis en las slides.
 
+### Contar la noticia en varias slides (tipo `historia`, referencia: Tanuki Media)
+
+Cuando la noticia tiene más que contar (un aniversario, un disco con varios adelantos, un anuncio con contexto),
+en vez de slides de `texto` usa **varias slides `historia`: foto a sangre + UNA frase**, máximo ~20 palabras,
+mayúsculas, con 1-3 palabras clave en rojo. Cada slide es un dato nuevo y la historia se cuenta deslizando.
+Así eran los mejores carruseles de JSpace (Atarashii Gakko, 180 likes: portada → «el 8 de mayo se lanzó
+"Chanka Chanka"» → «junto con "OI AG!"… en Lollapalooza Berlín» → MV → cierre).
+
+```json
+{ "tipo": "historia", "imagen": "foto.jpg", "encuadre": "50% 30%",
+  "texto": "Tezuka es conocido por **mangas icónicos** como Astro Boy y Black Jack",
+  "circulos": ["astro.jpg", "kimba.jpg", "dororo.jpg"], "nota": "Osamu Tezuka | 3 de noviembre de 1928" }
+```
+- `circulos` (opcional, hasta 5): personajes, portadas o miembros de la banda en círculos sobre la frase.
+- `nota` (opcional): una línea pequeña con fecha o nombre.
+- Estructura: `portada` → 2-4 `historia` (o `poster` / video) → `cierre`. Una imagen distinta en cada slide.
+
+### Resumen de la semana (domingos)
+
+El domingo las dos franjas son resúmenes (referencia: Recoanii, «Noticias de anime destacadas de la semana»):
+**12:30 → J-music de la semana** y **18:30 → anime de la semana**, con el estilo de JSpace.
+
+1. Junta las 5-8 noticias más destacadas de la semana (lunes a domingo) de esa franja: las que publicó JSpace
+   (`noticias/publicadas.md`) y las más grandes que no se publicaron (búscalas). Sin rumores.
+2. Slides: `semanal` → una `portada` por noticia (imagen oficial, titular de 6-10 palabras, una línea con el dato;
+   sin `etiqueta`) → `mosaico` con las imágenes de la semana → `cierre`. Máximo 11 slides.
+   ```json
+   { "tipo": "semanal", "imagen": "la-mejor.jpg", "encuadre": "65% 30%",
+     "titulo": "Lo más\n**destacado**\nde la semana", "tema": "Anime", "rango": "Semana 45 · 2 al 8 de noviembre" }
+   { "tipo": "mosaico", "imagenes": ["n1.jpg", "n2.jpg", "n3.jpg", "n4.jpg"], "texto": "¿Cuál fue tu **favorita**?" }
+   ```
+   En `semanal`, `tema` es «Anime» o «J-Music». Elige como fondo la imagen más llamativa de la semana.
+3. Leyenda: «🔥 Lo más destacado de la semana en el anime/la J-music» + una línea por noticia con un emoji +
+   «¿Cuál fue tu favorita? 👇» + 5 hashtags. `"franja"` igual que el día (jmusic o anime), `"formato": "semanal"`.
+
 ## 5. Render y revisión
 
 ```bash
