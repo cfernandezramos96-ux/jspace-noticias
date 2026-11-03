@@ -52,25 +52,64 @@ let nuevas = 0; // trabajo nuevo para la rutina: si es > 0, el workflow la despi
 const updates = await tg('getUpdates', { offset: estado.offset, timeout: Number(process.env.ESPERA || 0), allowed_updates: ['message', 'callback_query'] });
 let movimiento = updates.length > 0;
 console.log(`bot @${yo.username} · ${updates.length} mensajes nuevos (pendientes según Telegram: ${hook.pending_update_count})`);
+// videos y fotos que mandan al chat (el tráiler oficial, un póster): el bot los baja a noticias/entrada/
+const albumes = {}; // media_group_id → id del pedido
+function adjuntoDe(m) {
+  if (m.video) return { ...m.video, ext: 'mp4' };
+  if (m.animation) return { ...m.animation, ext: 'mp4' };
+  if (m.document && /^(video|image)\//.test(m.document.mime_type || '')) {
+    return { ...m.document, ext: (m.document.file_name || '').split('.').pop().toLowerCase() || (m.document.mime_type.startsWith('video') ? 'mp4' : 'jpg') };
+  }
+  if (m.photo?.length) return { ...m.photo.at(-1), ext: 'jpg' }; // la foto más grande
+  return null;
+}
+async function baja(adjunto, id, n, chat, responderA) {
+  const mb = (adjunto.file_size || 0) / 1e6;
+  if (mb > 20) {
+    // los bots de Telegram solo pueden bajar hasta 20 MB
+    await tg('sendMessage', { chat_id: chat, reply_to_message_id: responderA, text: `⚠️ Ese archivo pesa ${mb.toFixed(0)} MB y Telegram solo me deja bajar hasta 20 MB. Mándenlo como video normal (no como archivo), que Telegram lo comprime, o recórtenlo.` });
+    return null;
+  }
+  const f = await tg('getFile', { file_id: adjunto.file_id });
+  const r = await fetch(`https://api.telegram.org/file/bot${TOKEN}/${f.file_path}`);
+  if (!r.ok) throw new Error(`no pude bajar el archivo (${r.status})`);
+  const nombre = `${id}-${n}.${adjunto.ext}`;
+  writeFileSync(join(DIR, nombre), Buffer.from(await r.arrayBuffer()));
+  console.log(`archivo bajado: ${nombre} (${mb.toFixed(1)} MB)`);
+  return `noticias/entrada/${nombre}`;
+}
+
 for (const u of updates) {
   estado.offset = u.update_id + 1;
   if (u.callback_query) { await boton(u.callback_query); continue; }
-  const m = u.message; if (!m?.text) continue;
+  const m = u.message; if (!m) continue;
+  // el texto puede venir como pie de un video o una foto
+  const texto = m.text ?? m.caption ?? '';
+  const adjunto = adjuntoDe(m);
+  if (!texto && !adjunto) continue;
   const chat = String(m.chat.id);
   if (!PERMITIDOS.includes(chat)) {
     console.log(`chat no autorizado: ${chat} (${m.chat.title || m.chat.username || m.chat.first_name || ''}) — añádelo a TELEGRAM_CHAT_ID para usarlo`);
     continue;
   }
-  const links = m.text.match(/https?:\/\/\S+/g) || [];
-  const codigos = (m.text.toUpperCase().match(/\b[AB][1-3]\b/g) || []);
+  // un álbum llega como varios mensajes: las fotos o videos que siguen al primero se suman a su pedido
+  if (m.media_group_id && albumes[m.media_group_id]) {
+    const pid = albumes[m.media_group_id];
+    const pedido = lee(`${pid}.json`);
+    const ruta = await baja(adjunto, pid, (pedido.archivos || []).length + 1, chat, m.message_id);
+    if (ruta) { pedido.archivos = [...(pedido.archivos || []), ruta]; escribe(`${pid}.json`, pedido); }
+    continue;
+  }
+  const links = texto.match(/https?:\/\/\S+/g) || [];
+  const codigos = (texto.toUpperCase().match(/\b[AB][1-3]\b/g) || []);
   const quien = m.from?.first_name || 'alguien';
   // ¿le hablan al bot? respondiendo a un mensaje suyo, mencionándolo o por privado
   const respuesta = m.reply_to_message?.from?.username === yo.username;
-  const mencion = m.text.toLowerCase().includes(`@${yo.username.toLowerCase()}`);
+  const mencion = texto.toLowerCase().includes(`@${yo.username.toLowerCase()}`);
   const privado = m.chat.type === 'private';
-  const t = m.text.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  const t = texto.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
   // atajos cortos sobre el último preview: «publícalo ya», «cancela» (los mensajes largos van a la rutina)
-  const corto = t.split(/\s+/).length <= 6 && !links.length;
+  const corto = t.split(/\s+/).length <= 6 && !links.length && !adjunto;
   const accion = !corto ? null
     : /\b(publica|publicalo|sacalo|subelo|dale|mandalo)\b.*\bya\b|^ya\b/.test(t) ? 'ya'
     : /\b(cancela|cancelalo|descarta|descartalo|no lo publiques)\b/.test(t) ? 'no' : null;
@@ -80,15 +119,16 @@ for (const u of updates) {
     else await tg('sendMessage', { chat_id: chat, reply_to_message_id: m.message_id, text: 'No tengo ningún post pendiente para eso.' });
     continue;
   }
-  if (/^\/(start|ayuda|help)/.test(m.text)) {
-    await tg('sendMessage', { chat_id: chat, text: '👹 Mándenme el link de una noticia o los códigos de la lista del día (A2, B1…) y lo armo para JSpace; antes de publicar les mando el preview para que alguno lo apruebe. Para pedir cambios, respondan al preview y explíquenme lo que quieren con sus palabras. Para cualquier otra cosa, menciónenme o respóndanme.' });
+  if (/^\/(start|ayuda|help)/.test(texto)) {
+    await tg('sendMessage', { chat_id: chat, text: '👹 Mándenme el link de una noticia o los códigos de la lista del día (A2, B1…) y lo armo para JSpace; antes de publicar les mando el preview para que alguno lo apruebe. Para pedir cambios, respondan al preview y explíquenme lo que quieren con sus palabras. Si tienen el tráiler o una imagen oficial, mándenmelos respondiéndome o mencionándome (hasta 20 MB). Para cualquier otra cosa, menciónenme o respóndanme.' });
     continue;
   }
-  if (respuesta || mencion || (privado && !links.length && !codigos.length)) {
-    // instrucción libre: la lee la rutina (Claude) tal cual, con el post al que se refiere
+  const aMi = respuesta || mencion || privado;
+  if (aMi && !(privado && (links.length || codigos.length) && !adjunto)) {
+    // instrucción libre: la lee la rutina (Claude) tal cual, con el post al que se refiere y los archivos que manden
     const directo = sobreQue(m); // respondió a un preview concreto
     const sobre = directo || ultimoPreview() || null;
-    let aviso = '✏️ Recibido, lo reviso y les respondo.';
+    let aviso = adjunto ? '🎬 Recibido el archivo, lo reviso y les respondo.' : '✏️ Recibido, lo reviso y les respondo.';
     if (directo) {
       const prev = lee(`${sobre}.preview.enviado.json`);
       const carpeta = join(RAIZ, prev.carpeta);
@@ -100,21 +140,28 @@ for (const u of updates) {
         aviso = '✏️ Recibido, lo corrijo. Lo saqué de la cola: les mando el preview nuevo para aprobarlo otra vez.';
       } else aviso = '✏️ Recibido, lo corrijo y les mando el preview nuevo.';
     }
+    const ruta = adjunto ? await baja(adjunto, u.update_id, 1, chat, m.message_id) : null;
+    if (adjunto && !ruta && !texto.trim()) continue; // solo venía el archivo y no se pudo bajar (ya se les avisó)
     escribe(`${u.update_id}.json`, {
-      id: u.update_id, tipo: 'instruccion', sobre, chat, de: quien, texto: m.text, links,
+      id: u.update_id, tipo: 'instruccion', sobre, chat, de: quien, texto, links,
+      archivos: ruta ? [ruta] : [],
       responde_a: m.reply_to_message?.text || m.reply_to_message?.caption || null,
       fecha: new Date(m.date * 1000).toISOString(),
     });
+    if (m.media_group_id) albumes[m.media_group_id] = u.update_id;
     await tg('sendMessage', { chat_id: chat, reply_to_message_id: m.message_id, text: aviso });
-    console.log(`instrucción guardada: ${u.update_id}${sobre ? ` (sobre ${sobre})` : ''}`);
+    console.log(`instrucción guardada: ${u.update_id}${sobre ? ` (sobre ${sobre})` : ''}${ruta ? ` con ${ruta}` : ''}`);
     nuevas++;
     continue;
   }
-  if (!links.length && !codigos.length) continue; // charla del grupo
+  if (!links.length && !codigos.length) continue; // charla del grupo (y fotos o videos que no son para el bot)
+  const ruta = adjunto ? await baja(adjunto, u.update_id, 1, chat, m.message_id) : null;
   escribe(`${u.update_id}.json`, {
-    id: u.update_id, tipo: 'noticia', chat, de: quien, texto: m.text, links, codigos,
+    id: u.update_id, tipo: 'noticia', chat, de: quien, texto, links, codigos,
+    archivos: ruta ? [ruta] : [],
     fecha: new Date(m.date * 1000).toISOString(),
   });
+  if (m.media_group_id) albumes[m.media_group_id] = u.update_id;
   await tg('sendMessage', { chat_id: chat, reply_to_message_id: m.message_id, text: '📥 Recibido. Lo armo y les mando el preview para que lo aprueben.' });
   console.log(`entrada guardada: ${u.update_id}`);
   nuevas++;
