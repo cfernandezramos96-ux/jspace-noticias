@@ -104,6 +104,8 @@
     // opcionalmente una fila de círculos con personajes o portadas, y el logo pequeño al pie
     const f = el('div', 'foto', { left: '0', top: '0', width: W + 'px', height: H + 'px' });
     const im = document.createElement('img'); im.src = src(S.imagen); im.style.objectPosition = S.encuadre || '50% 30%'; f.appendChild(im);
+    // caber: la foto entera (sin recortar caras) arriba y el resto en negro con degradado para el texto
+    if (S.caber) { f.style.background = '#0A0A0A'; im.style.objectFit = 'contain'; im.style.objectPosition = '50% ' + (S.caber === true ? '0%' : S.caber); }
     el('div', 'abs', { left: '0', top: '0', width: W + 'px', height: H + 'px',
       background: `linear-gradient(180deg, rgba(10,10,10,0) 45%, rgba(10,10,10,${0.85 * (S.sombra ?? 1)}) 70%, rgba(10,10,10,${0.97 * (S.sombra ?? 1)}) 88%)` });
     const bl = [];
