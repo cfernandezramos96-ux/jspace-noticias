@@ -36,6 +36,32 @@ const tg = async (metodo, params, archivos) => {
   return j.result;
 };
 const lee = (f) => JSON.parse(readFileSync(join(DIR, f), 'utf8'));
+// manda archivos al chat en álbumes: 10 por álbum como máximo y menos de 50 MB por envío (límite de los bots);
+// un archivo de más de 49 MB no se puede mandar y vuelve en `pesados`
+async function mandaArchivos(chat, carpeta, nombres, comoDocumento = false) {
+  const MB = 1024 * 1024, ids = [], pesados = [], tandas = [];
+  let tanda = [], suma = 0;
+  for (const a of nombres) {
+    const peso = statSync(join(carpeta, a)).size;
+    if (peso > 49 * MB) { pesados.push(a); continue; }
+    if (tanda.length === 10 || suma + peso > 45 * MB) { tandas.push(tanda); tanda = []; suma = 0; }
+    tanda.push(a); suma += peso;
+  }
+  if (tanda.length) tandas.push(tanda);
+  const tipo = (a) => comoDocumento ? 'document' : a.endsWith('.mp4') ? 'video' : 'photo';
+  for (const t of tandas) {
+    if (t.length === 1) { // un álbum necesita 2 o más
+      const metodo = { document: 'sendDocument', video: 'sendVideo', photo: 'sendPhoto' }[tipo(t[0])];
+      const r = await tg(metodo, { chat_id: chat }, { [tipo(t[0])]: join(carpeta, t[0]) }); // el archivo va en el campo del mismo nombre
+      ids.push(r.message_id);
+    } else {
+      const r = await tg('sendMediaGroup', { chat_id: chat, media: t.map((a, j) => ({ type: tipo(a), media: `attach://f${j}` })) },
+        Object.fromEntries(t.map((a, j) => [`f${j}`, join(carpeta, a)])));
+      ids.push(...r.map((x) => x.message_id));
+    }
+  }
+  return { ids, pesados };
+}
 // las mismas slides que publicar.mjs (el MP4 de un slide manda sobre su JPG)
 const slidesDe = (carpeta) => {
   const porNum = new Map();
@@ -247,13 +273,7 @@ async function decide(accion, id, quien, chat, responderA) {
     escribe(`${id}.manual.json`, { por: quien, fecha, carpeta: prev.carpeta });
     await decir(`🎵 ${quien} lo sube a mano con canción: no se publica solo. Ahí van los archivos en calidad completa (en orden) y la leyenda para copiar. Si cambian de idea, toquen aquí.`,
       [{ text: '✅ Aprobar', callback_data: `ok:${id}` }, { text: '🚀 Publicar ya', callback_data: `ya:${id}` }]);
-    const slides = slidesDe(carpeta), pesados = [];
-    const caben = slides.filter((a) => statSync(join(carpeta, a)).size < 49 * 1024 * 1024 || !pesados.push(a)); // límite de los bots: 50 MB
-    for (let i = 0; i < caben.length; i += 10) {
-      const tanda = caben.slice(i, i + 10);
-      await tg('sendMediaGroup', { chat_id: chat, media: tanda.map((a, j) => ({ type: 'document', media: `attach://f${j}` })) },
-        Object.fromEntries(tanda.map((a, j) => [`f${j}`, join(carpeta, a)])));
-    }
+    const { pesados } = await mandaArchivos(chat, carpeta, slidesDe(carpeta), true);
     if (pesados.length) await tg('sendMessage', { chat_id: chat, text: `⚠️ ${pesados.join(', ')} pesa más de 50 MB y no me deja mandarlo: es el video que subieron a Cloudinary, úsenlo de ahí.` });
     const leyenda = existsSync(join(carpeta, 'leyenda.txt')) ? readFileSync(join(carpeta, 'leyenda.txt'), 'utf8').trim() : '';
     if (leyenda) await tg('sendMessage', { chat_id: chat, text: leyenda.slice(0, 4000) });
@@ -278,16 +298,8 @@ for (const f of readdirSync(DIR).filter((n) => /^\d+\.preview\.json$/.test(n))) 
   }
   if (existsSync(join(DIR, `${id}.manual.json`))) unlinkSync(join(DIR, `${id}.manual.json`)); // post cambiado: se decide otra vez
   const slides = slidesDe(carpeta);
-  const album = []; // ids de las fotos, para saber a qué post responden
-  for (let i = 0; i < slides.length; i += 10) { // un álbum de Telegram lleva 10 como máximo
-    const tanda = slides.slice(i, i + 10);
-    const archivos = Object.fromEntries(tanda.map((a, j) => [`f${j}`, join(carpeta, a)]));
-    const fotos = await tg('sendMediaGroup', {
-      chat_id: chat,
-      media: tanda.map((a, j) => ({ type: a.endsWith('.mp4') ? 'video' : 'photo', media: `attach://f${j}` })),
-    }, archivos);
-    album.push(...fotos.map((x) => x.message_id));
-  }
+  const { ids: album, pesados } = await mandaArchivos(chat, carpeta, slides); // album: para saber a qué post responden
+  if (pesados.length) await tg('sendMessage', { chat_id: chat, text: `⚠️ No pude mandar ${pesados.join(', ')} (pasa de 50 MB, el límite de Telegram), pero sí va en el post.` });
   const leyenda = existsSync(join(carpeta, 'leyenda.txt')) ? readFileSync(join(carpeta, 'leyenda.txt'), 'utf8').trim() : '(sin leyenda)';
   const texto = `👀 Preview: ${prev.titular || basename(carpeta)}\n🕒 Si lo aprueban sale el ${hora(prev.hora)} (${prev.franja === 'jmusic' ? 'J-music' : 'anime'}), en Instagram y Facebook.\n${prev.nota ? `📝 ${prev.nota}\n` : ''}\n—— Leyenda ——\n${leyenda}`;
   const msj = await tg('sendMessage', {
