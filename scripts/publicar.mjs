@@ -208,6 +208,12 @@ async function cuenta() {
   console.log(`cuenta: @${yo.username} · IG_USER_ID=${yo.user_id || yo.id}${yo.account_type ? ` · tipo ${yo.account_type}` : ''}`);
   const lim = await api('GET', `${USER}/content_publishing_limit`, { fields: 'quota_usage,config' }).catch(() => null);
   if (lim?.data?.[0]) console.log(`publicaciones en las últimas 24 h: ${lim.data[0].quota_usage} de ${lim.data[0].config?.quota_total ?? '?'}`);
+  // Facebook: sacar el token de la página y usarlo en una lectura (en la nube convive con el del proxy)
+  try {
+    const { access_token: pt } = await api('GET', PAGINA, { fields: 'access_token' });
+    const p = await api('GET', PAGINA, { fields: 'name', access_token: pt });
+    console.log(`facebook: página «${p.name}» · token de página OK`);
+  } catch (e) { console.log(`facebook: ✗ ${e.message}`); }
 }
 async function renovar() {
   if (FB) return console.log('el token de usuario del sistema no caduca: no hace falta renovarlo');
