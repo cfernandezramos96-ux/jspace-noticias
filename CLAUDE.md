@@ -55,3 +55,7 @@ repite la búsqueda con fuentes nuevas, no recortes la misma. Solo fotos oficial
 Reglas: nunca inventar datos; rumores no se publican; si algo no cuadra, no se publica y se avisa. Los carruseles
 animados de collab ElKazuoTV × JSpace siguen yendo por carrusel-animado, con su propio flujo (estático antes, guion
 literal).
+
+**🎵 Subidos a mano:** si existe `noticias/entrada/<id>.manual.json`, el equipo eligió subir ese post a mano desde la
+app de Instagram para ponerle una canción (la API no lo permite). No lo publiques ni lo metas en cola; cuéntalo como
+publicado al revisar `publicadas.md` para no repetir la noticia.

@@ -8,9 +8,9 @@
 //      que lo publica) y ❌ Descartar. Basta con que uno del chat apruebe.
 //   4. Manda a Telegram los demás resultados que dejó la rutina (<id>.resultado.txt) y los marca enviados.
 // Estados de un pedido en noticias/entrada/: <id>.json → <id>.preview.json → <id>.preview.enviado.json →
-// <id>.aprobado.json ({ modo: 'cola' | 'ya' }) o <id>.descartado.json.
+// <id>.aprobado.json ({ modo: 'cola' | 'ya' }), <id>.descartado.json o <id>.manual.json (🎵 lo suben a mano con canción).
 // Usa TELEGRAM_TOKEN (secreto de GitHub Actions; nunca se imprime). Sin dependencias.
-import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync, renameSync, unlinkSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync, renameSync, unlinkSync, statSync } from 'node:fs';
 import { join, dirname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -36,6 +36,14 @@ const tg = async (metodo, params, archivos) => {
   return j.result;
 };
 const lee = (f) => JSON.parse(readFileSync(join(DIR, f), 'utf8'));
+// las mismas slides que publicar.mjs (el MP4 de un slide manda sobre su JPG)
+const slidesDe = (carpeta) => {
+  const porNum = new Map();
+  for (const a of readdirSync(carpeta).filter((n) => /^slide-\d+\.(jpg|mp4)$/.test(n)).sort()) {
+    const n = a.match(/\d+/)[0]; if (!porNum.has(n) || a.endsWith('.mp4')) porNum.set(n, a);
+  }
+  return [...porNum.keys()].sort().map((n) => porNum.get(n));
+};
 const escribe = (f, datos) => writeFileSync(join(DIR, f), JSON.stringify(datos, null, 2));
 const hora = (iso) => new Date(iso).toLocaleString('es-CO', { timeZone: 'America/Bogota', weekday: 'short', day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' });
 
@@ -112,6 +120,7 @@ for (const u of updates) {
   const corto = t.split(/\s+/).length <= 6 && !links.length && !adjunto;
   const accion = !corto ? null
     : /\b(publica|publicalo|sacalo|subelo|dale|mandalo)\b.*\bya\b|^ya\b/.test(t) ? 'ya'
+    : /\b(lo subo yo|lo publico yo|con cancion)\b/.test(t) ? 'manual'
     : /\b(cancela|cancelalo|descarta|descartalo|no lo publiques)\b/.test(t) ? 'no' : null;
   if (accion) {
     const id = sobreQue(m) || ultimoPreview();
@@ -120,7 +129,7 @@ for (const u of updates) {
     continue;
   }
   if (/^\/(start|ayuda|help)/.test(texto)) {
-    await tg('sendMessage', { chat_id: chat, text: '👹 Mándenme el link de una noticia o los códigos de la lista del día (A2, B1…) y lo armo para JSpace; antes de publicar les mando el preview para que alguno lo apruebe. Para pedir cambios, respondan al preview y explíquenme lo que quieren con sus palabras. Si tienen el tráiler o una imagen oficial, mándenmelos respondiéndome o mencionándome (hasta 20 MB). Para cualquier otra cosa, menciónenme o respóndanme.' });
+    await tg('sendMessage', { chat_id: chat, text: '👹 Mándenme el link de una noticia o los códigos de la lista del día (A2, B1…) y lo armo para JSpace; antes de publicar les mando el preview para que alguno lo apruebe. Si quieren ponerle una canción de Instagram, toquen «🎵 Lo subo yo» y les mando los archivos para subirlo a mano. Para pedir cambios, respondan al preview y explíquenme lo que quieren con sus palabras. Si tienen el tráiler o una imagen oficial, mándenmelos respondiéndome o mencionándome (hasta 20 MB). Para cualquier otra cosa, menciónenme o respóndanme.' });
     continue;
   }
   // un enlace a un video subido (Cloudinary, Drive) es material para un post, no una noticia nueva
@@ -209,6 +218,9 @@ async function decide(accion, id, quien, chat, responderA) {
   if (existsSync(join(DIR, `${id}.descartado.json`))) return no(`Ese lo descartó ${lee(`${id}.descartado.json`).por}.`);
   if (aprobado?.modo === 'ya') return no(`${aprobado.por} ya pidió publicarlo ya: está saliendo.`);
   if (aprobado && accion === 'ok') return no(`Ya lo aprobó ${aprobado.por}.`);
+  const manual = join(DIR, `${id}.manual.json`);
+  if (existsSync(manual) && accion === 'manual') return no(`Ya se lo mandé a ${lee(`${id}.manual.json`).por} para subirlo a mano.`);
+  if (existsSync(manual)) unlinkSync(manual); // cambiaron de idea: vuelve al flujo normal
   const fecha = new Date().toISOString();
   // después de aprobar se puede cambiar de idea: publicar ya o cancelar
   const cambiar = [{ text: '🚀 Publicar ya', callback_data: `ya:${id}` }, { text: '❌ Cancelar', callback_data: `no:${id}` }];
@@ -228,6 +240,24 @@ async function decide(accion, id, quien, chat, responderA) {
     if (aprobado) unlinkSync(join(DIR, `${id}.aprobado.json`));
     escribe(`${id}.descartado.json`, { por: quien, fecha, carpeta: prev.carpeta });
     await decir(`❌ ${aprobado ? 'Cancelado' : 'Descartado'} por ${quien}. No se publica.`);
+  } else if (accion === 'manual') {
+    // la API no pone música de Instagram: sale de la cola y se sube a mano desde la app
+    if (existsSync(join(carpeta, 'programado.json'))) unlinkSync(join(carpeta, 'programado.json'));
+    if (aprobado) unlinkSync(join(DIR, `${id}.aprobado.json`));
+    escribe(`${id}.manual.json`, { por: quien, fecha, carpeta: prev.carpeta });
+    await decir(`🎵 ${quien} lo sube a mano con canción: no se publica solo. Ahí van los archivos en calidad completa (en orden) y la leyenda para copiar. Si cambian de idea, toquen aquí.`,
+      [{ text: '✅ Aprobar', callback_data: `ok:${id}` }, { text: '🚀 Publicar ya', callback_data: `ya:${id}` }]);
+    const slides = slidesDe(carpeta), pesados = [];
+    const caben = slides.filter((a) => statSync(join(carpeta, a)).size < 49 * 1024 * 1024 || !pesados.push(a)); // límite de los bots: 50 MB
+    for (let i = 0; i < caben.length; i += 10) {
+      const tanda = caben.slice(i, i + 10);
+      await tg('sendMediaGroup', { chat_id: chat, media: tanda.map((a, j) => ({ type: 'document', media: `attach://f${j}` })) },
+        Object.fromEntries(tanda.map((a, j) => [`f${j}`, join(carpeta, a)])));
+    }
+    if (pesados.length) await tg('sendMessage', { chat_id: chat, text: `⚠️ ${pesados.join(', ')} pesa más de 50 MB y no me deja mandarlo: es el video que subieron a Cloudinary, úsenlo de ahí.` });
+    const leyenda = existsSync(join(carpeta, 'leyenda.txt')) ? readFileSync(join(carpeta, 'leyenda.txt'), 'utf8').trim() : '';
+    if (leyenda) await tg('sendMessage', { chat_id: chat, text: leyenda.slice(0, 4000) });
+    await tg('sendMessage', { chat_id: chat, text: 'Recuerden subirlo también en Facebook (sin la slide de cierre) si lo quieren allá.' });
   } else return 'No entendí ese botón.';
   movimiento = true;
   console.log(`${accion} ${id} por ${quien}`);
@@ -246,12 +276,8 @@ for (const f of readdirSync(DIR).filter((n) => /^\d+\.preview\.json$/.test(n))) 
     unlinkSync(join(DIR, `${id}.aprobado.json`));
     if (existsSync(join(carpeta, 'programado.json'))) unlinkSync(join(carpeta, 'programado.json'));
   }
-  // las mismas slides que publicar.mjs (el MP4 de un slide manda sobre su JPG)
-  const porNum = new Map();
-  for (const a of readdirSync(carpeta).filter((n) => /^slide-\d+\.(jpg|mp4)$/.test(n)).sort()) {
-    const n = a.match(/\d+/)[0]; if (!porNum.has(n) || a.endsWith('.mp4')) porNum.set(n, a);
-  }
-  const slides = [...porNum.keys()].sort().map((n) => porNum.get(n));
+  if (existsSync(join(DIR, `${id}.manual.json`))) unlinkSync(join(DIR, `${id}.manual.json`)); // post cambiado: se decide otra vez
+  const slides = slidesDe(carpeta);
   const album = []; // ids de las fotos, para saber a qué post responden
   for (let i = 0; i < slides.length; i += 10) { // un álbum de Telegram lleva 10 como máximo
     const tanda = slides.slice(i, i + 10);
@@ -270,6 +296,8 @@ for (const f of readdirSync(DIR).filter((n) => /^\d+\.preview\.json$/.test(n))) 
       { text: '✅ Aprobar', callback_data: `ok:${id}` },
       { text: '🚀 Publicar ya', callback_data: `ya:${id}` },
       { text: '❌ Descartar', callback_data: `no:${id}` },
+    ], [
+      { text: '🎵 Lo subo yo con canción', callback_data: `manual:${id}` },
     ]] },
   });
   escribe(`${id}.preview.enviado.json`, { ...prev, mensaje: msj.message_id, album });
