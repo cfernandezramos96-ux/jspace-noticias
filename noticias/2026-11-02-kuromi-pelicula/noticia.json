@@ -1,0 +1,23 @@
+{
+  "titular": "Kuromi tendrá su primera película en 2027",
+  "link": "https://www.animenewsnetwork.com/news/2026-10-30/sanrio-kuromi-character-gets-1st-film-in-2027/.243372",
+  "formato": "post",
+  "slides": [
+    {
+      "tipo": "portada",
+      "imagen": "kv_kuromi_pc.webp",
+      "encuadre": "50% 30%",
+      "etiqueta": "Película · 2027",
+      "titulo": "**Kuromi** tendrá su primera película en 2027",
+      "texto": "Sanrio la anunció en Halloween, **el día de su cumpleaños**.",
+      "alto_imagen": 1040
+    },
+    {
+      "tipo": "poster",
+      "imagen": "teaser.jpg"
+    },
+    {
+      "tipo": "cierre"
+    }
+  ]
+}

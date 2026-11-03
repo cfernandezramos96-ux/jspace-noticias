@@ -1,0 +1,4 @@
+# claves: nunca al repositorio (en la nube van como variables del entorno)
+.env
+node_modules/
+noticias/cola.log

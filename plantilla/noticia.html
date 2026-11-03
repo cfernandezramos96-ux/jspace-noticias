@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<!-- noticia.html · JSpace · una slide de 1080×1350 (4:5, lo más alto que acepta la API de Instagram) dibujada desde
+     window.DATA (la pone scripts/render.mjs). La cuadrícula del perfil es 3:4 y le recorta ~34 px a cada lado: por eso
+     todo el texto va en .centro (90 px de margen). DATA.alto = 1440 la deja en 3:4 para subirla a mano. Tipos:
+       portada · la imagen oficial a sangre + logo, titular y una línea, arriba o abajo (como Koryugi y el post de Ao no Hako)
+       poster  · la imagen oficial completa, sin recortar, sobre su versión desenfocada
+       texto · dato · cierre · slides de diseño con el estilo de los carruseles de ElKazuoTV (negro con rayos, rojo, línea roja)
+     Poppins Black en mayúsculas para titulares, Poppins Medium para el texto. Solo el logo NUEVO de JSpace.
+     Texto entre **dobles asteriscos** = rojo. -->
+<style>
+  @font-face { font-family: 'Poppins'; src: url('fuentes/Poppins-Black.ttf') format('truetype'); font-weight: 900; }
+  @font-face { font-family: 'Poppins'; src: url('fuentes/Poppins-Bold.ttf') format('truetype'); font-weight: 700; }
+  @font-face { font-family: 'Poppins'; src: url('fuentes/Poppins-Medium.ttf') format('truetype'); font-weight: 500; }
+  :root { --rojo: #FF3636; --negro: #0A0A0A; --blanco: #FFFFFF; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: var(--alto); overflow: hidden; background: var(--negro); }
+  #s { position: relative; width: 1080px; height: var(--alto); overflow: hidden; background: var(--negro); color: var(--blanco); font-family: 'Poppins', sans-serif; }
+  .abs { position: absolute; }
+  .black { font-weight: 900; text-transform: uppercase; }
+  .medium { font-weight: 500; }
+  .r { color: var(--rojo); }
+  .medium .r { font-weight: 900; }
+  .centro { left: 90px; width: 900px; text-align: center; }
+  canvas.rayos { position: absolute; left: 0; top: 0; }
+  .foto { position: absolute; overflow: hidden; }
+  .foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .tarjeta { border: 8px solid #fff; border-radius: 24px; box-shadow: 0 34px 70px -30px rgba(0,0,0,.75); background: #111; }
+  .sep { position: absolute; left: 90px; width: 900px; height: 6px; background: var(--rojo); }
+  .pie { position: absolute; left: 72px; bottom: 44px; font-weight: 700; font-size: 24px; letter-spacing: .02em; opacity: .75; }
+  .claro { background: var(--blanco) !important; color: var(--negro) !important; }
+</style>
+</head>
+<body>
+<div id="s"></div>
+<script>
+(async function () {
+  const D = window.DATA, S = D.slide, Q = document.getElementById('s');
+  const W = 1080, H = D.alto || 1350;
+  document.documentElement.style.setProperty('--alto', H + 'px');
+  // las fuentes antes de medir nada: si no, los bloques se apilan con alturas de la fuente de reserva
+  await Promise.all(['900 40px Poppins', '700 40px Poppins', '500 40px Poppins'].map((f) => document.fonts.load(f)));
+  const BASE = D.base; // carpeta de la noticia, con / al final (para las imágenes)
+  const el = (tag, cls, css = {}, html) => { const e = document.createElement(tag); if (cls) e.className = cls; Object.assign(e.style, css); if (html != null) e.innerHTML = html; Q.appendChild(e); return e; };
+  // **rojo** → <span class="r">; saltos de línea con \n
+  const rico = (t = '') => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\*\*(.+?)\*\*/g, '<span class="r">$1</span>').replace(/\n/g, '<br>');
+  const src = (f) => /^https?:|^data:/.test(f) ? f : BASE + f;
+  const LOGO = 'marca/jspace-logo-nuevo.svg', LOGO_R = 228.42 / 71.41;
+
+  // el rayo de JSpace en rejilla (el mismo de los carruseles de ElKazuoTV)
+  const RAYO = new Path2D('M0,1349.78l267.51-348.93-198.11-70.13,322.06-332.51-270.06-69.69L603.65,0l143.74,73.76-390.1,379.66,256.62,101.25-341.99,319.31,201.16,82.21L0,1349.78ZM90.37,925.8l196.12,69.42-213.95,279.06,378.19-314.65-200.05-81.76,341.82-319.15-256.24-101.1L727.67,76.72l-121.41-62.3-463.22,507.66,270.71,69.86L90.37,925.8Z');
+  function rayos() {
+    const cv = document.createElement('canvas'); cv.className = 'rayos'; cv.width = W; cv.height = H; Q.appendChild(cv);
+    const g = cv.getContext('2d'), k = 257 / 747; g.fillStyle = 'rgba(255,255,255,.05)';
+    for (let col = 0, x = -100; x < W + 100; col++, x += 257)
+      for (let y = (col % 2 ? 232 : 0) - 464; y < H + 250; y += 464) { g.save(); g.translate(x, y); g.scale(k, k); g.fill(RAYO); g.restore(); }
+  }
+  // logo nuevo de JSpace centrado
+  const logo = (alto, top = 0) => { const w = Math.round(alto * LOGO_R); const i = el('img', 'abs', { left: (540 - w / 2) + 'px', top: top + 'px', width: w + 'px', height: alto + 'px' }); i.src = LOGO; return i; };
+  const cabecera = () => logo(64, 44);
+  const pie = (claro) => el('div', 'pie', { color: claro ? 'var(--negro)' : '' }, '@jspaceco_');
+  // texto que encoge hasta caber en maxH (y sin desbordar el ancho)
+  function encaja(e, fs, maxH, min = 28) {
+    e.style.fontSize = fs + 'px';
+    while ((e.offsetHeight > maxH || e.scrollWidth > e.clientWidth + 1) && fs > min) { fs -= 2; e.style.fontSize = fs + 'px'; }
+    return fs;
+  }
+  // apila bloques [[elemento, gapAntes], …] desde arriba (top) o hasta abajo (bottom)
+  const alto = (bl) => bl.reduce((s, [b, gap]) => s + gap + b.offsetHeight, 0);
+  function apila(bl, { top, bottom }) {
+    let y = top != null ? top : bottom - alto(bl);
+    for (const [b, gap] of bl) { y += gap; b.style.top = y + 'px'; y += b.offsetHeight; }
+    return y;
+  }
+  const esperaImgs = () => Promise.all([...Q.querySelectorAll('img')].map((i) => i.complete ? 0 : new Promise((r) => { i.onload = i.onerror = r; })));
+
+  const tipo = S.tipo || 'texto';
+  if (tipo === 'portada') {
+    // la imagen oficial ocupa todo; el bloque de texto va donde la imagen deja aire (abajo por defecto)
+    const claro = S.tema === 'claro', arriba = S.posicion === 'arriba';
+    // alto_imagen < H: la imagen ocupa solo la parte de arriba (o de abajo) y el texto va sobre el fondo, sin tapar
+    // a nadie. Para imágenes con el personaje en el centro, como un key visual casi cuadrado.
+    const AI = Math.min(S.alto_imagen || H, H);
+    const f = el('div', 'foto', { left: '0', top: (arriba ? H - AI : 0) + 'px', width: W + 'px', height: AI + 'px', background: claro ? 'var(--blanco)' : 'var(--negro)' });
+    const im = document.createElement('img'); im.src = src(S.imagen); im.style.objectPosition = S.encuadre || '50% 30%'; f.appendChild(im);
+    if (claro) Q.classList.add('claro');
+    const c = claro ? '255,255,255' : '10,10,10', fuerza = S.sombra != null ? S.sombra : 1;
+    const capas = arriba
+      ? `rgba(${c},${0.92 * fuerza}) 0%, rgba(${c},${0.8 * fuerza}) 26%, rgba(${c},0) 52%`
+      : `rgba(${c},0) 46%, rgba(${c},${0.82 * fuerza}) 68%, rgba(${c},${0.96 * fuerza}) 86%`;
+    el('div', 'abs', { left: '0', top: '0', width: W + 'px', height: H + 'px', background: `linear-gradient(180deg, ${capas})` });
+    const tx = claro ? 'var(--negro)' : 'var(--blanco)';
+    const bl = [[logo(S.logo || 74), 0]];
+    if (S.etiqueta) { const e = el('div', 'abs black centro', { fontSize: '30px', letterSpacing: '.06em', color: 'var(--rojo)' }, rico(S.etiqueta)); bl.push([e, 22]); }
+    const T = el('div', 'abs black centro', { lineHeight: '1.0', color: tx }, rico(S.titulo)); encaja(T, S.tamano || 92, 400, 56); bl.push([T, S.etiqueta ? 8 : 26]);
+    if (S.subtitulo) { const e = el('div', 'abs black centro', { lineHeight: '1.1', color: tx }); e.innerHTML = rico(S.subtitulo); encaja(e, 40, 110, 28); bl.push([e, 14]); }
+    if (S.texto) { const e = el('div', 'abs medium centro', { lineHeight: '1.25', color: tx }); e.innerHTML = rico(S.texto); encaja(e, 34, 130, 26); bl.push([e, 18]); }
+    if (D.total > 1) { const e = el('div', 'abs black centro', { fontSize: '26px', color: tx }, 'Desliza <span class="r">→</span>'); bl.push([e, 28]); }
+    if (arriba) apila(bl, { top: 64 }); else apila(bl, { bottom: H - 60 });
+  } else if (tipo === 'poster') {
+    // la imagen completa (contain) sobre ella misma desenfocada y oscurecida: así no se corta nada del póster
+    const fondo = el('div', 'foto', { left: '-80px', top: '-80px', width: (W + 160) + 'px', height: (H + 160) + 'px', filter: 'blur(40px) brightness(.45)' });
+    const b = document.createElement('img'); b.src = src(S.imagen); fondo.appendChild(b);
+    const f = el('div', 'abs', { left: '0', top: '0', width: W + 'px', height: H + 'px' });
+    const im = document.createElement('img'); im.src = src(S.imagen); Object.assign(im.style, { width: '100%', height: '100%', objectFit: 'contain', display: 'block' }); f.appendChild(im);
+  } else if (tipo === 'texto') {
+    // titular + separador + texto + (opcional) tarjeta con imagen de borde blanco (mesa 4)
+    rayos(); cabecera();
+    const bl = [];
+    const T = el('div', 'abs black centro', { lineHeight: '1.0' }, rico(S.titulo)); encaja(T, S.tamano || 84, 280, 48); bl.push([T, 0]);
+    bl.push([el('div', 'sep'), 18]);
+    if (S.subtitulo) { const e = el('div', 'abs black centro', { lineHeight: '1.08' }); e.innerHTML = rico(S.subtitulo); encaja(e, 46, 200, 30); bl.push([e, 22]); }
+    if (S.texto) { const e = el('div', 'abs medium centro', { lineHeight: '1.3' }); e.innerHTML = rico(S.texto); encaja(e, S.imagen ? 36 : 44, S.imagen ? 270 : 640, 28); bl.push([e, 22]); }
+    const y = apila(bl, { top: 160 });
+    if (S.imagen) {
+      const top = y + 36, h = Math.min(700, H - 110 - top), w = Math.min(900, Math.round(h * (S.proporcion || 4 / 3)));
+      const c = el('div', 'foto tarjeta', { left: (540 - w / 2) + 'px', top: top + 'px', width: w + 'px', height: h + 'px' });
+      const im = document.createElement('img'); im.src = src(S.imagen); im.style.objectPosition = S.encuadre || '50% 40%'; c.appendChild(im);
+    } else {
+      // sin imagen: el bloque va centrado en vertical
+      const d = Math.max(0, (H - (y - 160)) / 2 - 160 - 20);
+      bl.forEach(([b]) => (b.style.top = (parseFloat(b.style.top) + d) + 'px'));
+    }
+    pie(false);
+  } else if (tipo === 'dato') {
+    // una cifra o palabra gigante en rojo + texto (mesa 2, solo texto)
+    rayos(); cabecera();
+    const bl = [];
+    if (S.antes) { const e = el('div', 'abs black centro', { lineHeight: '1.05' }); e.innerHTML = rico(S.antes); encaja(e, 48, 160, 30); bl.push([e, 0]); }
+    const G = el('div', 'abs black centro r', { lineHeight: '0.95', whiteSpace: 'nowrap' }, rico(S.dato)); encaja(G, S.tamano || 240, 320, 90); bl.push([G, bl.length ? 18 : 0]);
+    bl.push([el('div', 'sep'), 24]);
+    if (S.texto) { const e = el('div', 'abs medium centro', { lineHeight: '1.3' }); e.innerHTML = rico(S.texto); encaja(e, 42, 380, 28); bl.push([e, 24]); }
+    apila(bl, { top: Math.round((H - alto(bl)) / 2) + 10 });
+    pie(false);
+  } else if (tipo === 'cierre') {
+    // variante blanca del cierre: logo grande y la invitación a seguir
+    Q.classList.add('claro');
+    const L = logo(130);
+    const T = el('div', 'abs black centro', { lineHeight: '1.04' }, rico(S.titulo || 'Sigue a **@jspaceco_**')); encaja(T, 64, 220, 40);
+    const X = el('div', 'abs medium centro', { lineHeight: '1.28' }, rico(S.texto || 'Noticias de anime, J-music y cultura japonesa **todos los días**.')); encaja(X, 34, 200, 24);
+    const bl = [[L, 0], [T, 56], [el('div', 'sep'), 22], [X, 22]];
+    apila(bl, { top: Math.round((H - alto(bl)) / 2) });
+  }
+  await document.fonts.ready; await esperaImgs();
+  window.__listo = true;
+})();
+</script>
+</body>
+</html>
