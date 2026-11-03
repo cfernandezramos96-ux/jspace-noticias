@@ -21,7 +21,12 @@ mala, rumor), **no publiques**: para y díselo.
 El proyecto vive en el repositorio privado `cfernandezramos96-ux/jspace-noticias`. Puede correr en el PC de
 Kazuo (`E:\Claudio\jspace-noticias`) o en una sesión en la nube de Claude Code, cuando el PC está apagado.
 
-- **Al empezar:** `git pull` (para ver lo publicado y la cola de la otra máquina).
+- **Al empezar:** `git checkout main && git pull` (en la nube el repositorio arranca sin rama, «detached
+  HEAD», y un `git pull` solo falla).
+- **Fuentes en la nube:** Anime News Network y Natalie bloquean las peticiones desde la nube (403 o
+  «Security check»). Usa WebSearch para encontrar la noticia y confírmala en fuentes que sí abren: Anime
+  Corner (animecorner.me), Anime Trending, MyAnimeList News, Crunchyroll News (artículos sueltos), la web
+  oficial de la serie o la banda y su cuenta oficial. Si un dato solo sale en una fuente secundaria, dilo.
 - **Al terminar** (carpeta de la noticia lista, en cola o publicada): `git add -A && git commit -m "JSpace: <titular>"`
   y `git push`. Si el push falla por cambios remotos: `git pull --rebase` y otra vez `git push`.
 - **La cola la publica la nube:** la rutina «JSpace publicar» (todos los días a las 18:30 de Bogotá) hace
