@@ -10,7 +10,7 @@
 // Estados de un pedido en noticias/entrada/: <id>.json → <id>.preview.json → <id>.preview.enviado.json →
 // <id>.aprobado.json ({ modo: 'cola' | 'ya' }) o <id>.descartado.json.
 // Usa TELEGRAM_TOKEN (secreto de GitHub Actions; nunca se imprime). Sin dependencias.
-import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync, renameSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync, renameSync, unlinkSync } from 'node:fs';
 import { join, dirname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -64,6 +64,16 @@ for (const u of updates) {
   const links = m.text.match(/https?:\/\/\S+/g) || [];
   const codigos = (m.text.toUpperCase().match(/\b[AB][1-3]\b/g) || []);
   if (!links.length && !codigos.length) {
+    // órdenes en texto sobre el último preview: «publícalo ya», «cancela»
+    const t = m.text.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+    const accion = /\b(publica|publicalo|sacalo|subelo|dale|mandalo)\b.*\bya\b|^ya\b/.test(t) ? 'ya'
+      : /\b(cancela|cancelalo|descarta|descartalo|no lo publiques)\b/.test(t) ? 'no' : null;
+    if (accion) {
+      const id = ultimoPreview();
+      if (id) await decide(accion, id, m.from?.first_name || 'alguien', chat, m.message_id);
+      else await tg('sendMessage', { chat_id: chat, reply_to_message_id: m.message_id, text: 'No tengo ningún post pendiente para eso.' });
+      continue;
+    }
     if (/^\/(start|ayuda|help)/.test(m.text)) await tg('sendMessage', { chat_id: chat, text: '👹 Mándame el link de una noticia o los códigos de la lista del día (por ejemplo A2 B1) y lo armo para JSpace. Antes de publicar les mando el preview para que alguno lo apruebe.' });
     continue;
   }
@@ -77,38 +87,54 @@ for (const u of updates) {
 }
 writeFileSync(ESTADO, JSON.stringify(estado, null, 2));
 
-// ✅ / 🚀 / ❌ sobre un preview
+// el último preview que sigue vivo (enviado, sin publicar ni descartar)
+function ultimoPreview() {
+  const ids = readdirSync(DIR).filter((n) => /^\d+\.preview\.enviado\.json$/.test(n)).map((n) => Number(n.split('.')[0])).sort((a, b) => b - a);
+  return ids.find((id) => !existsSync(join(DIR, `${id}.descartado.json`)) && !existsSync(join(RAIZ, lee(`${id}.preview.enviado.json`).carpeta, 'publicado.json')));
+}
+
+// ✅ / 🚀 / ❌ sobre un preview (botones o texto)
 async function boton(q) {
   const chat = String(q.message?.chat.id);
-  const quien = q.from?.first_name || 'alguien';
   if (!PERMITIDOS.includes(chat)) return tg('answerCallbackQuery', { callback_query_id: q.id, text: 'Este chat no está autorizado' });
   const [accion, id] = String(q.data || '').split(':');
+  const r = await decide(accion, id, q.from?.first_name || 'alguien', chat, q.message.message_id);
+  await tg('answerCallbackQuery', { callback_query_id: q.id, text: r || 'Listo' });
+  if (!r) await tg('editMessageReplyMarkup', { chat_id: chat, message_id: q.message.message_id, reply_markup: { inline_keyboard: [] } }).catch(() => {});
+}
+// si no se puede hacer, lo dice en el chat y devuelve el motivo (para el aviso del botón)
+async function decide(accion, id, quien, chat, responderA) {
   const prev = existsSync(join(DIR, `${id}.preview.enviado.json`)) ? lee(`${id}.preview.enviado.json`) : null;
-  if (!prev) return tg('answerCallbackQuery', { callback_query_id: q.id, text: 'No encuentro ese preview' });
-  for (const f of [`${id}.aprobado.json`, `${id}.descartado.json`]) {
-    if (existsSync(join(DIR, f))) return tg('answerCallbackQuery', { callback_query_id: q.id, text: `Ya lo decidió ${lee(f).por}` });
-  }
+  const decir = (text, botones) => tg('sendMessage', { chat_id: chat, reply_to_message_id: responderA, text, ...(botones ? { reply_markup: { inline_keyboard: [botones] } } : {}) });
+  const no = async (text) => { await decir(text); return text; };
+  if (!prev) return no('No encuentro ese preview.');
+  const carpeta = join(RAIZ, prev.carpeta);
+  const aprobado = existsSync(join(DIR, `${id}.aprobado.json`)) ? lee(`${id}.aprobado.json`) : null;
+  if (existsSync(join(carpeta, 'publicado.json'))) return no('Ese ya salió publicado.');
+  if (existsSync(join(DIR, `${id}.descartado.json`))) return no(`Ese lo descartó ${lee(`${id}.descartado.json`).por}.`);
+  if (aprobado?.modo === 'ya') return no(`${aprobado.por} ya pidió publicarlo ya: está saliendo.`);
+  if (aprobado && accion === 'ok') return no(`Ya lo aprobó ${aprobado.por}.`);
   const fecha = new Date().toISOString();
-  let aviso;
+  // después de aprobar se puede cambiar de idea: publicar ya o cancelar
+  const cambiar = [{ text: '🚀 Publicar ya', callback_data: `ya:${id}` }, { text: '❌ Cancelar', callback_data: `no:${id}` }];
   if (accion === 'ok') {
     // la cola la publican las rutinas de las 12:30 y las 18:30 (publican todo lo que ya tocó)
-    const carpeta = join(RAIZ, prev.carpeta);
     writeFileSync(join(carpeta, 'programado.json'), JSON.stringify({ hora: prev.hora }, null, 2));
     escribe(`${id}.aprobado.json`, { modo: 'cola', por: quien, fecha, carpeta: prev.carpeta, hora: prev.hora });
-    aviso = new Date(prev.hora) > new Date()
+    await decir(new Date(prev.hora) > new Date()
       ? `✅ Aprobado por ${quien}. Sale el ${hora(prev.hora)}`
-      : `✅ Aprobado por ${quien}. Su hora ya pasó: sale en la próxima franja (12:30 o 18:30).`;
+      : `✅ Aprobado por ${quien}. Su hora ya pasó: sale en la próxima franja (12:30 o 18:30).`, cambiar);
   } else if (accion === 'ya') {
     escribe(`${id}.aprobado.json`, { modo: 'ya', por: quien, fecha, carpeta: prev.carpeta });
     nuevas++;
-    aviso = `🚀 Aprobado por ${quien} para publicar ya. Les aviso cuando salga.`;
+    await decir(`🚀 ${quien} pidió publicarlo ya. Sale en un par de minutos y les mando los links.`);
   } else if (accion === 'no') {
+    if (existsSync(join(carpeta, 'programado.json'))) unlinkSync(join(carpeta, 'programado.json'));
+    if (aprobado) unlinkSync(join(DIR, `${id}.aprobado.json`));
     escribe(`${id}.descartado.json`, { por: quien, fecha, carpeta: prev.carpeta });
-    aviso = `❌ Descartado por ${quien}. No se publica.`;
-  } else return tg('answerCallbackQuery', { callback_query_id: q.id });
-  await tg('answerCallbackQuery', { callback_query_id: q.id, text: 'Listo' });
-  await tg('editMessageReplyMarkup', { chat_id: chat, message_id: q.message.message_id, reply_markup: { inline_keyboard: [] } }).catch(() => {});
-  await tg('sendMessage', { chat_id: chat, reply_to_message_id: q.message.message_id, text: aviso });
+    await decir(`❌ ${aprobado ? 'Cancelado' : 'Descartado'} por ${quien}. No se publica.`);
+  } else return 'No entendí ese botón.';
+  movimiento = true;
   console.log(`${accion} ${id} por ${quien}`);
 }
 
@@ -136,7 +162,7 @@ for (const f of readdirSync(DIR).filter((n) => /^\d+\.preview\.json$/.test(n))) 
   }
   const leyenda = existsSync(join(carpeta, 'leyenda.txt')) ? readFileSync(join(carpeta, 'leyenda.txt'), 'utf8').trim() : '(sin leyenda)';
   const texto = `👀 Preview: ${prev.titular || basename(carpeta)}\n🕒 Si lo aprueban sale el ${hora(prev.hora)} (${prev.franja === 'jmusic' ? 'J-music' : 'anime'}), en Instagram y Facebook.\n${prev.nota ? `📝 ${prev.nota}\n` : ''}\n—— Leyenda ——\n${leyenda}`;
-  await tg('sendMessage', {
+  const msj = await tg('sendMessage', {
     chat_id: chat, text: texto.slice(0, 4000), disable_web_page_preview: true,
     reply_markup: { inline_keyboard: [[
       { text: '✅ Aprobar', callback_data: `ok:${id}` },
@@ -144,7 +170,8 @@ for (const f of readdirSync(DIR).filter((n) => /^\d+\.preview\.json$/.test(n))) 
       { text: '❌ Descartar', callback_data: `no:${id}` },
     ]] },
   });
-  renameSync(join(DIR, f), join(DIR, `${id}.preview.enviado.json`));
+  escribe(`${id}.preview.enviado.json`, { ...prev, mensaje: msj.message_id });
+  unlinkSync(join(DIR, f));
   console.log(`preview enviado: ${id} (${slides.length} slides)`);
   movimiento = true;
 }
