@@ -85,10 +85,13 @@
     const AI = Math.min(S.alto_imagen || H, H);
     const f = el('div', 'foto', { left: '0', top: (arriba ? H - AI : 0) + 'px', width: W + 'px', height: AI + 'px', background: claro ? 'var(--blanco)' : 'var(--negro)' });
     const im = document.createElement('img'); im.src = src(S.imagen); im.style.objectPosition = S.encuadre || '50% 30%'; f.appendChild(im);
+    // subir: sube la foto N px; el hueco de abajo queda cubierto por el degradado opaco (para que se vea a la gente sobre el texto)
+    if (S.subir) im.style.transform = `translateY(-${S.subir}px)`;
     if (claro) Q.classList.add('claro');
     const c = claro ? '255,255,255' : '10,10,10', fuerza = S.sombra != null ? S.sombra : 1;
     const capas = arriba
       ? `rgba(${c},${0.92 * fuerza}) 0%, rgba(${c},${0.8 * fuerza}) 26%, rgba(${c},0) 52%`
+      : S.subir ? `rgba(${c},0) 34%, rgba(${c},${0.9 * fuerza}) 54%, rgba(${c},1) 66%`
       : `rgba(${c},0) 46%, rgba(${c},${0.82 * fuerza}) 68%, rgba(${c},${0.96 * fuerza}) 86%`;
     el('div', 'abs', { left: '0', top: '0', width: W + 'px', height: H + 'px', background: `linear-gradient(180deg, ${capas})` });
     const tx = claro ? 'var(--negro)' : 'var(--blanco)';
