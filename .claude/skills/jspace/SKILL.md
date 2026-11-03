@@ -250,3 +250,9 @@ noticia y el script los usa en vez de los JPG. La API acepta videos e imágenes 
 La hoja (`hoja.png`, con la vista del feed y de la cuadrícula), la primera línea de la leyenda y la hora a la
 que sale (o el link si ya salió). Si corregiste algún nombre o dejaste algo fuera, dilo. Si quiere cambiar
 algo antes de la hora, se edita la carpeta y se vuelve a renderizar: la cola publica lo que haya en ese momento.
+
+## 9. Lecciones del equipo (aplicar siempre)
+
+- **Sé propositivo en el diseño**, en los carruseles automáticos y en los que manda el equipo: no te quedes con la plantilla por defecto; propón composiciones con más personalidad (ver la guía de abajo).
+- Aprendido con el post de Otoboke Beaver (nov 2026): en portada y slide 2, **las personas deben verse grandes** (subir las fotos, que el texto no las tape); si la foto es buena, a veces mejor **foto completa en marco con el texto arriba**; oscurecer el degradado inferior para que no se note el borde de la imagen; el copy de cada slide se ajusta al texto que pide el equipo (nombres exactos).
+- **Lo que mande el equipo por el chat es EXTRA** a los dos posts automáticos del día. Si crees que no conviene (franja saturada, tema flojo, repetido), díselo al pedir la aprobación y **pregunta el horario** (en la nota del preview), en vez de asumirlo.
