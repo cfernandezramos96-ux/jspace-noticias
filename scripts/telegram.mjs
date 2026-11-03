@@ -32,6 +32,7 @@ const hook = await tg('getWebhookInfo', {});
 if (hook.url) { console.log('el bot tenía un webhook; lo quito para poder leer los mensajes'); await tg('deleteWebhook', {}); }
 
 // 1-2. mensajes nuevos
+let nuevas = 0;
 const updates = await tg('getUpdates', { offset: estado.offset, timeout: 0, allowed_updates: ['message'] });
 console.log(`bot @${yo.username} · ${updates.length} mensajes nuevos (pendientes según Telegram: ${hook.pending_update_count})`);
 for (const u of updates) {
@@ -54,8 +55,11 @@ for (const u of updates) {
   }, null, 2));
   await tg('sendMessage', { chat_id: chat, reply_to_message_id: m.message_id, text: '📥 Recibido. Lo armo y te aviso cuando quede en cola.' });
   console.log(`entrada guardada: ${u.update_id}`);
+  nuevas++;
 }
 writeFileSync(ESTADO, JSON.stringify(estado, null, 2));
+// el workflow despierta la rutina de la nube solo si llegó algo
+if (process.env.GITHUB_OUTPUT) writeFileSync(process.env.GITHUB_OUTPUT, `nuevas=${nuevas}\n`, { flag: 'a' });
 
 // 3. resultados de la nube
 for (const f of readdirSync(DIR).filter((n) => n.endsWith('.resultado.txt'))) {
