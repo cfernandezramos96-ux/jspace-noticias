@@ -38,6 +38,11 @@ con `site:youtube.com` + el nombre en japonés o en inglés, o el canal oficial 
 para Precure, el canal oficial de Toei) y mándale al equipo el enlace exacto del video oficial para que lo baje y lo
 devuelva por el chat; mientras, deja listo todo lo demás del post (y su preview, si el video es opcional).
 
+**Videos en calidad completa:** el bot de Telegram solo baja archivos de hasta 20 MB, así que el equipo sube los videos
+pesados a Cloudinary (Media Library, carpeta `jspace`) y pega en el chat el enlace (`res.cloudinary.com/...`). Un
+enlace así no es una noticia: es material para el post del que hablan. Bájalo con curl a la carpeta de la noticia y
+úsalo igual que un video mandado por el chat. Lo mismo con enlaces directos a un MP4 (Google Drive compartido, etc.).
+
 **Imágenes: búscalas tú, el equipo no debe tener que mandarte fotos.** La miniatura de YouTube o la primera imagen que
 salga es el último recurso, nunca la primera opción. Cuando la noticia es de una persona (artista, seiyuu, banda),
 busca fotos buenas de ella: perfil de su agencia o su web oficial, fotos de prensa en las notas de Natalie, Oricon,
