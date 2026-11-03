@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>JSpace · Subir</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;900&display=swap" rel="stylesheet">
+<!--
+  Página del equipo para subir videos e imágenes pesados a Cloudinary (carpeta jspace) en calidad completa y copiar el
+  enlace para el bot de Telegram. La configuración de subida va cifrada con la contraseña (AES-GCM, clave PBKDF2): sin
+  la contraseña la página no puede subir nada. Para cambiar la contraseña, vuelve a cifrar CAJA con la nueva.
+-->
+<style>
+  :root { --fondo: #0A0A0A; --tarjeta: #151515; --borde: #2a2a2a; --texto: #f2f2f2; --suave: #9a9a9a; --rojo: #FF3636; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: var(--fondo); color: var(--texto); font: 500 16px/1.5 Poppins, system-ui, sans-serif;
+    background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-size: 40px 40px; display: flex; align-items: center; justify-content: center; padding: 24px 16px; }
+  main { width: 100%; max-width: 440px; }
+  .logo { display: inline-block; background: var(--rojo); color: #fff; font-weight: 900; font-size: 30px; letter-spacing: 1px;
+    padding: 2px 14px; transform: rotate(-4deg); margin-bottom: 8px; }
+  h1 { font-size: 22px; font-weight: 700; margin: 12px 0 4px; }
+  p { color: var(--suave); margin: 0 0 20px; font-size: 14px; }
+  .tarjeta { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 14px; padding: 22px; }
+  label { display: block; font-size: 13px; color: var(--suave); margin: 0 0 6px; }
+  input[type=text], input[type=password] { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--borde);
+    background: #0d0d0d; color: var(--texto); font: inherit; margin-bottom: 14px; }
+  input:focus { outline: 2px solid var(--rojo); outline-offset: 1px; }
+  button { width: 100%; padding: 13px; border: 0; border-radius: 10px; background: var(--rojo); color: #fff; font: 700 16px Poppins, sans-serif; cursor: pointer; }
+  button:disabled { opacity: .5; cursor: default; }
+  button.sec { background: #262626; margin-top: 10px; }
+  .error { color: var(--rojo); font-size: 14px; min-height: 21px; margin: 4px 0 0; }
+  .zona { border: 2px dashed var(--borde); border-radius: 12px; padding: 30px 16px; text-align: center; cursor: pointer; margin-bottom: 14px; }
+  .zona.encima { border-color: var(--rojo); }
+  .zona strong { display: block; font-size: 17px; }
+  .zona span { color: var(--suave); font-size: 13px; }
+  .barra { height: 10px; background: #262626; border-radius: 5px; overflow: hidden; margin: 14px 0 6px; }
+  .barra div { height: 100%; width: 0; background: var(--rojo); transition: width .2s; }
+  .enlace { word-break: break-all; background: #0d0d0d; border: 1px solid var(--borde); border-radius: 10px; padding: 10px 12px; font-size: 13px; margin: 12px 0; }
+  .oculto { display: none; }
+  .salir { background: none; color: var(--suave); width: auto; padding: 0; font-weight: 500; font-size: 13px; text-decoration: underline; margin-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="logo">JSPACE</div>
+
+  <section id="entrar" class="tarjeta">
+    <h1>Subir material</h1>
+    <p>Entra con el usuario del equipo.</p>
+    <form id="formEntrar">
+      <label for="usuario">Usuario</label>
+      <input id="usuario" type="text" autocomplete="username" autocapitalize="none" required>
+      <label for="clave">Contraseña</label>
+      <input id="clave" type="password" autocomplete="current-password" required>
+      <button id="btnEntrar">Entrar</button>
+      <div class="error" id="errEntrar"></div>
+    </form>
+  </section>
+
+  <section id="subir" class="tarjeta oculto">
+    <h1>Subir video o imagen</h1>
+    <p>Calidad completa, hasta 100 MB. Después pega el enlace en el grupo respondiendo al preview.</p>
+    <div class="zona" id="zona">
+      <strong>Toca para elegir el archivo</strong>
+      <span>o arrástralo aquí</span>
+    </div>
+    <input id="archivo" type="file" accept="video/*,image/*" class="oculto">
+    <div id="progreso" class="oculto">
+      <div id="nombre" style="font-size:14px"></div>
+      <div class="barra"><div id="relleno"></div></div>
+      <div id="estado" style="font-size:13px;color:var(--suave)"></div>
+    </div>
+    <div id="listo" class="oculto">
+      <div class="enlace" id="enlace"></div>
+      <button id="btnCopiar">Copiar enlace</button>
+      <button id="btnOtro" class="sec">Subir otro</button>
+    </div>
+    <div class="error" id="errSubir"></div>
+    <button class="salir" id="btnSalir">Salir</button>
+  </section>
+</main>
+
+<script>
+// configuración de subida cifrada con «usuario:contraseña»
+const CAJA = {"salt":"Qz6N8+gmSYeGIaGYHYt+7w==","iv":"HJicCTPvUl7SBRaV","data":"Tz1/vyecpXuLahEoRxeBBNZZsgGXmVAKYO8hwo3GPJZjYpKU6ma3O4c6yGCJR5+hq1gCcsGA"};
+const MAX = 100 * 1024 * 1024; // límite del plan gratis de Cloudinary por archivo
+const $ = (id) => document.getElementById(id);
+const b64 = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
+let config = null;
+
+async function abrir(usuario, clave) {
+  const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(`${usuario}:${clave}`), 'PBKDF2', false, ['deriveKey']);
+  const llave = await crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(CAJA.salt), iterations: 250000, hash: 'SHA-256' },
+    base, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+  const claro = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(CAJA.iv) }, llave, b64(CAJA.data));
+  return JSON.parse(new TextDecoder().decode(claro));
+}
+function mostrar(seccion) {
+  $('entrar').classList.toggle('oculto', seccion !== 'entrar');
+  $('subir').classList.toggle('oculto', seccion !== 'subir');
+}
+// recordar la sesión en este dispositivo
+try { const g = localStorage.getItem('jspace-subir'); if (g) { config = JSON.parse(g); mostrar('subir'); } } catch {}
+
+$('formEntrar').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  $('btnEntrar').disabled = true; $('errEntrar').textContent = '';
+  try {
+    config = await abrir($('usuario').value.trim().toLowerCase(), $('clave').value);
+    try { localStorage.setItem('jspace-subir', JSON.stringify(config)); } catch {}
+    mostrar('subir');
+  } catch { $('errEntrar').textContent = 'Usuario o contraseña incorrectos.'; }
+  $('btnEntrar').disabled = false;
+});
+$('btnSalir').addEventListener('click', () => {
+  config = null; try { localStorage.removeItem('jspace-subir'); } catch {}
+  $('clave').value = ''; mostrar('entrar');
+});
+
+function reiniciar() {
+  ['progreso', 'listo'].forEach((id) => $(id).classList.add('oculto'));
+  $('zona').classList.remove('oculto'); $('errSubir').textContent = ''; $('archivo').value = '';
+}
+function subir(f) {
+  $('errSubir').textContent = '';
+  if (!f) return;
+  if (f.size > MAX) { $('errSubir').textContent = `Pesa ${(f.size / 1048576).toFixed(0)} MB: el máximo es 100 MB. Recórtalo un poco.`; return; }
+  $('zona').classList.add('oculto'); $('progreso').classList.remove('oculto');
+  $('nombre').textContent = f.name; $('relleno').style.width = '0';
+  const datos = new FormData();
+  datos.append('file', f); datos.append('upload_preset', config.preset);
+  const x = new XMLHttpRequest();
+  x.open('POST', `https://api.cloudinary.com/v1_1/${config.cloud}/auto/upload`);
+  x.upload.onprogress = (e) => {
+    if (!e.lengthComputable) return;
+    const p = Math.round(e.loaded / e.total * 100);
+    $('relleno').style.width = p + '%'; $('estado').textContent = `${p} % · ${(e.loaded / 1048576).toFixed(1)} de ${(e.total / 1048576).toFixed(1)} MB`;
+  };
+  x.onload = () => {
+    let r = {}; try { r = JSON.parse(x.responseText); } catch {}
+    if (x.status >= 200 && x.status < 300 && r.secure_url) {
+      $('progreso').classList.add('oculto'); $('listo').classList.remove('oculto');
+      $('enlace').textContent = r.secure_url; $('btnCopiar').textContent = 'Copiar enlace';
+    } else {
+      $('progreso').classList.add('oculto'); $('zona').classList.remove('oculto');
+      $('errSubir').textContent = 'No se pudo subir: ' + (r.error?.message || `error ${x.status}`);
+    }
+  };
+  x.onerror = () => { $('progreso').classList.add('oculto'); $('zona').classList.remove('oculto'); $('errSubir').textContent = 'Se cortó la conexión. Inténtalo otra vez.'; };
+  $('estado').textContent = 'Empezando…';
+  x.send(datos);
+}
+
+$('zona').addEventListener('click', () => $('archivo').click());
+$('archivo').addEventListener('change', () => subir($('archivo').files[0]));
+$('zona').addEventListener('dragover', (e) => { e.preventDefault(); $('zona').classList.add('encima'); });
+$('zona').addEventListener('dragleave', () => $('zona').classList.remove('encima'));
+$('zona').addEventListener('drop', (e) => { e.preventDefault(); $('zona').classList.remove('encima'); subir(e.dataTransfer.files[0]); });
+$('btnCopiar').addEventListener('click', async () => {
+  const t = $('enlace').textContent;
+  try { await navigator.clipboard.writeText(t); }
+  catch { const r = document.createRange(); r.selectNodeContents($('enlace')); getSelection().removeAllRanges(); getSelection().addRange(r); document.execCommand('copy'); }
+  $('btnCopiar').textContent = '✓ Copiado';
+});
+$('btnOtro').addEventListener('click', reiniciar);
+</script>
+</body>
+</html>
