@@ -59,3 +59,7 @@ literal).
 **🎵 Subidos a mano:** si existe `noticias/entrada/<id>.manual.json`, el equipo eligió subir ese post a mano desde la
 app de Instagram para ponerle una canción (la API no lo permite). No lo publiques ni lo metas en cola; cuéntalo como
 publicado al revisar `publicadas.md` para no repetir la noticia.
+
+**Descargas:** nunca pongas correos ni datos personales del equipo en las peticiones (User-Agent, formularios, URLs):
+eso queda esperando un permiso que nadie aprueba y la rutina se traba. Si un sitio te limita (Wikimedia, 429), no
+insistas: busca la foto en otra fuente.
