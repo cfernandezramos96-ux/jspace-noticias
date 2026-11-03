@@ -208,7 +208,9 @@ writeFileSync(ESTADO, JSON.stringify(estado, null, 2));
 
 // el último preview que sigue vivo (enviado, sin publicar ni descartar)
 function ultimoPreview() {
-  const ids = readdirSync(DIR).filter((n) => /^\d+\.preview\.enviado\.json$/.test(n)).map((n) => Number(n.split('.')[0])).sort((a, b) => b - a);
+  // el más reciente por mensaje de Telegram: los ids de los automáticos (AAAAMMDD01…) no van en orden con los del bot
+  const ids = readdirSync(DIR).filter((n) => /^\d+\.preview\.enviado\.json$/.test(n)).map((n) => Number(n.split('.')[0]))
+    .sort((a, b) => (lee(`${b}.preview.enviado.json`).mensaje || 0) - (lee(`${a}.preview.enviado.json`).mensaje || 0));
   return ids.find((id) => !existsSync(join(DIR, `${id}.descartado.json`)) && !existsSync(join(RAIZ, lee(`${id}.preview.enviado.json`).carpeta, 'publicado.json')));
 }
 
@@ -330,7 +332,29 @@ for (const f of readdirSync(DIR).filter((n) => n.endsWith('.resultado.txt'))) {
   console.log(`resultado enviado: ${id}`);
 }
 
-// 5. tiempo máximo: un pedido sin respuesta a los 20 min (la rutina se trabó) se relanza una vez; si a los otros 20
+// 5. nada sale sin aprobación: 1 h antes de la hora de un preview sin decidir, recordatorio; si pasa la hora, aviso.
+// Solo el preview más reciente de cada carpeta y solo los de las últimas 12 h (los viejos no se reavisan).
+const ultimoDe = {};
+for (const f of readdirSync(DIR).filter((n) => /^\d+\.preview\.enviado\.json$/.test(n))) {
+  const p = lee(f);
+  if (!ultimoDe[p.carpeta] || (p.mensaje || 0) > (ultimoDe[p.carpeta].p.mensaje || 0)) ultimoDe[p.carpeta] = { f, p };
+}
+for (const { f, p } of Object.values(ultimoDe)) {
+  const id = f.split('.')[0], hay = (s) => existsSync(join(DIR, `${id}.${s}`));
+  if (hay('aprobado.json') || hay('descartado.json') || hay('manual.json') || existsSync(join(RAIZ, p.carpeta, 'publicado.json'))) continue;
+  const falta = new Date(p.hora) - Date.now(), chat = PERMITIDOS[0];
+  if (!chat || falta < -12 * 3600e3) continue;
+  const responder = p.mensaje ? { reply_to_message_id: p.mensaje } : {};
+  if (falta > 0 && falta <= 3600e3 && !p.recordado) {
+    await tg('sendMessage', { chat_id: chat, ...responder, text: `⏰ A las ${hora(p.hora)} toca «${p.titular}» y nadie lo ha aprobado. Si no lo aprueban, no sale.` });
+    escribe(f, { ...p, recordado: true }); movimiento = true;
+  } else if (falta < -10 * 60e3 && !p.vencido) {
+    await tg('sendMessage', { chat_id: chat, ...responder, text: `⚠️ «${p.titular}» no salió a su hora porque nadie lo aprobó. Si lo aprueban ahora, sale en la próxima publicación.` });
+    escribe(f, { ...p, vencido: true }); movimiento = true;
+  }
+}
+
+// 6. tiempo máximo: un pedido sin respuesta a los 20 min (la rutina se trabó) se relanza una vez; si a los otros 20
 // sigue igual, se avisa al chat. <id>.reintento.json guarda cuándo se relanzó y si ya se avisó.
 const LIMITE = 20 * 60 * 1000;
 for (const f of readdirSync(DIR).filter((n) => /^\d+\.json$/.test(n))) {
