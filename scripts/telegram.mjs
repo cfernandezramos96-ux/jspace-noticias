@@ -26,8 +26,14 @@ const tg = async (metodo, params) => {
 
 const estado = existsSync(ESTADO) ? JSON.parse(readFileSync(ESTADO, 'utf8')) : { offset: 0 };
 
+// diagnóstico: qué bot es y si tiene un webhook que se come los mensajes (con webhook, getUpdates no recibe nada)
+const yo = await tg('getMe', {});
+const hook = await tg('getWebhookInfo', {});
+if (hook.url) { console.log('el bot tenía un webhook; lo quito para poder leer los mensajes'); await tg('deleteWebhook', {}); }
+
 // 1-2. mensajes nuevos
 const updates = await tg('getUpdates', { offset: estado.offset, timeout: 0, allowed_updates: ['message'] });
+console.log(`bot @${yo.username} · ${updates.length} mensajes nuevos (pendientes según Telegram: ${hook.pending_update_count})`);
 for (const u of updates) {
   estado.offset = u.update_id + 1;
   const m = u.message; if (!m?.text) continue;
