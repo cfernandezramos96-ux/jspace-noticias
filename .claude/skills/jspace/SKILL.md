@@ -29,12 +29,17 @@ Kazuo (`E:\Claudio\jspace-noticias`) o en una sesión en la nube de Claude Code,
   oficial de la serie o la banda y su cuenta oficial. Si un dato solo sale en una fuente secundaria, dilo.
 - **Al terminar** (carpeta de la noticia lista, en cola o publicada): `git add -A && git commit -m "JSpace: <titular>"`
   y `git push`. Si el push falla por cambios remotos: `git pull --rebase` y otra vez `git push`.
-- **Dos posts al día, por franjas** (decidido con Kazuo el 2 nov 2026, sin contar los collabs con ElKazuoTV):
+- **Dos posts automáticos al día, todos los días (también el domingo)** (decidido con Kazuo el 2 nov 2026):
   - **12:30 · `"franja": "jmusic"`** · J-music y cultura japonesa: bandas, idols, openings, giras por
     Latinoamérica, curiosidades. Es lo que mejor funciona en la cuenta (Atarashii Gakko ×20, BBTS ×3, Yokai ×3).
   - **18:30 · `"franja": "anime"`** · la noticia de anime o manga más fuerte del día.
-- **La cola la publica la nube:** las rutinas «JSpace · J-music (12:30)» y «JSpace · publicar (18:30)» hacen
-  `git pull`, `node scripts/publicar.mjs --cola` y suben el resultado. Por eso un post en cola **tiene que
+- **Extras, aparte de esos dos** (Kazuo, 3 nov 2026): lo que pide el equipo por Telegram y los resúmenes de los
+  domingos van con `"franja": "extra"` en las horas extra: **15:00** (20:00 UTC) y **21:00** (02:00 UTC del día
+  siguiente). El domingo esas dos horas son de los resúmenes (15:00 J-music, 21:00 anime), así que un pedido del
+  equipo para el domingo va al siguiente hueco extra libre (o a la hora que pida el equipo). Un extra nunca cuenta
+  como el post automático de su tema.
+- **La cola la publica la nube:** las rutinas «JSpace · J-music (12:30)», «JSpace · anime (18:30)» y
+  «JSpace · extras (15:00 y 21:00)» hacen `git pull`, `node scripts/publicar.mjs --cola` y suben el resultado. Por eso un post en cola **tiene que
   estar en GitHub antes de su hora**.
 - **En la nube** las claves están en las variables del entorno (IG_TOKEN, CLOUDINARY_*), no en `.env`.
   Antes del primer render: `npm ci && npx playwright install chromium` (en la nube no hay Chrome instalado).
@@ -188,8 +193,9 @@ tráiler oficial** y revisa el resultado con cuidado (hojas de fotogramas con ff
 
 ### Resumen de la semana (domingos)
 
-El domingo las dos franjas son resúmenes (referencia: Recoanii, «Noticias de anime destacadas de la semana»):
-**12:30 → J-music de la semana** y **18:30 → anime de la semana**, con el estilo de JSpace.
+Los domingos hay dos resúmenes **además** de los dos posts normales del día (referencia: Recoanii, «Noticias de
+anime destacadas de la semana»): **15:00 → J-music de la semana** y **21:00 → anime de la semana**, con el estilo de
+JSpace. Los hace la rutina «JSpace · extras».
 
 1. Junta las 5-8 noticias más destacadas de la semana (lunes a domingo) de esa franja: las que publicó JSpace
    (`noticias/publicadas.md`) y las más grandes que no se publicaron (búscalas). Sin rumores.
@@ -202,7 +208,7 @@ El domingo las dos franjas son resúmenes (referencia: Recoanii, «Noticias de a
    ```
    En `semanal`, `tema` es «Anime» o «J-Music». Elige como fondo la imagen más llamativa de la semana.
 3. Leyenda: «🔥 Lo más destacado de la semana en el anime/la J-music» + una línea por noticia con un emoji +
-   «¿Cuál fue tu favorita? 👇» + 5 hashtags. `"franja"` igual que el día (jmusic o anime), `"formato": "semanal"`.
+   «¿Cuál fue tu favorita? 👇» + 5 hashtags. `"franja": "extra"`, `"tema": "jmusic"` o `"anime"`, `"formato": "semanal"`.
 
 ## 5. Render y revisión
 
@@ -241,8 +247,9 @@ La API **solo acepta JPG y de 4:5 a 1.91:1**: por eso las slides salen a 1080×1
 
 1. Si no existe `.env` con `IG_TOKEN`, **para**: dile a Kazuo que falta conectar la API (pasos en
    `E:\Claudio\jspace-noticias\API-INSTAGRAM.md`) y deja todo listo en la carpeta.
-2. Franja y hora: pon `"franja": "jmusic"` o `"franja": "anime"` en noticia.json. **Un post por franja y
-   por día**: J-music a las **12:30**, anime a las **18:30** (hora de Bogotá). Mira las carpetas de esa
+2. Franja y hora: pon `"franja": "jmusic"` o `"franja": "anime"` en noticia.json (o `"extra"` si es un pedido del
+   equipo o un resumen, a las 15:00 o 21:00). **Un post por franja y por día**: J-music a las **12:30**, anime a
+   las **18:30** (hora de Bogotá). Mira las carpetas de esa
    franja con `programado.json` sin `publicado.json` y las líneas de hoy en `noticias/publicadas.md` (la
    segunda columna es la franja). Si la franja de hoy está libre y su hora no ha pasado, hoy; si no, el
    siguiente día libre. Si es de última hora y Kazuo dice «ya», publica ya.
@@ -265,4 +272,4 @@ algo antes de la hora, se edita la carpeta y se vuelve a renderizar: la cola pub
 
 - **Sé propositivo en el diseño**, en los carruseles automáticos y en los que manda el equipo: no te quedes con la plantilla por defecto; propón composiciones con más personalidad (ver la guía de abajo).
 - Aprendido con el post de Otoboke Beaver (nov 2026): en portada y slide 2, **las personas deben verse grandes** (subir las fotos, que el texto no las tape); si la foto es buena, a veces mejor **foto completa en marco con el texto arriba**; oscurecer el degradado inferior para que no se note el borde de la imagen; el copy de cada slide se ajusta al texto que pide el equipo (nombres exactos).
-- **Lo que mande el equipo por el chat es EXTRA** a los dos posts automáticos del día. Si crees que no conviene (franja saturada, tema flojo, repetido), díselo al pedir la aprobación y **pregunta el horario** (en la nota del preview), en vez de asumirlo.
+- **Lo que mande el equipo por el chat es EXTRA** a los dos posts automáticos del día: `"franja": "extra"`, a las 15:00 o 21:00 (ver arriba). Si crees que no conviene (día saturado, tema flojo, repetido), díselo al pedir la aprobación y **pregunta el horario** (en la nota del preview), en vez de asumirlo.

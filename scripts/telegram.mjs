@@ -256,7 +256,7 @@ async function decide(accion, id, quien, chat, responderA) {
     escribe(`${id}.aprobado.json`, { modo: 'cola', por: quien, fecha, carpeta: prev.carpeta, hora: prev.hora });
     await decir(new Date(prev.hora) > new Date()
       ? `✅ Aprobado por ${quien}. Sale el ${hora(prev.hora)}`
-      : `✅ Aprobado por ${quien}. Su hora ya pasó: sale en la próxima franja (12:30 o 18:30).`, cambiar);
+      : `✅ Aprobado por ${quien}. Su hora ya pasó: sale en la próxima publicación (12:30, 3:00, 6:30 o 9:00 p. m.).`, cambiar);
   } else if (accion === 'ya') {
     escribe(`${id}.aprobado.json`, { modo: 'ya', por: quien, fecha, carpeta: prev.carpeta });
     nuevas++;
@@ -302,7 +302,7 @@ for (const f of readdirSync(DIR).filter((n) => /^\d+\.preview\.json$/.test(n))) 
   const { ids: album, pesados } = await mandaArchivos(chat, carpeta, slides); // album: para saber a qué post responden
   if (pesados.length) await tg('sendMessage', { chat_id: chat, text: `⚠️ No pude mandar ${pesados.join(', ')} (pasa de 50 MB, el límite de Telegram), pero sí va en el post.` });
   const leyenda = existsSync(join(carpeta, 'leyenda.txt')) ? readFileSync(join(carpeta, 'leyenda.txt'), 'utf8').trim() : '(sin leyenda)';
-  const texto = `👀 Preview: ${prev.titular || basename(carpeta)}\n🕒 Si lo aprueban sale el ${hora(prev.hora)} (${prev.franja === 'jmusic' ? 'J-music' : 'anime'}), en Instagram y Facebook.\n${prev.nota ? `📝 ${prev.nota}\n` : ''}\n—— Leyenda ——\n${leyenda}`;
+  const texto = `👀 Preview: ${prev.titular || basename(carpeta)}\n🕒 Si lo aprueban sale el ${hora(prev.hora)} (${{ jmusic: 'J-music', anime: 'anime', extra: 'extra, aparte de los dos automáticos' }[prev.franja] || prev.franja}), en Instagram y Facebook.\n${prev.nota ? `📝 ${prev.nota}\n` : ''}\n—— Leyenda ——\n${leyenda}`;
   const msj = await tg('sendMessage', {
     chat_id: chat, text: texto.slice(0, 4000), disable_web_page_preview: true,
     reply_markup: { inline_keyboard: [[
