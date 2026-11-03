@@ -123,7 +123,9 @@ for (const u of updates) {
     await tg('sendMessage', { chat_id: chat, text: '👹 Mándenme el link de una noticia o los códigos de la lista del día (A2, B1…) y lo armo para JSpace; antes de publicar les mando el preview para que alguno lo apruebe. Para pedir cambios, respondan al preview y explíquenme lo que quieren con sus palabras. Si tienen el tráiler o una imagen oficial, mándenmelos respondiéndome o mencionándome (hasta 20 MB). Para cualquier otra cosa, menciónenme o respóndanme.' });
     continue;
   }
-  const aMi = respuesta || mencion || privado;
+  // un enlace a un video subido (Cloudinary, Drive) es material para un post, no una noticia nueva
+  const material = links.length > 0 && links.every((l) => /res\.cloudinary\.com|drive\.google\.com|\.mp4(\?|$)/i.test(l));
+  const aMi = respuesta || mencion || privado || material;
   if (aMi && !(privado && (links.length || codigos.length) && !adjunto)) {
     // instrucción libre: la lee la rutina (Claude) tal cual, con el post al que se refiere y los archivos que manden
     const directo = sobreQue(m); // respondió a un preview concreto
