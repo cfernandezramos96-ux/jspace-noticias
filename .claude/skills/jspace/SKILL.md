@@ -146,6 +146,16 @@ Así eran los mejores carruseles de JSpace (Atarashii Gakko, 180 likes: portada 
 - `nota` (opcional): una línea pequeña con fecha o nombre.
 - Estructura: `portada` → 2-4 `historia` (o `poster` / video) → `cierre`. Una imagen distinta en cada slide.
 
+### Carrusel informativo (tipos `texto` y `dato`, referencia: el primer borrador de Bocchi, que le gusta a Kazuo)
+
+Para noticias con **datos que contar** (de qué trata, staff, estudio, fechas, cifras de taquilla o ventas):
+`portada` → `texto` «¿De qué **trata**?» (subtítulo + 1-2 frases + tarjeta con el póster) → `texto` «El
+**equipo**» (líneas `**Dirige:** …`, `**Estudio:** …`, separadas con `\n`) → `dato` con la cifra gigante en rojo
+(«La última película hizo / **¥218M** / en sus primeros 3 días…») → `cierre`. Fondo negro con la rejilla de rayos.
+
+**Cuál usar:** anuncio corto → post de 3 (portada + póster + cierre). Historia o aniversario → slides `historia`.
+Noticia con datos (staff, cifras, fechas) → carrusel informativo. Tráiler oficial → «tráiler en tarjeta».
+
 ### Noticias con video: «tráiler en tarjeta» (referencia: Koryugi, Naruto × Ninku)
 
 Decidido con Kazuo el 3 nov 2026; **aún no construido ni probado: hazlo la primera vez que llegue una noticia con
