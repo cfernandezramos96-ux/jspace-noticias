@@ -163,7 +163,7 @@
     if (S.texto) { const e = el('div', 'abs medium centro', { lineHeight: '1.3' }); e.innerHTML = rico(S.texto); encaja(e, S.imagen ? 36 : 44, S.imagen ? 270 : 640, 28); bl.push([e, 22]); }
     const y = apila(bl, { top: 160 });
     if (S.imagen) {
-      const top = y + 36, h = Math.min(700, H - 110 - top), w = Math.min(900, Math.round(h * (S.proporcion || 4 / 3)));
+      const top = y + 36; let h = Math.min(700, H - 110 - top); const w = Math.min(900, Math.round(h * (S.proporcion || 4 / 3))); if (S.proporcion) h = Math.min(h, Math.round(w / S.proporcion));
       const c = el('div', 'foto tarjeta', { left: (540 - w / 2) + 'px', top: top + 'px', width: w + 'px', height: h + 'px' });
       const im = document.createElement('img'); im.src = src(S.imagen); im.style.objectPosition = S.encuadre || '50% 40%'; c.appendChild(im);
     } else {

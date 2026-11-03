@@ -7,7 +7,7 @@
     {
       "tipo": "portada",
       "imagen": "publico.jpg",
-      "encuadre": "50% 50%",
+      "encuadre": "62% 50%",
       "posicion": "abajo",
       "etiqueta": "J-Music · Aniversario",
       "titulo": "Se cumple **un año** del debut de **Otoboke Beaver** en Colombia",
@@ -17,18 +17,18 @@
     {
       "tipo": "historia",
       "imagen": "escenario.jpg",
-      "encuadre": "50% 70%",
+      "encuadre": "39% 70%",
       "texto": "Fue su **primera visita a Colombia**, dentro de una gira por Latinoamérica",
       "nota": "Boro Room, Bogotá | 4 de noviembre de 2025",
       "subir": 240
     },
     {
-      "tipo": "historia",
+      "tipo": "texto",
+      "titulo": "El **punk japonés** aterrizó en Bogotá",
+      "texto": "Accorinrin, Yoyoyoshie, Hirochan y Leo, en su primera visita a Colombia.",
       "imagen": "grupo.jpg",
-      "encuadre": "50% 30%",
-      "texto": "El **punk japonés** de Accorinrin, Yoyoyoshie, Hirochan y Leo aterrizó en Bogotá",
-      "nota": "Otoboke Beaver | Bogotá 2025",
-      "subir": 110
+      "proporcion": 1.5,
+      "encuadre": "50% 50%"
     },
     {
       "tipo": "cierre"
