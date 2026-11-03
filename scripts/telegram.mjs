@@ -50,6 +50,7 @@ if (hook.url) { console.log('el bot tenía un webhook; lo quito para poder leer 
 let nuevas = 0; // trabajo nuevo para la rutina: si es > 0, el workflow la despierta
 // ESPERA = segundos de long polling (el workflow lo llama en bucle): responde en cuanto llega algo
 const updates = await tg('getUpdates', { offset: estado.offset, timeout: Number(process.env.ESPERA || 0), allowed_updates: ['message', 'callback_query'] });
+let movimiento = updates.length > 0;
 console.log(`bot @${yo.username} · ${updates.length} mensajes nuevos (pendientes según Telegram: ${hook.pending_update_count})`);
 for (const u of updates) {
   estado.offset = u.update_id + 1;
@@ -145,6 +146,7 @@ for (const f of readdirSync(DIR).filter((n) => /^\d+\.preview\.json$/.test(n))) 
   });
   renameSync(join(DIR, f), join(DIR, `${id}.preview.enviado.json`));
   console.log(`preview enviado: ${id} (${slides.length} slides)`);
+  movimiento = true;
 }
 
 // 4. resultados de la nube
@@ -160,3 +162,6 @@ for (const f of readdirSync(DIR).filter((n) => n.endsWith('.resultado.txt'))) {
 
 // el workflow despierta la rutina de la nube solo si hay trabajo nuevo para ella (DESPERTAR = archivo de aviso)
 if (nuevas && process.env.DESPERTAR) writeFileSync(process.env.DESPERTAR, String(nuevas));
+
+// actividad reciente: mientras haya movimiento (30 min), el workflow se relanza solo en vez de esperar al cron
+if (movimiento) { estado.ultima = new Date().toISOString(); writeFileSync(ESTADO, JSON.stringify(estado, null, 2)); }
