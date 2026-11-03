@@ -146,7 +146,7 @@ async function publica(carpeta) {
   const n = JSON.parse(readFileSync(join(carpeta, 'noticia.json'), 'utf8'));
   const fecha = ahora.toLocaleString('sv-SE', { timeZone: 'America/Bogota' }).slice(0, 16);
   appendFileSync(join(RAIZ, 'noticias', 'publicadas.md'),
-    `${fecha} · ${n.titular} · ${n.formato || ''} · ${n.link || ''} · ${permalink}${registro.facebook ? ` · FB: ${registro.facebook}` : ''}\n`);
+    `${fecha} · ${n.franja || '-'} · ${n.titular} · ${n.formato || ''} · ${n.link || ''} · ${permalink}${registro.facebook ? ` · FB: ${registro.facebook}` : ''}\n`);
 }
 
 // ---------- Facebook: la página de JSpace, con las mismas imágenes y la misma leyenda ----------

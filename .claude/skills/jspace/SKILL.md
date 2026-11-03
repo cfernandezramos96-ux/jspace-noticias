@@ -29,9 +29,13 @@ Kazuo (`E:\Claudio\jspace-noticias`) o en una sesión en la nube de Claude Code,
   oficial de la serie o la banda y su cuenta oficial. Si un dato solo sale en una fuente secundaria, dilo.
 - **Al terminar** (carpeta de la noticia lista, en cola o publicada): `git add -A && git commit -m "JSpace: <titular>"`
   y `git push`. Si el push falla por cambios remotos: `git pull --rebase` y otra vez `git push`.
-- **La cola la publica la nube:** la rutina «JSpace publicar» (todos los días a las 18:30 de Bogotá) hace
-  `git pull`, `node scripts/publicar.mjs --cola` y sube el resultado. Por eso un post en cola **tiene que
-  estar en GitHub antes de las 18:30**.
+- **Dos posts al día, por franjas** (decidido con Kazuo el 2 nov 2026, sin contar los collabs con ElKazuoTV):
+  - **12:30 · `"franja": "jmusic"`** · J-music y cultura japonesa: bandas, idols, openings, giras por
+    Latinoamérica, curiosidades. Es lo que mejor funciona en la cuenta (Atarashii Gakko ×20, BBTS ×3, Yokai ×3).
+  - **18:30 · `"franja": "anime"`** · la noticia de anime o manga más fuerte del día.
+- **La cola la publica la nube:** las rutinas «JSpace · J-music (12:30)» y «JSpace · publicar (18:30)» hacen
+  `git pull`, `node scripts/publicar.mjs --cola` y suben el resultado. Por eso un post en cola **tiene que
+  estar en GitHub antes de su hora**.
 - **En la nube** las claves están en las variables del entorno (IG_TOKEN, CLOUDINARY_*), no en `.env`.
   Antes del primer render: `npm ci && npx playwright install chromium` (en la nube no hay Chrome instalado).
 
@@ -162,11 +166,13 @@ La API **solo acepta JPG y de 4:5 a 1.91:1**: por eso las slides salen a 1080×1
 
 1. Si no existe `.env` con `IG_TOKEN`, **para**: dile a Kazuo que falta conectar la API (pasos en
    `E:\Claudio\jspace-noticias\API-INSTAGRAM.md`) y deja todo listo en la carpeta.
-2. Hora: **un post de JSpace por día.** Mira las carpetas con `programado.json` sin `publicado.json`. Si hoy
-   no hay ninguno, hoy a las **18:30** (hora de Bogotá); si ya pasó o ya hay uno hoy, el siguiente día libre
-   a las 18:30. Si es de última hora y Kazuo dice «ya», publica ya.
-3. En cola: `node scripts/publicar.mjs noticias/<carpeta> --a 18:30` y **push a GitHub** (la rutina de la
-   nube la publica a las 18:30). Ya: `node scripts/publicar.mjs noticias/<carpeta>` y push.
+2. Franja y hora: pon `"franja": "jmusic"` o `"franja": "anime"` en noticia.json. **Un post por franja y
+   por día**: J-music a las **12:30**, anime a las **18:30** (hora de Bogotá). Mira las carpetas de esa
+   franja con `programado.json` sin `publicado.json` y las líneas de hoy en `noticias/publicadas.md` (la
+   segunda columna es la franja). Si la franja de hoy está libre y su hora no ha pasado, hoy; si no, el
+   siguiente día libre. Si es de última hora y Kazuo dice «ya», publica ya.
+3. En cola: `node scripts/publicar.mjs noticias/<carpeta> --a 12:30` (o `--a 18:30`) y **push a GitHub**
+   (la nube la publica a esa hora). Ya: `node scripts/publicar.mjs noticias/<carpeta>` y push.
 4. Si la API devuelve un error, cópialo tal cual a Kazuo y no cambies la leyenda. Los errores de la cola
    quedan en `noticias/<carpeta>/error.txt`.
 5. El script publica también en la **página de Facebook de JSpace** (mismas imágenes y leyenda; las slides de video van como su JPG) y escribe `publicado.json` y la línea de `noticias/publicadas.md` solo. Si Facebook falla, Instagram ya salió: el error queda en `publicado.json` y se reintenta con `node scripts/publicar.mjs --facebook noticias/<carpeta>`.
