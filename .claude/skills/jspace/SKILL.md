@@ -16,6 +16,20 @@ ElKazuoTV, solo con el logo nuevo de JSpace). Voz: `~/.claude/instagram/voice.md
 revisión de este flujo la haces tú y tiene que ser estricta. Si algo no cuadra (dato dudoso, imagen
 mala, rumor), **no publiques**: para y díselo.
 
+## PC o nube: todo pasa por GitHub
+
+El proyecto vive en el repositorio privado `cfernandezramos96-ux/jspace-noticias`. Puede correr en el PC de
+Kazuo (`E:\Claudio\jspace-noticias`) o en una sesión en la nube de Claude Code, cuando el PC está apagado.
+
+- **Al empezar:** `git pull` (para ver lo publicado y la cola de la otra máquina).
+- **Al terminar** (carpeta de la noticia lista, en cola o publicada): `git add -A && git commit -m "JSpace: <titular>"`
+  y `git push`. Si el push falla por cambios remotos: `git pull --rebase` y otra vez `git push`.
+- **La cola la publica la nube:** la rutina «JSpace publicar» (todos los días a las 18:30 de Bogotá) hace
+  `git pull`, `node scripts/publicar.mjs --cola` y sube el resultado. Por eso un post en cola **tiene que
+  estar en GitHub antes de las 18:30**.
+- **En la nube** las claves están en las variables del entorno (IG_TOKEN, CLOUDINARY_*), no en `.env`.
+  Antes del primer render: `npm ci && npx playwright install chromium` (en la nube no hay Chrome instalado).
+
 ## 0. Qué te mandan
 
 - Un link → sigue.
@@ -146,8 +160,8 @@ La API **solo acepta JPG y de 4:5 a 1.91:1**: por eso las slides salen a 1080×1
 2. Hora: **un post de JSpace por día.** Mira las carpetas con `programado.json` sin `publicado.json`. Si hoy
    no hay ninguno, hoy a las **18:30** (hora de Bogotá); si ya pasó o ya hay uno hoy, el siguiente día libre
    a las 18:30. Si es de última hora y Kazuo dice «ya», publica ya.
-3. En cola: `node scripts/publicar.mjs noticias/<carpeta> --a 18:30` (la tarea de Windows «JSpace publicar»
-   publica la cola cada 15 minutos). Ya: `node scripts/publicar.mjs noticias/<carpeta>`.
+3. En cola: `node scripts/publicar.mjs noticias/<carpeta> --a 18:30` y **push a GitHub** (la rutina de la
+   nube la publica a las 18:30). Ya: `node scripts/publicar.mjs noticias/<carpeta>` y push.
 4. Si la API devuelve un error, cópialo tal cual a Kazuo y no cambies la leyenda. Los errores de la cola
    quedan en `noticias/<carpeta>/error.txt`.
 5. El script escribe `publicado.json` y la línea de `noticias/publicadas.md` solo.

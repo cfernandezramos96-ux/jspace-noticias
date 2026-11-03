@@ -7,7 +7,7 @@
 //
 // Lee .env (IG_USER_ID, IG_TOKEN). Las slides salen de la carpeta: slide-NN.jpg (imágenes) o slide-NN.mp4 (carrusel
 // animado), en orden, y la leyenda de leyenda.txt. Las sube a Cloudinary (o a catbox si no está en .env; la API solo
-// acepta URLs públicas), crea los
+// acepta URLs públicas; en la nube con un upload preset sin firma), crea los
 // contenedores, espera a que Instagram los procese y publica. Al terminar escribe publicado.json y una línea en
 // noticias/publicadas.md. Nunca imprime el token.
 import { readFileSync, writeFileSync, readdirSync, existsSync, appendFileSync } from 'node:fs';
@@ -24,17 +24,20 @@ const leeEnv = () => Object.fromEntries((existsSync(ENV) ? readFileSync(ENV, 'ut
 const env = { ...Object.fromEntries(Object.entries(process.env).filter(([k]) => /^(IG_|CLOUDINARY_)/.test(k))), ...leeEnv() };
 const VER = env.IG_API_VERSION || 'v23.0';
 const TOKEN = env.IG_TOKEN, USER = env.IG_USER_ID || '17841453083457784'; // el id de @jspaceco_ (panel de Meta)
+// En la nube el token NO está en el entorno: es un «Network secret» y el proxy de la nube lo añade como
+// `Authorization: Bearer` a cada petición a graph.facebook.com. IG_AUTH=proxy activa ese modo.
+const PROXY = env.IG_AUTH === 'proxy';
 const falla = (msg) => { console.error('✗ ' + msg); process.exit(1); };
-if (!TOKEN) falla('falta IG_TOKEN en .env (mira .env.example)');
+if (!TOKEN && !PROXY) falla('falta IG_TOKEN en .env (mira .env.example)');
 // Dos tipos de token: el de «inicio de sesión unificado» (usuario del sistema, empieza por EAA, no caduca) va por
 // graph.facebook.com; el de «inicio de sesión de Instagram» (IGAA…, 60 días) va por graph.instagram.com.
-const FB = TOKEN.startsWith('EAA');
+const FB = PROXY || TOKEN.startsWith('EAA');
 const API = FB ? 'https://graph.facebook.com' : 'https://graph.instagram.com';
 
 // ---------- llamadas a la API (el token va en el cuerpo o en la query, nunca en lo que se imprime) ----------
 async function api(metodo, ruta, params = {}) {
   const url = new URL(ruta.startsWith('http') ? ruta : `${API}/${VER}/${ruta}`);
-  const cuerpo = new URLSearchParams({ ...params, access_token: TOKEN });
+  const cuerpo = new URLSearchParams(PROXY ? params : { ...params, access_token: TOKEN });
   const res = metodo === 'GET'
     ? await fetch(url + (url.search ? '&' : '?') + cuerpo)
     : await fetch(url, { method: 'POST', body: cuerpo });
@@ -60,16 +63,21 @@ async function listo(id, rotulo) {
 // ---------- subida a una URL pública: Cloudinary (si está en .env) o catbox ----------
 async function sube(ruta) {
   const tipo = ruta.endsWith('.mp4') ? 'video/mp4' : 'image/jpeg';
-  const { CLOUDINARY_CLOUD_NAME: nube, CLOUDINARY_API_KEY: clave, CLOUDINARY_API_SECRET: secreto } = env;
-  if (nube && clave && secreto) {
-    // subida firmada: sha1 de los parámetros ordenados + el secreto (el secreto nunca viaja)
-    const { createHash } = await import('node:crypto');
-    const params = { folder: 'jspace', timestamp: String(Math.floor(Date.now() / 1000)) };
-    const firma = createHash('sha1').update(Object.keys(params).sort().map((k) => `${k}=${params[k]}`).join('&') + secreto).digest('hex');
+  const { CLOUDINARY_CLOUD_NAME: nube, CLOUDINARY_API_KEY: clave, CLOUDINARY_API_SECRET: secreto, CLOUDINARY_UPLOAD_PRESET: preset } = env;
+  if (nube && ((clave && secreto) || preset)) {
     const form = new FormData();
     form.append('file', new Blob([readFileSync(ruta)], { type: tipo }), basename(ruta));
-    for (const [k, v] of Object.entries(params)) form.append(k, v);
-    form.append('api_key', clave); form.append('signature', firma);
+    if (clave && secreto) {
+      // en el PC: subida firmada (sha1 de los parámetros ordenados + el secreto; el secreto nunca viaja)
+      const { createHash } = await import('node:crypto');
+      const params = { folder: 'jspace', timestamp: String(Math.floor(Date.now() / 1000)) };
+      const firma = createHash('sha1').update(Object.keys(params).sort().map((k) => `${k}=${params[k]}`).join('&') + secreto).digest('hex');
+      for (const [k, v] of Object.entries(params)) form.append(k, v);
+      form.append('api_key', clave); form.append('signature', firma);
+    } else {
+      // en la nube: «upload preset» sin firma (no hace falta el secreto; la carpeta la fija el preset)
+      form.append('upload_preset', preset);
+    }
     const res = await fetch(`https://api.cloudinary.com/v1_1/${nube}/${tipo.startsWith('video') ? 'video' : 'image'}/upload`, { method: 'POST', body: form });
     const j = await res.json().catch(() => ({}));
     if (!res.ok || !j.secure_url) throw new Error(`Cloudinary no aceptó ${basename(ruta)}: ${j.error?.message || res.status}`);
