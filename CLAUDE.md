@@ -93,5 +93,11 @@ cuenta; los seguidores ven el carrusel. NUNCA se gradúan para que los vean todo
   música) y pon en noticia.json `"cancion": "<artista – canción>"` con la canción que mejor le queda. Cuando el post
   sale, el bot se lo manda a Kazuo POR PRIVADO (no al grupo) y él le pone la canción desde la app. Nunca pegues tú
   música con derechos al video. Máximo uno al día.
+- **Sin aprobación aparte** (Kazuo, 4 nov 2026): el reel de prueba va con lo que se aprobó del carrusel. Nunca lo
+  mandes a aprobar ni preguntes por él. Pero cada vez que corrijas el carrusel (titular, etiqueta, foto de portada,
+  párrafo, créditos, video), vuelve a generar el reel con los mismos cambios ANTES del nuevo preview:
+  `node scripts/reel.mjs noticias/<carpeta> <clip> <segundos> <desde>` (los del video del post) y, si existe
+  `reel-cancion.mp4`, `node scripts/portada-animada.mjs noticias/<carpeta>`. Así el reel siempre coincide con el
+  carrusel aprobado.
 - Al terminar el mes, el informe del lunes 7 de diciembre compara el alcance con y sin reel de prueba y pregunta si
   seguimos.
