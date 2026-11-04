@@ -113,3 +113,10 @@ fijar esta semana:» con los 3 posts que conviene fijar en el perfil (`node scri
 más alcance del último mes, sin repetir tema, mejor si uno es de Colombia), con sus links y cuáles se cambian
 respecto a la semana anterior (anótalos en noticias/rendimiento.md). La API de Instagram no deja fijar posts: los
 fija Kazuo desde la app («…» → «Fijar en tu perfil»).
+
+**Radar de noticias (Kazuo, 4 nov 2026):** `.github/workflows/radar.yml` corre `scripts/radar.mjs` cada 2 horas, gratis
+(sin Claude): lee Anime News Network, Anime Corner, MyAnimeList, Natalie y prensa colombiana (por Google Noticias) y
+avisa al grupo «🔥 ¿Lo armo?» cuando sale algo de los nombres de `noticias/radar.json` o de Colombia (máx. 6 al día).
+Si alguien toca «Ármalo», llega como un pedido normal (tipo noticia): ármalo con la skill y manda el preview. Los links
+de Google Noticias redirigen: si no abren, busca la nota por el titular. Los lunes, con el informe, ajusta la lista de
+nombres de `noticias/radar.json` según lo que funcione.

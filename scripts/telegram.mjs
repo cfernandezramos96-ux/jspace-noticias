@@ -245,6 +245,26 @@ async function boton(q) {
   const chat = String(q.message?.chat.id);
   if (!(await autorizado(chat, q.from?.id))) return tg('answerCallbackQuery', { callback_query_id: q.id, text: 'Este chat no está autorizado' });
   const [accion, id, extra] = String(q.data || '').split(':');
+  // botones del radar de noticias (scripts/radar.mjs): «Ármalo» lo manda a la rutina como un link más
+  if (accion === 'radar' || accion === 'radarno') {
+    const quien = q.from?.first_name || 'alguien', hecho = join(DIR, `radar-${id}.hecho.json`);
+    const p = existsSync(join(DIR, 'radar.json')) ? lee('radar.json').pendientes?.[id] : null;
+    let texto;
+    if (existsSync(hecho)) texto = `Eso ya lo decidió ${lee(`radar-${id}.hecho.json`).por}.`;
+    else if (accion === 'radarno') { escribe(`radar-${id}.hecho.json`, { por: quien, armar: false }); texto = `👌 ${quien} lo descartó.`; }
+    else if (!p) texto = 'Ese aviso ya venció. Si lo quieren, mándenme el link.';
+    else {
+      const pid = Date.now();
+      escribe(`${pid}.json`, { id: pid, tipo: 'noticia', chat, de: quien, texto: `Del radar de noticias: «${p.titulo}» (${p.fuente}). Si el link no abre (los de Google Noticias redirigen), busca la nota por el titular.`, links: [p.link], codigos: [], archivos: [], fecha: new Date().toISOString() });
+      escribe(`radar-${id}.hecho.json`, { por: quien, armar: true, pedido: pid });
+      nuevas++; movimiento = true;
+      texto = `📥 ${quien} dijo que sí. Lo armo y les mando el preview para que lo aprueben.`;
+    }
+    await tg('answerCallbackQuery', { callback_query_id: q.id, text: texto.slice(0, 190) });
+    await tg('editMessageReplyMarkup', { chat_id: chat, message_id: q.message.message_id, reply_markup: { inline_keyboard: [] } }).catch(() => {});
+    await tg('sendMessage', { chat_id: chat, reply_to_message_id: q.message.message_id, text: texto });
+    return;
+  }
   const r = await decide(accion, id, q.from?.first_name || 'alguien', chat, q.message.message_id, extra);
   await tg('answerCallbackQuery', { callback_query_id: q.id, text: r || 'Listo' });
   // los botones de cambio rápido no cierran el preview; los de decidir sí (y el de elegir hora se borra al usarlo)
