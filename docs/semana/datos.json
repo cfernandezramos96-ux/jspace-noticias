@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-04T17:31:30.923Z",
+  "actualizado": "2026-11-04T17:32:44.408Z",
   "posts": [
     {
       "externo": true,
@@ -273,7 +273,7 @@
       "programado": "2026-11-05T20:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-04-radwimps-shabadaba/slide-01.jpg",
-      "video": false
+      "video": true
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
