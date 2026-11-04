@@ -141,6 +141,24 @@ la noticia entera en 6-10 palabras («Bocchi the Rock! tendrá nueva película e
 serie en rojo. Una línea debajo con el dato que engancha. Interiores: titular de 2-5 palabras y ≤ 30 palabras
 de texto. Sin emojis en las slides.
 
+### Estilo de redacción (Kazuo, 4 nov 2026; manda sobre lo anterior y vale para slides y leyenda)
+
+Estilo periodístico culto, fluido y de alto rigor gramatical, sin perder el tuteo. Cuatro reglas estrictas:
+
+1. **Precisión léxica:** en vez de verbos genéricos o coloquiales («tocar», «hacer», «sacar»), usar verbos con
+   más riqueza semántica («presentarse», «producir», «lanzar», «financiar»).
+2. **Variar la diátesis y subordinar, cero monotonía:** nada de enumeraciones yuxtapuestas con clíticos repetidos
+   («la impulsa, la produce, la distribuye»). Usar participios («impulsada por»), voz pasiva («será distribuida
+   por») y conectores subordinantes para jerarquizar la información.
+3. **Concordancia y rigor temporal:** para eventos futuros, preferir el futuro imperfecto («comenzará»,
+   «llegará»). El presente prospectivo («comienza el 6 de noviembre») solo con sujeto gramatical explícito; nunca
+   coloquial e impersonal («el 9 toca en»).
+4. **Punto y coma exacto:** solo para separar oraciones sintácticamente independientes pero relacionadas en el
+   sentido, o los elementos de una enumeración compleja. Nunca para aislar un complemento circunstancial sin verbo
+   de su oración principal.
+
+Antes de cada vista previa, releer titular, slides y leyenda contra estas cuatro reglas.
+
 ### Contar la noticia en varias slides (tipo `historia`, referencia: Tanuki Media)
 
 Cuando la noticia tiene más que contar (un aniversario, un disco con varios adelantos, un anuncio con contexto),
