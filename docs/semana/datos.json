@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-04T16:32:51.823Z",
+  "actualizado": "2026-11-04T17:17:48.169Z",
   "posts": [
     {
       "externo": true,
@@ -254,6 +254,20 @@
       "programado": "2026-11-04T23:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-04-mashle-live-action/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-04-radwimps-shabadaba",
+      "titular": "RADWIMPS estrena el video de \"Shabadaba\", tema del drama PoliticaLupin",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-05T20:00:00.000Z",
+      "programado": "2026-11-05T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-04-radwimps-shabadaba/slide-01.jpg",
       "video": false
     },
     {
