@@ -77,6 +77,16 @@ const hora = (iso) => new Date(iso).toLocaleString('es-CO', { timeZone: 'America
 
 const estado = existsSync(ESTADO) ? lee('estado.json') : { offset: 0 };
 
+// por privado le puede escribir cualquiera que esté en el grupo del equipo (Kazuo, 4 nov 2026: Don le escribió y no respondía)
+const miembros = {};
+const autorizado = async (chat, usuario) => {
+  if (PERMITIDOS.includes(chat)) return true;
+  if (!usuario || chat !== String(usuario) || !GRUPO) return false; // solo chats privados, no otros grupos
+  if (!(usuario in miembros)) miembros[usuario] = await tg('getChatMember', { chat_id: GRUPO, user_id: usuario })
+    .then((r) => ['creator', 'administrator', 'member'].includes(r.status)).catch(() => false);
+  return miembros[usuario];
+};
+
 // diagnóstico: qué bot es y si tiene un webhook que se come los mensajes (con webhook, getUpdates no recibe nada)
 const yo = await tg('getMe', {});
 const hook = await tg('getWebhookInfo', {});
@@ -124,7 +134,8 @@ for (const u of updates) {
   const adjunto = adjuntoDe(m);
   if (!texto && !adjunto) continue;
   const chat = String(m.chat.id);
-  if (!PERMITIDOS.includes(chat)) {
+  if (!(await autorizado(chat, m.from?.id))) {
+    if (m.chat.type === 'private') await tg('sendMessage', { chat_id: chat, text: '👹 Solo atiendo al equipo de JSpace. Si eres del equipo, pídele a Kazuo que te agregue al grupo.' }).catch(() => {});
     console.log(`chat no autorizado: ${chat} (${m.chat.title || m.chat.username || m.chat.first_name || ''}) — añádelo a TELEGRAM_CHAT_ID para usarlo`);
     continue;
   }
@@ -230,7 +241,7 @@ function sobreQue(m) {
 // ✅ / 🚀 / ❌ sobre un preview (botones o texto)
 async function boton(q) {
   const chat = String(q.message?.chat.id);
-  if (!PERMITIDOS.includes(chat)) return tg('answerCallbackQuery', { callback_query_id: q.id, text: 'Este chat no está autorizado' });
+  if (!(await autorizado(chat, q.from?.id))) return tg('answerCallbackQuery', { callback_query_id: q.id, text: 'Este chat no está autorizado' });
   const [accion, id] = String(q.data || '').split(':');
   const r = await decide(accion, id, q.from?.first_name || 'alguien', chat, q.message.message_id);
   await tg('answerCallbackQuery', { callback_query_id: q.id, text: r || 'Listo' });
