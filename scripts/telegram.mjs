@@ -21,6 +21,8 @@ const TOKEN = process.env.TELEGRAM_TOKEN;
 const PERMITIDOS = (process.env.TELEGRAM_CHAT_ID || '').split(',').map((s) => s.trim()).filter(Boolean);
 // el grupo del equipo (los ids de grupo son negativos): ahí van los previews automáticos y los avisos
 const GRUPO = PERMITIDOS.find((c) => c.startsWith('-')) || PERMITIDOS[0];
+// el privado de Kazuo (id positivo): ahí le llegan los reels a los que él les pone canción
+const KAZUO = PERMITIDOS.find((c) => !c.startsWith('-'));
 if (!TOKEN) { console.error('falta TELEGRAM_TOKEN'); process.exit(1); }
 mkdirSync(DIR, { recursive: true });
 
@@ -387,8 +389,23 @@ for (const d of readdirSync(NOTICIAS, { withFileTypes: true }).filter((x) => x.i
       for (const a of new Set(PERMITIDOS)) await tg('sendMessage', { chat_id: a, text: `✅ Ya salió «${titular}»
 Instagram: ${p.permalink}${p.facebook ? `
 Facebook: ${p.facebook}` : ''}${p.historia ? `
-📲 Ya salió también en historias. Si el post vale la pena, compártanlo a mano desde la app (avión de papel → «Agregar a tu historia») con una encuesta o una pregunta.` : ''}`, disable_web_page_preview: true });
+📲 Ya salió también en historias. Si el post vale la pena, compártanlo a mano desde la app (avión de papel → «Agregar a tu historia») con una encuesta o una pregunta.` : ''}${p.reel_prueba ? `
+🎬 Y como reel de prueba (solo lo ven quienes no nos siguen).` : ''}`, disable_web_page_preview: true });
       writeFileSync(pub, JSON.stringify({ ...p, anunciado: true }, null, 2)); movimiento = true;
+    }
+    // posts sin video que valen un reel con canción: la portada animada le llega a Kazuo por privado, NO al grupo; él le
+    // pone la canción desde la app y lo sube como reel de prueba (Kazuo, 4 nov 2026)
+    const rc = join(c, 'reel-cancion.mp4'), q = leeJson(pub);
+    if (q && !q.cancion_enviada && existsSync(rc) && KAZUO && Date.now() - new Date(q.fecha) < 24 * 3600e3) {
+      const n = leeJson(join(c, 'noticia.json')) || {};
+      await tg('sendVideo', { chat_id: KAZUO, supports_streaming: 'true', caption: `🎵 Reel para ponerle canción: «${titular}»` }, { video: rc });
+      const ley = existsSync(join(c, 'leyenda.txt')) ? readFileSync(join(c, 'leyenda.txt'), 'utf8').trim() : '';
+      await tg('sendMessage', { chat_id: KAZUO, disable_web_page_preview: true, text: `${n.cancion ? `Canción sugerida: ${n.cancion}
+` : ''}Súbelo desde la app como reel, ponle la canción de la biblioteca de Instagram y en «Opciones avanzadas» activa «Reel de prueba» (no lo gradúes después).
+
+—— Leyenda ——
+${ley}`.slice(0, 4000) });
+      writeFileSync(pub, JSON.stringify({ ...q, cancion_enviada: true }, null, 2)); movimiento = true;
     }
     continue;
   }

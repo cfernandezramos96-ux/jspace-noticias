@@ -150,10 +150,31 @@ async function publica(carpeta) {
   // Facebook va después y aparte: si falla, el post de Instagram ya salió y no se repite
   await enFacebook(carpeta, registro, leyenda, urlDe);
   await enHistoria(carpeta, registro);
+  await reelDePrueba(carpeta, registro, leyenda);
   const n = JSON.parse(readFileSync(join(carpeta, 'noticia.json'), 'utf8'));
   const fecha = ahora.toLocaleString('sv-SE', { timeZone: 'America/Bogota' }).slice(0, 16);
   appendFileSync(join(RAIZ, 'noticias', 'publicadas.md'),
     `${fecha} · ${n.franja || '-'} · ${n.titular} · ${n.formato || ''} · ${n.link || ''} · ${permalink}${registro.facebook ? ` · FB: ${registro.facebook}` : ''}\n`);
+}
+
+// ---------- reel de prueba en Instagram: el reel.mp4 (posts con video) solo para quienes NO siguen la cuenta ----------
+// (Kazuo, 4 nov 2026, prueba de un mes) Los seguidores ven el carrusel; el reel sale a buscar gente nueva. Se queda
+// como reel de prueba para siempre: graduation_strategy MANUAL y NUNCA se gradúa (ni a mano). Los reels de prueba
+// no admiten collab. noticia.json "reel_prueba": false lo apaga para un post.
+const REELS_PRUEBA = Date.now() < Date.parse('2026-12-04T05:00:00Z');
+async function reelDePrueba(carpeta, registro, leyenda) {
+  let n = {}; try { n = JSON.parse(readFileSync(join(carpeta, 'noticia.json'), 'utf8')); } catch {}
+  const reel = join(carpeta, 'reel.mp4');
+  if (!REELS_PRUEBA || n.reel_prueba === false || !existsSync(reel)) return;
+  try {
+    const url = await sube(reel);
+    const { id: c } = await api('POST', `${USER}/media`, { media_type: 'REELS', video_url: url, caption: leyenda, share_to_feed: 'false', trial_params: JSON.stringify({ graduation_strategy: 'MANUAL' }) });
+    await listo(c, 'reel de prueba');
+    const { id } = await api('POST', `${USER}/media_publish`, { creation_id: c });
+    registro.reel_prueba = id;
+    console.log('✓ reel de prueba publicado (solo para no seguidores)');
+  } catch (e) { registro.reel_prueba_error = e.message; console.error(`✗ reel de prueba: ${e.message}`); }
+  writeFileSync(join(carpeta, 'publicado.json'), JSON.stringify(registro, null, 2));
 }
 
 // ---------- historia de Instagram: la portada del post en vertical, para que lo vean los seguidores ----------
@@ -343,7 +364,7 @@ try {
   else if (args[0] === '--reel-ig-prueba') {
     // crea el contenedor de un reel de prueba (solo para no seguidores) y NO lo publica: comprueba que Instagram lo acepta
     const url = await sube(resolve(args[1] || falla('uso: --reel-ig-prueba <reel.mp4>')));
-    const { id } = await api('POST', `${USER}/media`, { media_type: 'REELS', video_url: url, caption: 'prueba', trial_params: JSON.stringify({ graduation_strategy: 'MANUAL' }) });
+    const { id } = await api('POST', `${USER}/media`, { media_type: 'REELS', video_url: url, caption: 'prueba', share_to_feed: 'false', trial_params: JSON.stringify({ graduation_strategy: 'MANUAL' }) });
     await listo(id, 'reel de prueba');
     console.log(`✓ Instagram aceptó y procesó el reel de prueba (contenedor ${id}, sin publicar: caduca solo)`);
   }

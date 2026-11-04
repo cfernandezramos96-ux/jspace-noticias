@@ -1,6 +1,6 @@
 // reel.mjs · JSpace · la versión de Facebook de un post con video: reel vertical 1080×1920 con el titular de la portada
 // arriba, el video en tarjeta en medio y un párrafo corto abajo (el primer párrafo largo de la leyenda, o `reel.texto`).
-//   node scripts/reel.mjs noticias/<carpeta> <clip.mp4> [segundos=60] [desde=0]
+//   node scripts/reel.mjs noticias/<carpeta> <clip.mp4> [segundos=60] [desde=0] [salida=reel.mp4]
 // Fondo: el mismo clip desenfocado y oscurecido detrás, con los rayos de JSpace encima (Kazuo, 3 nov 2026);
 // "reel": { "fondo": "negro" } en noticia.json vuelve al fondo negro.
 // Salida: reel.mp4 y reel.jpg (el marco) en la carpeta. noticia.json puede traer "reel": { "titulo", "etiqueta",
@@ -12,7 +12,7 @@ import { resolve, join, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const RAIZ = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const [dir, clip, seg = '60', desde = '0'] = process.argv.slice(2);
+const [dir, clip, seg = '60', desde = '0', nombre = 'reel.mp4'] = process.argv.slice(2);
 if (!dir || !clip) { console.error('uso: node scripts/reel.mjs noticias/<carpeta> <clip.mp4> [segundos]'); process.exit(1); }
 const carpeta = resolve(dir), noticia = JSON.parse(readFileSync(join(carpeta, 'noticia.json'), 'utf8'));
 const portada = (noticia.slides || []).find((s) => s.tipo === 'portada') || {};
@@ -57,7 +57,7 @@ const base = FONDO
 const filtro = base + `[c]scale=${W}:${H}:force_original_aspect_ratio=increase,crop=${W}:${H},setsar=1,format=yuva420p[v];` +
   `color=c=white:s=${W}x${H},format=gray,${mascara}[m];[v][m]alphamerge[vm];[fondo][vm]overlay=${x}:${y}:shortest=1[b];` +
   (MARCA ? `[2:v]scale=170:-1,format=rgba,colorchannelmixer=aa=0.85[w];[b][w]overlay=${x + W - 190}:${y + 28},format=yuv420p[o]` : `[b]format=yuv420p[o]`);
-const salida = join(carpeta, 'reel.mp4');
+const salida = join(carpeta, nombre);
 execFileSync('ffmpeg', ['-y', '-v', 'error', '-loop', '1', '-framerate', '30', '-i', marco, '-ss', desde, '-i', clip, ...(MARCA ? ['-i', marca] : []), '-t', seg,
   '-filter_complex', filtro, '-map', '[o]', '-map', '1:a?', '-c:v', 'libx264', '-preset', 'medium', '-crf', '21', '-r', '30',
   '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-ar', '48000', '-b:a', '160k', '-shortest', '-movflags', '+faststart', salida], { stdio: 'inherit' });

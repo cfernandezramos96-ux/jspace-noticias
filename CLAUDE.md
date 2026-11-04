@@ -83,3 +83,15 @@ Si algo falla, corrígelo y vuelve a renderizar ANTES de mandar el preview.
 vertical, `historia.jpg`; la API no pone stickers). El informe del lunes 16 de noviembre dice si sirvieron (alcance o
 visitas al perfil si hay métricas; si no, likes de los posts con historia frente a los de antes) y pregunta al grupo
 si seguimos. El 18 se apagan solas.
+
+**Reels de prueba en Instagram (prueba de un mes, 4 nov - 4 dic 2026; Kazuo):** solo los ven quienes NO siguen la
+cuenta; los seguidores ven el carrusel. NUNCA se gradúan para que los vean todos: se quedan como reels de prueba.
+- **Post con video:** automático. `publicar.mjs` sube el `reel.mp4` (el mismo de Facebook) como reel de prueba
+  después del carrusel. No admite collab; `"reel_prueba": false` en noticia.json lo apaga.
+- **Post sin video que lo valga** (artista o banda con una canción conocida, anime con un opening famoso, sobre todo
+  si es de Colombia): corre `node scripts/portada-animada.mjs noticias/<carpeta>` (sale `reel-cancion.mp4`, 8 s, sin
+  música) y pon en noticia.json `"cancion": "<artista – canción>"` con la canción que mejor le queda. Cuando el post
+  sale, el bot se lo manda a Kazuo POR PRIVADO (no al grupo) y él le pone la canción desde la app. Nunca pegues tú
+  música con derechos al video. Máximo uno al día.
+- Al terminar el mes, el informe del lunes 7 de diciembre compara el alcance con y sin reel de prueba y pregunta si
+  seguimos.
