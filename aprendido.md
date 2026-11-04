@@ -32,6 +32,9 @@ sección, y haz commit junto con la corrección. Si ya estaba, refuérzala con �
 - **Integrantes según la fecha del hecho**: verifica quién estaba en la banda ESE día (Otoboke Beaver: en Bogotá ya
   tocaba Leo, no Kahokiss; Shonen Knife: Naoko Yamano, Atsuko Yamano y Risa Kawano) (Kazuo, 3 nov 2026).
 
+## Collabs
+- **Conciertos en Colombia → collab con Bunkawave** (`"colaboradores": ["bunkawave"]`) (Kazuo, 4 nov 2026).
+
 ## Horarios y pedidos
 - **Un solo horario, siempre el mismo**: nunca des dos horas distintas para un post en mensajes diferentes. Antes de
   decir una hora, léela de `programado.json`/el preview (Kazuo, 3 nov 2026).

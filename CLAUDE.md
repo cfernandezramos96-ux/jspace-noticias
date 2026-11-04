@@ -101,3 +101,9 @@ cuenta; los seguidores ven el carrusel. NUNCA se gradúan para que los vean todo
   carrusel aprobado.
 - Al terminar el mes, el informe del lunes 7 de diciembre compara el alcance con y sin reel de prueba y pregunta si
   seguimos.
+
+**Collab con Bunkawave (Kazuo, 4 nov 2026):** todo post de un **concierto en Colombia** (anuncio, fecha, aniversario
+de un concierto) va en collab con Bunkawave: `"colaboradores": ["bunkawave"]` en noticia.json (si también va con
+ElKazuoTV, los dos: `["elkazuotv", "bunkawave"]`). Son amigos de JSpace y aceptan. Por ahora sin su logo en las
+slides: Kazuo les está preguntando si se puede poner, como el de ElKazuoTV; cuando lo pase, se añade a la plantilla.
+Nota: el reel de prueba de Instagram no admite collab, sale sin ellos.
