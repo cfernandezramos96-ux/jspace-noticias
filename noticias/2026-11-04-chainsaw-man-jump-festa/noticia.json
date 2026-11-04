@@ -1,0 +1,30 @@
+{
+ "titular": "Chainsaw Man tendrá panel en Jump Festa 2027 el 20 de diciembre",
+ "link": "https://vandal.elespanol.com/random/fecha-confirmada-el-anime-de-chainsaw-man-prepara-su-nuevo-arco-y-/44746.html",
+ "formato": "post",
+ "franja": "extra",
+ "tema": "anime",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "a.jpg",
+   "encuadre": "50% 100%",
+   "posicion": "arriba",
+   "etiqueta": "Jump Festa 2027",
+   "sombra": 0.8,
+   "titulo": "**Chainsaw Man** tendrá panel en el Jump Festa 2027",
+   "texto": "Novedades del arco de los Asesinos el 20 de diciembre."
+  },
+  {
+   "tipo": "texto",
+   "titulo": "Lo que **sabemos**",
+   "texto": "El panel es el domingo 20 de diciembre, de 12:25 a 12:55 (hora de Japón), en el Jump Super Stage.\nEl anime adaptará el arco de los **Asesinos**, con MAPPA.",
+   "imagen": "a.jpg",
+   "proporcion": 0.7,
+   "encuadre": "50% 70%"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
