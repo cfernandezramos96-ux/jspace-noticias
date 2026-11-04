@@ -131,3 +131,5 @@ automáticos.
   el link en el grupo con «collab», «subimos» o «salió» y el bot lo anota en `noticias/externos.json`. Cuenta para no
   repetir la noticia. Si tú armas una collab que publica otra cuenta, añádela tú a ese archivo (`codigo`, `link`,
   `fecha`, `cuenta`, `texto`).
+- **Posts que el equipo sube a mano** al feed de JSpace: los anota `scripts/escaneo.mjs` (sin Claude) al abrir Claude en
+  el PC. No se usa Metricool para esto: no trae los posts a tiempo (Kazuo, 4 nov 2026).
