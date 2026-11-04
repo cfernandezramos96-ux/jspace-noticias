@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-04T20:35:32.989Z",
+  "actualizado": "2026-11-04T23:31:16.335Z",
   "posts": [
     {
       "externo": true,
@@ -296,13 +296,18 @@
       "carpeta": "noticias/2026-11-04-mashle-live-action",
       "titular": "Mashle tendrá película live-action en marzo de 2027",
       "franja": "anime",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [],
-      "hora": "2026-11-04T23:30:00.000Z",
+      "hora": "2026-11-04T23:30:32.405Z",
       "programado": "2026-11-04T23:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-04-mashle-live-action/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfVpBMSFVoi/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1859241105858020",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
