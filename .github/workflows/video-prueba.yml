@@ -1,0 +1,32 @@
+# Prueba: ¿GitHub Actions puede bajar videos de YouTube? (la nube de Claude no puede: YouTube la bloquea).
+# Deja el resultado en noticias/entrada/prueba-video.txt.
+name: Prueba video YouTube
+on:
+  workflow_dispatch:
+  push:
+    paths: ['.github/workflows/video-prueba.yml']
+permissions:
+  contents: write
+jobs:
+  prueba:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bajar
+        run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg > /dev/null
+          pip install -q -U yt-dlp
+          out=noticias/entrada/prueba-video.txt
+          echo "yt-dlp $(yt-dlp --version) · $(date -u)" > $out
+          for url in https://www.youtube.com/watch?v=CD_wOuLtjUc https://www.youtube.com/watch?v=uSOfMAT_Hqo; do
+            echo "== $url" >> $out
+            yt-dlp -f "bv*[height<=1080][ext=mp4]+ba[ext=m4a]/b[ext=mp4]/b" --merge-output-format mp4 \
+              -o "$RUNNER_TEMP/v.%(ext)s" --no-playlist "$url" > $RUNNER_TEMP/log.txt 2>&1 \
+              && echo "OK $(du -h $RUNNER_TEMP/v.mp4 | cut -f1) $(ffprobe -v error -show_entries stream=width,height -of csv=p=0 $RUNNER_TEMP/v.mp4 | head -1)" >> $out \
+              || { echo "FALLÓ"; tail -5 $RUNNER_TEMP/log.txt; } >> $out
+            rm -f $RUNNER_TEMP/v.*
+          done
+          cat $out
+          git config user.name "JSpace Bot"; git config user.email "jspace-bot@users.noreply.github.com"
+          git add $out && git commit -q -m "Prueba de video" && (git push -q || (git pull -q --rebase && git push -q))
