@@ -1,0 +1,34 @@
+{
+ "titular": "RADWIMPS estrena el video de \"Shabadaba\", tema del drama PoliticaLupin",
+ "link": "https://radwimps.jp/en/news/16657/",
+ "formato": "carrusel",
+ "franja": "extra",
+ "tema": "jmusic",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "mvthumb.jpg",
+   "encuadre": "50% 50%",
+   "posicion": "abajo",
+   "etiqueta": "J-Music · Nuevo video",
+   "titulo": "**RADWIMPS** estrena el video de **“Shabadaba”**",
+   "texto": "Es el tema del drama PoliticaLupin, con Satomi Ishihara."
+  },
+  {
+   "tipo": "poster",
+   "imagen": "art.jpg"
+  },
+  {
+   "tipo": "texto",
+   "titulo": "Arte con **ironía**",
+   "subtitulo": "Dirige Masaki Watanabe",
+   "texto": "Imágenes abstractas y metáforas sobre la incomodidad frente a la sociedad.",
+   "imagen": "b1.jpg",
+   "proporcion": 1.5,
+   "encuadre": "50% 50%"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
