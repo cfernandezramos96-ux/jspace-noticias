@@ -107,3 +107,9 @@ de un concierto) va en collab con Bunkawave: `"colaboradores": ["bunkawave"]` en
 ElKazuoTV, los dos: `["elkazuotv", "bunkawave"]`). Son amigos de JSpace y aceptan. Por ahora sin su logo en las
 slides: Kazuo les está preguntando si se puede poner, como el de ElKazuoTV; cuando lo pase, se añade a la plantilla.
 Nota: el reel de prueba de Instagram no admite collab, sale sin ellos.
+
+**Fijados del perfil (Kazuo, 4 nov 2026):** cada lunes, en el informe «📊 Cómo nos fue», añade una línea «📌 Para
+fijar esta semana:» con los 3 posts que conviene fijar en el perfil (`node scripts/publicar.mjs --informe 30`: los de
+más alcance del último mes, sin repetir tema, mejor si uno es de Colombia), con sus links y cuáles se cambian
+respecto a la semana anterior (anótalos en noticias/rendimiento.md). La API de Instagram no deja fijar posts: los
+fija Kazuo desde la app («…» → «Fijar en tu perfil»).
