@@ -33,12 +33,20 @@ for (const d of readdirSync(NOTICIAS, { withFileTypes: true }).filter((x) => x.i
   if (estado === 'aprobado' && existsSync(join(c, 'error.txt'))) estado = 'error';
   const portada = ['slide-01.jpg', 'slide-01.mp4'].find((f) => existsSync(join(c, f)));
   posts.push({
-    carpeta, titular: n.titular, franja: n.franja || dec?.franja || null, tema: n.tema || null, estado,
+    carpeta, titular: n.titular, franja: n.franja || dec?.franja || null, estado,
+    // noticias que son de anime y de J-music a la vez (un opening, una seiyuu que canta): "temas": ["anime", "jmusic"]
+    temas: n.temas || (n.tema ? [n.tema] : []),
     hora: pub?.fecha || hora, programado: hora, colaboradores: n.colaboradores || [],
     portada: portada === 'slide-01.jpg' ? `${carpeta}/slide-01.jpg` : null, video: existsSync(join(c, 'reel.mp4')),
     ...(pub ? { ig: pub.permalink, fb: pub.facebook || null, fb_tipo: pub.facebook_tipo || null,
       reel_prueba: !!pub.reel_prueba, historia: !!pub.historia } : {}),
   });
+}
+// lo que no subimos nosotros: collabs publicadas desde ElKazuoTV u otra cuenta, que el equipo anota pegando el link en
+// el grupo (la API de Instagram no las trae)
+for (const e of lee(join(NOTICIAS, 'externos.json')) || []) {
+  posts.push({ externo: true, cuenta: e.cuenta || 'otra cuenta', titular: e.texto || 'Collab', estado: 'externo', hora: e.hora || e.fecha,
+    temas: e.temas || [], colaboradores: [], ig: e.link, de: e.de });
 }
 posts.sort((a, b) => new Date(a.hora) - new Date(b.hora));
 

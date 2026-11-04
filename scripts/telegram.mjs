@@ -173,6 +173,30 @@ for (const u of updates) {
     await tg('sendMessage', { chat_id: chat, text: '👹 Mándenme el link de una noticia o los códigos de la lista del día (A2, B1…) y lo armo para JSpace; antes de publicar les mando el preview para que alguno lo apruebe. Si quieren ponerle una canción de Instagram, toquen «🎵 Lo subo yo» y les mando los archivos para subirlo a mano. Para pedir cambios, respondan al preview y explíquenme lo que quieren con sus palabras. Si tienen el tráiler o una imagen oficial, mándenmelos respondiéndome o mencionándome (hasta 20 MB). Para cualquier otra cosa, menciónenme o respóndanme.' });
     continue;
   }
+  // posts de Instagram que NO subimos nosotros (collabs que publica ElKazuoTV u otra cuenta): la API no los trae, así
+  // que el equipo pega el link con «collab», «subimos», «salió»… y queda en el horario semanal, sin gastar a Claude.
+  // Un link de un post nuestro tampoco va a la rutina (ya está en el horario). Kazuo, 4 nov 2026.
+  const ig = links.map((l) => l.match(/instagram\.com\/(?:[\w.]+\/)?(?:p|reel|reels|tv)\/([\w-]+)/)).filter(Boolean);
+  if (ig.length) {
+    const nuestras = readFileSync(join(RAIZ, 'noticias', 'publicadas.md'), 'utf8');
+    const propios = ig.filter((x) => nuestras.includes(x[1]));
+    const registrar = /(collab|colab|colaboracion|elkazuotv|subimos|publicamos|salio|registra|registralo|anotalo|horario)/.test(t);
+    if (propios.length === ig.length && !adjunto) {
+      await tg('sendMessage', { chat_id: chat, reply_to_message_id: m.message_id, text: '👌 Ese post es nuestro: ya está en el horario.' });
+      continue;
+    }
+    if (registrar) {
+      const archivo = join(RAIZ, 'noticias', 'externos.json');
+      const lista = existsSync(archivo) ? JSON.parse(readFileSync(archivo, 'utf8')) : [];
+      const nuevos = ig.filter((x) => !nuestras.includes(x[1]) && !lista.some((e) => e.codigo === x[1]));
+      for (const x of nuevos) lista.push({ codigo: x[1], link: `https://www.instagram.com/p/${x[1]}/`, fecha: new Date(m.date * 1000).toISOString(), de: quien,
+        cuenta: /elkazuo/.test(t) ? 'ElKazuoTV' : null, texto: texto.replace(/https?:\/\/\S+/g, '').replace(/@\w+/g, '').trim().slice(0, 200) });
+      writeFileSync(archivo, JSON.stringify(lista, null, 2));
+      await tg('sendMessage', { chat_id: chat, reply_to_message_id: m.message_id, text: nuevos.length ? '📌 Anotado en el horario semanal.' : '👌 Ese ya estaba en el horario.' });
+      movimiento = true;
+      continue;
+    }
+  }
   // un enlace a un video subido (Cloudinary, Drive) es material para un post, no una noticia nueva
   const material = links.length > 0 && links.every((l) => /res\.cloudinary\.com|drive\.google\.com|\.mp4(\?|$)/i.test(l));
   const aMi = respuesta || mencion || privado || material;

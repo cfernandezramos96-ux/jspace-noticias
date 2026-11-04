@@ -120,3 +120,14 @@ avisa al grupo «🔥 ¿Lo armo?» cuando sale algo de los nombres de `noticias/
 Si alguien toca «Ármalo», llega como un pedido normal (tipo noticia): ármalo con la skill y manda el preview. Los links
 de Google Noticias redirigen: si no abren, busca la nota por el titular. Los lunes, con el informe, ajusta la lista de
 nombres de `noticias/radar.json` según lo que funcione.
+
+**Horario semanal** (`docs/semana/`, en GitHub Pages: cfernandezramos96-ux.github.io/jspace-noticias/semana/): lo arma
+`scripts/semana.mjs` en cada vuelta del bot. Muestra lo publicado, aprobado, sin aprobar y los huecos de los dos
+automáticos.
+- **Noticias de anime y J-music a la vez** (Kazuo, 4 nov 2026: un opening o ending, una seiyuu que canta, un concierto
+  de anime, la cantante de Evangelion): pon `"temas": ["anime", "jmusic"]` en noticia.json. Pueden ir en cualquiera de
+  los dos automáticos (la `franja` dice en cuál va); no repitas el mismo tema en el otro hueco del día.
+- **Lo que no subimos nosotros** (collabs publicadas desde ElKazuoTV u otra cuenta): la API no las trae. El equipo pega
+  el link en el grupo con «collab», «subimos» o «salió» y el bot lo anota en `noticias/externos.json`. Cuenta para no
+  repetir la noticia. Si tú armas una collab que publica otra cuenta, añádela tú a ese archivo (`codigo`, `link`,
+  `fecha`, `cuenta`, `texto`).

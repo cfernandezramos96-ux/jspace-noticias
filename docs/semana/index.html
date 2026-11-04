@@ -10,7 +10,7 @@
 <style>
   :root {
     --fondo: #0a0a0a; --panel: #141414; --panel2: #1c1c1c; --linea: #2a2a2a; --texto: #f2f2f2; --suave: #9a9a9a;
-    --rojo: #ff3636; --verde: #3ecf6e; --azul: #4ea1ff; --ambar: #ffb020; --gris: #6b6b6b;
+    --rojo: #ff3636; --verde: #3ecf6e; --azul: #4ea1ff; --ambar: #ffb020; --gris: #6b6b6b; --morado: #b78cff;
   }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--fondo); color: var(--texto); font: 500 14px/1.4 Poppins, system-ui, sans-serif; }
@@ -40,6 +40,7 @@
   .post.pendiente { border-left-color: var(--ambar); }
   .post.vencido, .post.error { border-left-color: var(--rojo); }
   .post.descartado { opacity: .5; }
+  .post.externo { border-left-color: var(--morado); }
   .post { display: grid; grid-template-columns: 64px 1fr; }
   .post img { width: 64px; height: 80px; object-fit: cover; display: block; background: #000; margin: 8px 0 8px 8px; border-radius: 6px; }
   .post.sin-img { grid-template-columns: 1fr; }
@@ -94,7 +95,7 @@ const TZ = 'America/Bogota';
 const ESTADOS = {
   publicado: ['Publicado', 'var(--verde)'], aprobado: ['Aprobado', 'var(--azul)'], pendiente: ['Sin aprobar', 'var(--ambar)'],
   vencido: ['No salió (sin aprobar)', 'var(--rojo)'], error: ['Error al publicar', 'var(--rojo)'],
-  manual: ['A mano 🎵', 'var(--gris)'], descartado: ['Descartado', 'var(--gris)'],
+  manual: ['A mano 🎵', 'var(--gris)'], descartado: ['Descartado', 'var(--gris)'], externo: ['Collab', 'var(--morado)'],
 };
 const FRANJAS = { jmusic: 'J-music', anime: 'Anime', extra: 'Extra' };
 // los dos automáticos de cada día: si falta alguno, se ve el hueco
@@ -111,14 +112,19 @@ function lunesDe(fecha) {
   return d;
 }
 async function carga() {
-  for (const url of [REPO + 'docs/semana/datos.json?t=' + Date.now(), 'datos.json?t=' + Date.now()]) {
+  // en GitHub Pages lee el datos.json recién subido (raw, sin esperar a que Pages despliegue); en local, el del disco
+  const urls = [REPO + 'docs/semana/datos.json?t=' + Date.now(), 'datos.json?t=' + Date.now()];
+  if (location.hostname === 'localhost') urls.reverse();
+  for (const url of urls) {
     try { const r = await fetch(url, { cache: 'no-store' }); if (r.ok) { datos = await r.json(); return pinta(); } } catch {}
   }
   document.getElementById('semana').innerHTML = '<p>No pude cargar los datos.</p>';
 }
 function tarjeta(p) {
   const [nombre, color] = ESTADOS[p.estado] || [p.estado, 'var(--gris)'];
-  const tags = [FRANJAS[p.franja] || p.franja, p.video && 'Video', ...(p.colaboradores || []).map((c) => 'Collab ' + c)].filter(Boolean);
+  const temas = (p.temas || []).filter((t) => t === 'anime' || t === 'jmusic');
+  const tags = [p.externo ? 'Desde ' + p.cuenta : FRANJAS[p.franja] || p.franja,
+    temas.length > 1 ? 'Anime + J-music' : null, p.video && 'Video', ...(p.colaboradores || []).map((c) => 'Collab ' + c)].filter(Boolean);
   const links = [p.ig && `<a href="${esc(p.ig)}" target="_blank" rel="noopener">Instagram</a>`,
     p.fb && `<a href="${esc(p.fb)}" target="_blank" rel="noopener">Facebook${p.fb_tipo === 'reel' ? ' (reel)' : ''}</a>`].filter(Boolean);
   const extras = [p.reel_prueba && 'Reel de prueba', p.historia && 'Historia'].filter(Boolean);
@@ -144,8 +150,8 @@ function pinta() {
     const vivos = posts.filter((p) => !['descartado', 'vencido', 'manual'].includes(p.estado));
     // un automático cuenta como hecho si hay un post de su franja ese día o uno cerca de su hora (±45 min); los huecos
     // se marcan desde que empezaron los dos automáticos con aprobación (4 nov 2026)
-    const cerca = (h) => vivos.some((p) => Math.abs(new Date(p.hora) - new Date(`${clave}T${h}:00-05:00`)) < 45 * 60e3);
-    const faltan = clave < INICIO ? [] : FIJOS.filter(([h, f]) => !vivos.some((p) => p.franja === f) && !cerca(h)).map(([h, f, n]) => {
+    const cerca = (h) => vivos.some((p) => !p.externo && Math.abs(new Date(p.hora) - new Date(`${clave}T${h}:00-05:00`)) < 45 * 60e3);
+    const faltan = clave < INICIO ? [] : FIJOS.filter(([h, f]) => !vivos.some((p) => !p.externo && p.franja === f) && !cerca(h)).map(([h, f, n]) => {
       const pasado = clave < hoy || (clave === hoy && new Date() > new Date(`${clave}T${h}:00-05:00`));
       if (!pasado) huecos++;
       return { hora: new Date(`${clave}T${h}:00-05:00`), html: `<div class="hueco${pasado ? ' tarde' : ''}"><b>${h}</b> · ${n}: ${pasado ? 'no salió' : 'se arma a las 8:00'}</div>` };
@@ -156,7 +162,7 @@ function pinta() {
   }).join('');
   const chip = (n, t, c) => `<span class="chip"><i style="background:${c}"></i>${n} ${t}</span>`;
   document.getElementById('resumen').innerHTML = chip(cuenta('publicado'), 'publicados', 'var(--verde)') + chip(cuenta('aprobado'), 'aprobados', 'var(--azul)') +
-    chip(cuenta('pendiente'), 'sin aprobar', 'var(--ambar)') + chip(cuenta('vencido') + cuenta('error'), 'no salieron', 'var(--rojo)') +
+    chip(cuenta('externo'), 'collabs de otras cuentas', 'var(--morado)') + chip(cuenta('pendiente'), 'sin aprobar', 'var(--ambar)') + chip(cuenta('vencido') + cuenta('error'), 'no salieron', 'var(--rojo)') +
     chip(huecos, 'automáticos por armar', 'var(--gris)');
   document.getElementById('pie').textContent = datos.actualizado ? `Actualizado: ${new Intl.DateTimeFormat('es-CO', { timeZone: TZ, dateStyle: 'medium', timeStyle: 'short' }).format(new Date(datos.actualizado))} (hora de Bogotá). Se refresca sola cada 2 minutos.` : '';
 }

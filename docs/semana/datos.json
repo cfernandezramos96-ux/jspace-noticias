@@ -1,12 +1,12 @@
 {
-  "actualizado": "2026-11-04T08:17:47.133Z",
+  "actualizado": "2026-11-04T08:25:26.442Z",
   "posts": [
     {
       "carpeta": "noticias/2026-11-02-bocchi-pelicula",
       "titular": "Bocchi the Rock! tendrá nueva película en 2027",
       "franja": null,
-      "tema": null,
       "estado": "publicado",
+      "temas": [],
       "hora": "2026-11-02T23:42:34.041Z",
       "programado": null,
       "colaboradores": [],
@@ -22,8 +22,8 @@
       "carpeta": "noticias/2026-11-02-kuromi-pelicula",
       "titular": "Kuromi tendrá su primera película en 2027",
       "franja": null,
-      "tema": null,
       "estado": "publicado",
+      "temas": [],
       "hora": "2026-11-03T00:15:34.562Z",
       "programado": "2026-11-03T00:15:00.000Z",
       "colaboradores": [],
@@ -39,8 +39,8 @@
       "carpeta": "noticias/2026-11-03-hiragi-vampiros",
       "titular": "Hiragi-san's House of Vampires tendrá anime",
       "franja": null,
-      "tema": null,
       "estado": "publicado",
+      "temas": [],
       "hora": "2026-11-03T00:54:16.970Z",
       "programado": null,
       "colaboradores": [],
@@ -56,8 +56,8 @@
       "carpeta": "noticias/2026-11-03-novia-sedienta",
       "titular": "The Bloodthirsty Bride Devours the King tendrá anime en 2027",
       "franja": "anime",
-      "tema": null,
       "estado": "publicado",
+      "temas": [],
       "hora": "2026-11-03T04:38:52.610Z",
       "programado": "2026-11-03T23:30:00.000Z",
       "colaboradores": [],
@@ -73,8 +73,8 @@
       "carpeta": "noticias/2026-11-03-arcana-baile",
       "titular": "Nao Toyama baila el ending de Meitantei Precure como Cure Arcana por su cumpleaños",
       "franja": "jmusic",
-      "tema": null,
       "estado": "descartado",
+      "temas": [],
       "hora": "2026-11-03T17:30:00.000Z",
       "programado": "2026-11-03T17:30:00.000Z",
       "colaboradores": [],
@@ -85,8 +85,10 @@
       "carpeta": "noticias/2026-11-03-aikawa-budokan",
       "titular": "Nanase Aikawa cierra su gira del 30 aniversario en el Budokan",
       "franja": "extra",
-      "tema": "jmusic",
       "estado": "publicado",
+      "temas": [
+        "jmusic"
+      ],
       "hora": "2026-11-03T17:41:33.328Z",
       "programado": "2026-11-03T17:30:00.000Z",
       "colaboradores": [],
@@ -102,8 +104,10 @@
       "carpeta": "noticias/2026-11-03-enako-isshiki",
       "titular": "Enako canta el opening de Isshiki-san Wants to Know About Love",
       "franja": "jmusic",
-      "tema": "jmusic",
       "estado": "publicado",
+      "temas": [
+        "jmusic"
+      ],
       "hora": "2026-11-03T17:43:54.934Z",
       "programado": null,
       "colaboradores": [],
@@ -119,8 +123,10 @@
       "carpeta": "noticias/2026-11-03-yoko-takahashi-bogota",
       "titular": "Yoko Takahashi, la cantante de Evangelion, estará este mes en Bogotá",
       "franja": "extra",
-      "tema": "jmusic",
       "estado": "publicado",
+      "temas": [
+        "jmusic"
+      ],
       "hora": "2026-11-03T20:11:52.735Z",
       "programado": "2026-11-03T20:00:00.000Z",
       "colaboradores": [],
@@ -136,8 +142,10 @@
       "carpeta": "noticias/2026-11-03-ave-mujica-mv",
       "titular": "Ave Mujica estrena el video de \"A Song of Romance\"",
       "franja": "jmusic",
-      "tema": "jmusic",
       "estado": "publicado",
+      "temas": [
+        "jmusic"
+      ],
       "hora": "2026-11-03T23:31:19.674Z",
       "programado": "2026-11-03T23:30:00.000Z",
       "colaboradores": [],
@@ -153,8 +161,10 @@
       "carpeta": "noticias/2026-11-04-morning-musume-aniversario",
       "titular": "Morning Musume celebra 29 años desde su debut indie con «Ai no Tane»",
       "franja": "extra",
-      "tema": "jmusic",
       "estado": "aprobado",
+      "temas": [
+        "jmusic"
+      ],
       "hora": "2026-11-04T15:00:00.000Z",
       "programado": "2026-11-04T15:00:00.000Z",
       "colaboradores": [],
@@ -165,8 +175,10 @@
       "carpeta": "noticias/2026-11-04-otoboke-aniversario",
       "titular": "Se cumple un año del debut de Otoboke Beaver en Colombia",
       "franja": "extra",
-      "tema": "jmusic",
       "estado": "aprobado",
+      "temas": [
+        "jmusic"
+      ],
       "hora": "2026-11-04T20:00:00.000Z",
       "programado": "2026-11-04T20:00:00.000Z",
       "colaboradores": [
@@ -180,8 +192,10 @@
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
       "titular": "Se cumple un año del debut de Shonen Knife en Colombia",
       "franja": "extra",
-      "tema": "jmusic",
       "estado": "aprobado",
+      "temas": [
+        "jmusic"
+      ],
       "hora": "2026-12-07T20:00:00.000Z",
       "programado": "2026-12-07T20:00:00.000Z",
       "colaboradores": [
