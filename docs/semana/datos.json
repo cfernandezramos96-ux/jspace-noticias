@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-04T17:32:44.408Z",
+  "actualizado": "2026-11-04T17:42:44.525Z",
   "posts": [
     {
       "externo": true,
@@ -233,6 +233,20 @@
       "historia": true
     },
     {
+      "carpeta": "noticias/2026-11-04-radwimps-shabadaba",
+      "titular": "RADWIMPS estrena el video de \"Shabadaba\", tema del drama PoliticaLupin",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-04T18:30:00.000Z",
+      "programado": "2026-11-04T18:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-04-radwimps-shabadaba/slide-01.jpg",
+      "video": true
+    },
+    {
       "carpeta": "noticias/2026-11-04-otoboke-aniversario",
       "titular": "Se cumple un año del debut de Otoboke Beaver en Colombia",
       "franja": "extra",
@@ -260,20 +274,6 @@
       "colaboradores": [],
       "portada": "noticias/2026-11-04-mashle-live-action/slide-01.jpg",
       "video": false
-    },
-    {
-      "carpeta": "noticias/2026-11-04-radwimps-shabadaba",
-      "titular": "RADWIMPS estrena el video de \"Shabadaba\", tema del drama PoliticaLupin",
-      "franja": "extra",
-      "estado": "pendiente",
-      "temas": [
-        "jmusic"
-      ],
-      "hora": "2026-11-05T20:00:00.000Z",
-      "programado": "2026-11-05T20:00:00.000Z",
-      "colaboradores": [],
-      "portada": "noticias/2026-11-04-radwimps-shabadaba/slide-01.jpg",
-      "video": true
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
