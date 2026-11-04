@@ -169,7 +169,8 @@ function historiaJpg(carpeta) {
   execFileSync('ffmpeg', ['-y', '-v', 'error', '-i', fuente, '-i', marca, '-filter_complex', filtro, '-map', '[o]', '-q:v', '3', '-frames:v', '1', salida], { cwd: RAIZ });
   return salida;
 }
-const HISTORIAS = false; // se activa cuando Kazuo apruebe el diseño de la historia (4 nov 2026)
+// Prueba de 2 semanas (Kazuo, 4 nov 2026): del 4 al 18 de noviembre; el informe del lunes 16 dice si sirvieron.
+const HISTORIAS = Date.now() < Date.parse('2026-11-18T05:00:00Z');
 async function enHistoria(carpeta, registro) {
   if (!HISTORIAS) return;
   let n = {}; try { n = JSON.parse(readFileSync(join(carpeta, 'noticia.json'), 'utf8')); } catch {}

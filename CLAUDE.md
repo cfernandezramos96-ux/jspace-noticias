@@ -78,3 +78,8 @@ que el equipo apruebe a la primera). Abre `hoja.png` con Read y comprueba, slide
 - Nada cortado por el texto (caras, manos, logos), ningún texto desbordado, fotos nítidas.
 - Todo lo de `aprendido.md`.
 Si algo falla, corrígelo y vuelve a renderizar ANTES de mandar el preview.
+
+**Historias (prueba del 4 al 18 nov 2026):** cada post publicado sale también en historias de Instagram (la portada en
+vertical, `historia.jpg`; la API no pone stickers). El informe del lunes 16 de noviembre dice si sirvieron (alcance o
+visitas al perfil si hay métricas; si no, likes de los posts con historia frente a los de antes) y pregunta al grupo
+si seguimos. El 18 se apagan solas.

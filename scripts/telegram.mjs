@@ -386,7 +386,8 @@ for (const d of readdirSync(NOTICIAS, { withFileTypes: true }).filter((x) => x.i
     if (p && !p.anunciado && Date.now() - new Date(p.fecha) < 6 * 3600e3 && chat) {
       for (const a of new Set(PERMITIDOS)) await tg('sendMessage', { chat_id: a, text: `✅ Ya salió «${titular}»
 Instagram: ${p.permalink}${p.facebook ? `
-Facebook: ${p.facebook}` : ''}`, disable_web_page_preview: true });
+Facebook: ${p.facebook}` : ''}${p.historia ? `
+📲 Ya salió también en historias. Si el post vale la pena, compártanlo a mano desde la app (avión de papel → «Agregar a tu historia») con una encuesta o una pregunta.` : ''}`, disable_web_page_preview: true });
       writeFileSync(pub, JSON.stringify({ ...p, anunciado: true }, null, 2)); movimiento = true;
     }
     continue;
