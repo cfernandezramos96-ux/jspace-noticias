@@ -20,6 +20,8 @@ sección, y haz commit junto con la corrección. Si ya estaba, refuérzala con �
 - **Logo de JSpace arriba** en la portada cuando la foto lo permite (Don, Nanase Aikawa).
 - **Sé propositivo con el diseño**: varía la disposición según las imágenes, como en Otoboke Beaver (Kazuo, 3 nov).
 
+- **Texto de portada siempre legible sobre la foto**: si el texto cae sobre una zona clara, acorta el título (máx. 3 renglones), usa sombra 1 y revisa el subtítulo y «Desliza» (Kazuo, Chainsaw Man, 4 nov 2026).
+
 ## Textos
 - **Que no suene a IA**: frases cortas, de fan que sabe, sin fórmulas («cabe destacar», «sin duda», tres adjetivos
   seguidos) (Don, Morning Musume).

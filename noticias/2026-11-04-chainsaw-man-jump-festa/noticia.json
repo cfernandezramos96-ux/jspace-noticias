@@ -10,10 +10,10 @@
    "imagen": "a.jpg",
    "encuadre": "50% 100%",
    "posicion": "arriba",
-   "etiqueta": "Jump Festa 2027",
-   "sombra": 0.8,
-   "titulo": "**Chainsaw Man** tendrá panel en el Jump Festa 2027",
-   "texto": "Novedades del arco de los Asesinos el 20 de diciembre."
+   "etiqueta": "20 de diciembre · 2027",
+   "sombra": 1,
+   "titulo": "**Chainsaw Man** tendrá panel en el Jump Festa",
+   "texto": "Novedades del arco de los Asesinos."
   },
   {
    "tipo": "texto",
