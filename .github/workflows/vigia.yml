@@ -1,0 +1,31 @@
+# JSpace · vigía: cada hora revisa que el bot, la rutina de las 8:00 y las publicaciones estén bien, y si algo se
+# rompe avisa al grupo de Telegram (scripts/vigia.mjs). Va aparte del bot para poder avisar si el bot se cae.
+name: JSpace vigía
+on:
+  schedule:
+    - cron: '23 * * * *'
+  workflow_dispatch:
+  push:
+    paths: ['.github/workflows/vigia.yml', 'scripts/vigia.mjs']
+concurrency: vigia
+permissions:
+  contents: write
+  actions: write
+jobs:
+  vigia:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24 }
+      - name: Revisar
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          node scripts/vigia.mjs
+          git config user.name "JSpace Bot"; git config user.email "jspace-bot@users.noreply.github.com"
+          git add noticias/entrada/vigia.json
+          git diff --cached --quiet || (git commit -q -m "Vigía" && (git push -q || (git pull -q --rebase && git push -q)))
