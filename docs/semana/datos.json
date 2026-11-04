@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-04T17:43:10.661Z",
+  "actualizado": "2026-11-04T18:33:51.815Z",
   "posts": [
     {
       "externo": true,
@@ -236,15 +236,20 @@
       "carpeta": "noticias/2026-11-04-radwimps-shabadaba",
       "titular": "RADWIMPS estrena el video de \"Shabadaba\", tema del drama PoliticaLupin",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic"
       ],
-      "hora": "2026-11-04T18:30:00.000Z",
+      "hora": "2026-11-04T18:31:52.810Z",
       "programado": "2026-11-04T18:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-04-radwimps-shabadaba/slide-01.jpg",
-      "video": true
+      "video": true,
+      "ig": "https://www.instagram.com/p/DfVG1nHCcFt/",
+      "fb": "https://www.facebook.com/reel/1612373117041900/",
+      "fb_tipo": "reel",
+      "reel_prueba": true,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-04-otoboke-aniversario",
