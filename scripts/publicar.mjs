@@ -14,7 +14,7 @@
 // contenedores, espera a que Instagram los procese y publica. Al terminar escribe publicado.json y una línea en
 // noticias/publicadas.md. Después publica lo mismo en la página de Facebook de JSpace (FB_PUBLICAR=no lo apaga).
 // Nunca imprime el token.
-import { readFileSync, writeFileSync, readdirSync, existsSync, appendFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, existsSync, appendFileSync, unlinkSync } from 'node:fs';
 import { resolve, join, dirname, basename } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
@@ -289,6 +289,28 @@ function enCola(carpeta, hhmm) {
 }
 // --esperar: si lo próximo de la cola toca en menos de 8 min, espera a su hora y lo publica (el bot despierta la nube
 // un par de minutos antes para que salga puntual)
+// Candado para no publicar dos veces (4 nov 2026: Kenshi Yonezu salió doble porque dos rutinas lo publicaron a la
+// vez). Antes de publicar, la rutina sube a GitHub un publicando.json con su marca; si el push choca con el de otra
+// rutina, gana la que llegó primero y la otra lo salta. Sin git (o sin remoto) no bloquea.
+function reclama(c) {
+  const git = (...a) => execFileSync('git', a, { cwd: RAIZ, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
+  const f = join(c, 'publicando.json'), rel = f.slice(RAIZ.length + 1).replace(/\\/g, '/');
+  const yo = `${process.env.HOSTNAME || process.env.COMPUTERNAME || 'pc'}-${process.pid}-${Date.now()}`;
+  const ajeno = () => { try { const p = JSON.parse(readFileSync(f, 'utf8')); return p.quien !== yo && Date.now() - new Date(p.fecha) < 20 * 60e3; } catch { return false; } };
+  try { git('pull', '-q', '--rebase', '--autostash'); } catch { return true; } // sin remoto: no hay con quién chocar
+  for (let i = 0; i < 3; i++) {
+    if (existsSync(join(c, 'publicado.json')) || ajeno()) return false;
+    writeFileSync(f, JSON.stringify({ quien: yo, fecha: new Date().toISOString() }, null, 2));
+    try { git('add', rel); git('commit', '-q', '-m', `Publicando ${basename(c)}`); git('push', '-q'); return true; }
+    catch {
+      // el push falló: otra rutina subió algo antes; deshacemos el commit propio y miramos qué hay en GitHub
+      // (soft: nunca toca otros archivos sin guardar, por si corre en el PC)
+      try { git('reset', '-q', '--soft', 'HEAD~1'); git('reset', '-q', '--', rel); unlinkSync(f); git('pull', '-q', '--rebase', '--autostash'); } catch { return false; }
+    }
+  }
+  return false;
+}
+
 async function cola(esperar = false) {
   const dir = join(RAIZ, 'noticias');
   const enCola = readdirSync(dir, { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => join(dir, d.name))
@@ -304,6 +326,7 @@ async function cola(esperar = false) {
   const pendientes = enCola.filter((c) => horaDe(c) <= new Date());
   if (!pendientes.length) return console.log('nada en cola para ahora');
   for (const c of pendientes) {
+    if (!reclama(c)) { console.log(`${basename(c)}: otra rutina ya lo está publicando, lo salto`); continue; }
     try { await publica(c); }
     catch (e) { console.error(`✗ ${basename(c)}: ${e.message}`); writeFileSync(join(c, 'error.txt'), `${new Date().toISOString()}\n${e.message}\n`); }
   }
