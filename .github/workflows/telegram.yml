@@ -39,7 +39,8 @@ jobs:
           while [ $SECONDS -lt $fin ]; do
             git pull -q --rebase || true
             node scripts/telegram.mjs || sleep 10
-            git add noticias
+            node scripts/semana.mjs || true
+            git add noticias docs/semana
             git diff --cached --quiet || (git commit -q -m "Telegram: entrada" && (git push -q || (git pull -q --rebase && git push -q)))
             if [ -s "$DESPERTAR" ]; then
               curl -sS --fail-with-body -X POST https://api.anthropic.com/v1/claude_code/routines/trig_01VSHZEWR9XsE2NfbMkPkUnE/fire \
