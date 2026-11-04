@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-04T08:33:50.533Z",
+  "actualizado": "2026-11-04T08:41:18.261Z",
   "posts": [
     {
       "externo": true,
@@ -144,6 +144,19 @@
       "fb_tipo": null,
       "reel_prueba": false,
       "historia": false
+    },
+    {
+      "externo": true,
+      "cuenta": "ElKazuoTV",
+      "titular": "3 bandas japonesas que deberías conocer",
+      "estado": "externo",
+      "hora": "2026-11-03T19:51:44.000Z",
+      "temas": [
+        "jmusic"
+      ],
+      "colaboradores": [],
+      "ig": "https://www.instagram.com/p/DfSrMzRHV_s/",
+      "de": "Claude (perfil de ElKazuoTV)"
     },
     {
       "carpeta": "noticias/2026-11-03-yoko-takahashi-bogota",

@@ -6,7 +6,9 @@
     "de": "Metricool",
     "cuenta": "ElKazuoTV",
     "texto": "Space Combine: la banda japonesa que el mundo olvidó",
-    "temas": ["jmusic"]
+    "temas": [
+      "jmusic"
+    ]
   },
   {
     "codigo": "DfIQcE5Hbyq",
@@ -15,6 +17,19 @@
     "de": "Metricool",
     "cuenta": "ElKazuoTV",
     "texto": "Sambomaster: la canción que transformó el dolor en esperanza para todo un país",
-    "temas": ["jmusic"]
+    "temas": [
+      "jmusic"
+    ]
+  },
+  {
+    "codigo": "DfSrMzRHV_s",
+    "link": "https://www.instagram.com/p/DfSrMzRHV_s/",
+    "fecha": "2026-11-03T19:51:44.000Z",
+    "de": "Claude (perfil de ElKazuoTV)",
+    "cuenta": "ElKazuoTV",
+    "texto": "3 bandas japonesas que deberías conocer",
+    "temas": [
+      "jmusic"
+    ]
   }
 ]
