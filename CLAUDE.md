@@ -64,6 +64,10 @@ publicado al revisar `publicadas.md` para no repetir la noticia.
 eso queda esperando un permiso que nadie aprueba y la rutina se traba. Si un sitio te limita (Wikimedia, 429), no
 insistas: busca la foto en otra fuente.
 
+**Lo aprendido:** lee `aprendido.md` antes de armar o corregir cualquier post: son las correcciones que el equipo ya
+hizo y no debe repetir. Cuando el equipo corrija algo que vale para los siguientes posts, añádelo ahí (en el mismo
+commit de la corrección).
+
 **Antes de mandar un preview, revísalo tú** (Kazuo, 4 nov 2026: cada corrección cuesta tiempo y créditos, la meta es
 que el equipo apruebe a la primera). Abre `hoja.png` con Read y comprueba, slide por slide:
 - **Portada sin barra de color abajo:** la foto llena las 1350 px de alto. La plantilla ya ignora `alto_imagen` en la
@@ -72,4 +76,5 @@ que el equipo apruebe a la primera). Abre `hoja.png` con Read y comprueba, slide
   «50 mil CDs en **solo** / **cinco días**». La plantilla ya baja la frase roja al renglón siguiente; si aun así se ve
   mal, reescribe el título para que la parte roja quede entera.
 - Nada cortado por el texto (caras, manos, logos), ningún texto desbordado, fotos nítidas.
+- Todo lo de `aprendido.md`.
 Si algo falla, corrígelo y vuelve a renderizar ANTES de mandar el preview.
