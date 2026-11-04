@@ -1,6 +1,32 @@
 {
-  "actualizado": "2026-11-04T08:25:26.442Z",
+  "actualizado": "2026-11-04T08:33:50.533Z",
   "posts": [
+    {
+      "externo": true,
+      "cuenta": "ElKazuoTV",
+      "titular": "Space Combine: la banda japonesa que el mundo olvidó",
+      "estado": "externo",
+      "hora": "2026-10-26T22:53:23.000Z",
+      "temas": [
+        "jmusic"
+      ],
+      "colaboradores": [],
+      "ig": "https://www.instagram.com/p/De93TDNHWj0/",
+      "de": "Metricool"
+    },
+    {
+      "externo": true,
+      "cuenta": "ElKazuoTV",
+      "titular": "Sambomaster: la canción que transformó el dolor en esperanza para todo un país",
+      "estado": "externo",
+      "hora": "2026-10-30T23:45:29.000Z",
+      "temas": [
+        "jmusic"
+      ],
+      "colaboradores": [],
+      "ig": "https://www.instagram.com/p/DfIQcE5Hbyq/",
+      "de": "Metricool"
+    },
     {
       "carpeta": "noticias/2026-11-02-bocchi-pelicula",
       "titular": "Bocchi the Rock! tendrá nueva película en 2027",
