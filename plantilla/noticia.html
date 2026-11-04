@@ -77,8 +77,24 @@
   // texto que encoge hasta caber en maxH (y sin desbordar el ancho)
   function encaja(e, fs, maxH, min = 28) {
     e.style.fontSize = fs + 'px';
-    while ((e.offsetHeight > maxH || e.scrollWidth > e.clientWidth + 1) && fs > min) { fs -= 2; e.style.fontSize = fs + 'px'; }
+    const cabe = () => { while ((e.offsetHeight > maxH || e.scrollWidth > e.clientWidth + 1) && fs > min) { fs -= 2; e.style.fontSize = fs + 'px'; } };
+    cabe();
+    if (juntaRojo(e)) cabe();
     return fs;
+  }
+  // lo rojo nunca queda partido entre dos renglones con texto blanco delante: si al partirse comparte renglón con lo
+  // anterior, baja entero al renglón siguiente («50 mil CDs en / **solo cinco días**», no «… en **solo** / **cinco días**»).
+  // Kazuo, 4 nov 2026.
+  function juntaRojo(e) {
+    let cambio = false;
+    for (const s of e.querySelectorAll('.r')) {
+      const rs = s.getClientRects(), prev = s.previousSibling;
+      if (rs.length < 2 || !prev || prev.nodeName === 'BR') continue;
+      const rg = document.createRange(); rg.selectNodeContents(prev);
+      const pr = [...rg.getClientRects()].filter((r) => r.width > 1);
+      if (pr.length && Math.abs(pr[pr.length - 1].top - rs[0].top) < 6) { s.before(document.createElement('br')); cambio = true; }
+    }
+    return cambio;
   }
   // apila bloques [[elemento, gapAntes], …] desde arriba (top) o hasta abajo (bottom)
   const alto = (bl) => bl.reduce((s, [b, gap]) => s + gap + b.offsetHeight, 0);
@@ -93,9 +109,9 @@
   if (tipo === 'portada') {
     // la imagen oficial ocupa todo; el bloque de texto va donde la imagen deja aire (abajo por defecto)
     const claro = S.tema === 'claro', arriba = S.posicion === 'arriba';
-    // alto_imagen < H: la imagen ocupa solo la parte de arriba (o de abajo) y el texto va sobre el fondo, sin tapar
-    // a nadie. Para imágenes con el personaje en el centro, como un key visual casi cuadrado.
-    const AI = Math.min(S.alto_imagen || H, H);
+    // Kazuo, 4 nov 2026: la portada NUNCA lleva barra de color abajo; la foto va a sangre en todo el alto. Si la foto
+    // es apaisada se recorta con encuadre o se busca otra más vertical; alto_imagen ya no se usa en la portada.
+    const AI = H;
     const f = el('div', 'foto', { left: '0', top: (arriba ? H - AI : 0) + 'px', width: W + 'px', height: AI + 'px', background: claro ? 'var(--blanco)' : 'var(--negro)' });
     const im = document.createElement('img'); im.src = src(S.imagen); im.style.objectPosition = S.encuadre || '50% 30%'; f.appendChild(im);
     // subir: sube la foto N px; el hueco de abajo queda cubierto por el degradado opaco (para que se vea a la gente sobre el texto)

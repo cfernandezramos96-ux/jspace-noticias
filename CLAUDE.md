@@ -63,3 +63,13 @@ publicado al revisar `publicadas.md` para no repetir la noticia.
 **Descargas:** nunca pongas correos ni datos personales del equipo en las peticiones (User-Agent, formularios, URLs):
 eso queda esperando un permiso que nadie aprueba y la rutina se traba. Si un sitio te limita (Wikimedia, 429), no
 insistas: busca la foto en otra fuente.
+
+**Antes de mandar un preview, revísalo tú** (Kazuo, 4 nov 2026: cada corrección cuesta tiempo y créditos, la meta es
+que el equipo apruebe a la primera). Abre `hoja.png` con Read y comprueba, slide por slide:
+- **Portada sin barra de color abajo:** la foto llena las 1350 px de alto. La plantilla ya ignora `alto_imagen` en la
+  portada; si la foto es apaisada (un grupo en fila), busca otra más vertical o encuádrala para que se vean las caras.
+- **Lo rojo nunca partido entre renglones con texto blanco delante:** «50 mil CDs en / **solo cinco días**», no
+  «50 mil CDs en **solo** / **cinco días**». La plantilla ya baja la frase roja al renglón siguiente; si aun así se ve
+  mal, reescribe el título para que la parte roja quede entera.
+- Nada cortado por el texto (caras, manos, logos), ningún texto desbordado, fotos nítidas.
+Si algo falla, corrígelo y vuelve a renderizar ANTES de mandar el preview.
