@@ -1,0 +1,13 @@
+{
+  "titular": "Mashle tendrá película live-action en marzo de 2027",
+  "link": "https://animecorner.me/mashle-magic-and-muscles-live-action-film-adaptation-announced/",
+  "formato": "post",
+  "franja": "anime",
+  "slides": [
+    {"tipo":"portada","imagen":"b.jpg","encuadre":"50% 30%","posicion":"abajo","etiqueta":"Película live-action · 2027",
+     "titulo":"**Mashle** tendrá su película live action en 2027",
+     "texto":"Se estrena en Japón el 19 de marzo. El actor de Mash se revela el 5 de noviembre."},
+    {"tipo":"texto","titulo":"Lo que **sabemos**","texto":"Warner Bros. Pictures y Fuji Television la impulsan, la produce CREDEUS (Kingdom, Blue Lock) y Toho la distribuye en Japón.\n**Mash, con mancuerna en vez de varita**","imagen":"a.png","proporcion":1.78,"encuadre":"50% 50%"},
+    {"tipo":"cierre"}
+  ]
+}

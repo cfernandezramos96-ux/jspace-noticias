@@ -1,0 +1,15 @@
+{
+  "titular": "Kenshi Yonezu arranca su gira GHOST este viernes y llegará a Ciudad de México",
+  "link": "https://www.thefirsttimes.jp/?p=900081",
+  "formato": "carrusel",
+  "franja": "jmusic",
+  "slides": [
+    {"tipo":"portada","imagen":"y02.jpg","encuadre":"50% 30%","posicion":"abajo","etiqueta":"J-Music · Gira GHOST",
+     "titulo":"**Kenshi Yonezu** arranca su gira **GHOST**",
+     "texto":"Desde Nagano el 6 de noviembre; el 9 de febrero toca en Ciudad de México."},
+    {"tipo":"poster","imagen":"y01.jpg"},
+    {"tipo":"dato","antes":"La gira mundial pasa por 11 ciudades","dato":"14 shows","texto":"Del 26 de diciembre al 28 de febrero, en domos y arenas de Asia, Norteamérica y Europa."},
+    {"tipo":"texto","titulo":"Antes, **Japón**","subtitulo":"Gira nacional · 6 ciudades","texto":"14 shows del 6 de noviembre al 17 de diciembre: Nagano, Yokohama, Osaka, Fukuoka, Miyagi y Aichi.","imagen":"y09.jpg","proporcion":1.4,"encuadre":"50% 50%"},
+    {"tipo":"cierre"}
+  ]
+}
