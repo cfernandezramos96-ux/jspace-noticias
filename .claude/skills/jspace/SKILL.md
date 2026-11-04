@@ -234,6 +234,13 @@ Mira `hoja.png` y **cada** `slide-NN.png` (Read). Revisa, y corrige y vuelve a r
 
 `leyenda.txt` en la carpeta:
 1. Primera línea ≤ 125 caracteres: la noticia en una frase con el dato clave (es lo que se ve antes del «… más»).
+   **Empieza con el nombre tal como lo busca la gente** (Kazuo, 4 nov 2026: Instagram funciona como buscador y
+   lee sobre todo la primera línea): el nombre del artista, la banda o el anime escrito como se busca (el título
+   más conocido en Latinoamérica; si hay dos, los dos: «Frieren / Sousou no Frieren»), y en esa misma línea la
+   palabra de lo que pasó («película», «temporada 2», «concierto en Bogotá», «nuevo single»). Ej.: «Yoko Takahashi,
+   la cantante de Evangelion, dará concierto en Bogotá 🇨🇴». Nada de arrancar con «¡Atención!» o un emoji solo.
+2b. En el cuerpo, una vez y de forma natural, las palabras con las que alguien lo buscaría en español: «anime»,
+   «manga», «J-pop», «concierto», la ciudad o el país si es local. No las repitas ni hagas listas de palabras.
 2. 2-3 párrafos cortos con el contexto (fechas, staff, de qué trata): aquí va la historia, no en slides.
 3. Una pregunta corta para los comentarios, si sale natural.
 4. Una sola llamada: «Síguenos para más noticias de anime y J-music 👹».
