@@ -244,13 +244,14 @@ function sobreQue(m) {
 async function boton(q) {
   const chat = String(q.message?.chat.id);
   if (!(await autorizado(chat, q.from?.id))) return tg('answerCallbackQuery', { callback_query_id: q.id, text: 'Este chat no está autorizado' });
-  const [accion, id] = String(q.data || '').split(':');
-  const r = await decide(accion, id, q.from?.first_name || 'alguien', chat, q.message.message_id);
+  const [accion, id, extra] = String(q.data || '').split(':');
+  const r = await decide(accion, id, q.from?.first_name || 'alguien', chat, q.message.message_id, extra);
   await tg('answerCallbackQuery', { callback_query_id: q.id, text: r || 'Listo' });
-  if (!r) await tg('editMessageReplyMarkup', { chat_id: chat, message_id: q.message.message_id, reply_markup: { inline_keyboard: [] } }).catch(() => {});
+  // los botones de cambio rápido no cierran el preview; los de decidir sí (y el de elegir hora se borra al usarlo)
+  if (!r && !['foto', 'corto', 'hora'].includes(accion)) await tg('editMessageReplyMarkup', { chat_id: chat, message_id: q.message.message_id, reply_markup: { inline_keyboard: [] } }).catch(() => {});
 }
 // si no se puede hacer, lo dice en el chat y devuelve el motivo (para el aviso del botón)
-async function decide(accion, id, quien, chat, responderA) {
+async function decide(accion, id, quien, chat, responderA, extra) {
   const prev = existsSync(join(DIR, `${id}.preview.enviado.json`)) ? lee(`${id}.preview.enviado.json`) : null;
   const decir = (text, botones) => tg('sendMessage', { chat_id: chat, reply_to_message_id: responderA, text, ...(botones ? { reply_markup: { inline_keyboard: [botones] } } : {}) });
   const no = async (text) => { await decir(text); return text; };
@@ -267,7 +268,35 @@ async function decide(accion, id, quien, chat, responderA) {
   const fecha = new Date().toISOString();
   // después de aprobar se puede cambiar de idea: publicar ya o cancelar
   const cambiar = [{ text: '🚀 Publicar ya', callback_data: `ya:${id}` }, { text: '❌ Cancelar', callback_data: `no:${id}` }];
-  if (accion === 'ok') {
+  // cambios rápidos (Kazuo, 4 nov 2026): sin escribir la corrección; la rutina la recibe ya redactada
+  const RAPIDOS = {
+    foto: ['🖼 Busco otra foto para la portada y les mando el preview nuevo.', 'Cambia la foto de la portada por otra mejor de la misma noticia: busca fotos nuevas (fuentes oficiales o de prensa), compara 3-5 y elige la que se vea mejor (sigue aprendido.md). No cambies nada más.'],
+    corto: ['✂️ Lo dejo más corto y les mando el preview nuevo.', 'Hazlo más corto: menos texto en las slides (titulares y párrafos más breves) y una leyenda más corta, sin perder el dato central. No cambies las imágenes ni nada más.'],
+  };
+  if (RAPIDOS[accion]) {
+    if (aprobado?.modo === 'cola') { unlinkSync(join(DIR, `${id}.aprobado.json`)); if (existsSync(join(carpeta, 'programado.json'))) unlinkSync(join(carpeta, 'programado.json')); }
+    const pid = Date.now();
+    escribe(`${pid}.json`, { id: pid, tipo: 'instruccion', sobre: Number(id), chat, de: quien, texto: RAPIDOS[accion][1], links: [], archivos: [], responde_a: null, fecha });
+    nuevas++;
+    await decir(RAPIDOS[accion][0] + (aprobado?.modo === 'cola' ? ' Lo saqué de la cola: hay que aprobarlo otra vez.' : ''));
+  } else if (accion === 'hora') {
+    // las próximas horas de publicación (12:30, 3:00, 6:30 y 9:00 p. m. de Bogotá); se elige con un botón
+    const horas = [];
+    for (let d = -1; d < 3 && horas.length < 6; d++) for (const [hh, mm] of [[17, 30], [20, 0], [23, 30], [26, 0]]) {
+      const t = new Date(); t.setUTCHours(0, 0, 0, 0); t.setUTCDate(t.getUTCDate() + d); t.setUTCMinutes(hh * 60 + mm);
+      if (t > Date.now() + 10 * 60e3 && +t !== +new Date(prev.hora) && horas.length < 6 && !horas.some((x) => +x === +t)) horas.push(t);
+    }
+    await tg('sendMessage', { chat_id: chat, reply_to_message_id: responderA, text: '⏰ ¿A qué hora lo pasamos?',
+      reply_markup: { inline_keyboard: horas.map((t) => [{ text: hora(t.toISOString()), callback_data: `h:${id}:${Math.round(+t / 60e3)}` }]) } });
+  } else if (accion === 'h') {
+    const nueva = new Date(Number(extra) * 60e3).toISOString();
+    escribe(`${id}.preview.enviado.json`, { ...prev, hora: nueva });
+    if (aprobado?.modo === 'cola') {
+      writeFileSync(join(carpeta, 'programado.json'), JSON.stringify({ hora: nueva }, null, 2));
+      escribe(`${id}.aprobado.json`, { ...aprobado, hora: nueva });
+    }
+    await decir(`⏰ ${quien} lo pasó al ${hora(nueva)}.${aprobado?.modo === 'cola' ? ' Sigue aprobado.' : ' Falta aprobarlo.'}`);
+  } else if (accion === 'ok') {
     // la cola la publican las rutinas de las 12:30 y las 18:30 (publican todo lo que ya tocó)
     writeFileSync(join(carpeta, 'programado.json'), JSON.stringify({ hora: prev.hora }, null, 2));
     escribe(`${id}.aprobado.json`, { modo: 'cola', por: quien, fecha, carpeta: prev.carpeta, hora: prev.hora });
@@ -328,6 +357,10 @@ for (const f of readdirSync(DIR).filter((n) => /^\d+\.preview\.json$/.test(n))) 
       { text: '✅ Aprobar', callback_data: `ok:${id}` },
       { text: '🚀 Publicar ya', callback_data: `ya:${id}` },
       { text: '❌ Descartar', callback_data: `no:${id}` },
+    ], [
+      { text: '🖼 Otra foto', callback_data: `foto:${id}` },
+      { text: '✂️ Más corto', callback_data: `corto:${id}` },
+      { text: '⏰ Otra hora', callback_data: `hora:${id}` },
     ], [
       { text: '🎵 Lo subo yo con canción', callback_data: `manual:${id}` },
     ]] },
