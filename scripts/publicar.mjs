@@ -340,6 +340,13 @@ const args = process.argv.slice(2);
 try {
   if (args[0] === '--cuenta') await cuenta();
   else if (args[0] === '--historia-prueba') console.log(historiaJpg(resolve(args[1] || falla('uso: --historia-prueba noticias/<carpeta>'))));
+  else if (args[0] === '--reel-ig-prueba') {
+    // crea el contenedor de un reel de prueba (solo para no seguidores) y NO lo publica: comprueba que Instagram lo acepta
+    const url = await sube(resolve(args[1] || falla('uso: --reel-ig-prueba <reel.mp4>')));
+    const { id } = await api('POST', `${USER}/media`, { media_type: 'REELS', video_url: url, caption: 'prueba', trial_params: JSON.stringify({ graduation_strategy: 'MANUAL' }) });
+    await listo(id, 'reel de prueba');
+    console.log(`✓ Instagram aceptó y procesó el reel de prueba (contenedor ${id}, sin publicar: caduca solo)`);
+  }
   else if (args[0] === '--informe') await informe(Number(args[1]) || 7);
   else if (args[0] === '--facebook') {
     // sube a Facebook un post que ya salió en Instagram (sin repetirlo en Instagram)
