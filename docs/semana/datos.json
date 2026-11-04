@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-04T20:05:24.233Z",
+  "actualizado": "2026-11-04T20:08:08.830Z",
   "posts": [
     {
       "externo": true,
@@ -283,6 +283,20 @@
       "programado": "2026-11-04T23:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-04-mashle-live-action/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-04-chainsaw-man-jump-festa",
+      "titular": "Chainsaw Man tendrá panel en Jump Festa 2027 el 20 de diciembre",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-11-05T20:00:00.000Z",
+      "programado": "2026-11-05T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-04-chainsaw-man-jump-festa/slide-01.jpg",
       "video": false
     },
     {
