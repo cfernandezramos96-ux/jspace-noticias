@@ -368,6 +368,16 @@ try {
     await listo(id, 'reel de prueba');
     console.log(`✓ Instagram aceptó y procesó el reel de prueba (contenedor ${id}, sin publicar: caduca solo)`);
   }
+  else if (args[0] === '--feed-nuevo') {
+    // posts del feed de @jspaceco_ de los últimos N días que no salieron por este script ni están anotados como externos
+    // (los que el equipo sube a mano, p. ej. con canción): los revisa la tarea nocturna del PC para el horario
+    const dias = Number(args[1]) || 3, desde = Date.now() - dias * 86400e3;
+    const conocidos = readFileSync(join(RAIZ, 'noticias', 'publicadas.md'), 'utf8') +
+      (existsSync(join(RAIZ, 'noticias', 'externos.json')) ? readFileSync(join(RAIZ, 'noticias', 'externos.json'), 'utf8') : '');
+    const { data = [] } = await api('GET', `${USER}/media`, { fields: 'id,timestamp,permalink,media_type,caption', limit: '30' });
+    console.log(JSON.stringify(data.filter((m) => +new Date(m.timestamp) >= desde && !conocidos.includes(m.permalink.split('/').filter(Boolean).pop()))
+      .map((m) => ({ fecha: m.timestamp, link: m.permalink, tipo: m.media_type, texto: (m.caption || '').split('\n')[0].slice(0, 120) })), null, 2));
+  }
   else if (args[0] === '--informe') await informe(Number(args[1]) || 7);
   else if (args[0] === '--facebook') {
     // sube a Facebook un post que ya salió en Instagram (sin repetirlo en Instagram)
