@@ -127,14 +127,22 @@ async function publica(carpeta) {
   let colab = [];
   try { colab = JSON.parse(readFileSync(join(carpeta, 'noticia.json'), 'utf8')).colaboradores || []; } catch {}
   const conColab = colab.length ? { collaborators: JSON.stringify(colab.map((u) => u.replace(/^@/, ''))) } : {};
+  // Etiquetas (Kazuo, 4 nov 2026): en eventos se etiqueta a la productora que lo organiza y al artista.
+  // noticia.json "etiquetas": ["breakfast_live", "otobokebeaver"] → van en la primera imagen del post al publicar.
+  // Hay que ponerlas aquí: si después se etiqueta desde la app editando el post, Instagram quita la collab.
+  let etiquetas = [];
+  try { etiquetas = JSON.parse(readFileSync(join(carpeta, 'noticia.json'), 'utf8')).etiquetas || []; } catch {}
+  const tags = etiquetas.slice(0, 20).map((u, i) => ({ username: u.replace(/^@/, ''), x: 0.15 + 0.7 * ((i % 3) / 2), y: 0.12 + 0.1 * Math.floor(i / 3) }));
+  const primeraImg = slides.findIndex((f) => f.endsWith('.jpg'));
+  const conTags = (i) => tags.length && i === primeraImg ? { user_tags: JSON.stringify(tags) } : {};
   const media = (url, extra) => url.endsWith('.mp4') ? { media_type: 'VIDEO', video_url: url, ...extra } : { image_url: url, ...extra };
   let contenedor;
   if (slides.length === 1) {
-    contenedor = (await api('POST', `${USER}/media`, media(urls[0], { caption: leyenda, ...conColab }))).id;
+    contenedor = (await api('POST', `${USER}/media`, media(urls[0], { caption: leyenda, ...conColab, ...conTags(0) }))).id;
   } else {
     const hijos = [];
     for (let i = 0; i < urls.length; i++) {
-      const { id } = await api('POST', `${USER}/media`, media(urls[i], { is_carousel_item: 'true' }));
+      const { id } = await api('POST', `${USER}/media`, media(urls[i], { is_carousel_item: 'true', ...conTags(i) }));
       await listo(id, `slide ${i + 1}`);
       hijos.push(id);
     }

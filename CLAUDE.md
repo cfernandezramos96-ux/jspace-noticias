@@ -108,6 +108,14 @@ ElKazuoTV, los dos: `["elkazuotv", "bunkawave"]`). Son amigos de JSpace y acepta
 slides: Kazuo les está preguntando si se puede poner, como el de ElKazuoTV; cuando lo pase, se añade a la plantilla.
 Nota: el reel de prueba de Instagram no admite collab, sale sin ellos.
 
+**Etiquetar a la productora (Kazuo, 4 nov 2026):** en todo post de un **evento** (concierto, festival, firma, gira
+con fecha), averiguar qué productora lo organiza, buscando en notas de prensa o en la boletería, y etiquetarla a ella y al artista:
+`"etiquetas": ["breakfast_live", "otobokebeaver"]` en noticia.json (usuarios de Instagram sin @). El publicador
+las pone en la primera imagen del post. Verificar el usuario exacto antes: business_discovery con el token (p. ej.
+`breakfastlive` es otra cuenta; la de la productora colombiana es `breakfast_live`). Si no se confirma la productora,
+se etiqueta solo al artista y se avisa en la vista previa. Nunca etiquetar después desde la app: al editar las
+etiquetas de un post publicado, Instagram le quita la collab (pasó con Otoboke, 4 nov 2026) y no se puede volver a poner.
+
 **Fijados del perfil (Kazuo, 4 nov 2026):** cada lunes, en el informe «📊 Cómo nos fue», añade una línea «📌 Para
 fijar esta semana:» con los 3 posts que conviene fijar en el perfil (`node scripts/publicar.mjs --informe 30`: los de
 más alcance del último mes, sin repetir tema, mejor si uno es de Colombia), con sus links y cuáles se cambian

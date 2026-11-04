@@ -168,6 +168,12 @@ Para noticias con **datos que contar** (de qué trata, staff, estudio, fechas, c
 **Cuál usar:** anuncio corto → post de 3 (portada + póster + cierre). Historia o aniversario → slides `historia`.
 Noticia con datos (staff, cifras, fechas) → carrusel informativo. Tráiler oficial → «tráiler en tarjeta».
 
+### Eventos: etiquetar a la productora y al artista (Kazuo, 4 nov 2026)
+
+En noticias de eventos (concierto, festival, gira con fecha) se averigua quién lo organiza y se agrega a noticia.json
+`"etiquetas": ["<usuario productora>", "<usuario artista>"]` (sin @, usuario verificado). Van en la primera imagen
+al publicar. En la vista previa se dice a quién se etiqueta. Detalles en CLAUDE.md («Etiquetar a la productora»).
+
 ### Collab con ElKazuoTV: su plantilla, la de los dos logos (Kazuo, 3 nov 2026)
 
 Si el post va en collab con ElKazuoTV (`"colaboradores": ["elkazuotv", …]` en noticia.json), la plantilla cambia
