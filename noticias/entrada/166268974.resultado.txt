@@ -1,0 +1,1 @@
+Eso fue un fallo pasajero de GitHub (error 502 al relanzar el bot, sobre las 5:09 a. m.). No se perdió nada y el bot siguió corriendo normal; ya está respondiendo. Lo programado de hoy sigue en pie.
