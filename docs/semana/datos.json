@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-04T20:23:42.836Z",
+  "actualizado": "2026-11-04T20:28:52.094Z",
   "posts": [
     {
       "externo": true,
@@ -274,6 +274,25 @@
       "historia": true
     },
     {
+      "carpeta": "noticias/2026-11-04-chainsaw-man-jump-festa",
+      "titular": "Chainsaw Man tendrá panel en Jump Festa 2027 el 20 de diciembre",
+      "franja": "extra",
+      "estado": "publicado",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-11-04T20:26:43.058Z",
+      "programado": "2026-11-05T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-04-chainsaw-man-jump-festa/slide-01.jpg",
+      "video": true,
+      "ig": "https://www.instagram.com/p/DfVT-qmDBCl/",
+      "fb": "https://www.facebook.com/reel/1155525177046277/",
+      "fb_tipo": "reel",
+      "reel_prueba": true,
+      "historia": true
+    },
+    {
       "carpeta": "noticias/2026-11-04-mashle-live-action",
       "titular": "Mashle tendrá película live-action en marzo de 2027",
       "franja": "anime",
@@ -284,20 +303,6 @@
       "colaboradores": [],
       "portada": "noticias/2026-11-04-mashle-live-action/slide-01.jpg",
       "video": false
-    },
-    {
-      "carpeta": "noticias/2026-11-04-chainsaw-man-jump-festa",
-      "titular": "Chainsaw Man tendrá panel en Jump Festa 2027 el 20 de diciembre",
-      "franja": "extra",
-      "estado": "aprobado",
-      "temas": [
-        "anime"
-      ],
-      "hora": "2026-11-05T20:00:00.000Z",
-      "programado": "2026-11-05T20:00:00.000Z",
-      "colaboradores": [],
-      "portada": "noticias/2026-11-04-chainsaw-man-jump-festa/slide-01.jpg",
-      "video": true
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
