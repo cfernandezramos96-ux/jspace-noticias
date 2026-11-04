@@ -121,7 +121,7 @@ Si alguien toca «Ármalo», llega como un pedido normal (tipo noticia): ármalo
 de Google Noticias redirigen: si no abren, busca la nota por el titular. Los lunes, con el informe, ajusta la lista de
 nombres de `noticias/radar.json` según lo que funcione.
 
-**Horario semanal** (`docs/semana/`, en GitHub Pages: cfernandezramos96-ux.github.io/jspace-noticias/semana/): lo arma
+**Horario semanal** (`docs/semana/`, en GitHub Pages: cfernandezramos96-ux.github.io/jspace-noticias/docs/semana/): lo arma
 `scripts/semana.mjs` en cada vuelta del bot. Muestra lo publicado, aprobado, sin aprobar y los huecos de los dos
 automáticos.
 - **Noticias de anime y J-music a la vez** (Kazuo, 4 nov 2026: un opening o ending, una seiyuu que canta, un concierto
