@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-04T08:41:18.261Z",
+  "actualizado": "2026-11-04T13:22:51.400Z",
   "posts": [
     {
       "externo": true,
@@ -211,6 +211,18 @@
       "video": false
     },
     {
+      "carpeta": "noticias/2026-11-04-yonezu-gira",
+      "titular": "Kenshi Yonezu arranca su gira GHOST este viernes y llegará a Ciudad de México",
+      "franja": "jmusic",
+      "estado": "pendiente",
+      "temas": [],
+      "hora": "2026-11-04T17:30:00.000Z",
+      "programado": "2026-11-04T17:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-04-yonezu-gira/slide-01.jpg",
+      "video": false
+    },
+    {
       "carpeta": "noticias/2026-11-04-otoboke-aniversario",
       "titular": "Se cumple un año del debut de Otoboke Beaver en Colombia",
       "franja": "extra",
@@ -225,6 +237,18 @@
         "bunkawave"
       ],
       "portada": "noticias/2026-11-04-otoboke-aniversario/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-04-mashle-live-action",
+      "titular": "Mashle tendrá película live-action en marzo de 2027",
+      "franja": "anime",
+      "estado": "pendiente",
+      "temas": [],
+      "hora": "2026-11-04T23:30:00.000Z",
+      "programado": "2026-11-04T23:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-04-mashle-live-action/slide-01.jpg",
       "video": false
     },
     {
