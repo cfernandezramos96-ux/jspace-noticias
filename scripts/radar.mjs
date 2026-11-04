@@ -25,7 +25,12 @@ const FUENTES = [
   ['Prensa de Colombia', gn('(anime OR manga OR J-pop OR otaku OR cosplay OR "concierto japonés" OR "banda japonesa") (Bogotá OR Colombia OR Medellín OR Cali) when:2d', 'es-419', 'CO')],
 ];
 const norm = (t) => t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
-const tiene = (t, lista) => lista.find((k) => norm(t).includes(norm(k)));
+// palabras latinas con límite de palabra («Ado» no debe salir de «eliminados»); japonés, por coincidencia simple
+const tiene = (t, lista) => lista.find((k) => {
+  const n = norm(k), x = norm(t);
+  if (!/^[a-z0-9' .-]+$/.test(n)) return x.includes(n);
+  return new RegExp(`(^|[^a-z0-9])${n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}([^a-z0-9]|$)`).test(x);
+});
 const limpia = (t) => t.replace(/<!\[CDATA\[|\]\]>/g, '').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;|&#039;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').trim();
 
 // la primera vez solo memoriza lo que ya hay (sin avisar): el radar es para lo que salga de aquí en adelante
