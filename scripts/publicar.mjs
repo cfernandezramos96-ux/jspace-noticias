@@ -210,6 +210,7 @@ async function enHistoria(carpeta, registro) {
 // ---------- Facebook: la página de JSpace, con las mismas imágenes y la misma leyenda ----------
 // Varias fotos en un post (Facebook no mezcla fotos y video: de una slide con video se sube su JPG).
 const PAGINA = env.FB_PAGE_ID || '169636513221619';
+const PERFIL_FB = '100053164456324'; // la misma página en el formato nuevo (profile.php?id=…): sus links sí abren en el celular
 // En Facebook van solo las imágenes de la noticia: la slide de cierre («Sigue a @jspaceco_») no tiene sentido ahí
 function slidesFacebook(carpeta) {
   const tipos = (JSON.parse(readFileSync(join(carpeta, 'noticia.json'), 'utf8')).slides || []).map((s) => s.tipo);
@@ -243,8 +244,11 @@ async function enFacebook(carpeta, registro, leyenda, urlDe = {}) {
     const params = { message: leyenda, access_token: pt };
     fotos.forEach((fbid, i) => { params[`attached_media[${i}]`] = JSON.stringify({ media_fbid: fbid }); });
     const { id } = await api('POST', `${PAGINA}/feed`, params);
-    const { permalink_url } = await api('GET', id, { fields: 'permalink_url', access_token: pt });
-    Object.assign(registro, { facebook: permalink_url, facebook_id: id });
+    // el permalink_url de la API trae un id viejo de la página (1856998409415623) que la app del celular no abre
+    // («This isn't available»); se usa el id del perfil nuevo de la página, el mismo que da Facebook como og:url
+    const { permalink_url: crudo } = await api('GET', id, { fields: 'permalink_url', access_token: pt });
+    const permalink_url = `https://www.facebook.com/${PERFIL_FB}/posts/${id.split('_').pop()}`;
+    Object.assign(registro, { facebook: permalink_url, facebook_id: id, facebook_crudo: crudo });
     console.log(`✓ publicado en Facebook: ${permalink_url}`);
   } catch (e) {
     registro.facebook_error = e.message;
