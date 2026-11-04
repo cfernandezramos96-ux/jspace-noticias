@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-04T18:33:51.815Z",
+  "actualizado": "2026-11-04T20:05:24.233Z",
   "posts": [
     {
       "externo": true,
@@ -255,18 +255,23 @@
       "carpeta": "noticias/2026-11-04-otoboke-aniversario",
       "titular": "Se cumple un año del debut de Otoboke Beaver en Colombia",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic"
       ],
-      "hora": "2026-11-04T20:00:00.000Z",
+      "hora": "2026-11-04T20:04:35.935Z",
       "programado": "2026-11-04T20:00:00.000Z",
       "colaboradores": [
         "elkazuotv",
         "bunkawave"
       ],
       "portada": "noticias/2026-11-04-otoboke-aniversario/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfVRcTuF-UN/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1859098565872274",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-04-mashle-live-action",
