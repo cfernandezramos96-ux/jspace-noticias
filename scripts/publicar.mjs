@@ -226,7 +226,7 @@ function slidesFacebook(carpeta) {
     .filter((f) => !['cierre', 'video'].includes(tipos[Number(f.match(/\d+/)[0]) - 1]));
 }
 async function enFacebook(carpeta, registro, leyenda, urlDe = {}) {
-  if (env.FB_PUBLICAR === 'no') return;
+  if (env.FB_PUBLICAR === 'no' || process.env.FB_PUBLICAR === 'no') return;
   try {
     const { access_token: pt } = await api('GET', PAGINA, { fields: 'access_token' });
     // post con video: en Facebook sale el reel vertical (reel.mp4, de scripts/reel.mjs), no el carrusel (Kazuo, 3 nov

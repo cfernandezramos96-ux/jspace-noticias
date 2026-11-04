@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-04T20:28:52.094Z",
+  "actualizado": "2026-11-04T20:35:32.989Z",
   "posts": [
     {
       "externo": true,
@@ -252,28 +252,6 @@
       "historia": true
     },
     {
-      "carpeta": "noticias/2026-11-04-otoboke-aniversario",
-      "titular": "Se cumple un año del debut de Otoboke Beaver en Colombia",
-      "franja": "extra",
-      "estado": "publicado",
-      "temas": [
-        "jmusic"
-      ],
-      "hora": "2026-11-04T20:04:35.935Z",
-      "programado": "2026-11-04T20:00:00.000Z",
-      "colaboradores": [
-        "elkazuotv",
-        "bunkawave"
-      ],
-      "portada": "noticias/2026-11-04-otoboke-aniversario/slide-01.jpg",
-      "video": false,
-      "ig": "https://www.instagram.com/p/DfVRcTuF-UN/",
-      "fb": "https://www.facebook.com/100053164456324/posts/1859098565872274",
-      "fb_tipo": null,
-      "reel_prueba": false,
-      "historia": true
-    },
-    {
       "carpeta": "noticias/2026-11-04-chainsaw-man-jump-festa",
       "titular": "Chainsaw Man tendrá panel en Jump Festa 2027 el 20 de diciembre",
       "franja": "extra",
@@ -290,6 +268,28 @@
       "fb": "https://www.facebook.com/reel/1155525177046277/",
       "fb_tipo": "reel",
       "reel_prueba": true,
+      "historia": true
+    },
+    {
+      "carpeta": "noticias/2026-11-04-otoboke-aniversario",
+      "titular": "Se cumple un año del debut de Otoboke Beaver en Colombia",
+      "franja": "extra",
+      "estado": "publicado",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-04T20:35:16.575Z",
+      "programado": "2026-11-04T20:00:00.000Z",
+      "colaboradores": [
+        "elkazuotv",
+        "bunkawave"
+      ],
+      "portada": "noticias/2026-11-04-otoboke-aniversario/slide-01.jpg",
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfVU9Bnmru_/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1859098565872274",
+      "fb_tipo": null,
+      "reel_prueba": false,
       "historia": true
     },
     {
