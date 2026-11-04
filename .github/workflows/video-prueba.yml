@@ -16,17 +16,18 @@ jobs:
       - name: Bajar
         run: |
           sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg > /dev/null
-          pip install -q -U yt-dlp
+          pip install -q -U "yt-dlp[default]"
+          curl -fsSL https://deno.land/install.sh | sh -s -- -y > /dev/null 2>&1; export PATH="$HOME/.deno/bin:$PATH"
           out=noticias/entrada/prueba-video.txt
           echo "yt-dlp $(yt-dlp --version) · $(date -u)" > $out
-          for url in https://www.youtube.com/watch?v=CD_wOuLtjUc https://www.youtube.com/watch?v=uSOfMAT_Hqo; do
-            echo "== $url" >> $out
+          for cli in tv web_safari mweb android_vr; do for url in https://www.youtube.com/watch?v=CD_wOuLtjUc https://www.youtube.com/watch?v=uSOfMAT_Hqo; do
+            echo "== $cli $url" >> $out
             yt-dlp -f "bv*[height<=1080][ext=mp4]+ba[ext=m4a]/b[ext=mp4]/b" --merge-output-format mp4 \
-              -o "$RUNNER_TEMP/v.%(ext)s" --no-playlist "$url" > $RUNNER_TEMP/log.txt 2>&1 \
+              -o "$RUNNER_TEMP/v.%(ext)s" --no-playlist --extractor-args "youtube:player_client=$cli" "$url" > $RUNNER_TEMP/log.txt 2>&1 \
               && echo "OK $(du -h $RUNNER_TEMP/v.mp4 | cut -f1) $(ffprobe -v error -show_entries stream=width,height -of csv=p=0 $RUNNER_TEMP/v.mp4 | head -1)" >> $out \
-              || { echo "FALLÓ"; tail -5 $RUNNER_TEMP/log.txt; } >> $out
+              || { echo "FALLÓ"; grep ERROR $RUNNER_TEMP/log.txt | head -2; } >> $out
             rm -f $RUNNER_TEMP/v.*
-          done
+          done; done
           cat $out
           git config user.name "JSpace Bot"; git config user.email "jspace-bot@users.noreply.github.com"
-          git add $out && git commit -q -m "Prueba de video" && (git push -q || (git pull -q --rebase && git push -q))
+          git add -f $out && git commit -q -m "Prueba de video" && (git push -q || (git pull -q --rebase && git push -q))
