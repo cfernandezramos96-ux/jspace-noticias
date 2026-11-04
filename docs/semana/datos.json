@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-04T13:22:51.400Z",
+  "actualizado": "2026-11-04T15:01:35.953Z",
   "posts": [
     {
       "externo": true,
@@ -200,15 +200,20 @@
       "carpeta": "noticias/2026-11-04-morning-musume-aniversario",
       "titular": "Morning Musume celebra 29 años desde su debut indie con «Ai no Tane»",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic"
       ],
-      "hora": "2026-11-04T15:00:00.000Z",
+      "hora": "2026-11-04T15:00:48.573Z",
       "programado": "2026-11-04T15:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-04-morning-musume-aniversario/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfUurEHFBem/",
+      "fb": "https://www.facebook.com/1856998409415623/posts/1858817875900343",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-04-yonezu-gira",
