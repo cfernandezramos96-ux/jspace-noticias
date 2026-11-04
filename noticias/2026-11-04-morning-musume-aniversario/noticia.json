@@ -1,0 +1,37 @@
+{
+  "titular": "Morning Musume celebra 29 años desde su debut indie con «Ai no Tane»",
+  "link": "https://j-generation.com/2017/11/morning-musume-17-collaborates-with-first-generation-members-for-morning-musumes-20th-anniversary/",
+  "formato": "carrusel",
+  "franja": "extra",
+  "tema": "jmusic",
+  "slides": [
+    {
+      "tipo": "portada",
+      "imagen": "grupo1.jpg",
+      "encuadre": "50% 30%",
+      "posicion": "abajo",
+      "etiqueta": "J-Music · Aniversario",
+      "titulo": "**Morning Musume** cumple **29 años** desde su debut indie",
+      "texto": "El 3 de noviembre de 1997 lanzaron «Ai no Tane», su primer single."
+    },
+    {
+      "tipo": "texto",
+      "titulo": "El reto de **50 mil copias**",
+      "texto": "«Ai no Tane» salió con sus cinco integrantes originales. Para el debut mayor debían vender 50 mil copias en cinco días. Lo lograron.",
+      "imagen": "grupo2.jpg",
+      "proporcion": 1.5,
+      "encuadre": "50% 50%"
+    },
+    {
+      "tipo": "texto",
+      "titulo": "**77 singles** después",
+      "texto": "Su último, «Lonely...But not Alone», salió el 30 de septiembre. El 11 de diciembre, Sakura Oda se despide en Yokohama Arena.",
+      "imagen": "single.jpg",
+      "proporcion": 1.0,
+      "encuadre": "50% 50%"
+    },
+    {
+      "tipo": "cierre"
+    }
+  ]
+}
