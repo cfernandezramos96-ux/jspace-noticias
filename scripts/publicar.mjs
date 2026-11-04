@@ -2,6 +2,7 @@
 //   node scripts/publicar.mjs noticias/<carpeta>            → publica ya esa noticia
 //   node scripts/publicar.mjs noticias/<carpeta> --a 18:30  → la deja en cola para esa hora (hoy, o mañana si ya pasó)
 //   node scripts/publicar.mjs --cola                        → publica lo que esté en cola y ya toque (lo lanza la tarea de Windows)
+//   node scripts/publicar.mjs --informe [días=7]               → resultados de los posts de los últimos días (JSON)
 //   node scripts/publicar.mjs --cuenta                      → comprueba el token: usuario, tipo de cuenta y cupo de publicaciones
 //   node scripts/publicar.mjs --renovar                     → renueva el token (dura 60 días) y lo guarda en .env
 //   node scripts/publicar.mjs --subida <archivo>                → solo sube ese archivo a Cloudinary y muestra la URL (prueba)
@@ -15,6 +16,7 @@
 // Nunca imprime el token.
 import { readFileSync, writeFileSync, readdirSync, existsSync, appendFileSync } from 'node:fs';
 import { resolve, join, dirname, basename } from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const RAIZ = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -147,10 +149,40 @@ async function publica(carpeta) {
   console.log(`✓ publicado en Instagram: ${permalink}`);
   // Facebook va después y aparte: si falla, el post de Instagram ya salió y no se repite
   await enFacebook(carpeta, registro, leyenda, urlDe);
+  await enHistoria(carpeta, registro);
   const n = JSON.parse(readFileSync(join(carpeta, 'noticia.json'), 'utf8'));
   const fecha = ahora.toLocaleString('sv-SE', { timeZone: 'America/Bogota' }).slice(0, 16);
   appendFileSync(join(RAIZ, 'noticias', 'publicadas.md'),
     `${fecha} · ${n.franja || '-'} · ${n.titular} · ${n.formato || ''} · ${n.link || ''} · ${permalink}${registro.facebook ? ` · FB: ${registro.facebook}` : ''}\n`);
+}
+
+// ---------- historia de Instagram: la portada del post en vertical, para que lo vean los seguidores ----------
+// (Kazuo, 4 nov 2026) La API publica historias de imagen, pero sin stickers (ni encuesta, ni pregunta, ni enlace):
+// esos solo se ponen desde la app. HISTORIA=no la apaga; noticia.json puede traer "historia": false.
+function historiaJpg(carpeta) {
+  const fuente = join(carpeta, 'slide-01.jpg'), salida = join(carpeta, 'historia.jpg');
+  const marca = 'plantilla/marca/jspace-marca-agua.png', F = 'plantilla/fuentes/Poppins-Black.ttf';
+  const texto = (t, y, color, tam) => `drawtext=fontfile=${F}:text='${t}':fontcolor=${color}:fontsize=${tam}:x=(w-text_w)/2:y=${y}`;
+  const filtro = '[0:v]split[a][b];[a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,gblur=sigma=30,eq=brightness=-0.18[f];' +
+    '[b]scale=880:1100[p];[f][p]overlay=100:420[c];[1:v]scale=300:-1[m];[c][m]overlay=(W-w)/2:130,' +
+    texto('NUEVO POST', 300, '0xFF3636', 72) + ',' + texto('Míralo en el perfil', 1600, 'white', 54) + '[o]';
+  execFileSync('ffmpeg', ['-y', '-v', 'error', '-i', fuente, '-i', marca, '-filter_complex', filtro, '-map', '[o]', '-q:v', '3', '-frames:v', '1', salida], { cwd: RAIZ });
+  return salida;
+}
+const HISTORIAS = false; // se activa cuando Kazuo apruebe el diseño de la historia (4 nov 2026)
+async function enHistoria(carpeta, registro) {
+  if (!HISTORIAS) return;
+  let n = {}; try { n = JSON.parse(readFileSync(join(carpeta, 'noticia.json'), 'utf8')); } catch {}
+  if (env.HISTORIA === 'no' || process.env.HISTORIA === 'no' || n.historia === false) return;
+  try {
+    const url = await sube(historiaJpg(carpeta));
+    const { id: c } = await api('POST', `${USER}/media`, { media_type: 'STORIES', image_url: url });
+    await listo(c, 'historia');
+    const { id } = await api('POST', `${USER}/media_publish`, { creation_id: c });
+    registro.historia = id;
+    console.log('✓ historia publicada');
+  } catch (e) { registro.historia_error = e.message; console.error(`✗ historia: ${e.message}`); }
+  writeFileSync(join(carpeta, 'publicado.json'), JSON.stringify(registro, null, 2));
 }
 
 // ---------- Facebook: la página de JSpace, con las mismas imágenes y la misma leyenda ----------
@@ -275,10 +307,39 @@ async function renovar() {
   console.log(`✓ token renovado: vale ${Math.round(j.expires_in / 86400)} días más`);
 }
 
+// ---------- informe de resultados (lo usa la rutina de los lunes) ----------
+// Los posts de Instagram de los últimos N días con likes, comentarios y, si el token tiene instagram_manage_insights,
+// alcance, guardados, compartidos y vistas. Imprime JSON; la rutina lo lee y escribe el informe.
+async function informe(dias = 7) {
+  const desde = Date.now() - dias * 86400e3, posts = [];
+  let r = await api('GET', `${USER}/media`, { fields: 'id,caption,media_type,media_product_type,timestamp,permalink,like_count,comments_count', limit: '50' });
+  for (;;) {
+    for (const m of r.data || []) if (+new Date(m.timestamp) >= desde) posts.push(m);
+    const ultimo = r.data?.[r.data.length - 1];
+    if (!r.paging?.next || !ultimo || +new Date(ultimo.timestamp) < desde) break;
+    r = await api('GET', r.paging.next);
+  }
+  let sinInsights = null;
+  for (const m of posts) {
+    try {
+      const i = await api('GET', `${m.id}/insights`, { metric: 'reach,saved,shares,views,total_interactions' });
+      m.metricas = Object.fromEntries((i.data || []).map((x) => [x.name, x.values?.[0]?.value ?? x.total_value?.value]));
+    } catch (e) { sinInsights = e.message; break; }
+  }
+  const hora = (t) => new Date(t).toLocaleString('es-CO', { timeZone: 'America/Bogota', weekday: 'short', day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' });
+  console.log(JSON.stringify({
+    dias, posts: posts.length, ...(sinInsights ? { aviso_insights: `sin alcance ni guardados: ${sinInsights}` } : {}),
+    lista: posts.map((m) => ({ fecha: hora(m.timestamp), tipo: m.media_type, likes: m.like_count, comentarios: m.comments_count,
+      ...(m.metricas || {}), link: m.permalink, titulo: (m.caption || '').split('\n')[0].slice(0, 90) })),
+  }, null, 2));
+}
+
 // ---------- entrada ----------
 const args = process.argv.slice(2);
 try {
   if (args[0] === '--cuenta') await cuenta();
+  else if (args[0] === '--historia-prueba') console.log(historiaJpg(resolve(args[1] || falla('uso: --historia-prueba noticias/<carpeta>'))));
+  else if (args[0] === '--informe') await informe(Number(args[1]) || 7);
   else if (args[0] === '--facebook') {
     // sube a Facebook un post que ya salió en Instagram (sin repetirlo en Instagram)
     const c = resolve(args[1] || falla('uso: --facebook noticias/<carpeta>'));
