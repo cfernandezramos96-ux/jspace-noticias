@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-05T14:30:47.527Z",
+  "actualizado": "2026-11-05T14:31:54.047Z",
   "posts": [
     {
       "externo": true,
@@ -371,6 +371,34 @@
       "colaboradores": [],
       "portada": "noticias/2026-11-05-code-geass-aspal/slide-01.jpg",
       "video": true
+    },
+    {
+      "carpeta": "noticias/2026-11-05-centimillimental-gira",
+      "titular": "Centimillimental anuncia su gira por Latinoamérica en mayo de 2027",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-06T02:00:00.000Z",
+      "programado": "2026-11-06T02:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-05-centimillimental-gira/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-05-mackenyu-mashle",
+      "titular": "Mackenyu será Mash en el live-action de Mashle",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-11-06T20:00:00.000Z",
+      "programado": "2026-11-06T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-05-mackenyu-mashle/slide-01.jpg",
+      "video": false
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
