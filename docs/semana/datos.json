@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-05T21:31:31.076Z",
+  "actualizado": "2026-11-05T23:44:57.575Z",
   "posts": [
     {
       "externo": true,
@@ -401,13 +401,18 @@
       "carpeta": "noticias/2026-11-05-code-geass-aspal",
       "titular": "Code Geass: Star Chaser Aspal revela su visual y su reparto",
       "franja": "anime",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [],
-      "hora": "2026-11-05T23:30:00.000Z",
+      "hora": "2026-11-05T23:42:07.522Z",
       "programado": "2026-11-05T23:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-05-code-geass-aspal/slide-01.jpg",
-      "video": true
+      "video": true,
+      "ig": "https://www.instagram.com/p/DfYPIv9D_-d/",
+      "fb": "https://www.facebook.com/reel/1059766577119333/",
+      "fb_tipo": "reel",
+      "reel_prueba": true,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
