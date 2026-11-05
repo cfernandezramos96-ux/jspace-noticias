@@ -1,0 +1,14 @@
+{
+ "titular": "Centimillimental anuncia su gira por Latinoamérica en mayo de 2027",
+ "link": "https://www.sonymusic.co.jp/artist/Centimillimental/info/587951",
+ "formato": "post",
+ "franja": "extra",
+ "tema": "jmusic",
+ "slides": [
+  {"tipo":"portada","imagen":"foto.jpg","encuadre":"58% 50%","posicion":"abajo","tema":"claro","etiqueta":"Gira · Mayo 2027","sombra":1,
+   "titulo":"**Centimillimental** hará gira por Latinoamérica en 2027",
+   "texto":"Seis ciudades en cinco países, desde el 7 de mayo."},
+  {"tipo":"texto","titulo":"Las **fechas**","texto":"**7 may** · Ciudad de México\n**9 may** · Buenos Aires\n**12 may** · São Paulo\n**14 may** · Santiago\n**16 may** · Lima\n**18 may** · Monterrey\nLos detalles de cada concierto se anunciarán después.","imagen":"foto.jpg","proporcion":1.5,"encuadre":"58% 50%"},
+  {"tipo":"cierre"}
+ ]
+}

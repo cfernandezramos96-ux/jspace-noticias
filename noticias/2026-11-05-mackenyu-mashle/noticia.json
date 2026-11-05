@@ -1,0 +1,15 @@
+{
+ "titular": "Mackenyu será Mash en el live-action de Mashle",
+ "link": "https://animecorner.me/mashle-live-action-film-teaser-reveals-mackenyu-cast-as-mash-yuichi-fukuda-directs/",
+ "formato": "post",
+ "franja": "extra",
+ "tema": "anime",
+ "slides": [
+  {"tipo":"portada","imagen":"mash.jpg","encuadre":"45% 50%","posicion":"abajo","etiqueta":"Live-action · 19 de marzo","sombra":1,
+   "titulo":"**Mackenyu** será Mash en el live-action de Mashle",
+   "texto":"Yuichi Fukuda dirige la película, que llega a Japón el 19 de marzo."},
+  {"tipo":"poster","imagen":"mash.jpg"},
+  {"tipo":"texto","titulo":"Tres años de **gimnasio**","texto":"Mackenyu se preparó físicamente durante unos tres años para el papel. Su reto: transmitir la personalidad de un Mash que casi no muestra emociones.","imagen":"mash.jpg","proporcion":1.78,"encuadre":"45% 40%"},
+  {"tipo":"cierre"}
+ ]
+}
