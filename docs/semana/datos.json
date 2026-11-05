@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-05T14:42:30.595Z",
+  "actualizado": "2026-11-05T14:44:40.080Z",
   "posts": [
     {
       "externo": true,
@@ -380,6 +380,20 @@
       "video": true
     },
     {
+      "carpeta": "noticias/2026-11-05-mackenyu-mashle",
+      "titular": "Mackenyu será Mash en el live-action de Mashle",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-11-05T21:30:00.000Z",
+      "programado": "2026-11-05T21:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-05-mackenyu-mashle/slide-01.jpg",
+      "video": false
+    },
+    {
       "carpeta": "noticias/2026-11-05-code-geass-aspal",
       "titular": "Code Geass: Star Chaser Aspal revela su visual y su reparto",
       "franja": "anime",
@@ -390,20 +404,6 @@
       "colaboradores": [],
       "portada": "noticias/2026-11-05-code-geass-aspal/slide-01.jpg",
       "video": true
-    },
-    {
-      "carpeta": "noticias/2026-11-05-mackenyu-mashle",
-      "titular": "Mackenyu será Mash en el live-action de Mashle",
-      "franja": "extra",
-      "estado": "aprobado",
-      "temas": [
-        "anime"
-      ],
-      "hora": "2026-11-06T20:00:00.000Z",
-      "programado": "2026-11-06T20:00:00.000Z",
-      "colaboradores": [],
-      "portada": "noticias/2026-11-05-mackenyu-mashle/slide-01.jpg",
-      "video": false
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
