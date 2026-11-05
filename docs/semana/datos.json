@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-05T13:20:58.352Z",
+  "actualizado": "2026-11-05T14:23:24.853Z",
   "posts": [
     {
       "externo": true,
@@ -370,7 +370,7 @@
       "programado": "2026-11-05T23:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-05-code-geass-aspal/slide-01.jpg",
-      "video": false
+      "video": true
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
