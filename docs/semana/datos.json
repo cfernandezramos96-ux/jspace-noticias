@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-05T02:32:14.207Z",
+  "actualizado": "2026-11-05T13:20:58.352Z",
   "posts": [
     {
       "externo": true,
@@ -332,6 +332,21 @@
       "historia": true
     },
     {
+      "carpeta": "noticias/2026-11-05-fool-night",
+      "titular": "Fool Night, de SHAFT y SUNRISE, llegará a Netflix el 26 de noviembre con su opening y ending",
+      "franja": "jmusic",
+      "estado": "pendiente",
+      "temas": [
+        "anime",
+        "jmusic"
+      ],
+      "hora": "2026-11-05T17:30:00.000Z",
+      "programado": "2026-11-05T17:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-05-fool-night/slide-01.jpg",
+      "video": false
+    },
+    {
       "carpeta": "noticias/2026-11-05-one-piece-doble-aventura",
       "titular": "One Piece: Doble Aventura llegará a los cines de Colombia el 3 de diciembre",
       "franja": "extra",
@@ -344,6 +359,18 @@
       "colaboradores": [],
       "portada": "noticias/2026-11-05-one-piece-doble-aventura/slide-01.jpg",
       "video": true
+    },
+    {
+      "carpeta": "noticias/2026-11-05-code-geass-aspal",
+      "titular": "Code Geass: Star Chaser Aspal revela su visual y su reparto",
+      "franja": "anime",
+      "estado": "pendiente",
+      "temas": [],
+      "hora": "2026-11-05T23:30:00.000Z",
+      "programado": "2026-11-05T23:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-05-code-geass-aspal/slide-01.jpg",
+      "video": false
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
