@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-05T01:17:43.398Z",
+  "actualizado": "2026-11-05T02:03:00.355Z",
   "posts": [
     {
       "externo": true,
@@ -330,6 +330,20 @@
       "fb_tipo": null,
       "reel_prueba": false,
       "historia": true
+    },
+    {
+      "carpeta": "noticias/2026-11-05-one-piece-doble-aventura",
+      "titular": "One Piece: Doble Aventura llegará a los cines de Colombia el 3 de diciembre",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-11-05T20:00:00.000Z",
+      "programado": "2026-11-05T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-05-one-piece-doble-aventura/slide-01.jpg",
+      "video": false
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
