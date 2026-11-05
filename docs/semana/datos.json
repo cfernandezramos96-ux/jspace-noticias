@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-05T14:33:22.145Z",
+  "actualizado": "2026-11-05T14:33:33.769Z",
   "posts": [
     {
       "externo": true,
@@ -376,7 +376,7 @@
       "carpeta": "noticias/2026-11-05-centimillimental-gira",
       "titular": "Centimillimental anuncia su gira por Latinoamérica en mayo de 2027",
       "franja": "extra",
-      "estado": "pendiente",
+      "estado": "manual",
       "temas": [
         "jmusic"
       ],
