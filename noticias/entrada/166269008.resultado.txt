@@ -1,0 +1,1 @@
+Listo, Kazuo, ya lo arreglé. Esos dos "a mano" eran los reels de prueba que el sistema sube solo a los pocos minutos de cada post (Chainsaw y RADWIMPS), y el escaneo los tomaba por posts subidos a mano. Los quité del horario y ajusté el escaneo para que no vuelva a confundirlos. Los dos posts reales siguen como publicados.

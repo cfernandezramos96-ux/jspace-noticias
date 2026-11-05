@@ -409,8 +409,15 @@ try {
     const dias = Number(args[1]) || 3, desde = Date.now() - dias * 86400e3;
     const conocidos = readFileSync(join(RAIZ, 'noticias', 'publicadas.md'), 'utf8') +
       (existsSync(join(RAIZ, 'noticias', 'externos.json')) ? readFileSync(join(RAIZ, 'noticias', 'externos.json'), 'utf8') : '');
+    // los reels de prueba e historias que sube este script también aparecen en el feed: no son posts a mano
+    const nuestros = new Set();
+    for (const d of readdirSync(join(RAIZ, 'noticias'))) {
+      const f = join(RAIZ, 'noticias', d, 'publicado.json');
+      if (!existsSync(f)) continue;
+      try { const r = JSON.parse(readFileSync(f, 'utf8')); for (const k of ['id', 'reel_prueba', 'historia']) if (r[k]) nuestros.add(String(r[k])); } catch {}
+    }
     const { data = [] } = await api('GET', `${USER}/media`, { fields: 'id,timestamp,permalink,media_type,caption', limit: '30' });
-    console.log(JSON.stringify(data.filter((m) => +new Date(m.timestamp) >= desde && !conocidos.includes(m.permalink.split('/').filter(Boolean).pop()))
+    console.log(JSON.stringify(data.filter((m) => +new Date(m.timestamp) >= desde && !nuestros.has(String(m.id)) && !conocidos.includes(m.permalink.split('/').filter(Boolean).pop()))
       .map((m) => ({ fecha: m.timestamp, link: m.permalink, tipo: m.media_type, texto: (m.caption || '').split('\n')[0].slice(0, 120) })), null, 2));
   }
   else if (args[0] === '--informe') await informe(Number(args[1]) || 7);
