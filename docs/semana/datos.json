@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-05T15:09:51.072Z",
+  "actualizado": "2026-11-05T16:37:35.666Z",
   "posts": [
     {
       "externo": true,
@@ -332,16 +332,21 @@
       "carpeta": "noticias/2026-11-05-fool-night",
       "titular": "Fool Night, de SHAFT y SUNRISE, llegará a Netflix el 26 de noviembre con su opening y ending",
       "franja": "jmusic",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "anime",
         "jmusic"
       ],
-      "hora": "2026-11-05T17:30:00.000Z",
+      "hora": "2026-11-05T16:34:11.536Z",
       "programado": "2026-11-05T17:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-05-fool-night/slide-01.jpg",
-      "video": true
+      "video": true,
+      "ig": "https://www.instagram.com/p/DfXeKIXE9Ey/",
+      "fb": "https://www.facebook.com/reel/2434516173744493/",
+      "fb_tipo": "reel",
+      "reel_prueba": true,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-05-one-piece-doble-aventura",
