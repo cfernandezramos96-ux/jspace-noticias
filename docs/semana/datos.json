@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-05T20:04:10.744Z",
+  "actualizado": "2026-11-05T21:31:31.076Z",
   "posts": [
     {
       "externo": true,
@@ -382,15 +382,20 @@
       "carpeta": "noticias/2026-11-05-mackenyu-mashle",
       "titular": "Mackenyu será Mash en el live-action de Mashle",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "anime"
       ],
-      "hora": "2026-11-05T21:30:00.000Z",
+      "hora": "2026-11-05T21:30:38.542Z",
       "programado": "2026-11-05T21:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-05-mackenyu-mashle/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfYAFyIIaBn/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1860316155750515",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-05-code-geass-aspal",
