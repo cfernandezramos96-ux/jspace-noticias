@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-05T18:47:07.002Z",
+  "actualizado": "2026-11-05T20:04:10.744Z",
   "posts": [
     {
       "externo": true,
@@ -363,15 +363,20 @@
       "carpeta": "noticias/2026-11-05-one-piece-doble-aventura",
       "titular": "One Piece: Doble Aventura llegará a los cines de Colombia el 3 de diciembre",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "anime"
       ],
-      "hora": "2026-11-05T20:00:00.000Z",
+      "hora": "2026-11-05T20:01:11.367Z",
       "programado": "2026-11-05T20:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-05-one-piece-doble-aventura/slide-01.jpg",
-      "video": true
+      "video": true,
+      "ig": "https://www.instagram.com/p/DfX12oZkyDz/",
+      "fb": "https://www.facebook.com/reel/1692429332594269/",
+      "fb_tipo": "reel",
+      "reel_prueba": true,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-05-mackenyu-mashle",
