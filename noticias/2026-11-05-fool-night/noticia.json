@@ -1,0 +1,37 @@
+{
+ "titular": "Fool Night, de SHAFT y SUNRISE, llegará a Netflix el 26 de noviembre con su opening y ending",
+ "link": "https://animecorner.me/fool-night-anime-by-shaft-and-sunrise-reveals-main-trailer-theme-songs-new-key-visual/",
+ "formato": "carrusel",
+ "franja": "jmusic",
+ "temas": [
+  "anime",
+  "jmusic"
+ ],
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "visual.jpg",
+   "encuadre": "38% 50%",
+   "posicion": "abajo",
+   "etiqueta": "Netflix · 26 de noviembre",
+   "titulo": "**Fool Night** revela su tráiler y sus canciones",
+   "texto": "Tempalay interpretará el opening y Nowlu, el ending."
+  },
+  {
+   "tipo": "poster",
+   "imagen": "visual.jpg"
+  },
+  {
+   "tipo": "texto",
+   "titulo": "Las **canciones**",
+   "subtitulo": "Opening y ending",
+   "texto": "**Opening:** «Shake! spit out», de Tempalay\n**Ending:** «Iki», de Nowlu",
+   "imagen": "frame.jpg",
+   "proporcion": 1.33,
+   "encuadre": "50% 50%"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
