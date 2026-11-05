@@ -1,0 +1,15 @@
+{
+  "titular": "One Piece: Doble Aventura llegará a los cines de Colombia el 3 de diciembre",
+  "link": "https://www.infobae.com/colombia/2026/11/05/one-piece-doble-aventura-llegara-a-colombia-con-dos-peliculas-ineditas-para-latinoamerica/",
+  "formato": "post",
+  "franja": "extra",
+  "tema": "anime",
+  "slides": [
+    {"tipo":"portada","imagen":"visual.jpg","encuadre":"0% 50%","posicion":"abajo","sombra":1,
+     "titulo":"One Piece llegará a los cines de **Colombia** con dos películas",
+     "texto":"Se estrenan el 3 de diciembre, por primera vez en Latinoamérica."},
+    {"tipo":"poster","imagen":"visual.jpg"},
+    {"tipo":"texto","titulo":"Dos películas, **dos cortos**","texto":"**Aventura en la Isla Espiral** (2001) se proyectará con «Soñando con ser el Rey del Fútbol»; **El Reino de Chopper** (2002), con «¡Adelante! El Rey Pirata del Béisbol».","imagen":"chopper.jpg","proporcion":1.78,"encuadre":"50% 50%"},
+    {"tipo":"cierre"}
+  ]
+}
