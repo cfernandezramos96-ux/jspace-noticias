@@ -18,15 +18,16 @@
    "texto": "Tempalay interpretará el opening y Nowlu, el ending."
   },
   {
-   "tipo": "poster",
-   "imagen": "visual.jpg"
-  },
-  {
    "tipo": "video",
    "imagen": "visual.jpg",
    "etiqueta": "Tráiler · Netflix 26 de nov",
    "titulo": "**Fool Night**",
-   "texto": "El tráiler principal."
+   "texto": "El tráiler principal.",
+   "creditos": "© SHAFT・SUNRISE · Netflix · Video: tráiler oficial"
+  },
+  {
+   "tipo": "poster",
+   "imagen": "visual.jpg"
   },
   {
    "tipo": "texto",
