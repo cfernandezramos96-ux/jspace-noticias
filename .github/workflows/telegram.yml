@@ -60,4 +60,9 @@ jobs:
         run: |
           git pull -q --rebase || true
           # siempre, también de madrugada: el equipo le escribe a cualquier hora (Kazuo, 4 nov 2026)
-          gh workflow run telegram.yml --ref main && echo "relanzado"
+          # 5 nov 2026: un fallo pasajero de GitHub al relanzar dejó el bot caído 22 min; ahora reintenta
+          for i in 1 2 3 4 5; do
+            gh workflow run telegram.yml --ref main && { echo "relanzado"; exit 0; }
+            echo "no se pudo relanzar (intento $i), reintento"; sleep $((i * 10))
+          done
+          exit 1
