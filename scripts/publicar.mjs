@@ -18,6 +18,7 @@ import { readFileSync, writeFileSync, readdirSync, existsSync, appendFileSync, u
 import { resolve, join, dirname, basename } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { reclama } from './candado.mjs';
 
 const RAIZ = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const ENV = join(RAIZ, '.env');
@@ -109,6 +110,8 @@ async function sube(ruta) {
 async function publica(carpeta) {
   if (!USER) falla('falta IG_USER_ID en .env (sale con --cuenta)');
   if (existsSync(join(carpeta, 'publicado.json'))) falla(`${basename(carpeta)} ya está publicada`);
+  // otra rutina o sesión puede estar publicándolo ahora mismo: si ya lo tiene, no se publica dos veces
+  if (!reclamaPost(carpeta)) { console.log(`✗ ${basename(carpeta)}: otra sesión ya lo publicó o lo está publicando. NO lo vuelvas a publicar.`); return false; }
   const archivos = readdirSync(carpeta).filter((f) => /^slide-\d+\.(jpg|mp4)$/.test(f)).sort();
   // si hay MP4 de un slide (carrusel animado) se usa ese en vez del JPG
   const porNum = new Map();
@@ -297,28 +300,8 @@ function enCola(carpeta, hhmm) {
 }
 // --esperar: si lo próximo de la cola toca en menos de 8 min, espera a su hora y lo publica (el bot despierta la nube
 // un par de minutos antes para que salga puntual)
-// Candado para no publicar dos veces (4 nov 2026: Kenshi Yonezu salió doble porque dos rutinas lo publicaron a la
-// vez). Antes de publicar, la rutina sube a GitHub un publicando.json con su marca; si el push choca con el de otra
-// rutina, gana la que llegó primero y la otra lo salta. Sin git (o sin remoto) no bloquea.
-function reclama(c) {
-  const git = (...a) => execFileSync('git', a, { cwd: RAIZ, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
-  const f = join(c, 'publicando.json'), rel = f.slice(RAIZ.length + 1).replace(/\\/g, '/');
-  const yo = `${process.env.HOSTNAME || process.env.COMPUTERNAME || 'pc'}-${process.pid}-${Date.now()}`;
-  const ajeno = () => { try { const p = JSON.parse(readFileSync(f, 'utf8')); return p.quien !== yo && Date.now() - new Date(p.fecha) < 20 * 60e3; } catch { return false; } };
-  try { git('pull', '-q', '--rebase', '--autostash'); } catch { return true; } // sin remoto: no hay con quién chocar
-  for (let i = 0; i < 3; i++) {
-    if (existsSync(join(c, 'publicado.json')) || ajeno()) return false;
-    writeFileSync(f, JSON.stringify({ quien: yo, fecha: new Date().toISOString() }, null, 2));
-    try { git('add', rel); git('commit', '-q', '-m', `Publicando ${basename(c)}`); git('push', '-q'); return true; }
-    catch {
-      // el push falló: otra rutina subió algo antes; deshacemos el commit propio y miramos qué hay en GitHub
-      // (soft: nunca toca otros archivos sin guardar, por si corre en el PC)
-      try { git('reset', '-q', '--soft', 'HEAD~1'); git('reset', '-q', '--', rel); unlinkSync(f); git('pull', '-q', '--rebase', '--autostash'); } catch { return false; }
-    }
-  }
-  return false;
-}
-
+// Candado para no publicar dos veces (scripts/candado.mjs): vale para la cola y para «publicar ya» (5 nov 2026)
+const reclamaPost = (c) => reclama(join(c, 'publicando.json'), { hechos: [join(c, 'publicado.json')] });
 async function cola(esperar = false) {
   const dir = join(RAIZ, 'noticias');
   const enCola = readdirSync(dir, { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => join(dir, d.name))
@@ -334,7 +317,7 @@ async function cola(esperar = false) {
   const pendientes = enCola.filter((c) => horaDe(c) <= new Date());
   if (!pendientes.length) return console.log('nada en cola para ahora');
   for (const c of pendientes) {
-    if (!reclama(c)) { console.log(`${basename(c)}: otra rutina ya lo está publicando, lo salto`); continue; }
+    if (!reclamaPost(c)) { console.log(`${basename(c)}: otra rutina ya lo está publicando, lo salto`); continue; }
     try { await publica(c); }
     catch (e) { console.error(`✗ ${basename(c)}: ${e.message}`); writeFileSync(join(c, 'error.txt'), `${new Date().toISOString()}\n${e.message}\n`); }
   }
