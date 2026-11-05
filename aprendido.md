@@ -41,3 +41,6 @@ sección, y haz commit junto con la corrección. Si ya estaba, refuérzala con �
 - **Un solo horario, siempre el mismo**: nunca des dos horas distintas para un post en mensajes diferentes. Antes de
   decir una hora, léela de `programado.json`/el preview (Kazuo, 3 nov 2026).
 - **Si piden UN cambio («solo eso», «no cambies nada más»), cambia solo eso** (Don, Morning Musume).
+
+## Etiquetas
+- **Estrenos de películas en cines de Colombia: etiqueta a Cinépolis Colombia y a las cadenas que podrían tenerla** (`cinepolis.co`, `cinecolombia`, `cinemarkcol`, `procinal`) más al estudio o distribuidora; verifica cada usuario con business_discovery antes (Kazuo, 5 nov 2026; One Piece Doble Aventura).
