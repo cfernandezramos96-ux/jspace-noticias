@@ -22,6 +22,13 @@
    "imagen": "visual.jpg"
   },
   {
+   "tipo": "video",
+   "imagen": "visual.jpg",
+   "etiqueta": "Tráiler · Netflix 26 de nov",
+   "titulo": "**Fool Night**",
+   "texto": "El tráiler principal."
+  },
+  {
    "tipo": "texto",
    "titulo": "Las **canciones**",
    "subtitulo": "Opening y ending",
