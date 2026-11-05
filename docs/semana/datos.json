@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-05T02:03:00.355Z",
+  "actualizado": "2026-11-05T02:18:08.538Z",
   "posts": [
     {
       "externo": true,
@@ -343,7 +343,7 @@
       "programado": "2026-11-05T20:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-05-one-piece-doble-aventura/slide-01.jpg",
-      "video": false
+      "video": true
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
