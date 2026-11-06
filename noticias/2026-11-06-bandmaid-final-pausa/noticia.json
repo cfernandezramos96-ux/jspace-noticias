@@ -28,15 +28,15 @@
   },
   {
    "tipo": "historia",
-   "imagen": "grupo.jpg",
-   "encuadre": "50% 50%",
+   "imagen": "bajo-guitarras.jpg",
+   "encuadre": "50% 25%",
    "texto": "EL **NIPPON BUDOKAN** ERA UN SUEÑO PENDIENTE DESDE QUE LA PANDEMIA CANCELÓ SU CONCIERTO EN **2021**",
    "nota": "13 y 14 de noviembre · Tokio"
   },
   {
    "tipo": "historia",
-   "imagen": "portada.jpg",
-   "encuadre": "85% 30%",
+   "imagen": "saludo.jpg",
+   "encuadre": "50% 30%",
    "texto": "TRAS EL FINAL, LA BANDA **PAUSARÁ LOS CONCIERTOS** HASTA **2028**, AÑO DE SU 15.º ANIVERSARIO",
    "nota": "Seguirá creando música durante la pausa"
   },
