@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-06T17:31:43.225Z",
+  "actualizado": "2026-11-06T20:01:43.950Z",
   "posts": [
     {
       "externo": true,
@@ -454,15 +454,20 @@
       "carpeta": "noticias/2026-11-06-bandmaid-final-pausa",
       "titular": "BAND-MAID cerrará su gira mundial en el Budokan y pausará los conciertos hasta 2028",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic"
       ],
-      "hora": "2026-11-06T20:00:00.000Z",
+      "hora": "2026-11-06T20:00:48.120Z",
       "programado": "2026-11-06T20:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-06-bandmaid-final-pausa/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfaamqDHI-U/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1861463248969139",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-06-laidback-camp-t4",
