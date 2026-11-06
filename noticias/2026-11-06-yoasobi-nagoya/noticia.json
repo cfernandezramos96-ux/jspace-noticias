@@ -1,0 +1,40 @@
+{
+ "titular": "YOASOBI llega al Nagoya Dome este fin de semana",
+ "link": "https://www.thefirsttimes.jp/?p=905719",
+ "formato": "carrusel",
+ "franja": "jmusic",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "f7.jpg",
+   "encuadre": "50% 0%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "titulo": "**YOASOBI** se presentará en Nagoya este fin de semana",
+   "texto": "Dos noches en el Vantelin Dome, el 7 y 8 de noviembre."
+  },
+  {
+   "tipo": "historia",
+   "imagen": "f6.jpg",
+   "encuadre": "50% 30%",
+   "texto": "La gira **Super Planet** abrió el 24 de octubre en el Kyocera Dome de Osaka",
+   "nota": "10 ciudades · 2026-2027"
+  },
+  {
+   "tipo": "historia",
+   "imagen": "f1.jpg",
+   "encuadre": "50% 50%",
+   "texto": "En Osaka, el dúo estrenó una **canción nueva**, «KILLA», y tocó con banda el tema de la serie matutina de NHK"
+  },
+  {
+   "tipo": "historia",
+   "imagen": "f3.jpg",
+   "encuadre": "50% 55%",
+   "texto": "Tras Nagoya vendrán **Sapporo, Fukuoka** y el cierre en el **Tokyo Dome**, el 5 y 6 de diciembre",
+   "nota": "Sapporo 14-15 nov · Fukuoka 28-29 nov"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}

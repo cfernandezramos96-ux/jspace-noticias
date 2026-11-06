@@ -1,0 +1,33 @@
+{
+ "titular": "Laid-Back Camp tendrá temporada 4 en abril de 2027",
+ "link": "https://animecorner.me/laid-back-camp-season-4-anime-reveals-new-trailer-visual-april-2027-release-date/",
+ "formato": "carrusel",
+ "franja": "anime",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "kv.jpg",
+   "encuadre": "50% 0%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "titulo": "**Laid-Back Camp** estrenará su temporada 4 en abril de 2027",
+   "texto": "Nuevo tráiler y visual, con estudio y equipo renovados."
+  },
+  {
+   "tipo": "texto",
+   "titulo": "El **equipo** de la temporada 4",
+   "subtitulo": "Yuru Camp △ Season 4",
+   "texto": "**Estudio:** FuRyu Pictures\n**Dirige:** Shin Tosaka\n**Guion:** Pierre Sugiura\n**Opening:** Asaka\n**Ending:** Eri Sasaki",
+   "imagen": "trailer.png",
+   "proporcion": 1.78,
+   "encuadre": "50% 30%"
+  },
+  {
+   "tipo": "poster",
+   "imagen": "kv.jpg"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
