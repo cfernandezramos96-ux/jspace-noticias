@@ -1,0 +1,47 @@
+{
+ "titular": "BAND-MAID cerrará su gira mundial en el Budokan y pausará los conciertos hasta 2028",
+ "link": "https://barks.jp/news/1088134/",
+ "formato": "carrusel",
+ "franja": "extra",
+ "tema": "jmusic",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "portada.jpg",
+   "encuadre": "50% 40%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "etiqueta": "Gira mundial · Final",
+   "titulo": "**BAND-MAID** cerrará su gira en el Budokan",
+   "texto": "Dos noches, el 13 y 14 de noviembre; la segunda ya está agotada."
+  },
+  {
+   "tipo": "poster",
+   "imagen": "gira.jpg"
+  },
+  {
+   "tipo": "historia",
+   "imagen": "show.jpg",
+   "encuadre": "50% 50%",
+   "texto": "TODAS LAS FECHAS EUROPEAS SE **AGOTARON** Y LA BANDA SE PRESENTÓ EN EL **DOWNLOAD FESTIVAL**",
+   "nota": "Gira mundial 2026"
+  },
+  {
+   "tipo": "historia",
+   "imagen": "grupo.jpg",
+   "encuadre": "50% 50%",
+   "texto": "EL **NIPPON BUDOKAN** ERA UN SUEÑO PENDIENTE DESDE QUE LA PANDEMIA CANCELÓ SU CONCIERTO EN **2021**",
+   "nota": "13 y 14 de noviembre · Tokio"
+  },
+  {
+   "tipo": "historia",
+   "imagen": "portada.jpg",
+   "encuadre": "85% 30%",
+   "texto": "TRAS EL FINAL, LA BANDA **PAUSARÁ LOS CONCIERTOS** HASTA **2028**, AÑO DE SU 15.º ANIVERSARIO",
+   "nota": "Seguirá creando música durante la pausa"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
