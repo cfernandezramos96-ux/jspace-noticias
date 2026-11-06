@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-06T14:05:44.250Z",
+  "actualizado": "2026-11-06T17:31:43.225Z",
   "posts": [
     {
       "externo": true,
@@ -437,13 +437,18 @@
       "carpeta": "noticias/2026-11-06-yoasobi-nagoya",
       "titular": "YOASOBI llega al Nagoya Dome este fin de semana",
       "franja": "jmusic",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [],
-      "hora": "2026-11-06T17:30:00.000Z",
+      "hora": "2026-11-06T17:30:47.723Z",
       "programado": "2026-11-06T17:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-06-yoasobi-nagoya/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfaJbnjH9gU/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1861331742315623",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-06-bandmaid-final-pausa",
