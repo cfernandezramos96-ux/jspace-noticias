@@ -20,49 +20,53 @@ permissions:
 jobs:
   bot:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
         with: { node-version: 24 }
-      - name: Escuchar el bot
+      - name: Escuchar el bot y relanzar
+        # 5 nov 2026: dos caídas de GitHub dejaron al bot apagado ~20 min porque no se pudo relanzar. Ahora, si el
+        # relanzamiento falla, el bot sigue escuchando otra vuelta y vuelve a intentar, hasta ~25 min; así no se apaga
+        # mientras GitHub se recupera. Un push o un despertar que falla tampoco tumban la vuelta: se reintentan después.
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           RUTINA_TOKEN: ${{ secrets.RUTINA_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
           ESPERA: '10'
           DESPERTAR: ${{ runner.temp }}/despertar
         run: |
           git config user.name "JSpace Bot"
           git config user.email "jspace-bot@users.noreply.github.com"
-          fin=$((SECONDS + 270))
-          while [ $SECONDS -lt $fin ]; do
-            git pull -q --rebase || true
-            node scripts/telegram.mjs || sleep 10
-            node scripts/semana.mjs || true
-            git add noticias docs/semana
-            git diff --cached --quiet || (git commit -q -m "Telegram: entrada" && (git push -q || (git pull -q --rebase && git push -q)))
-            if [ -s "$DESPERTAR" ]; then
-              curl -sS --fail-with-body -X POST https://api.anthropic.com/v1/claude_code/routines/trig_01VSHZEWR9XsE2NfbMkPkUnE/fire \
-                -H "Authorization: Bearer $RUTINA_TOKEN" \
-                -H "anthropic-beta: experimental-cc-routine-2026-04-01" \
-                -H "anthropic-version: 2023-06-01" \
-                -H "content-type: application/json" \
-                -d '{"text": "Llegaron pedidos nuevos del bot de Telegram en noticias/entrada/."}' > /dev/null && echo "rutina despertada"
-              rm -f "$DESPERTAR"
-            fi
+          escucha() {
+            fin=$((SECONDS + 270))
+            while [ $SECONDS -lt $fin ]; do
+              git pull -q --rebase || git rebase --abort 2>/dev/null || true
+              node scripts/telegram.mjs || sleep 10
+              node scripts/semana.mjs || true
+              git add noticias docs/semana
+              git diff --cached --quiet || git commit -q -m "Telegram: entrada" || true
+              git push -q 2>/dev/null || (git pull -q --rebase && git push -q) || echo "push falló, se reintenta en la próxima vuelta"
+              if [ -s "$DESPERTAR" ]; then
+                if curl -sS --fail-with-body -X POST https://api.anthropic.com/v1/claude_code/routines/trig_01VSHZEWR9XsE2NfbMkPkUnE/fire                   -H "Authorization: Bearer $RUTINA_TOKEN"                   -H "anthropic-beta: experimental-cc-routine-2026-04-01"                   -H "anthropic-version: 2023-06-01"                   -H "content-type: application/json"                   -d '{"text": "Llegaron pedidos nuevos del bot de Telegram en noticias/entrada/."}' > /dev/null; then
+                  echo "rutina despertada"; rm -f "$DESPERTAR"
+                else echo "no se pudo despertar la rutina, se reintenta"; fi
+              fi
+            done
+          }
+          relanza() {
+            # siempre, también de madrugada: el equipo le escribe a cualquier hora (Kazuo, 4 nov 2026)
+            for i in 1 2 3; do
+              gh workflow run telegram.yml --ref main && { echo "relanzado"; return 0; }
+              echo "no se pudo relanzar (intento $i)"; sleep $((i * 10))
+            done
+            return 1
+          }
+          escucha
+          for ronda in 1 2 3 4; do
+            relanza && exit 0
+            echo "GitHub no deja relanzar: sigo escuchando otra vuelta (ronda $ronda)"
+            escucha
           done
-      - name: Relanzar
-        # el cron de GitHub se atrasa mucho; la siguiente vuelta
-        # arranca en cuanto termina esta (workflow_dispatch sí se puede lanzar con el token del propio workflow)
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          git pull -q --rebase || true
-          # siempre, también de madrugada: el equipo le escribe a cualquier hora (Kazuo, 4 nov 2026)
-          # 5 nov 2026: un fallo pasajero de GitHub al relanzar dejó el bot caído 22 min; ahora reintenta
-          for i in 1 2 3 4 5; do
-            gh workflow run telegram.yml --ref main && { echo "relanzado"; exit 0; }
-            echo "no se pudo relanzar (intento $i), reintento"; sleep $((i * 10))
-          done
-          exit 1
+          relanza

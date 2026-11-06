@@ -27,4 +27,8 @@ jobs:
           node scripts/radar.mjs
           git config user.name "JSpace Bot"; git config user.email "jspace-bot@users.noreply.github.com"
           git add noticias/entrada/radar.json
-          git diff --cached --quiet || (git commit -q -m "Radar" && (git push -q || (git pull -q --rebase && git push -q)))
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Radar"
+          # 5 nov 2026: una caída de GitHub tumbó el push; se reintenta para no perder lo ya avisado (y no avisar doble)
+          for i in 1 2 3 4 5; do git push -q && exit 0; sleep $((i * 15)); git pull -q --rebase || true; done
+          exit 1
