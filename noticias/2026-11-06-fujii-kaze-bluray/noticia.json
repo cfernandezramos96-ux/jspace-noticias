@@ -1,0 +1,25 @@
+{
+ "titular": "Fujii Kaze lanzará su Pre: Prema Tour en Blu-ray",
+ "link": "https://news.mynavi.jp/article/20261106-5267335/",
+ "formato": "post",
+ "franja": "extra",
+ "tema": "jmusic",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "jacket.jpg",
+   "encuadre": "50% 40%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "titulo": "**Fujii Kaze** lanzará su gira en Blu-ray",
+   "texto": "El 16 de diciembre llegará el concierto de Hiroshima, con documental de 35 minutos."
+  },
+  {
+   "tipo": "poster",
+   "imagen": "frame.jpg"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
