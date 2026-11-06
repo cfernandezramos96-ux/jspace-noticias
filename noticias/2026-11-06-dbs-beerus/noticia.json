@@ -1,0 +1,32 @@
+{
+ "titular": "Dragon Ball Super: Beerus supera los 2,2 millones de vistas en Netflix",
+ "link": "https://comicbook.com/anime/news/despite-fan-backlash-dragon-ball-super-remake-is-one-of-the-biggest-hits-of-fall-2026/",
+ "formato": "post",
+ "franja": "extra",
+ "tema": "anime",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "kv.jpg",
+   "encuadre": "50% 30%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "etiqueta": "Remake · Netflix",
+   "titulo": "**Dragon Ball Super: Beerus** supera los 2,2 millones de vistas en Netflix",
+   "texto": "Con solo dos episodios, ya figura entre las series más vistas del mundo."
+  },
+  {
+   "tipo": "dato",
+   "antes": "Entre el 19 y el 25 de octubre sumó más de",
+   "dato": "2,2 M",
+   "texto": "de vistas en Netflix, según Tudum: el noveno lugar entre las series no angloparlantes del mundo."
+  },
+  {
+   "tipo": "poster",
+   "imagen": "ep3.jpg"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
