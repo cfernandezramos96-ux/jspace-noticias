@@ -28,7 +28,8 @@
   },
   {
    "tipo": "historia",
-   "imagen": "bajo-guitarras.jpg",
+   "imagen": "concierto-completo.jpg",
+   "caber": true,
    "encuadre": "50% 25%",
    "texto": "EL **NIPPON BUDOKAN** ERA UN SUEÑO PENDIENTE DESDE QUE LA PANDEMIA CANCELÓ SU CONCIERTO EN **2021**",
    "nota": "13 y 14 de noviembre · Tokio"
