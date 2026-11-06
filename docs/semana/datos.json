@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-06T05:13:57.661Z",
+  "actualizado": "2026-11-06T08:03:38.569Z",
   "posts": [
     {
       "externo": true,
@@ -415,6 +415,25 @@
       "historia": true
     },
     {
+      "carpeta": "noticias/2026-11-06-fujii-kaze-bluray",
+      "titular": "Fujii Kaze lanzará su Pre: Prema Tour en Blu-ray",
+      "franja": "extra",
+      "estado": "publicado",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-06T08:02:59.194Z",
+      "programado": "2026-11-07T02:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-06-fujii-kaze-bluray/slide-01.jpg",
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfZIcYIIVG_/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1860811642367633",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
+    },
+    {
       "carpeta": "noticias/2026-11-06-bandmaid-final-pausa",
       "titular": "BAND-MAID cerrará su gira mundial en el Budokan y pausará los conciertos hasta 2028",
       "franja": "extra",
@@ -426,20 +445,6 @@
       "programado": "2026-11-06T20:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-06-bandmaid-final-pausa/slide-01.jpg",
-      "video": false
-    },
-    {
-      "carpeta": "noticias/2026-11-06-fujii-kaze-bluray",
-      "titular": "Fujii Kaze lanzará su Pre: Prema Tour en Blu-ray",
-      "franja": "extra",
-      "estado": "aprobado",
-      "temas": [
-        "jmusic"
-      ],
-      "hora": "2026-11-07T02:00:00.000Z",
-      "programado": "2026-11-07T02:00:00.000Z",
-      "colaboradores": [],
-      "portada": "noticias/2026-11-06-fujii-kaze-bluray/slide-01.jpg",
       "video": false
     },
     {
