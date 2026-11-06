@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-06T08:03:38.569Z",
+  "actualizado": "2026-11-06T13:21:41.277Z",
   "posts": [
     {
       "externo": true,
@@ -434,6 +434,18 @@
       "historia": true
     },
     {
+      "carpeta": "noticias/2026-11-06-yoasobi-nagoya",
+      "titular": "YOASOBI llega al Nagoya Dome este fin de semana",
+      "franja": "jmusic",
+      "estado": "pendiente",
+      "temas": [],
+      "hora": "2026-11-06T17:30:00.000Z",
+      "programado": "2026-11-06T17:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-06-yoasobi-nagoya/slide-01.jpg",
+      "video": false
+    },
+    {
       "carpeta": "noticias/2026-11-06-bandmaid-final-pausa",
       "titular": "BAND-MAID cerrará su gira mundial en el Budokan y pausará los conciertos hasta 2028",
       "franja": "extra",
@@ -445,6 +457,18 @@
       "programado": "2026-11-06T20:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-06-bandmaid-final-pausa/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-06-laidback-camp-t4",
+      "titular": "Laid-Back Camp tendrá temporada 4 en abril de 2027",
+      "franja": "anime",
+      "estado": "pendiente",
+      "temas": [],
+      "hora": "2026-11-06T23:30:00.000Z",
+      "programado": "2026-11-06T23:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-06-laidback-camp-t4/slide-01.jpg",
       "video": false
     },
     {
