@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-06T20:01:43.950Z",
+  "actualizado": "2026-11-06T23:31:27.950Z",
   "posts": [
     {
       "externo": true,
@@ -473,13 +473,18 @@
       "carpeta": "noticias/2026-11-06-laidback-camp-t4",
       "titular": "Laid-Back Camp tendrá temporada 4 en abril de 2027",
       "franja": "anime",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [],
-      "hora": "2026-11-06T23:30:00.000Z",
+      "hora": "2026-11-06T23:30:39.401Z",
       "programado": "2026-11-06T23:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-06-laidback-camp-t4/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfaynrBDrKc/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1861615442287253",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-06-dbs-beerus",
