@@ -1,0 +1,34 @@
+{
+ "titular": "Dragon Ball Super: Beerus tendrá doblaje latino en Crunchyroll",
+ "link": "https://dragonballinternational.com/2026/11/06/english-and-latin-american-spanish-and-portuguese-dubs-announced-for-dragon-ball-super-beerus/",
+ "formato": "carrusel",
+ "franja": "anime",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "kv23.png",
+   "encuadre": "50% 50%",
+   "posicion": "arriba",
+   "sombra": 1,
+   "etiqueta": "Doblaje latino",
+   "titulo": "**Dragon Ball Super: Beerus** tendrá doblaje latino",
+   "texto": "Llegará a Crunchyroll el 12 de noviembre."
+  },
+  {
+   "tipo": "poster",
+   "imagen": "kv23.png"
+  },
+  {
+   "tipo": "texto",
+   "titulo": "La voz de **Goku** vuelve",
+   "subtitulo": "Reparto del doblaje en español",
+   "texto": "**Goku:** Mario Castañeda\n**Vegeta:** René García\n**Beerus:** José Luis Orozco\n**Whis:** Arturo Castañeda",
+   "imagen": "kv169.png",
+   "proporcion": 1.78,
+   "encuadre": "50% 50%"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}

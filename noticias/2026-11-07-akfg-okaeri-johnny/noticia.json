@@ -1,0 +1,39 @@
+{
+ "titular": "Asian Kung-Fu Generation estrenará el video en vivo de «Okaeri Johnny»",
+ "link": "https://www.thefirsttimes.jp/news/0000914480/",
+ "formato": "carrusel",
+ "franja": "jmusic",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "a1.jpg",
+   "encuadre": "75% 20%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "titulo": "**Asian Kung-Fu Generation** estrenará el video en vivo de «Okaeri Johnny»",
+   "texto": "Saldrá este domingo 8 de noviembre en su canal oficial de YouTube."
+  },
+  {
+   "tipo": "poster",
+   "imagen": "a6.jpg"
+  },
+  {
+   "tipo": "texto",
+   "titulo": "Del concierto de los **30 años**",
+   "subtitulo": "Thirty Revolutions",
+   "texto": "El video procede del Blu-ray grabado en el Ariake Arena de Tokio. Llegará a tiendas el **11 de noviembre**.",
+   "imagen": "a3.jpg",
+   "proporcion": 1.36,
+   "encuadre": "50% 50%"
+  },
+  {
+   "tipo": "dato",
+   "antes": "Su nuevo álbum, grabado en Abbey Road, saldrá el",
+   "dato": "27 ENE",
+   "texto": "Será su primer álbum original en unos cinco años."
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
