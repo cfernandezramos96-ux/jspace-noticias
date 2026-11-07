@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-07T20:04:10.591Z",
+  "actualizado": "2026-11-07T23:31:25.416Z",
   "posts": [
     {
       "externo": true,
@@ -564,13 +564,18 @@
       "carpeta": "noticias/2026-11-07-beerus-doblaje",
       "titular": "Dragon Ball Super: Beerus tendrá doblaje latino en Crunchyroll",
       "franja": "anime",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [],
-      "hora": "2026-11-07T23:30:00.000Z",
+      "hora": "2026-11-07T23:30:39.930Z",
       "programado": "2026-11-07T23:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-07-beerus-doblaje/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfdXazMHbER/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1862874158828048",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
