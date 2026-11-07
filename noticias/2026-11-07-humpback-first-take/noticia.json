@@ -1,0 +1,36 @@
+{
+ "titular": "Hump Back debuta en THE FIRST TAKE con «Haikei, Shounen yo»",
+ "link": "https://www.thefirsttimes.jp/the-first-take/0000914180/",
+ "formato": "carrusel",
+ "franja": "extra",
+ "tema": "jmusic",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "cover.jpg",
+   "encuadre": "50% 50%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "etiqueta": "Debut · THE FIRST TAKE",
+   "titulo": "**Hump Back** debuta en THE FIRST TAKE",
+   "texto": "El trío de Osaka interpreta «Haikei, Shounen yo» en una sola toma."
+  },
+  {
+   "tipo": "video",
+   "imagen": "ft.jpg",
+   "etiqueta": "THE FIRST TAKE",
+   "titulo": "**Hump Back** en una sola toma",
+   "texto": "«Haikei, Shounen yo», su canción del debut mayor.",
+   "creditos": "Video: canal oficial de THE FIRST TAKE"
+  },
+  {
+   "tipo": "dato",
+   "antes": "Su recopilatorio por los 10 años saldrá el",
+   "dato": "7 DIC",
+   "texto": "«Hump Back 2016-2026» celebra una década desde su primer mini álbum, «Yoru ni nattara»."
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
