@@ -1,0 +1,32 @@
+{
+ "titular": "Naruto llega a MINISO Colombia",
+ "link": "https://revistaclevel.com/naruto-llega-miniso-colombia-con-96-productos-desde-4900",
+ "formato": "post",
+ "franja": "extra",
+ "tema": "anime",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "portada.jpg",
+   "encuadre": "50% 0%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "etiqueta": "Colección · Colombia",
+   "titulo": "**Naruto** llega a MINISO Colombia",
+   "texto": "96 productos, entre peluches, bolsos y blind boxes, desde $4.900."
+  },
+  {
+   "tipo": "dato",
+   "antes": "MINISO puso a la venta una edición limitada de",
+   "dato": "191.000",
+   "texto": "unidades, sin reposición: cuando se agoten, no volverán."
+  },
+  {
+   "tipo": "poster",
+   "imagen": "poster.jpg"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
