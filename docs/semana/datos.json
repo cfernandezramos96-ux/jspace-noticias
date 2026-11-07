@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-07T17:31:48.696Z",
+  "actualizado": "2026-11-07T20:04:10.591Z",
   "posts": [
     {
       "externo": true,
@@ -545,15 +545,20 @@
       "carpeta": "noticias/2026-11-07-humpback-first-take",
       "titular": "Hump Back debuta en THE FIRST TAKE con «Haikei, Shounen yo»",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic"
       ],
-      "hora": "2026-11-07T20:00:00.000Z",
+      "hora": "2026-11-07T20:01:28.239Z",
       "programado": "2026-11-07T20:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-07-humpback-first-take/slide-01.jpg",
-      "video": true
+      "video": true,
+      "ig": "https://www.instagram.com/p/Dfc_d5EFWfz/",
+      "fb": "https://www.facebook.com/reel/985376064090227/",
+      "fb_tipo": "reel",
+      "reel_prueba": true,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-07-beerus-doblaje",
