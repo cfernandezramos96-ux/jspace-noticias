@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-07T13:59:18.611Z",
+  "actualizado": "2026-11-07T17:31:48.696Z",
   "posts": [
     {
       "externo": true,
@@ -528,13 +528,18 @@
       "carpeta": "noticias/2026-11-07-akfg-okaeri-johnny",
       "titular": "Asian Kung-Fu Generation estrenará el video en vivo de «Okaeri Johnny»",
       "franja": "jmusic",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [],
-      "hora": "2026-11-07T17:30:00.000Z",
+      "hora": "2026-11-07T17:31:02.023Z",
       "programado": "2026-11-07T17:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-07-akfg-okaeri-johnny/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfcuQuFF-gv/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1862559355526195",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-07-humpback-first-take",
