@@ -1,0 +1,18 @@
+{
+ "titular": "Nocchi de Perfume se casó con el actor Kento Shibuya",
+ "link": "https://natalie.mu/music/news/697104",
+ "formato": "carrusel",
+ "franja": "extra",
+ "tema": "jmusic",
+ "slides": [
+  { "tipo": "portada", "imagen": "nocchi.jpg", "encuadre": "48% 50%", "posicion": "abajo", "sombra": 1,
+    "titulo": "**Nocchi**, de Perfume, se casó con el actor Kento Shibuya",
+    "texto": "La pareja, ambos de 38 años, lo anunció este 8 de noviembre." },
+  { "tipo": "texto", "titulo": "¿Quién es **Kento Shibuya**?", "subtitulo": "Actor desde los 8 años",
+    "texto": "Debutó de niño y hoy participa en el dorama histórico de NHK «Toyotomi Kyodai!».",
+    "imagen": "nocchi.jpg", "proporcion": 1.33, "encuadre": "48% 40%" },
+  { "tipo": "dato", "antes": "Nocchi y Shibuya nacieron en", "dato": "1988",
+    "texto": "Ella en Hiroshima, el 20 de septiembre; él en Kanagawa, el 23 de abril. Perfume está en pausa («cold sleep») desde 2026." },
+  { "tipo": "cierre" }
+ ]
+}
