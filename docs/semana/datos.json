@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-07T23:31:25.416Z",
+  "actualizado": "2026-11-08T09:30:29.854Z",
   "posts": [
     {
       "externo": true,
@@ -576,6 +576,20 @@
       "fb_tipo": null,
       "reel_prueba": false,
       "historia": true
+    },
+    {
+      "carpeta": "noticias/2026-11-08-nocchi-boda",
+      "titular": "Nocchi de Perfume se casó con el actor Kento Shibuya",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-09T20:00:00.000Z",
+      "programado": "2026-11-09T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-08-nocchi-boda/slide-01.jpg",
+      "video": false
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
