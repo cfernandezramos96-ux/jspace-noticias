@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-08T09:30:29.854Z",
+  "actualizado": "2026-11-08T13:16:51.127Z",
   "posts": [
     {
       "externo": true,
@@ -576,6 +576,58 @@
       "fb_tipo": null,
       "reel_prueba": false,
       "historia": true
+    },
+    {
+      "carpeta": "noticias/2026-11-08-yoasobi-killa",
+      "titular": "YOASOBI estrenará «KILLA», basada en una novela, el 11 de noviembre",
+      "franja": "jmusic",
+      "estado": "pendiente",
+      "temas": [],
+      "hora": "2026-11-08T17:30:00.000Z",
+      "programado": "2026-11-08T17:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-08-yoasobi-killa/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-08-resumen-jmusic",
+      "titular": "jmusic",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-08T20:00:00.000Z",
+      "programado": "2026-11-08T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-08-resumen-jmusic/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-08-spyxfamily-t4",
+      "titular": "SPY×FAMILY tendrá temporada 4 y segunda película en 2027",
+      "franja": "anime",
+      "estado": "pendiente",
+      "temas": [],
+      "hora": "2026-11-08T23:30:00.000Z",
+      "programado": "2026-11-08T23:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-08-spyxfamily-t4/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-08-resumen-anime",
+      "titular": "anime",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-11-09T02:00:00.000Z",
+      "programado": "2026-11-09T02:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-08-resumen-anime/slide-01.jpg",
+      "video": false
     },
     {
       "carpeta": "noticias/2026-11-08-nocchi-boda",
