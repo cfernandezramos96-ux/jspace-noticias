@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-08T17:00:04.969Z",
+  "actualizado": "2026-11-08T17:04:04.873Z",
   "posts": [
     {
       "externo": true,
@@ -641,6 +641,20 @@
       "programado": "2026-11-09T20:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-08-nocchi-boda/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-08-tatsuro-christmas-eve",
+      "titular": "Tatsuro Yamashita lanza el paquete navideño 2026 de «Christmas Eve» el 15 de diciembre",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-10T02:00:00.000Z",
+      "programado": "2026-11-10T02:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-08-tatsuro-christmas-eve/slide-01.jpg",
       "video": false
     },
     {
