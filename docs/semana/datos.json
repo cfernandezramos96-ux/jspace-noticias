@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-08T20:02:18.717Z",
+  "actualizado": "2026-11-08T23:31:52.241Z",
   "posts": [
     {
       "externo": true,
@@ -612,13 +612,18 @@
       "carpeta": "noticias/2026-11-08-spyxfamily-t4",
       "titular": "SPY×FAMILY tendrá temporada 4 y segunda película en 2027",
       "franja": "anime",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [],
-      "hora": "2026-11-08T23:30:00.000Z",
+      "hora": "2026-11-08T23:30:35.065Z",
       "programado": "2026-11-08T23:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-08-spyxfamily-t4/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/Dff8NAPjmEP/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1864112158704248",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-08-resumen-anime",
