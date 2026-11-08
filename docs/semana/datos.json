@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-08T17:40:02.946Z",
+  "actualizado": "2026-11-08T20:02:18.717Z",
   "posts": [
     {
       "externo": true,
@@ -593,15 +593,20 @@
       "carpeta": "noticias/2026-11-08-resumen-jmusic",
       "titular": "jmusic",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic"
       ],
-      "hora": "2026-11-08T20:00:00.000Z",
+      "hora": "2026-11-08T20:01:30.376Z",
       "programado": "2026-11-08T20:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-08-resumen-jmusic/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DffkPXvjVGW/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1863961415385989",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-08-spyxfamily-t4",
