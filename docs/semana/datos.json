@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-08T16:59:30.482Z",
+  "actualizado": "2026-11-08T17:00:00.200Z",
   "posts": [
     {
       "externo": true,
@@ -593,7 +593,7 @@
       "carpeta": "noticias/2026-11-08-resumen-jmusic",
       "titular": "jmusic",
       "franja": "extra",
-      "estado": "pendiente",
+      "estado": "aprobado",
       "temas": [
         "jmusic"
       ],
