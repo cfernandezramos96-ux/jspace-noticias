@@ -1,0 +1,84 @@
+{
+ "titular": "jmusic",
+ "link": "",
+ "formato": "semanal",
+ "franja": "extra",
+ "tema": "jmusic",
+ "slides": [
+  {
+   "tipo": "semanal",
+   "imagen": "n0.jpg",
+   "encuadre": "50% 40%",
+   "titulo": "Lo más\n**destacado**\nde la semana",
+   "tema": "J-Music",
+   "rango": "Semana 45 · 2 al 8 de noviembre"
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n0.jpg",
+   "encuadre": "50% 40%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "titulo": "**Yoko Takahashi**, la voz de Evangelion, estará este mes en Bogotá",
+   "texto": "Su primera vez en Colombia: jueves 19, 8:30 p. m., Lourdes Music Hall."
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n1.jpg",
+   "encuadre": "100% 50%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "titulo": "**Nanase Aikawa** cierra su gira de 30 años en el Budokan",
+   "texto": "Su primer Nippon Budokan en 28 años, con J de LUNA SEA y Marty Friedman."
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n2.jpg",
+   "encuadre": "50% 30%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "titulo": "**Kenshi Yonezu** arranca su gira GHOST y llegará a Ciudad de México",
+   "texto": "Desde Nagano el 6 de noviembre; el 9 de febrero toca en Ciudad de México."
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n3.jpg",
+   "encuadre": "58% 50%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "titulo": "**Centimillimental** hará gira por Latinoamérica en mayo de 2027",
+   "texto": "Seis ciudades en cinco países, desde el 7 de mayo."
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n4.jpg",
+   "encuadre": "50% 40%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "titulo": "**BAND-MAID** cerrará su gira en el Budokan y pausará los conciertos hasta 2028",
+   "texto": "Dos noches, el 13 y 14 de noviembre; la segunda ya está agotada."
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n5.jpg",
+   "encuadre": "50% 30%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "titulo": "**YOASOBI** estrenará «KILLA», basada en una novela, el 11 de noviembre",
+   "texto": "Saldrá en plataformas digitales, con portada ya revelada."
+  },
+  {
+   "tipo": "mosaico",
+   "imagenes": [
+    "n0.jpg",
+    "n1.jpg",
+    "n2.jpg",
+    "n3.jpg"
+   ],
+   "texto": "¿Cuál fue tu **favorita**?"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "titular": "anime",
+ "link": "",
+ "formato": "semanal",
+ "franja": "extra",
+ "tema": "anime",
+ "slides": [
+  {
+   "tipo": "semanal",
+   "imagen": "n0.png",
+   "encuadre": "50% 40%",
+   "titulo": "Lo más\n**destacado**\nde la semana",
+   "tema": "Anime",
+   "rango": "Semana 45 · 2 al 8 de noviembre"
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n0.png",
+   "encuadre": "50% 40%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "titulo": "**SPY×FAMILY** tendrá temporada 4 y segunda película en 2027",
+   "texto": "Los Forger regresarán a la televisión y a los cines de Japón."
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n1.webp",
+   "encuadre": "50% 40%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "titulo": "**Bocchi the Rock!** tendrá nueva película en 2027",
+   "texto": "La película contará el pasado de **Nijika y Seika**."
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n2.jpg",
+   "encuadre": "0% 50%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "titulo": "One Piece llegará a los cines de **Colombia** con dos películas",
+   "texto": "Se estrenan el 3 de diciembre, por primera vez en Latinoamérica."
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n3.jpg",
+   "encuadre": "45% 50%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "titulo": "**Mackenyu** será Mash en el live-action de Mashle",
+   "texto": "Yuichi Fukuda dirige la película, que llega a Japón el 19 de marzo."
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n4.jpg",
+   "encuadre": "50% 0%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "titulo": "**Laid-Back Camp** estrenará su temporada 4 en abril de 2027",
+   "texto": "Nuevo tráiler y visual, con estudio y equipo renovados."
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n5.png",
+   "encuadre": "50% 50%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "titulo": "**Dragon Ball Super: Beerus** tendrá doblaje latino en Crunchyroll",
+   "texto": "Llegará a Crunchyroll el 12 de noviembre."
+  },
+  {
+   "tipo": "mosaico",
+   "imagenes": [
+    "n0.png",
+    "n1.webp",
+    "n2.jpg",
+    "n3.jpg"
+   ],
+   "texto": "¿Cuál fue tu **favorita**?"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}

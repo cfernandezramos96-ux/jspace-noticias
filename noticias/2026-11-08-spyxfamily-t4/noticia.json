@@ -1,0 +1,16 @@
+{
+ "titular": "SPY×FAMILY tendrá temporada 4 y segunda película en 2027",
+ "link": "https://www.animenewsnetwork.com/news/2026-11-08/spy-family-anime-gets-4th-season-theatrical-film-in-2027/.243614",
+ "formato": "carrusel",
+ "franja": "anime",
+ "slides": [
+  { "tipo": "portada", "imagen": "visual.png", "encuadre": "50% 40%", "posicion": "abajo", "sombra": 1, "etiqueta": "Temporada 4 · Película",
+    "titulo": "**SPY×FAMILY** tendrá temporada 4 y segunda película en 2027",
+    "texto": "Los Forger regresarán a la televisión y a los cines de Japón." },
+  { "tipo": "poster", "imagen": "key.jpg" },
+  { "tipo": "texto", "titulo": "Lo que **sabemos**", "subtitulo": "Anunciado en el evento Extra Mission II",
+    "texto": "Toho reveló ambos proyectos el 8 de noviembre. Fechas, historia, equipo y estudio se darán a conocer más adelante.",
+    "imagen": "key.jpg", "proporcion": 1.78, "encuadre": "50% 50%" },
+  { "tipo": "cierre" }
+ ]
+}
