@@ -1,0 +1,19 @@
+{
+ "titular": "Tatsuro Yamashita lanza el paquete navideño 2026 de «Christmas Eve» el 15 de diciembre",
+ "link": "https://www.thefirsttimes.jp/news/0000914656/",
+ "formato": "carrusel",
+ "franja": "extra",
+ "tema": "jmusic",
+ "slides": [
+  { "tipo": "portada", "imagen": "t112601.jpg", "encuadre": "56% 30%", "posicion": "abajo", "sombra": 1, "etiqueta": "Edición limitada",
+    "titulo": "**Tatsuro Yamashita** lanzará el paquete navideño 2026 de «Christmas Eve»",
+    "texto": "Saldrá el 15 de diciembre, por tiempo limitado." },
+  { "tipo": "poster", "imagen": "t112603.jpg" },
+  { "tipo": "texto", "titulo": "Un tiburón **Santa** surfista", "subtitulo": "Arte de Andre Miripolsky",
+    "texto": "El artista de Los Ángeles, autor también de la portada de «JOY 2», vistió a su tiburón con gorro navideño para la ocasión.",
+    "imagen": "t112602.jpg", "proporcion": 1.12, "encuadre": "50% 50%" },
+  { "tipo": "dato", "antes": "«Christmas Eve» ha entrado al Top 100 semanal de Oricon durante 40 años seguidos; en 2026 apuntará al año", "dato": "41",
+    "texto": "El contenido será el mismo de la edición 30th Anniversary; lo único nuevo es el estuche." },
+  { "tipo": "cierre" }
+ ]
+}
