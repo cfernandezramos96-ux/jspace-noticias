@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-09T05:51:53.853Z",
+  "actualizado": "2026-11-09T05:54:23.991Z",
   "posts": [
     {
       "externo": true,
@@ -724,7 +724,9 @@
       ],
       "hora": "2026-11-11T20:00:00.000Z",
       "programado": "2026-11-11T20:00:00.000Z",
-      "colaboradores": [],
+      "colaboradores": [
+        "helianevans"
+      ],
       "portada": "noticias/2026-11-09-helian-ladybaby/slide-01.jpg",
       "video": true
     },
