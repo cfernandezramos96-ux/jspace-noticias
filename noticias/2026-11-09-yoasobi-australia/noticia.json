@@ -5,7 +5,7 @@
  "franja": "extra",
  "tema": "jmusic",
  "slides": [
-  {"tipo":"portada","imagen":"portada.jpg","encuadre":"50% 30%","posicion":"abajo","sombra":1,
+  {"tipo":"portada","imagen":"portada.jpg","encuadre":"50% 100%","posicion":"abajo","sombra":1,
    "tema":"oscuro",
    "titulo":"**YOASOBI** se presentará por primera vez en Australia",
    "texto":"Melbourne y Sídney, en marzo de 2027."},
