@@ -1,0 +1,23 @@
+{
+ "titular": "YOASOBI tocará por primera vez en Australia en marzo de 2027",
+ "link": "https://www.backseatmafia.com/news-yoasobi-announce-first-australian-arena-shows-for-march-2027/",
+ "formato": "carrusel",
+ "franja": "extra",
+ "tema": "jmusic",
+ "slides": [
+  {"tipo":"portada","imagen":"portada.jpg","encuadre":"50% 30%","posicion":"abajo","sombra":1,
+   "tema":"oscuro",
+   "titulo":"**YOASOBI** se presentará por primera vez en Australia",
+   "texto":"Melbourne y Sídney, en marzo de 2027."},
+  {"tipo":"historia","imagen":"ikura.jpg","encuadre":"50% 25%",
+   "texto":"Las fechas: **Melbourne, 17 de marzo**, en el Rod Laver Arena; y **Sídney, 19 de marzo**, en el Afterpay Arena",
+   "nota":"Primeros shows del dúo en Australia"},
+  {"tipo":"historia","imagen":"ayase.jpg","encuadre":"50% 40%",
+   "texto":"Forman parte de la gira **Super Planet**, que recorrerá 11 ciudades de Asia y Oceanía",
+   "nota":"Singapur 20 feb · Hong Kong, enero"},
+  {"tipo":"historia","imagen":"f7.jpg","encuadre":"50% 40%",
+   "texto":"La preventa comenzará el **12 de noviembre** y la venta general, el **13 de noviembre**, al mediodía (hora local)",
+   "nota":"Entradas vía Live Nation Australia"},
+  {"tipo":"cierre"}
+ ]
+}
