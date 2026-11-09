@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-09T04:27:32.296Z",
+  "actualizado": "2026-11-09T04:29:41.186Z",
   "posts": [
     {
       "externo": true,
@@ -645,6 +645,20 @@
       "historia": true
     },
     {
+      "carpeta": "noticias/2026-11-09-yoasobi-australia",
+      "titular": "YOASOBI tocará por primera vez en Australia en marzo de 2027",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-09T17:30:00.000Z",
+      "programado": "2026-11-09T17:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-09-yoasobi-australia/slide-01.jpg",
+      "video": false
+    },
+    {
       "carpeta": "noticias/2026-11-08-nocchi-boda",
       "titular": "Nocchi de Perfume se casó con el actor Kento Shibuya",
       "franja": "extra",
@@ -659,6 +673,20 @@
       "video": false
     },
     {
+      "carpeta": "noticias/2026-11-09-ano-taiwan",
+      "titular": "ano debutó en Taiwán como solista en el Vagabond Festival",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-09T23:30:00.000Z",
+      "programado": "2026-11-09T23:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-09-ano-taiwan/slide-01.jpg",
+      "video": false
+    },
+    {
       "carpeta": "noticias/2026-11-08-tatsuro-christmas-eve",
       "titular": "Tatsuro Yamashita lanza el paquete navideño 2026 de «Christmas Eve» el 15 de diciembre",
       "franja": "extra",
@@ -670,34 +698,6 @@
       "programado": "2026-11-10T02:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-08-tatsuro-christmas-eve/slide-01.jpg",
-      "video": false
-    },
-    {
-      "carpeta": "noticias/2026-11-09-yoasobi-australia",
-      "titular": "YOASOBI tocará por primera vez en Australia en marzo de 2027",
-      "franja": "extra",
-      "estado": "aprobado",
-      "temas": [
-        "jmusic"
-      ],
-      "hora": "2026-11-10T20:00:00.000Z",
-      "programado": "2026-11-10T20:00:00.000Z",
-      "colaboradores": [],
-      "portada": "noticias/2026-11-09-yoasobi-australia/slide-01.jpg",
-      "video": false
-    },
-    {
-      "carpeta": "noticias/2026-11-09-ano-taiwan",
-      "titular": "ano debutó en Taiwán como solista en el Vagabond Festival",
-      "franja": "extra",
-      "estado": "aprobado",
-      "temas": [
-        "jmusic"
-      ],
-      "hora": "2026-11-11T02:00:00.000Z",
-      "programado": "2026-11-11T02:00:00.000Z",
-      "colaboradores": [],
-      "portada": "noticias/2026-11-09-ano-taiwan/slide-01.jpg",
       "video": false
     },
     {
