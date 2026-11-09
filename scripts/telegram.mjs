@@ -271,7 +271,7 @@ function sobreQue(m) {
 
 // ✅ / 🚀 / ❌ sobre un preview (botones o texto)
 // 9 nov 2026: si el botón ya venció (query is too old), Telegram da error; eso no debe tumbar la vuelta
-const contesta = (q, text) => tg('answerCallbackQuery', { callback_query_id: q.id, text }).catch((e) => console.log(`botón sin respuesta: ${e.message}`));
+function contesta(q, text) { return tg('answerCallbackQuery', { callback_query_id: q.id, text }).catch((e) => console.log(`botón sin respuesta: ${e.message}`)); }
 async function boton(q) {
   const chat = String(q.message?.chat.id);
   if (!(await autorizado(chat, q.from?.id))) return contesta(q, 'Este chat no está autorizado');
