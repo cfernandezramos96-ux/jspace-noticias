@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-09T02:02:14.045Z",
+  "actualizado": "2026-11-09T03:42:06.090Z",
   "posts": [
     {
       "externo": true,
@@ -670,6 +670,20 @@
       "programado": "2026-11-10T02:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-08-tatsuro-christmas-eve/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-09-yoasobi-australia",
+      "titular": "YOASOBI tocará por primera vez en Australia en marzo de 2027",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-10T20:00:00.000Z",
+      "programado": "2026-11-10T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-09-yoasobi-australia/slide-01.jpg",
       "video": false
     },
     {
