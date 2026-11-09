@@ -4,6 +4,7 @@
  "formato": "carrusel",
  "franja": "extra",
  "tema": "jmusic",
+ "etiquetas": ["helianevans"],
  "slides": [
   { "tipo": "portada", "imagen": "portada.jpg", "encuadre": "50% 50%", "posicion": "abajo", "sombra": 1, "etiqueta": "Colaboración · Tokio",
     "titulo": "**Helian Evans** y LADYBABY cantan en Tokio",
