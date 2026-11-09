@@ -5,7 +5,7 @@
  "franja": "extra",
  "tema": "jmusic",
  "slides": [
-  {"tipo":"portada","imagen":"live.jpg","encuadre":"50% 55%","posicion":"abajo","sombra":1,"tema":"oscuro",
+  {"tipo":"portada","imagen":"portada.jpg","encuadre":"47% 50%","posicion":"abajo","sombra":1,"tema":"oscuro",
    "titulo":"**ano** debutó en Taiwán como solista",
    "texto":"Se presentó en el Vagabond Festival, en Tainan."},
   {"tipo":"poster","imagen":"cartel.jpg"},
