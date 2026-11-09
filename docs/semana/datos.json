@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-09T05:33:04.483Z",
+  "actualizado": "2026-11-09T05:41:40.050Z",
   "posts": [
     {
       "externo": true,
@@ -676,7 +676,7 @@
       "carpeta": "noticias/2026-11-09-ano-taiwan",
       "titular": "ano debutó en Taiwán como solista en el Vagabond Festival",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "pendiente",
       "temas": [
         "jmusic"
       ],
@@ -684,7 +684,7 @@
       "programado": "2026-11-09T23:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-09-ano-taiwan/slide-01.jpg",
-      "video": false
+      "video": true
     },
     {
       "carpeta": "noticias/2026-11-08-tatsuro-christmas-eve",
