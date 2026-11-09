@@ -18,10 +18,14 @@
   },
   {
    "tipo": "poster",
-   "imagen": "show-2.jpg"
+   "imagen": "cartel.jpg"
   },
   {
    "tipo": "texto",
+   "imagen": "show-2.jpg",
+   "imagen_arriba": true,
+   "proporcion": 1.5,
+   "alto_imagen": 520,
    "titulo": "Las **fechas** de la gira",
    "texto": "**7 nov:** Seúl · Gabin Art Hall\n**15 nov:** Hong Kong\n**5 dic:** Taipéi\n**25 dic:** Tokio"
   },
