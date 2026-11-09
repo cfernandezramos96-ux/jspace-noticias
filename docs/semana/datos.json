@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-09T04:29:41.186Z",
+  "actualizado": "2026-11-09T04:35:49.129Z",
   "posts": [
     {
       "externo": true,
@@ -698,6 +698,20 @@
       "programado": "2026-11-10T02:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-08-tatsuro-christmas-eve/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-09-aimi-gira",
+      "titular": "AIMI inicia su gira asiática STAR RISING en Seúl",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-11T20:00:00.000Z",
+      "programado": "2026-11-11T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-09-aimi-gira/slide-01.jpg",
       "video": false
     },
     {
