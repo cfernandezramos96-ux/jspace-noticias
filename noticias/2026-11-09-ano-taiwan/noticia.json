@@ -1,0 +1,23 @@
+{
+ "titular": "ano debutó en Taiwán como solista en el Vagabond Festival",
+ "link": "https://www.marieclaire.com.tw/entertainment/music/94047",
+ "formato": "carrusel",
+ "franja": "extra",
+ "tema": "jmusic",
+ "slides": [
+  {"tipo":"portada","imagen":"live.jpg","encuadre":"50% 55%","posicion":"abajo","sombra":1,"tema":"oscuro",
+   "titulo":"**ano** debutó en Taiwán como solista",
+   "texto":"Se presentó en el Vagabond Festival, en Tainan."},
+  {"tipo":"poster","imagen":"cartel.jpg"},
+  {"tipo":"historia","imagen":"ano.jpg","encuadre":"50% 30%",
+   "texto":"Fue su primera presentación en un gran festival de Taiwán con **su propio nombre**, el **7 de noviembre** en Anping",
+   "nota":"Vagabond Festival · 7 y 8 de noviembre"},
+  {"tipo":"historia","imagen":"live.jpg","encuadre":"50% 30%",
+   "texto":"El **14 de noviembre**, su concierto en el Tokyo Garden Theater se transmitirá en vivo por **U-NEXT**",
+   "nota":"19:30 en Japón · repetición hasta el 28 de noviembre"},
+  {"tipo":"historia","imagen":"ano.jpg","encuadre":"50% 45%",
+   "texto":"Y el **28 de febrero de 2027** llegará su propio festival, **Nyanoesai**, en el Toyosu PIT de Tokio",
+   "nota":"Más artistas por anunciar"},
+  {"tipo":"cierre"}
+ ]
+}
