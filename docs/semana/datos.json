@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-09T05:09:44.546Z",
+  "actualizado": "2026-11-09T05:18:18.938Z",
   "posts": [
     {
       "externo": true,
@@ -713,6 +713,20 @@
       "colaboradores": [],
       "portada": "noticias/2026-11-09-yoasobi-australia/slide-01.jpg",
       "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-09-helian-ladybaby",
+      "titular": "Helian Evans y LADYBABY cantan Nippon Manju en Tokio",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-11T20:00:00.000Z",
+      "programado": "2026-11-11T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-09-helian-ladybaby/slide-01.jpg",
+      "video": true
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
