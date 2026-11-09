@@ -1,0 +1,18 @@
+{
+ "titular": "Helian Evans y LADYBABY cantan Nippon Manju en Tokio",
+ "link": "https://www.facebook.com/helianevans.official/",
+ "formato": "carrusel",
+ "franja": "extra",
+ "tema": "jmusic",
+ "slides": [
+  { "tipo": "portada", "imagen": "frame1.jpg", "encuadre": "50% 90%", "posicion": "abajo", "sombra": 1, "etiqueta": "Colaboración · Tokio",
+    "titulo": "**Helian Evans** y LADYBABY cantan en Tokio",
+    "texto": "El artista ecuatoriano interpretó «Nippon Manju» junto al grupo de idol metal." },
+  { "tipo": "video", "imagen": "frame3.jpg", "vertical": true, "etiqueta": "En vivo",
+    "titulo": "**Nippon Manju**", "texto": "Helian Evans y LADYBABY, sobre el escenario.",
+    "creditos": "Video: Helian Evans" },
+  { "tipo": "dato", "antes": "El sencillo de debut de LADYBABY salió en", "dato": "2015",
+    "texto": "«Nippon Manju» recorre Japón y volvió viral al grupo en todo el mundo." },
+  { "tipo": "cierre" }
+ ]
+}
