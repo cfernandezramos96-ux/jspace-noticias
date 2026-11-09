@@ -8,6 +8,14 @@ instagram_manage_insights).
 su alcance viene en parte de la otra cuenta) y los reels de prueba (`tipo: VIDEO`; solo los ven no seguidores). Compara
 carruseles sin collab contra carruseles sin collab. No juzgues los posts con menos de un día.
 
+## 2026-11-09 · informe de la semana del 2 al 8 de noviembre (38 piezas)
+- **Lo que rindió:** reel de Hump Back 1.090 de alcance (su carrusel, 17), Nanase Aikawa 1.024 (collab), Yoko Takahashi
+  en Bogotá 679, Chainsaw Man (reel) 484. Todo lo demás, 7-116.
+- **Lo que no:** resúmenes del domingo (15 y 7 de alcance) y Fool Night (2-19). Los reels con video real de la banda
+  o la serie funcionan; los reels de obras poco conocidas, no.
+- **Decisiones:** reel de prueba siempre que haya video oficial; priorizar Colombia/Latinoamérica y collabs; un solo
+  resumen semanal a prueba.
+
 ## 2026-11-08 · auditoría de la semana del 2 al 8 de noviembre (31 carruseles, 7 reels)
 - **Corrección:** Nanase Aikawa (1.019 de alcance) era collab con @suzukinoradio, aunque su noticia.json no lo registre.
   Un nombre conocido por sí solo NO despega: sin collab, Kenshi Yonezu 17, RADWIMPS 23, Asian Kung-Fu Generation 27,
@@ -42,3 +50,5 @@ carruseles sin collab contra carruseles sin collab. No juzgues los posts con men
 - Ave Mujica MV y Enako 2 likes: lanzamientos de nicho, aunque lleven video.
 - De antes (cuenta vieja): J-music, cultura y lo local rinden ×3-×20 sobre el promedio (~9 likes); Atarashii Gakko
   180 likes es el mejor post de la cuenta.
+
+- **Fijados desde el 2026-11-09:** Yoko Takahashi (DfStfSeCSei), Nanase Aikawa (DfScRgSmAXH), Bocchi the Rock! (DfQgzkoj3n_).

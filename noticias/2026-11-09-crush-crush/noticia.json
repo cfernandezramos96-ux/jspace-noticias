@@ -1,0 +1,43 @@
+{
+ "titular": "My Crush's Crush llegará en abril de 2027 con su primer tráiler y reparto",
+ "link": "https://animecorner.me/my-crushs-crush-anime-reveals-teaser-visual-trailer-staff-cast-april-2027-premiere/",
+ "formato": "carrusel",
+ "franja": "anime",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "visual.jpg",
+   "encuadre": "50% 0%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "titulo": "**My Crush's Crush** ya tiene fecha de estreno",
+   "texto": "Llegará en abril de 2027.",
+   "subir": 200
+  },
+  {
+   "tipo": "historia",
+   "imagen": "frame.jpg",
+   "encuadre": "50% 50%",
+   "texto": "Sora se declara y **lo rechazan**: ella está enamorada de otra persona",
+   "nota": "Basado en el manga de Sekina Aoi y Ryo Tsuzura"
+  },
+  {
+   "tipo": "texto",
+   "imagen": "visual.jpg",
+   "imagen_arriba": true,
+   "proporcion": 1.2,
+   "titulo": "El **reparto**",
+   "texto": "**Sora Akizuki:** Gakuto Kajiwara\n**Asahi Suzukaze:** Haruna Mikawa\n**Miya Fuwa:** Nene Hieda",
+   "encuadre": "50% 62%"
+  },
+  {
+   "tipo": "texto",
+   "titulo": "El **equipo**",
+   "texto": "**Estudio:** project No.9\n**Dirige:** Kazuomi Koga\n**Guion:** Yoriko Tomita\n**Personajes:** Takayuki Noguchi\n**Música:** Rina Tayama"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
