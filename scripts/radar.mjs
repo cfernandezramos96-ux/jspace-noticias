@@ -63,8 +63,13 @@ for (const [fuente, url] of FUENTES) {
 // Colombia primero; un solo aviso por nombre en cada vuelta
 hallazgos.sort((a, b) => b.local - a.local);
 const vistos = new Set(), avisar = [];
+// 9 nov 2026: la misma noticia con otro titular en otra fuente salía como aviso nuevo en la vuelta siguiente
+const palabras = (t) => new Set(norm(t.replace(/ - [^-]+$/, '')).split(/[^p{L}p{N}]+/u).filter((p) => p.length > 2 || /d/.test(p)));
+const parecidos = (a, b) => { const x = palabras(a), y = palabras(b), c = [...x].filter((p) => y.has(p)).length; return c >= 3 && c / Math.min(x.size, y.size) >= 0.6; };
+const yaAvisado = (h) => [...Object.values(estado.pendientes), ...avisar].some((p) => parecidos(p.titulo, h.titulo));
 for (const h of hallazgos) {
   estado.vistos[h.clave] = new Date().toISOString();
+  if (yaAvisado(h)) { console.log(`repetida, no aviso: ${h.titulo}`); continue; }
   if (PRIMERA || avisar.length >= 3 || estado.avisos + avisar.length >= 6) continue;
   const k = norm(h.nombre || h.titulo);
   if (vistos.has(k)) continue;

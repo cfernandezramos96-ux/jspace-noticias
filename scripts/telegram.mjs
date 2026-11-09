@@ -128,7 +128,11 @@ async function baja(adjunto, id, n, chat, responderA) {
 }
 
 for (const u of updates) {
+  // 9 nov 2026: el offset se guarda ANTES de atender el mensaje y un error en uno no tumba la vuelta; si no, el mismo
+  // mensaje se atendía otra vez en cada vuelta y el bot repetía sus respuestas
   estado.offset = u.update_id + 1;
+  writeFileSync(ESTADO, JSON.stringify(estado, null, 2));
+  try {
   if (u.callback_query) { await boton(u.callback_query); continue; }
   const m = u.message; if (!m) continue;
   // el texto puede venir como pie de un video o una foto
@@ -242,6 +246,7 @@ for (const u of updates) {
   await tg('sendMessage', { chat_id: chat, reply_to_message_id: m.message_id, text: '📥 Recibido. Lo armo y les mando el preview para que lo aprueben.' });
   console.log(`entrada guardada: ${u.update_id}`);
   nuevas++;
+  } catch (e) { console.log(`error atendiendo ${u.update_id}: ${e.message}`); }
 }
 writeFileSync(ESTADO, JSON.stringify(estado, null, 2));
 
@@ -389,7 +394,9 @@ for (const f of readdirSync(DIR).filter((n) => /^\d+\.preview\.json$/.test(n))) 
   // post cambiado: se decide otra vez (también si lo habían descartado o lo iban a subir a mano)
   for (const s of ['manual.json', 'descartado.json']) if (existsSync(join(DIR, `${id}.${s}`))) unlinkSync(join(DIR, `${id}.${s}`));
   const slides = slidesDe(carpeta);
-  const { ids: album, pesados } = await mandaArchivos(chat, carpeta, slides); // album: para saber a qué post responden
+  // album: para saber a qué post responden. Si el álbum ya salió y falló el mensaje de los botones, no se vuelve a mandar
+  const { ids: album, pesados } = prev.album_enviado ? { ids: prev.album_enviado, pesados: [] } : await mandaArchivos(chat, carpeta, slides);
+  if (!prev.album_enviado) escribe(f, { ...prev, album_enviado: album });
   if (pesados.length) await tg('sendMessage', { chat_id: chat, text: `⚠️ No pude mandar ${pesados.join(', ')} (pasa de 50 MB, el límite de Telegram), pero sí va en el post.` });
   // el reel (Facebook y reel de prueba de Instagram) NO se manda al preview: sale igual que el carrusel aprobado y solo
   // llenaría el chat y demoraría el preview (Kazuo, 4 nov 2026)
@@ -461,18 +468,19 @@ for (const d of readdirSync(NOTICIAS, { withFileTypes: true }).filter((x) => x.i
   if (existsSync(pub)) {
     const p = leeJson(pub);
     if (p && !p.anunciado && Date.now() - new Date(p.fecha) < 6 * 3600e3 && chat) {
+      writeFileSync(pub, JSON.stringify({ ...p, anunciado: true }, null, 2)); movimiento = true; // antes de mandar: si un chat falla, no se repite en los demás
       for (const a of new Set(PERMITIDOS)) await tg('sendMessage', { chat_id: a, text: `✅ Ya salió «${titular}»
 Instagram: ${p.permalink}${p.facebook ? `
 Facebook: ${p.facebook}` : ''}${p.historia ? `
 📲 Ya salió también en historias. Si el post vale la pena, compártanlo a mano desde la app (avión de papel → «Agregar a tu historia») con una encuesta o una pregunta.` : ''}${p.reel_prueba ? `
-🎬 Y como reel de prueba (solo lo ven quienes no nos siguen).` : ''}`, disable_web_page_preview: true });
-      writeFileSync(pub, JSON.stringify({ ...p, anunciado: true }, null, 2)); movimiento = true;
+🎬 Y como reel de prueba (solo lo ven quienes no nos siguen).` : ''}`, disable_web_page_preview: true }).catch((e) => console.log(`no pude avisar a ${a}: ${e.message}`));
     }
     // posts sin video que valen un reel con canción: la portada animada le llega a Kazuo por privado, NO al grupo; él le
     // pone la canción desde la app y lo sube como reel de prueba (Kazuo, 4 nov 2026)
     const rc = join(c, 'reel-cancion.mp4'), q = leeJson(pub);
     if (q && !q.cancion_enviada && existsSync(rc) && KAZUO && Date.now() - new Date(q.fecha) < 24 * 3600e3) {
       const n = leeJson(join(c, 'noticia.json')) || {};
+      writeFileSync(pub, JSON.stringify({ ...q, cancion_enviada: true }, null, 2)); movimiento = true; // antes de mandar, para no repetir el video
       await tg('sendVideo', { chat_id: KAZUO, supports_streaming: 'true', caption: `🎵 Reel para ponerle canción: «${titular}»` }, { video: rc });
       const ley = existsSync(join(c, 'leyenda.txt')) ? readFileSync(join(c, 'leyenda.txt'), 'utf8').trim() : '';
       await tg('sendMessage', { chat_id: KAZUO, disable_web_page_preview: true, text: `${n.cancion ? `Canción sugerida: ${n.cancion}
@@ -480,7 +488,6 @@ Facebook: ${p.facebook}` : ''}${p.historia ? `
 
 —— Leyenda ——
 ${ley}`.slice(0, 4000) });
-      writeFileSync(pub, JSON.stringify({ ...q, cancion_enviada: true }, null, 2)); movimiento = true;
     }
     continue;
   }
@@ -506,7 +513,8 @@ for (const f of readdirSync(DIR).filter((n) => /^\d+\.json$/.test(n))) {
   const hay = (s) => existsSync(join(DIR, `${id}.${s}`));
   if (hay('resultado.txt') || hay('enviado.txt')) continue;
   const p = lee(f);
-  if (p.tipo !== 'instruccion' && (hay('preview.json') || hay('preview.enviado.json'))) continue;
+  // 9 nov 2026: también las instrucciones que terminan en un preview propio (antes daban la alarma falsa de demora)
+  if (hay('preview.json') || hay('preview.enviado.json')) continue;
   if (!p.fecha || Date.now() - new Date(p.fecha) < LIMITE) continue;
   const chat = p.chat || GRUPO;
   const r = hay('reintento.json') ? lee(`${id}.reintento.json`) : null;

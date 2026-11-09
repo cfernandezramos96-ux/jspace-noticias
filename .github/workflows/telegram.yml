@@ -54,6 +54,13 @@ jobs:
                 else echo "no se pudo despertar la rutina, se reintenta"; fi
               fi
             done
+            # 9 nov 2026: lo que no alcanzó a subir se perdería al acabar y la vuelta siguiente lo mandaría otra vez
+            for i in 1 2 3 4 5; do
+              git push -q && return 0
+              git pull -q --rebase -X theirs || git rebase --abort 2>/dev/null || true
+              sleep $((i * 5))
+            done
+            echo "no pude subir el estado al terminar la vuelta"
           }
           relanza() {
             # siempre, también de madrugada: el equipo le escribe a cualquier hora (Kazuo, 4 nov 2026)
