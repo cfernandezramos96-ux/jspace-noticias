@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-09T20:51:48.004Z",
+  "actualizado": "2026-11-09T22:02:01.615Z",
   "posts": [
     {
       "externo": true,
@@ -722,6 +722,20 @@
       "programado": "2026-11-10T17:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-09-yoasobi-australia/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-09-ado-covers",
+      "titular": "Ado revela las portadas de su segundo álbum de covers",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-10T20:00:00.000Z",
+      "programado": "2026-11-10T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-09-ado-covers/slide-01.jpg",
       "video": false
     },
     {
