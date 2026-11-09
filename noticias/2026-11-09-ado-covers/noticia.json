@@ -1,0 +1,35 @@
+{
+ "titular": "Ado revela las portadas de su segundo álbum de covers",
+ "link": "https://www.universal-music.co.jp/ado/news/2026-11-02/",
+ "formato": "carrusel",
+ "franja": "extra",
+ "tema": "jmusic",
+ "slides": [
+  {
+   "tipo": "texto",
+   "imagen": "normal.png",
+   "proporcion": 1,
+   "imagen_arriba": false,
+   "titulo": "**Ado** revela las portadas de su álbum de covers",
+   "texto": "Dos ilustraciones de M.B para «Ado no Utattemita Album Sono 2»."
+  },
+  {
+   "tipo": "poster",
+   "imagen": "inicial.png"
+  },
+  {
+   "tipo": "texto",
+   "titulo": "Las canciones **confirmadas**",
+   "texto": "**Unknown Mother-Goose** (wowaka)\n**Fairytale,** (buzzG)\n**Mōsō Shikkan Girl** (Moja)\n**Kawaki wo Ameku** (Minami)\n**Kuchibashi ni Cherry** (EGO-WRAPPIN')\n**Enter Sandman** (Metallica)\n**La Gata Bajo La Lluvia** (R. Pérez-Botija)"
+  },
+  {
+   "tipo": "dato",
+   "antes": "El álbum llegará el",
+   "dato": "23 dic",
+   "texto": "En edición estándar y en edición limitada con soporte de acrílico."
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
