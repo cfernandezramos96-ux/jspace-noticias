@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-09T04:35:49.129Z",
+  "actualizado": "2026-11-09T05:09:17.196Z",
   "posts": [
     {
       "externo": true,
@@ -645,17 +645,17 @@
       "historia": true
     },
     {
-      "carpeta": "noticias/2026-11-09-yoasobi-australia",
-      "titular": "YOASOBI tocará por primera vez en Australia en marzo de 2027",
+      "carpeta": "noticias/2026-11-09-aimi-gira",
+      "titular": "AIMI inicia su gira asiática STAR RISING en Seúl",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "pendiente",
       "temas": [
         "jmusic"
       ],
       "hora": "2026-11-09T17:30:00.000Z",
       "programado": "2026-11-09T17:30:00.000Z",
       "colaboradores": [],
-      "portada": "noticias/2026-11-09-yoasobi-australia/slide-01.jpg",
+      "portada": "noticias/2026-11-09-aimi-gira/slide-01.jpg",
       "video": false
     },
     {
@@ -701,17 +701,17 @@
       "video": false
     },
     {
-      "carpeta": "noticias/2026-11-09-aimi-gira",
-      "titular": "AIMI inicia su gira asiática STAR RISING en Seúl",
+      "carpeta": "noticias/2026-11-09-yoasobi-australia",
+      "titular": "YOASOBI tocará por primera vez en Australia en marzo de 2027",
       "franja": "extra",
-      "estado": "pendiente",
+      "estado": "aprobado",
       "temas": [
         "jmusic"
       ],
-      "hora": "2026-11-11T20:00:00.000Z",
-      "programado": "2026-11-11T20:00:00.000Z",
+      "hora": "2026-11-10T17:30:00.000Z",
+      "programado": "2026-11-10T17:30:00.000Z",
       "colaboradores": [],
-      "portada": "noticias/2026-11-09-aimi-gira/slide-01.jpg",
+      "portada": "noticias/2026-11-09-yoasobi-australia/slide-01.jpg",
       "video": false
     },
     {
