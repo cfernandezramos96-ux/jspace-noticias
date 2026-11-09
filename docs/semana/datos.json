@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-09T05:54:26.799Z",
+  "actualizado": "2026-11-09T13:27:29.723Z",
   "posts": [
     {
       "externo": true,
@@ -712,6 +712,18 @@
       "programado": "2026-11-10T17:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-09-yoasobi-australia/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-09-crush-crush",
+      "titular": "My Crush's Crush llegará en abril de 2027 con su primer tráiler y reparto",
+      "franja": "anime",
+      "estado": "pendiente",
+      "temas": [],
+      "hora": "2026-11-10T23:30:00.000Z",
+      "programado": "2026-11-10T23:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-09-crush-crush/slide-01.jpg",
       "video": false
     },
     {
