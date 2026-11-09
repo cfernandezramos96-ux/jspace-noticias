@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-09T13:27:29.723Z",
+  "actualizado": "2026-11-09T17:31:51.596Z",
   "posts": [
     {
       "externo": true,
@@ -648,15 +648,20 @@
       "carpeta": "noticias/2026-11-09-aimi-gira",
       "titular": "AIMI inicia su gira asiática STAR RISING en Seúl",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic"
       ],
-      "hora": "2026-11-09T17:30:00.000Z",
+      "hora": "2026-11-09T17:31:01.354Z",
       "programado": "2026-11-09T17:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-09-aimi-gira/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/Dfh31bDD0V_/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1865005801948217",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-08-nocchi-boda",
