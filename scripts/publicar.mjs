@@ -366,10 +366,17 @@ async function informe(dias = 7) {
       m.metricas = Object.fromEntries((i.data || []).map((x) => [x.name, x.values?.[0]?.value ?? x.total_value?.value]));
     } catch (e) { sinInsights = e.message; break; }
   }
+  // collab real según Instagram (noticia.json no siempre lo registra): su alcance viene en parte de la otra cuenta
+  for (const m of posts) {
+    try {
+      const c = await api('GET', `${m.id}/collaborators`, { fields: 'username,invite_status' });
+      m.collab = (c.data || []).filter((x) => x.invite_status === 'Accepted').map((x) => x.username);
+    } catch { m.collab = null; }
+  }
   const hora = (t) => new Date(t).toLocaleString('es-CO', { timeZone: 'America/Bogota', weekday: 'short', day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' });
   console.log(JSON.stringify({
     dias, posts: posts.length, ...(sinInsights ? { aviso_insights: `sin alcance ni guardados: ${sinInsights}` } : {}),
-    lista: posts.map((m) => ({ fecha: hora(m.timestamp), tipo: m.media_type, likes: m.like_count, comentarios: m.comments_count,
+    lista: posts.map((m) => ({ fecha: hora(m.timestamp), tipo: m.media_type, collab: m.collab, likes: m.like_count, comentarios: m.comments_count,
       ...(m.metricas || {}), link: m.permalink, titulo: (m.caption || '').split('\n')[0].slice(0, 90) })),
   }, null, 2));
 }
