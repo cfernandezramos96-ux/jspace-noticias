@@ -5,7 +5,7 @@
  "franja": "extra",
  "tema": "jmusic",
  "slides": [
-  { "tipo": "portada", "imagen": "frame1.jpg", "encuadre": "50% 90%", "posicion": "abajo", "sombra": 1, "etiqueta": "Colaboración · Tokio",
+  { "tipo": "portada", "imagen": "portada.jpg", "encuadre": "50% 50%", "posicion": "abajo", "sombra": 1, "etiqueta": "Colaboración · Tokio",
     "titulo": "**Helian Evans** y LADYBABY cantan en Tokio",
     "texto": "El artista ecuatoriano interpretó «Nippon Manju» junto al grupo de idol metal." },
   { "tipo": "video", "imagen": "frame3.jpg", "vertical": true, "etiqueta": "En vivo",
