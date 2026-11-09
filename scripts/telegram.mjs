@@ -270,9 +270,11 @@ function sobreQue(m) {
 }
 
 // ✅ / 🚀 / ❌ sobre un preview (botones o texto)
+// 9 nov 2026: si el botón ya venció (query is too old), Telegram da error; eso no debe tumbar la vuelta
+const contesta = (q, text) => tg('answerCallbackQuery', { callback_query_id: q.id, text }).catch((e) => console.log(`botón sin respuesta: ${e.message}`));
 async function boton(q) {
   const chat = String(q.message?.chat.id);
-  if (!(await autorizado(chat, q.from?.id))) return tg('answerCallbackQuery', { callback_query_id: q.id, text: 'Este chat no está autorizado' });
+  if (!(await autorizado(chat, q.from?.id))) return contesta(q, 'Este chat no está autorizado');
   const [accion, id, extra] = String(q.data || '').split(':');
   // botones del radar de noticias (scripts/radar.mjs): «Ármalo» lo manda a la rutina como un link más
   if (accion === 'radar' || accion === 'radarno') {
@@ -289,13 +291,13 @@ async function boton(q) {
       nuevas++; movimiento = true;
       texto = `📥 ${quien} dijo que sí. Lo armo y les mando el preview para que lo aprueben.`;
     }
-    await tg('answerCallbackQuery', { callback_query_id: q.id, text: texto.slice(0, 190) });
+    await contesta(q, texto.slice(0, 190));
     await tg('editMessageReplyMarkup', { chat_id: chat, message_id: q.message.message_id, reply_markup: { inline_keyboard: [] } }).catch(() => {});
     await tg('sendMessage', { chat_id: chat, reply_to_message_id: q.message.message_id, text: texto });
     return;
   }
   const r = await decide(accion, id, q.from?.first_name || 'alguien', chat, q.message.message_id, extra);
-  await tg('answerCallbackQuery', { callback_query_id: q.id, text: r || 'Listo' });
+  await contesta(q, r || 'Listo');
   // los botones de cambio rápido no cierran el preview; los de decidir sí (y el de elegir hora se borra al usarlo)
   if (!r && !['foto', 'corto', 'hora'].includes(accion)) await tg('editMessageReplyMarkup', { chat_id: chat, message_id: q.message.message_id, reply_markup: { inline_keyboard: [] } }).catch(() => {});
 }
