@@ -1,0 +1,15 @@
+{
+ "titular": "AIMI inicia su gira asiática STAR RISING en Seúl",
+ "link": "https://sports.khan.co.kr/en/article/202608272053007",
+ "formato": "post",
+ "franja": "extra",
+ "tema": "jmusic",
+ "slides": [
+  {"tipo":"portada","imagen":"cartel.jpg","encuadre":"50% 20%","posicion":"abajo","sombra":1,"tema":"oscuro","etiqueta":"Gira asiática",
+   "titulo":"**AIMI** inicia su gira asiática en Seúl",
+   "texto":"Hong Kong, Taipéi y Tokio seguirán."},
+  {"tipo":"poster","imagen":"cartel.jpg"},
+  {"tipo":"texto","titulo":"Las **fechas** de la gira","texto":"**7 nov:** Seúl · Gabin Art Hall\n**15 nov:** Hong Kong\n**5 dic:** Taipéi\n**25 dic:** Tokio"},
+  {"tipo":"cierre"}
+ ]
+}
