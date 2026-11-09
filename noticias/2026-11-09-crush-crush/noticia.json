@@ -23,6 +23,14 @@
    "nota": "Basado en el manga de Sekina Aoi y Ryo Tsuzura"
   },
   {
+   "tipo": "video",
+   "imagen": "frame-video.jpg",
+   "etiqueta": "Tráiler",
+   "titulo": "**My Crush's Crush**",
+   "texto": "Primer tráiler oficial. Estreno en abril de 2027.",
+   "creditos": "© Sekina Aoi, Ryo Tsuzura / Hakusensha"
+  },
+  {
    "tipo": "texto",
    "imagen": "visual.jpg",
    "imagen_arriba": true,
