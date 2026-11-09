@@ -11,8 +11,8 @@
   { "tipo": "video", "imagen": "frame3.jpg", "vertical": true, "etiqueta": "En vivo",
     "titulo": "**Nippon Manju**", "texto": "Helian Evans y LADYBABY, sobre el escenario.",
     "creditos": "Video: Helian Evans" },
-  { "tipo": "dato", "antes": "El sencillo de debut de LADYBABY salió en", "dato": "2015",
-    "texto": "«Nippon Manju» recorre Japón y volvió viral al grupo en todo el mundo." },
+  { "tipo": "dato", "antes": "Su colaboración con LADYBABY, «GTFVCK!!», sale el", "dato": "19 nov",
+    "texto": "Helian Evans y LADYBABY estrenan canción juntos este 19 de noviembre." },
   { "tipo": "cierre" }
  ]
 }
