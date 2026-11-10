@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-10T17:31:34.284Z",
+  "actualizado": "2026-11-10T20:01:37.757Z",
   "posts": [
     {
       "externo": true,
@@ -762,16 +762,21 @@
       "carpeta": "noticias/2026-11-10-ano-kirai",
       "titular": "ano lanzará el single «Kirai no chi Suki!», opening de Keroro Gunso☆, el 18 de noviembre",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "anime",
         "jmusic"
       ],
-      "hora": "2026-11-10T20:00:00.000Z",
+      "hora": "2026-11-10T20:00:48.650Z",
       "programado": "2026-11-10T20:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-10-ano-kirai/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfktyKFj0fi/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1866319491816848",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-09-crush-crush",
