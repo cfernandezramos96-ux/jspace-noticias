@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-10T10:37:57.278Z",
+  "actualizado": "2026-11-10T17:31:34.284Z",
   "posts": [
     {
       "externo": true,
@@ -743,15 +743,20 @@
       "carpeta": "noticias/2026-11-09-yoasobi-australia",
       "titular": "YOASOBI tocará por primera vez en Australia en marzo de 2027",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic"
       ],
-      "hora": "2026-11-10T17:30:00.000Z",
+      "hora": "2026-11-10T17:30:49.937Z",
       "programado": "2026-11-10T17:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-09-yoasobi-australia/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfkcnvLjMzK/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1866176861831111",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-10-ano-kirai",
