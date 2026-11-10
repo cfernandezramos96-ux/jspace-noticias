@@ -23,18 +23,27 @@
    "tipo": "texto",
    "titulo": "Edición **limitada**",
    "subtitulo": "En una caja con diseño de manga",
-   "texto": "Trae un **llavero acrílico** y un **sticker** de ano con el pelotón Keroro, ilustración original de Kanon Yoshizaki, el autor del manga.",
-   "imagen": "portada.jpg",
-   "proporcion": 0.75,
-   "encuadre": "50% 30%"
+   "texto": "Trae el CD, un librito, un **llavero acrílico** y **stickers** de ano con el pelotón Keroro, ilustración de Kanon Yoshizaki, autor del manga.",
+   "imagen": "lim.jpg",
+   "proporcion": 0.8,
+   "imagen_arriba": true
+  },
+  {
+   "tipo": "texto",
+   "titulo": "El **llavero** acrílico",
+   "subtitulo": "Keroro y compañía",
+   "texto": "Viene en la edición limitada junto a las figuritas del pelotón.",
+   "imagen": "llavero.jpg",
+   "proporcion": 1,
+   "imagen_arriba": true
   },
   {
    "tipo": "texto",
    "titulo": "Edición por **tiempo limitado**",
    "subtitulo": "Con ano dibujada como humana",
    "texto": "Incluye un **sticker** de la portada, también dibujada por Yoshizaki.",
-   "imagen": "periodo.jpg",
-   "proporcion": 1,
+   "imagen": "periodo2.jpg",
+   "proporcion": 1.5,
    "imagen_arriba": true
   },
   {
