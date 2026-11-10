@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-10T20:01:37.757Z",
+  "actualizado": "2026-11-10T23:33:53.628Z",
   "posts": [
     {
       "externo": true,
@@ -782,13 +782,18 @@
       "carpeta": "noticias/2026-11-09-crush-crush",
       "titular": "My Crush's Crush llegará en abril de 2027 con su primer tráiler y reparto",
       "franja": "anime",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [],
-      "hora": "2026-11-10T23:30:00.000Z",
+      "hora": "2026-11-10T23:31:44.103Z",
       "programado": "2026-11-10T23:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-09-crush-crush/slide-01.jpg",
-      "video": true
+      "video": true,
+      "ig": "https://www.instagram.com/p/DflF6olksu0/",
+      "fb": "https://www.facebook.com/reel/2532667307223725/",
+      "fb_tipo": "reel",
+      "reel_prueba": true,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-09-helian-ladybaby",
