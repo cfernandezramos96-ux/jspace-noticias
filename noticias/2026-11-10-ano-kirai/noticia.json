@@ -1,0 +1,18 @@
+{
+ "titular": "ano lanzará el single «Kirai no chi Suki!», opening de Keroro Gunso☆, el 18 de noviembre",
+ "link": "https://realsound.jp/2026/09/post-2523985.html",
+ "formato": "post",
+ "franja": "extra",
+ "tema": "jmusic",
+ "temas": ["anime", "jmusic"],
+ "slides": [
+  {"tipo":"portada","imagen":"portada.jpg","encuadre":"50% 30%","posicion":"abajo","sombra":1,"tema":"oscuro",
+   "titulo":"**ano** lanzará el single del opening de Keroro Gunso☆",
+   "texto":"«Kirai no chi Suki!» llegará en CD el 18 de noviembre."},
+  {"tipo":"poster","imagen":"periodo.jpg"},
+  {"tipo":"historia","imagen":"kv.jpg","encuadre":"50% 30%",
+   "texto":"La canción es el **opening** del anime **Keroro Gunso☆**, que se estrenó el 3 de octubre",
+   "nota":"ano es la capitana de promoción del 20.º aniversario"},
+  {"tipo":"cierre"}
+ ]
+}
