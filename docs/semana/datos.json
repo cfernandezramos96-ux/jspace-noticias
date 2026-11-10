@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-09T23:33:47.522Z",
+  "actualizado": "2026-11-10T02:02:01.299Z",
   "posts": [
     {
       "externo": true,
@@ -724,15 +724,20 @@
       "carpeta": "noticias/2026-11-08-tatsuro-christmas-eve",
       "titular": "Tatsuro Yamashita lanza el paquete navideño 2026 de «Christmas Eve» el 15 de diciembre",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic"
       ],
-      "hora": "2026-11-10T02:00:00.000Z",
+      "hora": "2026-11-10T02:01:12.271Z",
       "programado": "2026-11-10T02:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-08-tatsuro-christmas-eve/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfiyOZQjL5J/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1865369278578536",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-09-yoasobi-australia",
