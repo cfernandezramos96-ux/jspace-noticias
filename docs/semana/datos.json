@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-11T22:00:23.909Z",
+  "actualizado": "2026-11-11T22:01:45.058Z",
   "posts": [
     {
       "externo": true,
@@ -825,15 +825,20 @@
       "carpeta": "noticias/2026-11-11-ag-coachella",
       "titular": "Atarashii Gakko! vuelve a Coachella en 2027",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic"
       ],
-      "hora": "2026-11-11T22:00:00.000Z",
+      "hora": "2026-11-11T22:01:00.937Z",
       "programado": "2026-11-11T22:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-11-ag-coachella/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfngUqzFC_X/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1867652478350216",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-11-mashle-t3",
