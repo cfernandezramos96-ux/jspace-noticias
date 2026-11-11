@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-11T17:40:47.951Z",
+  "actualizado": "2026-11-11T20:04:35.504Z",
   "posts": [
     {
       "externo": true,
@@ -799,17 +799,22 @@
       "carpeta": "noticias/2026-11-09-helian-ladybaby",
       "titular": "Helian Evans y LADYBABY cantan Nippon Manju en Tokio",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic"
       ],
-      "hora": "2026-11-11T20:00:00.000Z",
+      "hora": "2026-11-11T20:02:10.272Z",
       "programado": "2026-11-11T20:00:00.000Z",
       "colaboradores": [
         "helianevans"
       ],
       "portada": "noticias/2026-11-09-helian-ladybaby/slide-01.jpg",
-      "video": true
+      "video": true,
+      "ig": "https://www.instagram.com/p/DfnSuHhEmf_/",
+      "fb": "https://www.facebook.com/reel/1483403350379853/",
+      "fb_tipo": "reel",
+      "reel_prueba": true,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-11-ag-coachella",
