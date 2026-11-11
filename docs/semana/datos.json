@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-11T22:01:45.058Z",
+  "actualizado": "2026-11-11T23:31:30.802Z",
   "posts": [
     {
       "externo": true,
@@ -844,13 +844,18 @@
       "carpeta": "noticias/2026-11-11-mashle-t3",
       "titular": "Mashle temporada 3 se estrenará el 9 de enero de 2027",
       "franja": "anime",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [],
-      "hora": "2026-11-11T23:30:00.000Z",
+      "hora": "2026-11-11T23:30:42.558Z",
       "programado": "2026-11-11T23:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-11-mashle-t3/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/Dfnqme-Diuw/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1867719795010151",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-10-perfume-favorites",
