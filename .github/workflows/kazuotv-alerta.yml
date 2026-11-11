@@ -1,0 +1,35 @@
+# ElKazuoTV · alerta de reel que despega: cada 2 horas revisa las publicaciones de @elkazuotv de las últimas 48 h y,
+# si una pasa de 3 veces la mediana de vistas, le escribe a Kazuo por privado con el bot de JSpace
+# (scripts/kazuotv-alerta.mjs). Gratis: no usa Claude ni necesita el PC prendido. Requiere el secreto IG_TOKEN.
+name: ElKazuoTV alerta
+on:
+  schedule:
+    - cron: '17 */2 * * *'
+  workflow_dispatch:
+  push:
+    paths: ['.github/workflows/kazuotv-alerta.yml', 'scripts/kazuotv-alerta.mjs']
+concurrency: kazuotv-alerta
+permissions:
+  contents: write
+jobs:
+  alerta:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with: { node-version: 24 }
+      - name: Revisar publicaciones
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          node scripts/kazuotv-alerta.mjs
+          git config user.name "JSpace Bot"; git config user.email "jspace-bot@users.noreply.github.com"
+          [ -f noticias/kazuotv-alertas.json ] || exit 0
+          git add noticias/kazuotv-alertas.json
+          git diff --cached --quiet && exit 0
+          git commit -q -m "ElKazuoTV: alerta"
+          for i in 1 2 3 4 5; do git push -q && exit 0; sleep $((i * 15)); git pull -q --rebase || true; done
+          exit 1
