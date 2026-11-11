@@ -1,0 +1,21 @@
+{
+ "titular": "Atarashii Gakko! vuelve a Coachella en 2027",
+ "link": "https://prtimes.jp/main/html/rd/p/000000947.000017258.html",
+ "formato": "carrusel",
+ "franja": "extra",
+ "tema": "jmusic",
+ "etiquetas": ["coachella", "goldenvoice"],
+ "slides": [
+  {"tipo": "portada", "imagen": "escenario-1.jpg", "encuadre": "56% 50%", "posicion": "abajo", "sombra": 1, "tema": "oscuro",
+   "etiqueta": "Coachella 2027",
+   "titulo": "**Atarashii Gakko!** vuelve a Coachella",
+   "texto": "Será su segunda presentación en solitario en el festival."},
+  {"tipo": "poster", "imagen": "cartel.jpg"},
+  {"tipo": "historia", "imagen": "coachella-2024.jpg", "encuadre": "50% 50%",
+   "texto": "En 2024 **cerraron el GOBI STAGE** durante los dos fines de semana del festival"},
+  {"tipo": "historia", "imagen": "visual.jpg", "encuadre": "50% 40%",
+   "texto": "Antes, en diciembre, harán su **primera gira por Latinoamérica**: Chile, Brasil y México",
+   "nota": "3, 6 y 8 de diciembre"},
+  {"tipo": "cierre"}
+ ]
+}
