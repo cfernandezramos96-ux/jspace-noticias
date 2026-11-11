@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-11T20:04:35.504Z",
+  "actualizado": "2026-11-11T22:00:23.909Z",
   "posts": [
     {
       "externo": true,
@@ -784,18 +784,6 @@
       "historia": true
     },
     {
-      "carpeta": "noticias/2026-11-11-yoasobi-killa",
-      "titular": "YOASOBI estrena «KILLA», su primer tema con arreglista externo",
-      "franja": "jmusic",
-      "estado": "aprobado",
-      "temas": [],
-      "hora": "2026-11-11T17:30:00.000Z",
-      "programado": "2026-11-11T17:30:00.000Z",
-      "colaboradores": [],
-      "portada": "noticias/2026-11-11-yoasobi-killa/slide-01.jpg",
-      "video": false
-    },
-    {
       "carpeta": "noticias/2026-11-09-helian-ladybaby",
       "titular": "Helian Evans y LADYBABY cantan Nippon Manju en Tokio",
       "franja": "extra",
@@ -814,6 +802,23 @@
       "fb": "https://www.facebook.com/reel/1483403350379853/",
       "fb_tipo": "reel",
       "reel_prueba": true,
+      "historia": true
+    },
+    {
+      "carpeta": "noticias/2026-11-11-yoasobi-killa",
+      "titular": "YOASOBI estrena «KILLA», su primer tema con arreglista externo",
+      "franja": "jmusic",
+      "estado": "publicado",
+      "temas": [],
+      "hora": "2026-11-11T21:58:51.148Z",
+      "programado": "2026-11-11T17:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-11-yoasobi-killa/slide-01.jpg",
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfngFj-j5BG/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1867650495017081",
+      "fb_tipo": null,
+      "reel_prueba": false,
       "historia": true
     },
     {
