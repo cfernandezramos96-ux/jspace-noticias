@@ -13,9 +13,9 @@
   {"tipo": "poster", "imagen": "cartel.jpg"},
   {"tipo": "historia", "imagen": "coachella-2024.jpg", "encuadre": "50% 50%",
    "texto": "En 2024 **cerraron el GOBI STAGE** durante los dos fines de semana del festival"},
-  {"tipo": "historia", "imagen": "visual.jpg", "encuadre": "50% 40%",
-   "texto": "Antes, en diciembre, harán su **primera gira por Latinoamérica**: Chile, Brasil y México",
-   "nota": "3, 6 y 8 de diciembre"},
+  {"tipo": "historia", "imagen": "visual.jpg", "encuadre": "50% 50%", "subir": 90, "tamano": 60,
+   "texto": "Antes llega su **primera gira por Latinoamérica**",
+   "nota": "Chile 3 dic · Brasil 6 dic · México 8 dic"},
   {"tipo": "cierre"}
  ]
 }
