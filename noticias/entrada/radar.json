@@ -25,7 +25,8 @@
     "817ebcb20c": "2026-11-09T11:32:15.607Z",
     "fbe1c4d484": "2026-11-10T15:25:49.221Z",
     "1a452a5434": "2026-11-11T03:31:31.553Z",
-    "c794adb507": "2026-11-11T09:34:57.430Z"
+    "c794adb507": "2026-11-11T09:34:57.430Z",
+    "9a4e67fc2f": "2026-11-11T13:53:12.023Z"
   },
   "pendientes": {
     "fbe1c4d484": {
@@ -45,8 +46,14 @@
       "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE0td1FSVE1EQW1PVzBjSjk2dnB6QVBRaHZfaVZZMjRjc3ZwcjdxUzktaFJrVTJYbjlmQzJUYXItZjM3WmctXzY2anBneGg?oc=5",
       "fuente": "Natalie",
       "fecha": "2026-11-11T09:34:57.430Z"
+    },
+    "9a4e67fc2f": {
+      "titulo": "onefiveのZeppは決意の夜に、“恋愛研究所セロﾗﾗテ”で先輩・Perfume楽曲をカバー（ライブレポート / 写真10枚） - ナタリー",
+      "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5fN2xkel84cDF0aTM0MldLVGZkNUJZRkVGQU45MDlfNGpYM0ttZ3ZLT3hFbVpqaW1aRDF6X1ozaVdpLS1WYlBWc1Q4Y2w?oc=5",
+      "fuente": "Natalie",
+      "fecha": "2026-11-11T13:53:12.024Z"
     }
   },
   "dia": "2026-11-11",
-  "avisos": 1
+  "avisos": 2
 }
