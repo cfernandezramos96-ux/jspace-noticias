@@ -1,0 +1,22 @@
+{
+ "titular": "Perfume publicará un álbum con 39 canciones elegidas por ellas",
+ "link": "https://www.universal-music.co.jp/perfume/news/2026-11-11/",
+ "formato": "carrusel",
+ "franja": "extra",
+ "tema": "jmusic",
+ "slides": [
+  { "tipo": "portada", "imagen": "perfume.jpg", "encuadre": "50% 40%", "posicion": "abajo", "tema": "claro", "sombra": 1,
+    "etiqueta": "Nuevo álbum · 23 dic",
+    "titulo": "**Perfume** elige 39 canciones para un nuevo álbum",
+    "texto": "«Favorites (Selected by Perfume) / Cold Sleep» saldrá el 23 de diciembre." },
+  { "tipo": "dato", "antes": "Cada integrante escogió 13 temas, hasta sumar", "dato": "39",
+    "texto": "Kashiyuka, A~chan y Nocchi eligieron sus canciones en 2025, antes de que el grupo entrara en «cold sleep»." },
+  { "tipo": "texto", "titulo": "Tres lados, tres **gustos**",
+    "texto": "**Side K:** «STAR TRAIN», «SEVENTH HEAVEN»\n**Side A:** «Magic of Love», «Zero Gravity»\n**Side N:** «Dream Fighter», «Polyrhythm»\n\nCada lado incluirá un remix de 2026 inédito.",
+    "imagen": "contraportada.jpg", "proporcion": 1.15, "imagen_arriba": true },
+  { "tipo": "texto", "titulo": "Más allá de los **39 temas**",
+    "texto": "El disco 4 reunirá «Cold Sleep» y «Fumetsu no Anata». El Blu-ray incluirá la reunión en la que las tres escogieron las canciones.",
+    "imagen": "perfume.jpg", "proporcion": 1.33, "encuadre": "50% 30%" },
+  { "tipo": "cierre" }
+ ]
+}
