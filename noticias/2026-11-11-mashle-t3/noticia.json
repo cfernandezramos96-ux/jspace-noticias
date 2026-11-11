@@ -1,0 +1,16 @@
+{
+ "titular": "Mashle temporada 3 se estrenará el 9 de enero de 2027",
+ "link": "https://animecorner.me/mashle-season-3-reveals-first-main-trailer-and-new-key-visual-january-9-premiere/",
+ "formato": "carrusel",
+ "franja": "anime",
+ "slides": [
+  {"tipo": "portada", "imagen": "domina.jpg", "encuadre": "50% 25%", "posicion": "abajo", "sombra": 1, "etiqueta": "Temporada 3 · Enero 2027",
+   "titulo": "**Mashle** temporada 3 se estrenará el 9 de enero",
+   "texto": "Adaptará el arco del Examen Final de los Videntes Divinos."},
+  {"tipo": "poster", "imagen": "kv.jpg"},
+  {"tipo": "texto", "titulo": "El **equipo** vuelve", "subtitulo": "Mashle: Magic and Muscles",
+   "texto": "**Estudio:** A-1 Pictures\n**Dirige:** Tomonari Tanaka\n**Guion:** Yosuke Kuroda\n**Música:** Masaru Yokoyama\n**Nuevos:** Ryota Suzuki (Levi) y Soma Saito (Domina)",
+   "imagen": "mash.jpg", "proporcion": 0.75, "encuadre": "50% 30%"},
+  {"tipo": "cierre"}
+ ]
+}

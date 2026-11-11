@@ -1,0 +1,36 @@
+{
+ "titular": "YOASOBI estrena «KILLA», su primer tema con arreglista externo",
+ "link": "https://www.thefirsttimes.jp/news/0000914719/",
+ "formato": "carrusel",
+ "franja": "jmusic",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "y1.jpg",
+   "encuadre": "50% 30%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "etiqueta": "Nuevo single · Hoy",
+   "titulo": "**YOASOBI** estrena hoy «KILLA», basada en una novela",
+   "texto": "Ya está disponible en plataformas digitales."
+  },
+  {
+   "tipo": "texto",
+   "titulo": "Una canción nacida de una **novela**",
+   "subtitulo": "«Hajimete no» Bungeibu",
+   "texto": "Parte de la novela debut de Yoa Mabyo, lanzada el 16 de octubre, en la que un chico se transforma en la chica ideal de quien ama.",
+   "imagen": "y3.jpg",
+   "proporcion": 0.75,
+   "encuadre": "50% 30%"
+  },
+  {
+   "tipo": "dato",
+   "antes": "Por primera vez, YOASOBI contará con un arreglista externo: Tsumiki, amigo de Ayase y productor de Vocaloid, arreglará",
+   "dato": "KILLA",
+   "texto": "Hasta ahora, Ayase se había encargado de los arreglos de YOASOBI."
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
