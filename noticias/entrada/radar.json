@@ -1,8 +1,5 @@
 {
   "vistos": {
-    "2aeef18ea5": "2026-11-04T08:09:31.621Z",
-    "6f1fba6844": "2026-11-04T08:09:31.621Z",
-    "e1dd1f1d19": "2026-11-04T08:09:31.621Z",
     "d4740c3f94": "2026-11-04T19:38:54.651Z",
     "81898c6e27": "2026-11-04T21:28:34.430Z",
     "97255af08a": "2026-11-05T01:51:15.918Z",
@@ -27,7 +24,8 @@
     "58af229c67": "2026-11-09T03:32:01.933Z",
     "817ebcb20c": "2026-11-09T11:32:15.607Z",
     "fbe1c4d484": "2026-11-10T15:25:49.221Z",
-    "1a452a5434": "2026-11-11T03:31:31.553Z"
+    "1a452a5434": "2026-11-11T03:31:31.553Z",
+    "c794adb507": "2026-11-11T09:34:57.430Z"
   },
   "pendientes": {
     "817ebcb20c": {
@@ -47,8 +45,14 @@
       "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1FR29OWW1venVTZjRVckVxMzVVTXZSVV9OME9xdFhIbk96Z1FWMzFMeXRZOGl3NVcwbXJSOVpzdzZHbnd1alY1bTBUZko?oc=5",
       "fuente": "Natalie",
       "fecha": "2026-11-11T03:31:31.554Z"
+    },
+    "c794adb507": {
+      "titulo": "2027年4月開催「コーチェラ」に新しい学校のリーダーズ、BLACKPINKジス、NCT、SB19、BABYMONSTERら出演決定 - ナタリー",
+      "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE0td1FSVE1EQW1PVzBjSjk2dnB6QVBRaHZfaVZZMjRjc3ZwcjdxUzktaFJrVTJYbjlmQzJUYXItZjM3WmctXzY2anBneGg?oc=5",
+      "fuente": "Natalie",
+      "fecha": "2026-11-11T09:34:57.430Z"
     }
   },
   "dia": "2026-11-11",
-  "avisos": 0
+  "avisos": 1
 }
