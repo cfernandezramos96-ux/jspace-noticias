@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-11T09:46:43.760Z",
+  "actualizado": "2026-11-11T13:18:30.849Z",
   "posts": [
     {
       "externo": true,
@@ -578,18 +578,6 @@
       "historia": true
     },
     {
-      "carpeta": "noticias/2026-11-08-yoasobi-killa",
-      "titular": "YOASOBI estrenará «KILLA», basada en una novela, el 11 de noviembre",
-      "franja": "jmusic",
-      "estado": "vencido",
-      "temas": [],
-      "hora": "2026-11-08T17:30:00.000Z",
-      "programado": "2026-11-08T17:30:00.000Z",
-      "colaboradores": [],
-      "portada": "noticias/2026-11-08-yoasobi-killa/slide-01.jpg",
-      "video": false
-    },
-    {
       "carpeta": "noticias/2026-11-08-resumen-jmusic",
       "titular": "jmusic",
       "franja": "extra",
@@ -796,6 +784,18 @@
       "historia": true
     },
     {
+      "carpeta": "noticias/2026-11-11-yoasobi-killa",
+      "titular": "YOASOBI estrena «KILLA», su primer tema con arreglista externo",
+      "franja": "jmusic",
+      "estado": "pendiente",
+      "temas": [],
+      "hora": "2026-11-11T17:30:00.000Z",
+      "programado": "2026-11-11T17:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-11-yoasobi-killa/slide-01.jpg",
+      "video": false
+    },
+    {
       "carpeta": "noticias/2026-11-09-helian-ladybaby",
       "titular": "Helian Evans y LADYBABY cantan Nippon Manju en Tokio",
       "franja": "extra",
@@ -823,6 +823,18 @@
       "programado": "2026-11-11T22:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-11-ag-coachella/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-11-mashle-t3",
+      "titular": "Mashle temporada 3 se estrenará el 9 de enero de 2027",
+      "franja": "anime",
+      "estado": "pendiente",
+      "temas": [],
+      "hora": "2026-11-11T23:30:00.000Z",
+      "programado": "2026-11-11T23:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-11-mashle-t3/slide-01.jpg",
       "video": false
     },
     {
