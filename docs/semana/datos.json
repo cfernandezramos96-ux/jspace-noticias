@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-12T02:02:50.532Z",
+  "actualizado": "2026-11-12T13:19:01.071Z",
   "posts": [
     {
       "externo": true,
@@ -875,6 +875,33 @@
       "fb_tipo": null,
       "reel_prueba": false,
       "historia": true
+    },
+    {
+      "carpeta": "noticias/2026-11-12-moriguchi-getwild",
+      "titular": "Hiroko Moriguchi revive «Get Wild» en versión city pop",
+      "franja": "jmusic",
+      "estado": "pendiente",
+      "temas": [
+        "jmusic",
+        "anime"
+      ],
+      "hora": "2026-11-12T17:30:00.000Z",
+      "programado": "2026-11-12T17:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-12-moriguchi-getwild/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-12-berserk-gluttony-t2",
+      "titular": "Berserk of Gluttony tendrá temporada 2 en abril de 2027",
+      "franja": "anime",
+      "estado": "pendiente",
+      "temas": [],
+      "hora": "2026-11-12T23:30:00.000Z",
+      "programado": "2026-11-12T23:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-12-berserk-gluttony-t2/slide-01.jpg",
+      "video": false
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
