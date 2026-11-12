@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-12T18:53:48.508Z",
+  "actualizado": "2026-11-12T23:31:48.381Z",
   "posts": [
     {
       "externo": true,
@@ -900,13 +900,18 @@
       "carpeta": "noticias/2026-11-12-berserk-gluttony-t2",
       "titular": "Berserk of Gluttony tendrá temporada 2 en abril de 2027",
       "franja": "anime",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [],
-      "hora": "2026-11-12T23:30:00.000Z",
+      "hora": "2026-11-12T23:30:56.025Z",
       "programado": "2026-11-12T23:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-12-berserk-gluttony-t2/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfqPalnlF1_/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1868901668225297",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-12-sambomaster-hanataba",
