@@ -1,0 +1,17 @@
+{
+ "titular": "Berserk of Gluttony tendrá temporada 2 en abril de 2027",
+ "link": "https://animecorner.me/berserk-of-gluttony-season-2-reveals-teaser-visual-april-2027-release-date/",
+ "formato": "carrusel",
+ "franja": "anime",
+ "slides": [
+  {"tipo": "portada", "imagen": "feat.png", "encuadre": "45% 40%", "posicion": "abajo", "sombra": 1, "tema": "claro",
+   "etiqueta": "Temporada 2 · Abril 2027",
+   "titulo": "**Berserk of Gluttony**\ntendrá temporada 2",
+   "texto": "La historia de Fate avanzará hacia el Dominio E."},
+  {"tipo": "poster", "imagen": "kv.jpg"},
+  {"tipo": "texto", "titulo": "El **equipo** regresa", "subtitulo": "Bōshoku no Berserk",
+   "texto": "**Estudio:** A.C.G.T\n**Director jefe:** Tetsuya Yanagisawa\n**Director:** Kenichi Ishikura\n**Voces:** Ryota Osaka (Fate) y Misato Matsuoka (Myne)",
+   "imagen": "kv.jpg", "proporcion": 0.75, "encuadre": "70% 40%"},
+  {"tipo": "cierre"}
+ ]
+}

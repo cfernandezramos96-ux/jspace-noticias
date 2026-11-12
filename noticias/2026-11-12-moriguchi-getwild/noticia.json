@@ -1,0 +1,23 @@
+{
+ "titular": "Hiroko Moriguchi revive «Get Wild» en versión city pop",
+ "link": "https://barks.jp/news/1103912",
+ "formato": "carrusel",
+ "franja": "jmusic",
+ "temas": ["jmusic", "anime"],
+ "slides": [
+  {"tipo": "portada", "imagen": "main.jpg", "encuadre": "42% 30%", "posicion": "abajo", "sombra": 1, "tema": "oscuro",
+   "etiqueta": "Nuevo cover · Anison",
+   "titulo": "**Moriguchi** revive\n«Get Wild»",
+   "texto": "El adelanto de su nuevo disco de covers de anime."},
+  {"tipo": "historia", "imagen": "a2.jpg", "encuadre": "50% 50%",
+   "texto": "El ending de **City Hunter** suena ahora más lento y elegante, con vientos y teclados",
+   "nota": "Versión city pop · ya disponible en streaming"},
+  {"tipo": "historia", "imagen": "b2.jpg", "encuadre": "28% 50%",
+   "texto": "**ANISON COVERS 3** llegará el 16 de diciembre con 10 temas de anime",
+   "nota": "Cobra, CAT'S EYE con Marty Friedman, YAWARA!…"},
+  {"tipo": "historia", "imagen": "c2.jpg", "encuadre": "50% 50%",
+   "texto": "En marzo de 2027 comenzará su gira **ANISON Time Capsule** por Japón",
+   "nota": "Aichi · Osaka · Okayama · Tokio"},
+  {"tipo": "cierre"}
+ ]
+}
