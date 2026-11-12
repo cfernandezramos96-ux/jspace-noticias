@@ -1,0 +1,23 @@
+{
+ "titular": "Sambomaster y Aina the End estrenan el MV de «Hanataba»",
+ "link": "https://barks.jp/news/1104002",
+ "formato": "carrusel",
+ "franja": "extra",
+ "tema": "jmusic",
+ "slides": [
+  {"tipo": "portada", "imagen": "band.jpg", "encuadre": "50% 50%", "posicion": "abajo", "sombra": 1, "tema": "claro",
+   "etiqueta": "Nuevo MV · Netflix",
+   "titulo": "**Sambomaster** y Aina the End estrenan el MV de «Hanataba»",
+   "texto": "Es el tema de la serie de Netflix Talk Survivor!!"},
+  {"tipo": "historia", "imagen": "cover.jpg", "encuadre": "50% 40%",
+   "texto": "Es una **nueva versión** del clásico «Hanataba» (2020), reinterpretado junto a Aina the End",
+   "nota": "Single digital · desde el 10 de noviembre"},
+  {"tipo": "historia", "imagen": "thumb.jpg", "encuadre": "50% 50%",
+   "texto": "El MV reencuentra, **seis años después**, a tres personas que entregaron flores en el video original",
+   "nota": "Incluye videos enviados por los fans"},
+  {"tipo": "historia", "imagen": "band.jpg", "encuadre": "85% 30%",
+   "texto": "Nobu, de Chidori, **sorprende a Aina** con un ramo: es admirador declarado de la cantante",
+   "nota": "Talk Survivor!! · 8 episodios en Netflix"},
+  {"tipo": "cierre"}
+ ]
+}
