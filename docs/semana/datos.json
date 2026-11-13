@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-13T22:30:37.844Z",
+  "actualizado": "2026-11-13T22:35:19.231Z",
   "posts": [
     {
       "externo": true,
@@ -994,15 +994,20 @@
       "carpeta": "noticias/2026-11-13-steel-ball-run-stands",
       "titular": "Steel Ball Run presenta «Here Come the Stands», un video con escenas inéditas",
       "franja": "anime",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "anime"
       ],
-      "hora": "2026-11-13T23:30:00.000Z",
+      "hora": "2026-11-13T22:33:22.086Z",
       "programado": "2026-11-13T23:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-13-steel-ball-run-stands/slide-01.jpg",
-      "video": true
+      "video": true,
+      "ig": "https://www.instagram.com/p/DfstoKFifVL/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1870095584772572",
+      "fb_tipo": null,
+      "reel_prueba": true,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
