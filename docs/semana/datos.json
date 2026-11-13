@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-13T15:35:37.186Z",
+  "actualizado": "2026-11-13T17:32:32.327Z",
   "posts": [
     {
       "externo": true,
@@ -956,15 +956,20 @@
       "carpeta": "noticias/2026-11-13-mitsuki-takahata",
       "titular": "Mitsuki Takahata lanza «I'm All Yours», su primer álbum en 12 años",
       "franja": "jmusic",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic"
       ],
-      "hora": "2026-11-13T17:30:00.000Z",
+      "hora": "2026-11-13T17:31:10.817Z",
       "programado": "2026-11-13T17:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-13-mitsuki-takahata/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfsLCccFyja/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1869843478131116",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-13-heroaca-ultra-expo",
