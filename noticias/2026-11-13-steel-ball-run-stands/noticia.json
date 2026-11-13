@@ -1,0 +1,30 @@
+{
+ "titular": "Steel Ball Run presenta «Here Come the Stands», un video con escenas inéditas",
+ "link": "https://animecorner.me/steel-ball-run-jojos-bizarre-adventure-spotlights-stands-in-new-special-video/",
+ "formato": "carrusel",
+ "franja": "anime",
+ "tema": "anime",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "sbr1.png",
+   "encuadre": "50% 40%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "etiqueta": "Video especial",
+   "titulo": "**Steel Ball Run** muestra sus Stands en video",
+   "texto": "Escenas inéditas y más combates en camino."
+  },
+  {
+   "tipo": "historia",
+   "imagen": "sbr2.jpg",
+   "encuadre": "50% 40%",
+   "texto": "«**Here Come the Stands**» repasa los Stands vistos hasta ahora y muestra sus habilidades en cortes nuevos",
+   "nota": "Warner Bros. Japan adelantó más combates de Stands"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}

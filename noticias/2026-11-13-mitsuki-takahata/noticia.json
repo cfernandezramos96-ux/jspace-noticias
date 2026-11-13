@@ -1,0 +1,23 @@
+{
+ "titular": "Mitsuki Takahata lanza «I'm All Yours», su primer álbum en 12 años",
+ "link": "https://www.thefirsttimes.jp/news/0000916977/",
+ "formato": "carrusel",
+ "franja": "jmusic",
+ "tema": "jmusic",
+ "slides": [
+  {"tipo": "portada", "imagen": "foto.jpg", "encuadre": "50% 30%", "posicion": "abajo", "sombra": 1, "tema": "oscuro",
+   "etiqueta": "Nuevo álbum",
+   "titulo": "**Mitsuki Takahata** lanza «I'm All Yours», su primer álbum en 12 años",
+   "texto": "Nueve canciones escritas por artistas de primer nivel."},
+  {"tipo": "historia", "imagen": "cover.jpg", "encuadre": "70% 50%",
+   "texto": "Es su **primer álbum en 12 años** y el primero con Universal Music, parte de sus 20 años de carrera",
+   "nota": "Lanzamiento · 11 de noviembre de 2026"},
+  {"tipo": "historia", "imagen": "foto.jpg", "encuadre": "50% 30%",
+   "texto": "Lo firman **Shiina Ringo, Kujira, Bialystocks y Night Tempo** participan como compositores o productores",
+   "nota": "9 canciones"},
+  {"tipo": "historia", "imagen": "mv.jpg", "encuadre": "65% 40%",
+   "texto": "El MV de «Sui mo, amai mo» es una **fantasía** dirigida por Hayashi Kyotaro",
+   "nota": "Estreno · 11 de noviembre, 20:00 (Japón)"},
+  {"tipo": "cierre"}
+ ]
+}
