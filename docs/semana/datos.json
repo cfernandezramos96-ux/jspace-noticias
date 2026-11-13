@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-13T17:32:32.327Z",
+  "actualizado": "2026-11-13T20:01:46.858Z",
   "posts": [
     {
       "externo": true,
@@ -975,15 +975,20 @@
       "carpeta": "noticias/2026-11-13-heroaca-ultra-expo",
       "titular": "Hero Academia Ultra Expo revela su key visual",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "anime"
       ],
-      "hora": "2026-11-13T20:00:00.000Z",
+      "hora": "2026-11-13T20:00:57.680Z",
       "programado": "2026-11-13T20:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-13-heroaca-ultra-expo/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfscLbTD1SY/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1869972564784874",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-13-steel-ball-run-stands",
