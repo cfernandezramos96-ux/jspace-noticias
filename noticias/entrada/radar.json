@@ -1,6 +1,5 @@
 {
   "vistos": {
-    "0ba81f9415": "2026-11-06T09:35:17.886Z",
     "bdaa402300": "2026-11-06T13:50:30.371Z",
     "cf34991b39": "2026-11-06T17:30:01.987Z",
     "f1a4bd0cb6": "2026-11-07T05:27:37.153Z",
@@ -25,15 +24,10 @@
     "674c633176": "2026-11-12T19:36:36.180Z",
     "a11ab57dd0": "2026-11-12T23:22:30.748Z",
     "538e5ac260": "2026-11-13T01:50:32.412Z",
-    "15b007ca4c": "2026-11-13T05:39:37.787Z"
+    "15b007ca4c": "2026-11-13T05:39:37.787Z",
+    "bff561e7d9": "2026-11-13T09:36:18.274Z"
   },
   "pendientes": {
-    "c794adb507": {
-      "titulo": "2027年4月開催「コーチェラ」に新しい学校のリーダーズ、BLACKPINKジス、NCT、SB19、BABYMONSTERら出演決定 - ナタリー",
-      "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE0td1FSVE1EQW1PVzBjSjk2dnB6QVBRaHZfaVZZMjRjc3ZwcjdxUzktaFJrVTJYbjlmQzJUYXItZjM3WmctXzY2anBneGg?oc=5",
-      "fuente": "Natalie",
-      "fecha": "2026-11-11T09:34:57.430Z"
-    },
     "9a4e67fc2f": {
       "titulo": "onefiveのZeppは決意の夜に、“恋愛研究所セロﾗﾗテ”で先輩・Perfume楽曲をカバー（ライブレポート / 写真10枚） - ナタリー",
       "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5fN2xkel84cDF0aTM0MldLVGZkNUJZRkVGQU45MDlfNGpYM0ttZ3ZLT3hFbVpqaW1aRDF6X1ozaVdpLS1WYlBWc1Q4Y2w?oc=5",
@@ -81,8 +75,14 @@
       "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1pTkhWa0NUa0N2Zm5GbkdRN0V0amlyRjI5YUc0TVFCeTBJd193em9HRHpwR0JLRFpsT1hDb3VFRktBVXZ4V3lFWXY2eVc?oc=5",
       "fuente": "Natalie",
       "fecha": "2026-11-13T05:39:37.787Z"
+    },
+    "bff561e7d9": {
+      "titulo": "「チェンソーマン レゼ篇」生演奏＆上映イベントに田渕ひさ子、牛尾憲輔とのミニライブも（コメントあり / 動画あり） - ナタリー",
+      "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9weC1GV0cyUEZld2Vpd25tWmVGd3liZ2pDR2xxR2RocUQ3Z2pvbW9OTVk2N3A4RWU3YW9tUlcwc1JMekVtbmR4empNdW4?oc=5",
+      "fuente": "Natalie",
+      "fecha": "2026-11-13T09:36:18.275Z"
     }
   },
   "dia": "2026-11-13",
-  "avisos": 1
+  "avisos": 2
 }
