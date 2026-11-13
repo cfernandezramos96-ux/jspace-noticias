@@ -1,0 +1,18 @@
+{
+ "titular": "Hero Academia Ultra Expo revela su key visual",
+ "link": "https://heroaca-expo.jp/",
+ "formato": "carrusel",
+ "franja": "extra",
+ "tema": "anime",
+ "slides": [
+  {"tipo": "portada", "imagen": "kv.webp", "encuadre": "50% 0%", "posicion": "abajo", "sombra": 1, "tema": "oscuro",
+   "etiqueta": "Ultra Expo · 2027",
+   "titulo": "**My Hero Academia** revela el visual de su Ultra Expo",
+   "texto": "Diez personajes, entre héroes y villanos."},
+  {"tipo": "poster", "imagen": "kv.webp"},
+  {"tipo": "texto", "titulo": "El **evento**", "subtitulo": "Cierre del 10.º aniversario del anime",
+   "texto": "**Cuándo:** 17 y 18 de abril de 2027\n**Dónde:** Makuhari Messe, Chiba\n**Preventa:** del 13 al 29 de noviembre (sorteo)",
+   "imagen": "kv.webp", "proporcion": 0.75, "encuadre": "50% 30%"},
+  {"tipo": "cierre"}
+ ]
+}
