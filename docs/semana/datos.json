@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-13T02:01:37.912Z",
+  "actualizado": "2026-11-13T06:29:15.359Z",
   "posts": [
     {
       "externo": true,
@@ -931,6 +931,20 @@
       "fb_tipo": null,
       "reel_prueba": false,
       "historia": true
+    },
+    {
+      "carpeta": "noticias/2026-11-13-heroaca-ultra-expo",
+      "titular": "Hero Academia Ultra Expo revela su key visual",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-11-13T20:00:00.000Z",
+      "programado": "2026-11-13T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-13-heroaca-ultra-expo/slide-01.jpg",
+      "video": false
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
