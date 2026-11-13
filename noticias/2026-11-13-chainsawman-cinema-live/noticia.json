@@ -9,9 +9,9 @@
   {"tipo":"portada","imagen":"kv.jpg","encuadre":"50% 100%","posicion":"arriba","etiqueta":"Cinema Live · 2027","sombra":0.9,
    "titulo":"**Chainsaw Man: Reze Arc** se proyectará con música en vivo","texto":"Película completa, banda y cuerdas, en febrero de 2027."},
   {"tipo":"poster","imagen":"denfami.jpg"},
-  {"tipo":"historia","imagen":"kv.jpg","encuadre":"60% 85%","texto":"El **13 y 14 de febrero de 2027**, en el **Pacifico Yokohama**, la película será proyectada completa en una pantalla gigante","nota":"Tres funciones · Yokohama, Japón"},
-  {"tipo":"historia","imagen":"denfami.jpg","encuadre":"50% 70%","texto":"La banda sonora será interpretada por **banda y cuerdas** en arreglos hechos para la ocasión","nota":"Bandmaster: Kenichi Takano"},
-  {"tipo":"historia","imagen":"kv.jpg","encuadre":"30% 40%","texto":"Al terminar, **Kensuke Ushio** y la guitarrista **Hisako Tabuchi**, de NUMBER GIRL, ofrecerán un **mini concierto**","nota":"Con música de la serie"},
+  {"tipo":"historia","imagen":"anime1.jpg","encuadre":"50% 35%","texto":"El **13 y 14 de febrero de 2027**, en el **Pacifico Yokohama**, la película será proyectada completa en una pantalla gigante","nota":"Tres funciones · Yokohama, Japón"},
+  {"tipo":"historia","imagen":"anime2.jpg","encuadre":"50% 30%","texto":"La banda sonora será interpretada por **banda y cuerdas** en arreglos hechos para la ocasión","nota":"Bandmaster: Kenichi Takano"},
+  {"tipo":"historia","imagen":"d2.jpg","encuadre":"50% 25%","texto":"Al terminar, **Kensuke Ushio** y la guitarrista **Hisako Tabuchi**, de NUMBER GIRL, ofrecerán un **mini concierto**","nota":"Con música de la serie"},
   {"tipo":"cierre"}
  ]
 }
