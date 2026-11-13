@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-13T14:28:45.497Z",
+  "actualizado": "2026-11-13T15:15:34.743Z",
   "posts": [
     {
       "externo": true,
@@ -953,6 +953,20 @@
       "historia": true
     },
     {
+      "carpeta": "noticias/2026-11-13-mitsuki-takahata",
+      "titular": "Mitsuki Takahata lanza «I'm All Yours», su primer álbum en 12 años",
+      "franja": "jmusic",
+      "estado": "pendiente",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-13T17:30:00.000Z",
+      "programado": "2026-11-13T17:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-13-mitsuki-takahata/slide-01.jpg",
+      "video": false
+    },
+    {
       "carpeta": "noticias/2026-11-13-heroaca-ultra-expo",
       "titular": "Hero Academia Ultra Expo revela su key visual",
       "franja": "extra",
@@ -964,6 +978,20 @@
       "programado": "2026-11-13T20:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-13-heroaca-ultra-expo/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-13-steel-ball-run-stands",
+      "titular": "Steel Ball Run presenta «Here Come the Stands», un video con escenas inéditas",
+      "franja": "anime",
+      "estado": "pendiente",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-11-13T23:30:00.000Z",
+      "programado": "2026-11-13T23:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-13-steel-ball-run-stands/slide-01.jpg",
       "video": false
     },
     {
