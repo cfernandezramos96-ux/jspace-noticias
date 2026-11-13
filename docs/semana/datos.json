@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-13T06:29:44.254Z",
+  "actualizado": "2026-11-13T11:45:56.461Z",
   "posts": [
     {
       "externo": true,
@@ -944,6 +944,21 @@
       "programado": "2026-11-13T20:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-13-heroaca-ultra-expo/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-13-chainsawman-cinema-live",
+      "titular": "Chainsaw Man: Reze Arc tendrá Cinema Live con orquesta y banda en 2027",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "anime",
+        "jmusic"
+      ],
+      "hora": "2026-11-14T02:00:00.000Z",
+      "programado": "2026-11-14T02:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-13-chainsawman-cinema-live/slide-01.jpg",
       "video": false
     },
     {
