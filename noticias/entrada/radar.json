@@ -25,7 +25,8 @@
     "15b007ca4c": "2026-11-13T05:39:37.787Z",
     "bff561e7d9": "2026-11-13T09:36:18.274Z",
     "28f6ddfe0c": "2026-11-13T17:31:22.635Z",
-    "752fe4b705": "2026-11-13T19:37:00.201Z"
+    "752fe4b705": "2026-11-13T19:37:00.201Z",
+    "93c253262c": "2026-11-13T21:29:39.172Z"
   },
   "pendientes": {
     "6d8700bc85": {
@@ -87,8 +88,14 @@
       "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPOVJITFYxeU1rTGotWXVBWTRmcU1CbjJmVG1odzBGU3UtLUttN1ZPeXQ2LW5ROU9Nb0ViQ1dkb1RjSk92eGtrOHJSNy13LUliWFBaYVdEMWFIYnR3Ym5PbnhOLVkwTlVrUXp6MG5BQ0ZQQ2Nfanh0LW1fUU1uUzl5S1hWSzJMQQ?oc=5",
       "fuente": "Prensa de Colombia",
       "fecha": "2026-11-13T19:37:00.202Z"
+    },
+    "93c253262c": {
+      "titulo": "En Manga atracaron a un hombre al que le quitaron una millonaria suma de dinero - Alerta",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE90WlZYcC1BUFJzSWxwUmRLeXI0S0xmT01pQkg5eDNLZkxnYzYyNWpVU1lUTnlzRGY5enFnM2RiNDhyMXRYYU9mWW9SdmswT2M1RWQ5MVVuQlVDWGN5a2pLbzBpREZ0UWxDZGs1SjBxNVJyWXPSAXNBVV95cUxPdFpWWHAtQVBSc0lscFJkS3lyNEtMZk9NaUJIOXgzS2ZMZ2M2MjVqVVNZVE55c0RmOXpxZzNkYjQ4cjF0WGFPZllvUnZrME9jNUVkOTFVbkJVQ1hjeWtqS28waURGdFFsQ2RrNUowcTVScllz?oc=5",
+      "fuente": "Prensa de Colombia",
+      "fecha": "2026-11-13T21:29:39.173Z"
     }
   },
   "dia": "2026-11-13",
-  "avisos": 4
+  "avisos": 5
 }
