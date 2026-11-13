@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-13T15:16:15.205Z",
+  "actualizado": "2026-11-13T15:30:31.628Z",
   "posts": [
     {
       "externo": true,
@@ -992,7 +992,7 @@
       "programado": "2026-11-13T23:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-13-steel-ball-run-stands/slide-01.jpg",
-      "video": false
+      "video": true
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
