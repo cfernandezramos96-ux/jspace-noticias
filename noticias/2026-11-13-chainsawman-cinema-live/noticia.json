@@ -1,0 +1,17 @@
+{
+ "titular": "Chainsaw Man: Reze Arc tendrá Cinema Live con orquesta y banda en 2027",
+ "link": "https://chainsawman.dog/news/260921_01/",
+ "formato": "carrusel",
+ "franja": "extra",
+ "tema": "anime",
+ "temas": ["anime", "jmusic"],
+ "slides": [
+  {"tipo":"portada","imagen":"kv.jpg","encuadre":"50% 100%","posicion":"arriba","etiqueta":"Cinema Live · 2027","sombra":0.9,
+   "titulo":"**Chainsaw Man: Reze Arc** se proyectará con música en vivo","texto":"Película completa, banda y cuerdas, en febrero de 2027."},
+  {"tipo":"poster","imagen":"denfami.jpg"},
+  {"tipo":"historia","imagen":"kv.jpg","encuadre":"60% 85%","texto":"El **13 y 14 de febrero de 2027**, en el **Pacifico Yokohama**, la película será proyectada completa en una pantalla gigante","nota":"Tres funciones · Yokohama, Japón"},
+  {"tipo":"historia","imagen":"denfami.jpg","encuadre":"50% 70%","texto":"La banda sonora será interpretada por **banda y cuerdas** en arreglos hechos para la ocasión","nota":"Bandmaster: Kenichi Takano"},
+  {"tipo":"historia","imagen":"kv.jpg","encuadre":"30% 40%","texto":"Al terminar, **Kensuke Ushio** y la guitarrista **Hisako Tabuchi**, de NUMBER GIRL, ofrecerán un **mini concierto**","nota":"Con música de la serie"},
+  {"tipo":"cierre"}
+ ]
+}
