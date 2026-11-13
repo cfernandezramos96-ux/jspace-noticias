@@ -24,7 +24,8 @@
     "538e5ac260": "2026-11-13T01:50:32.412Z",
     "15b007ca4c": "2026-11-13T05:39:37.787Z",
     "bff561e7d9": "2026-11-13T09:36:18.274Z",
-    "28f6ddfe0c": "2026-11-13T17:31:22.635Z"
+    "28f6ddfe0c": "2026-11-13T17:31:22.635Z",
+    "752fe4b705": "2026-11-13T19:37:00.201Z"
   },
   "pendientes": {
     "6d8700bc85": {
@@ -80,8 +81,14 @@
       "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQcEc5NEJ3QUNReDByVU5QRFpsX0dBZXh0a1pfVmJGU1c5TDdZT0NUN19ITE04OU1XR1FhM05ieGEzbEZfdXdsZVVpcmZsYV9qZGJEZnhTS211dEp3clktRGxNSE1qMFNkeGdmUE5mYm9Vb0xRT0tfcmVDS0ttQldjYXFOLW5YaGpKbm04NkNuYmIzVVpKckxHdWdFd0dlS1RJSW9IaG5n?oc=5",
       "fuente": "Prensa de Colombia",
       "fecha": "2026-11-13T17:31:22.636Z"
+    },
+    "752fe4b705": {
+      "titulo": "Hidden Kitten: Anime Waifu - Nintendo",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPOVJITFYxeU1rTGotWXVBWTRmcU1CbjJmVG1odzBGU3UtLUttN1ZPeXQ2LW5ROU9Nb0ViQ1dkb1RjSk92eGtrOHJSNy13LUliWFBaYVdEMWFIYnR3Ym5PbnhOLVkwTlVrUXp6MG5BQ0ZQQ2Nfanh0LW1fUU1uUzl5S1hWSzJMQQ?oc=5",
+      "fuente": "Prensa de Colombia",
+      "fecha": "2026-11-13T19:37:00.202Z"
     }
   },
   "dia": "2026-11-13",
-  "avisos": 3
+  "avisos": 4
 }
