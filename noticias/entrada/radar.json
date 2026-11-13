@@ -1,6 +1,5 @@
 {
   "vistos": {
-    "2563bbfd10": "2026-11-06T05:38:15.207Z",
     "0ba81f9415": "2026-11-06T09:35:17.886Z",
     "bdaa402300": "2026-11-06T13:50:30.371Z",
     "cf34991b39": "2026-11-06T17:30:01.987Z",
@@ -25,15 +24,10 @@
     "1cbc925de2": "2026-11-12T17:31:51.755Z",
     "674c633176": "2026-11-12T19:36:36.180Z",
     "a11ab57dd0": "2026-11-12T23:22:30.748Z",
-    "538e5ac260": "2026-11-13T01:50:32.412Z"
+    "538e5ac260": "2026-11-13T01:50:32.412Z",
+    "15b007ca4c": "2026-11-13T05:39:37.787Z"
   },
   "pendientes": {
-    "1a452a5434": {
-      "titulo": "Perfumeメンバー選曲アルバムの全39曲明らかに、特典BDに3人の選曲会議映像も（トラックリスト一覧あり） - ナタリー",
-      "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1FR29OWW1venVTZjRVckVxMzVVTXZSVV9OME9xdFhIbk96Z1FWMzFMeXRZOGl3NVcwbXJSOVpzdzZHbnd1alY1bTBUZko?oc=5",
-      "fuente": "Natalie",
-      "fecha": "2026-11-11T03:31:31.554Z"
-    },
     "c794adb507": {
       "titulo": "2027年4月開催「コーチェラ」に新しい学校のリーダーズ、BLACKPINKジス、NCT、SB19、BABYMONSTERら出演決定 - ナタリー",
       "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE0td1FSVE1EQW1PVzBjSjk2dnB6QVBRaHZfaVZZMjRjc3ZwcjdxUzktaFJrVTJYbjlmQzJUYXItZjM3WmctXzY2anBneGg?oc=5",
@@ -81,8 +75,14 @@
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQTFBLSlZJMzZON3ZFbW5tUmhoQW9xVmJwaWU2LVRldzhFaUUtQ2hvVzRZdXRwX3ZsTzdpa3pwZWhYQ2lrOEo1bWVFWGIzTzdyUmtrcTlGN25wVzVucDhBYW14SGdLeldQSEZreHphcThqMTlFbXkzR04wdW1veGt1TlBuU0Q3d3djV2RiMUx6dUdFMlRmSElZdmQ2d2xoRTBaQm92ZTl0YkJlRmx0d3UzYg?oc=5",
       "fuente": "Prensa de Colombia",
       "fecha": "2026-11-13T01:50:32.412Z"
+    },
+    "15b007ca4c": {
+      "titulo": "「ヒロアカウルトラエキスポ」キービジュアル公開 原作カラー扉をもとに描き下ろし - ナタリー",
+      "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1pTkhWa0NUa0N2Zm5GbkdRN0V0amlyRjI5YUc0TVFCeTBJd193em9HRHpwR0JLRFpsT1hDb3VFRktBVXZ4V3lFWXY2eVc?oc=5",
+      "fuente": "Natalie",
+      "fecha": "2026-11-13T05:39:37.787Z"
     }
   },
-  "dia": "2026-11-12",
-  "avisos": 5
+  "dia": "2026-11-13",
+  "avisos": 1
 }
