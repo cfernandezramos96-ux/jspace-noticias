@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-14T16:26:51.304Z",
+  "actualizado": "2026-11-14T17:31:44.178Z",
   "posts": [
     {
       "externo": true,
@@ -1013,15 +1013,20 @@
       "carpeta": "noticias/2026-11-14-matsuri-london",
       "titular": "Kyary Pamyu Pamyu, Otoboke Beaver y Hitsujibungaku debutarán en Londres con matsuri '26",
       "franja": "jmusic",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic"
       ],
-      "hora": "2026-11-14T17:30:00.000Z",
+      "hora": "2026-11-14T17:30:55.650Z",
       "programado": "2026-11-14T17:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-14-matsuri-london/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfuvzaCFIpb/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1871134591335338",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-14-mwam-circus-tour",
