@@ -1,6 +1,5 @@
 {
   "vistos": {
-    "f1a4bd0cb6": "2026-11-07T05:27:37.153Z",
     "f2a444498d": "2026-11-07T07:41:28.371Z",
     "a416fe4ae4": "2026-11-07T07:41:28.371Z",
     "d99cc10683": "2026-11-07T19:23:57.173Z",
@@ -29,7 +28,8 @@
     "93c253262c": "2026-11-13T21:29:39.172Z",
     "25b488deee": "2026-11-13T23:22:12.675Z",
     "b2a3856358": "2026-11-13T23:22:12.675Z",
-    "05755d01be": "2026-11-13T23:22:12.676Z"
+    "05755d01be": "2026-11-13T23:22:12.676Z",
+    "2c6c641bc2": "2026-11-14T05:30:40.650Z"
   },
   "pendientes": {
     "6549ca4118": {
@@ -97,8 +97,14 @@
       "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPUXVYNHZIZFhqUkhTcEF3Z1k5RWtENWVfU2JLQXVzR2pUbTlEN3V3VTlfdkhQaHEwWl9vVy1namdZMVluQ2FXbzdYc2NNY19xUm5QZzRWTWFpMVk4ME93eHNuemUxUi1XVzdhd2RaY19XSG1yLWJFSFQtQjFyXzNXZ3hMLTd0ZHVYekJ1MTRrMXRQQ3hFLXBxWHpqU1k5TTdsdVN1UGNmV2E2SHBmWDBDWWxiX0RyYy1iV2Q5VTJfSUJIUmdmS1VNcjlTa3dXQdIB4gFBVV95cUxPMlJhNXY5cEtiUVdyYWR3ckdselpYcHJDTzR3YkFXZFJtMVktbXVwM0J5ZjVGbTBhaWhrSGZLd3JtZURtTThVS2lSbm5JNk1YbERWNW92WmlkbU14TU8zOW9CQWlsaUxtVHg4dENXeGNxWW1mVHotY3ZtSEhuSGZHTndDWTQ5dUZkUGt6eVdnV0lhRm5ETDFLN083VEtjTnA4bm1oQk1sUFQzT0x2d1ZYNFhtRGRadkM2WEZZTHFjTDhvdGgzNlRyVi1LNGJkS2dCMFVGR1oySklSU0lZRFkxbDZn?oc=5",
       "fuente": "Prensa de Colombia",
       "fecha": "2026-11-13T23:22:12.676Z"
+    },
+    "2c6c641bc2": {
+      "titulo": "MAN WITH A MISSIONの47都道府県ツアーに10-FEET、ホルモン、SiM、ハルカミライら出演 - ナタリー",
+      "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBwVzZIN3BxZGJ4VjRwdC1nNTM0LXNiSUNfNTM5REJEdmJmUi1XS2JveUdNWG5CWXN4YmxzT0diTlZWdURKdDVSdHc2TFQ?oc=5",
+      "fuente": "Natalie",
+      "fecha": "2026-11-14T05:30:40.651Z"
     }
   },
-  "dia": "2026-11-13",
-  "avisos": 6
+  "dia": "2026-11-14",
+  "avisos": 1
 }
