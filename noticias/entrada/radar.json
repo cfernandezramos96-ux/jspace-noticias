@@ -1,6 +1,5 @@
 {
   "vistos": {
-    "161b9228ca": "2026-11-07T23:13:25.407Z",
     "cb8cd5e6e6": "2026-11-08T09:26:40.511Z",
     "f42118b019": "2026-11-08T11:16:46.188Z",
     "d330ecaf27": "2026-11-08T11:16:46.188Z",
@@ -27,7 +26,8 @@
     "b2a3856358": "2026-11-13T23:22:12.675Z",
     "05755d01be": "2026-11-13T23:22:12.676Z",
     "2c6c641bc2": "2026-11-14T05:30:40.650Z",
-    "7586f9d677": "2026-11-14T15:19:28.053Z"
+    "7586f9d677": "2026-11-14T15:19:28.053Z",
+    "3a3691eb44": "2026-11-14T23:15:00.303Z"
   },
   "pendientes": {
     "a11ab57dd0": {
@@ -89,8 +89,14 @@
       "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1wdTcxVF9EbS0yNTI4dlhxNnBQcUhmMlpwbUExd21BeWI3UWpFYkhLcmlqLTlMOHZXRFVYVExyTnNRU0ZvZFg5eERoTDA?oc=5",
       "fuente": "Natalie",
       "fecha": "2026-11-14T15:19:28.054Z"
+    },
+    "3a3691eb44": {
+      "titulo": "「BAND-MAID WORLD TOUR 2026 FINAL」の様子。（Photo by MASANORI FUJIKAWA） [画像ギャラリー 4/4] - ナタリー",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9uR2NMeXR2bE5pVTIzNUtYUDhwa1EtWUQ4Q3hMeVo2Mnc0QmJ0U053ZDZfNi1FUTRpV05aWnZfZVVTUzMzQzFZblUyTVd1RmVBXzVSa3VBNXMyX3dQNl9ZOUhB?oc=5",
+      "fuente": "Natalie",
+      "fecha": "2026-11-14T23:15:00.303Z"
     }
   },
   "dia": "2026-11-14",
-  "avisos": 2
+  "avisos": 3
 }
