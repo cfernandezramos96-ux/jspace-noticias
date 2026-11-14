@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-14T05:56:45.641Z",
+  "actualizado": "2026-11-14T13:15:40.378Z",
   "posts": [
     {
       "externo": true,
@@ -1010,6 +1010,20 @@
       "historia": true
     },
     {
+      "carpeta": "noticias/2026-11-14-matsuri-london",
+      "titular": "Kyary Pamyu Pamyu, Otoboke Beaver y Hitsujibungaku debutarán en Londres con matsuri '26",
+      "franja": "jmusic",
+      "estado": "pendiente",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-14T17:30:00.000Z",
+      "programado": "2026-11-14T17:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-14-matsuri-london/slide-01.jpg",
+      "video": false
+    },
+    {
       "carpeta": "noticias/2026-11-14-mwam-circus-tour",
       "titular": "MAN WITH A MISSION recorrerá 47 prefecturas con 10-FEET, Maximum The Hormone y SiM",
       "franja": "extra",
@@ -1021,6 +1035,20 @@
       "programado": "2026-11-14T20:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-14-mwam-circus-tour/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-14-rezero-t5",
+      "titular": "Re:ZERO tendrá temporada 5",
+      "franja": "anime",
+      "estado": "pendiente",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-11-14T23:30:00.000Z",
+      "programado": "2026-11-14T23:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-14-rezero-t5/slide-01.jpg",
       "video": false
     },
     {
