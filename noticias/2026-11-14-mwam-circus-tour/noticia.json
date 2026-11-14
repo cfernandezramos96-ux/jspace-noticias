@@ -1,0 +1,19 @@
+{
+ "titular": "MAN WITH A MISSION recorrerá 47 prefecturas con 10-FEET, Maximum The Hormone y SiM",
+ "link": "https://prtimes.jp/main/html/rd/p/000005065.000013546.html",
+ "formato": "carrusel",
+ "franja": "extra",
+ "tema": "jmusic",
+ "slides": [
+  {"tipo": "portada", "imagen": "ft.jpg", "encuadre": "55% 0%", "posicion": "abajo", "sombra": 1, "tema": "oscuro",
+   "etiqueta": "Gira · 2027",
+   "titulo": "**MAN WITH A MISSION** recorrerá Japón con 10-FEET, Hormone y SiM",
+   "texto": "La gira «The Circus» sumará 23 bandas invitadas."},
+  {"tipo": "poster", "imagen": "ft.jpg"},
+  {"tipo": "texto", "titulo": "La **gira**", "subtitulo": "MAN WITH A MISSION LIVE TOUR “The Circus”",
+   "texto": "**Inicio:** 20 de enero de 2027, Zepp Haneda (Tokio)\n**Alcance:** las 47 prefecturas de Japón\n**Álbum:** «The Circus», el 23 de diciembre"},
+  {"tipo": "texto", "titulo": "Los **invitados**", "subtitulo": "Primera mitad de la gira, de enero a abril",
+   "texto": "**20 de enero:** ハルカミライ (Haruka Mirai)\n**6 de febrero:** 10-FEET\n**6 de marzo:** Maximum The Hormone y SiM\n**Otros:** Sabasister, SHANK, Paledusk, kobore y Otoboke Beaver"},
+  {"tipo": "cierre"}
+ ]
+}
