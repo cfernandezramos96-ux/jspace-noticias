@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-14T20:02:09.503Z",
+  "actualizado": "2026-11-14T23:31:15.621Z",
   "posts": [
     {
       "externo": true,
@@ -1051,15 +1051,20 @@
       "carpeta": "noticias/2026-11-14-rezero-t5",
       "titular": "Re:ZERO tendrá temporada 5",
       "franja": "anime",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "anime"
       ],
-      "hora": "2026-11-14T23:30:00.000Z",
+      "hora": "2026-11-14T23:30:35.694Z",
       "programado": "2026-11-14T23:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-14-rezero-t5/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfvY-W5IOxt/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1871416247973839",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
