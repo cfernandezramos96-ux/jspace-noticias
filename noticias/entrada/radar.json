@@ -27,7 +27,8 @@
     "25b488deee": "2026-11-13T23:22:12.675Z",
     "b2a3856358": "2026-11-13T23:22:12.675Z",
     "05755d01be": "2026-11-13T23:22:12.676Z",
-    "2c6c641bc2": "2026-11-14T05:30:40.650Z"
+    "2c6c641bc2": "2026-11-14T05:30:40.650Z",
+    "7586f9d677": "2026-11-14T15:19:28.053Z"
   },
   "pendientes": {
     "1cbc925de2": {
@@ -95,8 +96,14 @@
       "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBwVzZIN3BxZGJ4VjRwdC1nNTM0LXNiSUNfNTM5REJEdmJmUi1XS2JveUdNWG5CWXN4YmxzT0diTlZWdURKdDVSdHc2TFQ?oc=5",
       "fuente": "Natalie",
       "fecha": "2026-11-14T05:30:40.651Z"
+    },
+    "7586f9d677": {
+      "titulo": "BAND-MAIDが武道館ライブ終えて充電期間へ、だけど来年も新曲と映像作品リリース - ナタリー",
+      "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1wdTcxVF9EbS0yNTI4dlhxNnBQcUhmMlpwbUExd21BeWI3UWpFYkhLcmlqLTlMOHZXRFVYVExyTnNRU0ZvZFg5eERoTDA?oc=5",
+      "fuente": "Natalie",
+      "fecha": "2026-11-14T15:19:28.054Z"
     }
   },
   "dia": "2026-11-14",
-  "avisos": 1
+  "avisos": 2
 }
