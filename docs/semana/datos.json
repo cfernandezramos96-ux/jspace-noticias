@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-14T17:31:44.178Z",
+  "actualizado": "2026-11-14T20:02:09.503Z",
   "posts": [
     {
       "externo": true,
@@ -1032,15 +1032,20 @@
       "carpeta": "noticias/2026-11-14-mwam-circus-tour",
       "titular": "MAN WITH A MISSION recorrerá 47 prefecturas con 10-FEET, Maximum The Hormone y SiM",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic"
       ],
-      "hora": "2026-11-14T20:00:00.000Z",
+      "hora": "2026-11-14T20:01:29.903Z",
       "programado": "2026-11-14T20:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-14-mwam-circus-tour/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfvBCNvlKTX/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1871260951322702",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-14-rezero-t5",
