@@ -1,0 +1,38 @@
+{
+ "titular": "Kyary Pamyu Pamyu, Otoboke Beaver y Hitsujibungaku debutarán en Londres con matsuri '26",
+ "link": "https://animecorner.me/matsuri-confirms-hitsujibungaku-kyary-pamyu-pamyu-and-otoboke-beaver-for-london-debut-on-december-14-tickets-on-sale/",
+ "formato": "carrusel",
+ "franja": "jmusic",
+ "tema": "jmusic",
+ "etiquetas": [
+  "otobokebeaver",
+  "hitsujibungaku"
+ ],
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "kyary.jpg",
+   "encuadre": "25% 50%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "etiqueta": "Concierto · Londres",
+   "titulo": "Kyary Pamyu Pamyu, Otoboke Beaver y Hitsujibungaku llegan a **Londres**",
+   "texto": "El festival matsuri '26 debutará en Europa el 14 de diciembre."
+  },
+  {
+   "tipo": "poster",
+   "imagen": "b.jpg"
+  },
+  {
+   "tipo": "historia",
+   "imagen": "otoboke.jpg",
+   "encuadre": "50% 40%",
+   "texto": "Entre los invitados está **Otoboke Beaver**, el cuarteto punk que ya se presentó en **Bogotá**",
+   "nota": "Boro Room · 4 de noviembre de 2025"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}

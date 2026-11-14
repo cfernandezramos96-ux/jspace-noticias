@@ -1,0 +1,34 @@
+{
+ "titular": "Re:ZERO tendrá temporada 5",
+ "link": "https://animecorner.me/rezero-season-5-anime-officially-announced/",
+ "formato": "carrusel",
+ "franja": "anime",
+ "tema": "anime",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "ultra.jpg",
+   "encuadre": "50% 100%",
+   "posicion": "arriba",
+   "sombra": 1,
+   "tema": "oscuro",
+   "etiqueta": "Temporada 5 · Confirmada",
+   "titulo": "**Re:ZERO** tendrá temporada 5",
+   "texto": "Subaru y Rem protagonizan el primer visual de la nueva entrega."
+  },
+  {
+   "tipo": "poster",
+   "imagen": "ultra.jpg"
+  },
+  {
+   "tipo": "historia",
+   "imagen": "feat.png",
+   "encuadre": "50% 50%",
+   "texto": "Tappei Nagatsuki prometió un arco con la dificultad **«al máximo»** y un diseño «desgarrador»",
+   "nota": "Obra original: Tappei Nagatsuki · Producción: WHITE FOX"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
