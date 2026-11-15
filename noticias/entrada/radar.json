@@ -1,6 +1,5 @@
 {
   "vistos": {
-    "6898b0ed80": "2026-11-08T17:15:06.884Z",
     "58af229c67": "2026-11-09T03:32:01.933Z",
     "817ebcb20c": "2026-11-09T11:32:15.607Z",
     "fbe1c4d484": "2026-11-10T15:25:49.221Z",
@@ -23,7 +22,8 @@
     "05755d01be": "2026-11-13T23:22:12.676Z",
     "2c6c641bc2": "2026-11-14T05:30:40.650Z",
     "7586f9d677": "2026-11-14T15:19:28.053Z",
-    "3a3691eb44": "2026-11-14T23:15:00.303Z"
+    "3a3691eb44": "2026-11-14T23:15:00.303Z",
+    "a1cfdb9823": "2026-11-15T17:17:51.179Z"
   },
   "pendientes": {
     "28f6ddfe0c": {
@@ -67,8 +67,14 @@
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9uR2NMeXR2bE5pVTIzNUtYUDhwa1EtWUQ4Q3hMeVo2Mnc0QmJ0U053ZDZfNi1FUTRpV05aWnZfZVVTUzMzQzFZblUyTVd1RmVBXzVSa3VBNXMyX3dQNl9ZOUhB?oc=5",
       "fuente": "Natalie",
       "fecha": "2026-11-14T23:15:00.303Z"
+    },
+    "a1cfdb9823": {
+      "titulo": "El creador de ‘Bleach’ regresa con una nueva imagen de Ichigo tras el final del anime - Diario AS",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPQnlDWXkzUmNBY2ppTnlBdnc3Rk5lUWp1T1VTUDhPRHlGYkVoY0pqaEJnX01uM0lZVU44dFhudkZBZDhVSURnVnQ3Ylc4TzZiZmxyLTRVWndSWGZ3WFgtX0l3bzFqZmMyNU05eVQ3clBLalFCaHp3dExqYlVnWXU2dVQ2NzBWNk9HMUtxcXdDaTNhaGZfMXZtWDE2Xy1DOS10MU93ZEpCTVpmSjVMdFNnME1rcUFBbHcyblkyWmpsaU9iNlpKZkYyWnotbEFxckh00gHkAUFVX3lxTE1JemtKVjZDekxZbk1iS1RqekpiNDdNN2U4b1ZKSUhiQVBxQ2hRc2x0aV9OSzRLYWtxdUIxQ1hXMlpLZXF4YW55NzQ1THItb3NKRFNUQk5VMUk5WUdJWjl4dld0NW5ka0FBZHlqYWpnYUpmdW9PMVBGbFp3ZzdtRWRZSkotT01pc1pTdjVLZ2dSQWVoQkpqTVhyRW1NY2U2MENKV1VKNDNHcnIzN1hJUkJQZDFYeHZJUWE3Qy03RE1hbXdCdXZNR2MtSk9kbmhQRDdjTlpRazFSQldpNWFFSXR3WV85VQ?oc=5",
+      "fuente": "Prensa de Colombia",
+      "fecha": "2026-11-15T17:17:51.179Z"
     }
   },
   "dia": "2026-11-15",
-  "avisos": 0
+  "avisos": 1
 }
