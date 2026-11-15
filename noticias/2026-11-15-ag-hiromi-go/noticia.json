@@ -1,0 +1,37 @@
+{
+ "titular": "Atarashii Gakko! y Hiromi Go cantan «Oyome Samba» en THE FIRST TAKE",
+ "link": "https://www.thefirsttimes.jp/news/0000919074/",
+ "formato": "carrusel",
+ "franja": "jmusic",
+ "tema": "jmusic",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "h04.jpg",
+   "encuadre": "50% 30%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "titulo": "**Atarashii Gakko!** y Hiromi Go cantan «Oyome Samba»",
+   "texto": "Fue el especial del 7.º aniversario de THE FIRST TAKE: una sesión única."
+  },
+  {
+   "tipo": "poster",
+   "imagen": "h02.jpg"
+  },
+  {
+   "tipo": "poster",
+   "imagen": "h01.jpg"
+  },
+  {
+   "tipo": "historia",
+   "imagen": "h03.jpg",
+   "encuadre": "50% 25%",
+   "texto": "«Oyome Samba» es un clásico de **Hiromi Go** de 1981; él cumplirá **55 años de carrera** en 2027",
+   "nota": "Debutó en 1972"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}

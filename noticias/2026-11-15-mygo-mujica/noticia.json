@@ -1,0 +1,18 @@
+{
+ "titular": "MyGO!!!!! // Ave Mujica revela su segundo tráiler, centrado en MyGO",
+ "link": "https://animecorner.me/mygo-and-ave-mujica-anime-sequel-unveils-2nd-trailer-featuring-mygo/",
+ "formato": "carrusel",
+ "franja": "anime",
+ "tema": "anime",
+ "slides": [
+  {"tipo": "portada", "imagen": "kv.png", "encuadre": "40% 50%", "posicion": "abajo", "sombra": 1, "tema": "oscuro",
+   "etiqueta": "Nuevo tráiler",
+   "titulo": "**MyGO!!!!! // Ave Mujica** presenta su segundo tráiler",
+   "texto": "Esta vez, el protagonismo recae en MyGO."},
+  {"tipo": "poster", "imagen": "fw.jpg"},
+  {"tipo": "historia", "imagen": "feat.jpg", "encuadre": "40% 40%",
+   "texto": "La secuela se estrenará el **8 de enero de 2027** en el bloque **FRIDAY ANIME NIGHT** de NTV",
+   "nota": "Viernes · 11:30 p. m. (hora de Japón)"},
+  {"tipo": "cierre"}
+ ]
+}

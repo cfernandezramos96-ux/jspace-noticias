@@ -1,0 +1,69 @@
+{
+ "titular": "anime",
+ "link": "",
+ "formato": "semanal",
+ "franja": "extra",
+ "tema": "anime",
+ "slides": [
+  {
+   "tipo": "semanal",
+   "imagen": "n0.jpg",
+   "encuadre": "50% 100%",
+   "titulo": "Lo más\n**destacado**\nde la semana",
+   "tema": "Anime",
+   "rango": "Semana 46 · 9 al 15 de noviembre"
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n0.jpg",
+   "encuadre": "50% 100%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "titulo": "**Re:ZERO** tendrá temporada 5",
+   "texto": "Subaru y Rem protagonizan el primer visual de la nueva entrega."
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n1.jpg",
+   "encuadre": "50% 25%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "titulo": "**Mashle** temporada 3 se estrenará el 9 de enero",
+   "texto": "Adaptará el arco del Examen Final de los Videntes Divinos."
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n2.png",
+   "encuadre": "45% 40%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "claro",
+   "titulo": "**Berserk of Gluttony** tendrá temporada 2",
+   "texto": "La historia de Fate avanzará hacia el Dominio E."
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n3.png",
+   "encuadre": "50% 40%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "titulo": "**Steel Ball Run** muestra sus Stands en video",
+   "texto": "Escenas inéditas y más combates en camino."
+  },
+  {
+   "tipo": "mosaico",
+   "imagenes": [
+    "n0.jpg",
+    "n1.jpg",
+    "n2.png",
+    "n3.png"
+   ],
+   "texto": "¿Cuál fue tu **favorita**?"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
