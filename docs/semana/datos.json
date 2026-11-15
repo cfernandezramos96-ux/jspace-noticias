@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-15T13:17:08.308Z",
+  "actualizado": "2026-11-15T17:31:53.873Z",
   "posts": [
     {
       "externo": true,
@@ -1070,15 +1070,20 @@
       "carpeta": "noticias/2026-11-15-ag-hiromi-go",
       "titular": "Atarashii Gakko! y Hiromi Go cantan «Oyome Samba» en THE FIRST TAKE",
       "franja": "jmusic",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic"
       ],
-      "hora": "2026-11-15T17:30:00.000Z",
+      "hora": "2026-11-15T17:31:01.777Z",
       "programado": "2026-11-15T17:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-15-ag-hiromi-go/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfxUn89Fyh7/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1872414491207348",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-15-resumen-jmusic",
