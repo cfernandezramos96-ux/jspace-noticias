@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-14T23:31:15.621Z",
+  "actualizado": "2026-11-15T13:16:56.362Z",
   "posts": [
     {
       "externo": true,
@@ -1065,6 +1065,62 @@
       "fb_tipo": null,
       "reel_prueba": false,
       "historia": true
+    },
+    {
+      "carpeta": "noticias/2026-11-15-ag-hiromi-go",
+      "titular": "Atarashii Gakko! y Hiromi Go cantan «Oyome Samba» en THE FIRST TAKE",
+      "franja": "jmusic",
+      "estado": "pendiente",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-15T17:30:00.000Z",
+      "programado": "2026-11-15T17:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-15-ag-hiromi-go/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-15-resumen-jmusic",
+      "titular": "jmusic",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-15T20:00:00.000Z",
+      "programado": "2026-11-15T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-15-resumen-jmusic/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-15-mygo-mujica",
+      "titular": "MyGO!!!!! // Ave Mujica revela su segundo tráiler, centrado en MyGO",
+      "franja": "anime",
+      "estado": "pendiente",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-11-15T23:30:00.000Z",
+      "programado": "2026-11-15T23:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-15-mygo-mujica/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-15-resumen-anime",
+      "titular": "anime",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-11-16T02:00:00.000Z",
+      "programado": "2026-11-16T02:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-15-resumen-anime/slide-01.jpg",
+      "video": false
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
