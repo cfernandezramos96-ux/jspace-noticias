@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-16T17:31:58.086Z",
+  "actualizado": "2026-11-16T20:01:06.854Z",
   "posts": [
     {
       "externo": true,
@@ -1160,15 +1160,20 @@
       "carpeta": "noticias/2026-11-15-shingeki-musical-bangkok",
       "titular": "Shingeki no Kyojin: The Musical llegará a Bangkok en mayo de 2027",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "anime"
       ],
-      "hora": "2026-11-16T20:00:00.000Z",
+      "hora": "2026-11-16T20:00:31.232Z",
       "programado": "2026-11-16T20:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-15-shingeki-musical-bangkok/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/Df0KhZbnWaY/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1874007277714736",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-16-skip-loafer-t2",
