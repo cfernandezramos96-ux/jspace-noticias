@@ -1,0 +1,27 @@
+{
+ "titular": "Shingeki no Kyojin: The Musical llegará a Bangkok en mayo de 2027",
+ "link": "https://www.bandwagon.asia/articles/attack-on-titan-the-musical-heads-to-bangkok-in-may-2027",
+ "formato": "post",
+ "franja": "extra",
+ "tema": "anime",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "ny.jpg",
+   "encuadre": "42% 50%",
+   "posicion": "arriba",
+   "sombra": 1,
+   "tema": "oscuro",
+   "etiqueta": "Musical · Gira mundial",
+   "titulo": "**Attack on Titan** llega a Bangkok",
+   "texto": "Su musical se presentará en mayo de 2027."
+  },
+  {
+   "tipo": "poster",
+   "imagen": "ny.jpg"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
