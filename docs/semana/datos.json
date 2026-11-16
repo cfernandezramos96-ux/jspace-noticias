@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-16T23:41:44.593Z",
+  "actualizado": "2026-11-16T23:47:33.165Z",
   "posts": [
     {
       "externo": true,
@@ -1179,15 +1179,20 @@
       "carpeta": "noticias/2026-11-16-skip-loafer-t2",
       "titular": "Skip and Loafer temporada 2 revela nuevo visual y tráiler",
       "franja": "anime",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "anime"
       ],
-      "hora": "2026-11-16T23:30:00.000Z",
+      "hora": "2026-11-16T23:44:21.972Z",
       "programado": "2026-11-16T23:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-16-skip-loafer-t2/slide-01.jpg",
-      "video": true
+      "video": true,
+      "ig": "https://www.instagram.com/p/Df0kI2hDQuO/",
+      "fb": "https://www.facebook.com/reel/2361048298001403/",
+      "fb_tipo": "reel",
+      "reel_prueba": true,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-16-kubo-ichigo",
