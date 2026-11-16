@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-16T03:50:07.362Z",
+  "actualizado": "2026-11-16T03:50:56.348Z",
   "posts": [
     {
       "externo": true,
@@ -1086,20 +1086,6 @@
       "historia": true
     },
     {
-      "carpeta": "noticias/2026-11-15-resumen-jmusic",
-      "titular": "jmusic",
-      "franja": "extra",
-      "estado": "aprobado",
-      "temas": [
-        "jmusic"
-      ],
-      "hora": "2026-11-15T20:00:00.000Z",
-      "programado": "2026-11-15T20:00:00.000Z",
-      "colaboradores": [],
-      "portada": "noticias/2026-11-15-resumen-jmusic/slide-01.jpg",
-      "video": false
-    },
-    {
       "carpeta": "noticias/2026-11-15-mygo-mujica",
       "titular": "MyGO!!!!! // Ave Mujica revela su segundo tráiler, centrado en MyGO",
       "franja": "anime",
@@ -1128,6 +1114,25 @@
       "video": false,
       "ig": "https://www.instagram.com/p/DfyPczDjPYJ/",
       "fb": "https://www.facebook.com/100053164456324/posts/1872871684494962",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
+    },
+    {
+      "carpeta": "noticias/2026-11-15-resumen-jmusic",
+      "titular": "jmusic",
+      "franja": "extra",
+      "estado": "publicado",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-16T03:50:01.158Z",
+      "programado": "2026-11-15T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-15-resumen-jmusic/slide-01.jpg",
+      "video": false,
+      "ig": "https://www.instagram.com/p/DfybcUZFdKi/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1872964511152346",
       "fb_tipo": null,
       "reel_prueba": false,
       "historia": true
