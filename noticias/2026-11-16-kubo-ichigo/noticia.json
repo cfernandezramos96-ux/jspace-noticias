@@ -1,0 +1,15 @@
+{
+ "titular": "Tite Kubo despide el anime de Bleach con un dibujo nuevo de Ichigo",
+ "link": "https://comicbook.com/anime/news/bleach-creator-returns-with-new-look-at-ichigo-after-animes-finale/",
+ "formato": "post",
+ "franja": "extra",
+ "tema": "anime",
+ "slides": [
+  {"tipo": "portada", "imagen": "ichigo.jpg", "encuadre": "30% 50%", "posicion": "abajo", "sombra": 1, "tema": "oscuro",
+   "etiqueta": "Bleach · Tite Kubo",
+   "titulo": "Kubo dibuja un **nuevo Ichigo**",
+   "texto": "Un boceto para despedir el anime."},
+  {"tipo": "poster", "imagen": "ichigo.jpg"},
+  {"tipo": "cierre"}
+ ]
+}
