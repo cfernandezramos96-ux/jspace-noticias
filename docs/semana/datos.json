@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-16T14:01:17.585Z",
+  "actualizado": "2026-11-16T17:31:58.086Z",
   "posts": [
     {
       "externo": true,
@@ -1141,15 +1141,20 @@
       "carpeta": "noticias/2026-11-16-mucc-lotus",
       "titular": "MUCC celebra 30 años con el álbum «LOTUS»",
       "franja": "jmusic",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic"
       ],
-      "hora": "2026-11-16T17:30:00.000Z",
+      "hora": "2026-11-16T17:30:39.349Z",
       "programado": "2026-11-16T17:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-16-mucc-lotus/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/Dfz5XyyjJEX/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1873847664397364",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-15-shingeki-musical-bangkok",
