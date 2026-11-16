@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-16T02:06:07.123Z",
+  "actualizado": "2026-11-16T03:49:41.485Z",
   "posts": [
     {
       "externo": true,
@@ -1131,6 +1131,20 @@
       "fb_tipo": null,
       "reel_prueba": false,
       "historia": true
+    },
+    {
+      "carpeta": "noticias/2026-11-15-shingeki-musical-bangkok",
+      "titular": "Shingeki no Kyojin: The Musical llegará a Bangkok en mayo de 2027",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-11-16T20:00:00.000Z",
+      "programado": "2026-11-16T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-15-shingeki-musical-bangkok/slide-01.jpg",
+      "video": false
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
