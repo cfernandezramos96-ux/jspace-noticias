@@ -1,0 +1,43 @@
+{
+ "titular": "LUNA SEA: el final de su gira en el Ariake Arena será transmitido en vivo",
+ "link": "https://prtimes.jp/main/html/rd/p/000009017.000001355.html",
+ "formato": "carrusel",
+ "franja": "extra",
+ "tema": "jmusic",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "promo.jpg",
+   "encuadre": "50% 20%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "titulo": "**LUNA SEA** cerrará su gira en vivo",
+   "texto": "El final en el Ariake Arena será transmitido por WOWOW."
+  },
+  {
+   "tipo": "historia",
+   "imagen": "live1.jpg",
+   "encuadre": "50% 50%",
+   "texto": "Será el **20 de diciembre** a las 4 p. m. (hora de Japón), con la gira «UNENDING JOURNEY -TO RISE-»",
+   "nota": "Ariake Arena, Tokio"
+  },
+  {
+   "tipo": "historia",
+   "imagen": "live2.jpg",
+   "encuadre": "50% 50%",
+   "texto": "La banda continúa sin **Shinya**, fallecido en febrero, con su alumno **Junji** en la batería",
+   "nota": "Antes, 33 shows con entradas agotadas"
+  },
+  {
+   "tipo": "historia",
+   "imagen": "arena.jpg",
+   "encuadre": "50% 50%",
+   "texto": "WOWOW emitirá además **7 conciertos** desde 2023, hasta el **Tokyo Dome 2025**, último escenario de Shinya",
+   "nota": "De enero a abril de 2027"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
