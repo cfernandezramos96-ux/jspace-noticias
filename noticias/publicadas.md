@@ -59,3 +59,4 @@ AAAA-MM-DD HH:MM · titular · formato · link · planner
 2026-11-14 18:30 · anime · Re:ZERO tendrá temporada 5 · carrusel · https://animecorner.me/rezero-season-5-anime-officially-announced/ · https://www.instagram.com/p/DfvY-W5IOxt/ · FB: https://www.facebook.com/100053164456324/posts/1871416247973839
 2026-11-15 12:31 · jmusic · Atarashii Gakko! y Hiromi Go cantan «Oyome Samba» en THE FIRST TAKE · carrusel · https://www.thefirsttimes.jp/news/0000919074/ · https://www.instagram.com/p/DfxUn89Fyh7/ · FB: https://www.facebook.com/100053164456324/posts/1872414491207348
 2026-11-15 21:05 · extra · anime · semanal ·  · https://www.instagram.com/p/DfyPczDjPYJ/ · FB: https://www.facebook.com/100053164456324/posts/1872871684494962
+2026-11-15 22:50 · extra · jmusic · semanal ·  · https://www.instagram.com/p/DfybcUZFdKi/ · FB: https://www.facebook.com/100053164456324/posts/1872964511152346
