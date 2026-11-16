@@ -61,3 +61,4 @@ AAAA-MM-DD HH:MM · titular · formato · link · planner
 2026-11-15 21:05 · extra · anime · semanal ·  · https://www.instagram.com/p/DfyPczDjPYJ/ · FB: https://www.facebook.com/100053164456324/posts/1872871684494962
 2026-11-15 22:50 · extra · jmusic · semanal ·  · https://www.instagram.com/p/DfybcUZFdKi/ · FB: https://www.facebook.com/100053164456324/posts/1872964511152346
 2026-11-16 12:30 · jmusic · MUCC celebra 30 años con el álbum «LOTUS» · carrusel · https://barks.jp/news/1104832 · https://www.instagram.com/p/Dfz5XyyjJEX/ · FB: https://www.facebook.com/100053164456324/posts/1873847664397364
+2026-11-16 15:00 · extra · Shingeki no Kyojin: The Musical llegará a Bangkok en mayo de 2027 · post · https://www.bandwagon.asia/articles/attack-on-titan-the-musical-heads-to-bangkok-in-may-2027 · https://www.instagram.com/p/Df0KhZbnWaY/ · FB: https://www.facebook.com/100053164456324/posts/1874007277714736
