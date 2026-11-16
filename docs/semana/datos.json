@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-16T03:53:50.171Z",
+  "actualizado": "2026-11-16T14:01:06.571Z",
   "posts": [
     {
       "externo": true,
@@ -1138,6 +1138,20 @@
       "historia": true
     },
     {
+      "carpeta": "noticias/2026-11-16-mucc-lotus",
+      "titular": "MUCC celebra 30 años con el álbum «LOTUS»",
+      "franja": "jmusic",
+      "estado": "pendiente",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-16T17:30:00.000Z",
+      "programado": "2026-11-16T17:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-16-mucc-lotus/slide-01.jpg",
+      "video": false
+    },
+    {
       "carpeta": "noticias/2026-11-15-shingeki-musical-bangkok",
       "titular": "Shingeki no Kyojin: The Musical llegará a Bangkok en mayo de 2027",
       "franja": "extra",
@@ -1149,6 +1163,20 @@
       "programado": "2026-11-16T20:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-15-shingeki-musical-bangkok/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-16-skip-loafer-t2",
+      "titular": "Skip and Loafer temporada 2 revela nuevo visual y tráiler",
+      "franja": "anime",
+      "estado": "pendiente",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-11-16T23:30:00.000Z",
+      "programado": "2026-11-16T23:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-16-skip-loafer-t2/slide-01.jpg",
       "video": false
     },
     {
