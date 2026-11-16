@@ -1,6 +1,5 @@
 {
   "vistos": {
-    "58af229c67": "2026-11-09T03:32:01.933Z",
     "817ebcb20c": "2026-11-09T11:32:15.607Z",
     "fbe1c4d484": "2026-11-10T15:25:49.221Z",
     "1a452a5434": "2026-11-11T03:31:31.553Z",
@@ -27,7 +26,8 @@
     "545ddb4410": "2026-11-15T19:26:45.764Z",
     "ab91e12ce7": "2026-11-15T19:26:45.765Z",
     "55b6f2a12f": "2026-11-16T02:05:38.397Z",
-    "cbad0e4e6c": "2026-11-16T02:05:38.397Z"
+    "cbad0e4e6c": "2026-11-16T02:05:38.397Z",
+    "b7747a93c2": "2026-11-16T03:44:03.818Z"
   },
   "pendientes": {
     "2c6c641bc2": {
@@ -77,8 +77,14 @@
       "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBhSGlOOWxHTlJ6REU3eFJTZmtkZ01YdnY5Z0NuM1dhQVdVbEdWeVBUVG9OclJSX3pubzdHalpQZEkwbFAtWnhGMUUzaWs?oc=5",
       "fuente": "Natalie",
       "fecha": "2026-11-16T02:05:39.103Z"
+    },
+    "b7747a93c2": {
+      "titulo": "ミュージカル「進撃の巨人」バンコク公演決定、エレン役に佐藤知恩 - ナタリー",
+      "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBISHMtaGYta1d3enRFVUp5SEZoWGp3dXZyUzhXcHZsdmhqb0ZJbE5oSHZsT1hfdlNuTGtTVHctTUhoOTNETUpSeVdmV2M?oc=5",
+      "fuente": "Natalie",
+      "fecha": "2026-11-16T03:44:03.819Z"
     }
   },
   "dia": "2026-11-15",
-  "avisos": 5
+  "avisos": 6
 }
