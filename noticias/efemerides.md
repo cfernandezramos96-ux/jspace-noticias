@@ -11,3 +11,4 @@ artistas muy conocidos. Antes de añadir una, mira que no esté ya.
 
 ## Japón
 - 11-03 · 1997 · Morning Musume lanza su single indie «Ai no Tane» · debut del grupo · post del 4 nov 2026
+- 11-16 · 2026 · (revisado) sin aniversario redondo verificado para el 16-19 de nov; Code Geass y Reborn! celebran 20 años en 2026 (sin fecha exacta confirmada)

@@ -1,0 +1,30 @@
+{
+ "titular": "Skip and Loafer temporada 2 revela nuevo visual y tráiler",
+ "link": "https://animecorner.me/skip-and-loafer-season-2-reveals-new-key-visual-new-trailer/",
+ "formato": "carrusel",
+ "franja": "anime",
+ "tema": "anime",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "kv.jpg",
+   "encuadre": "50% 30%",
+   "posicion": "abajo",
+   "sombra": 0.9,
+   "tema": "claro",
+   "etiqueta": "Temporada 2 · Abril 2027",
+   "titulo": "**Skip and Loafer** revela visual y tráiler de su temporada 2",
+   "texto": "Mitsumi y Shima regresarán en abril de 2027."
+  },
+  {
+   "tipo": "historia",
+   "imagen": "trailer.jpg",
+   "encuadre": "50% 40%",
+   "texto": "**P.A. Works** y **Kotomi Deai** regresan; **Reina Ueda** y **Yuto Takenaka** se suman al reparto",
+   "nota": "Chieri Yasaka y Kiyohiko Ujiie"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}

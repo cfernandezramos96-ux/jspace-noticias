@@ -8,6 +8,14 @@ instagram_manage_insights).
 su alcance viene en parte de la otra cuenta) y los reels de prueba (`tipo: VIDEO`; solo los ven no seguidores). Compara
 carruseles sin collab contra carruseles sin collab. No juzgues los posts con menos de un día.
 
+## 2026-11-16 · informe de la semana del 9 al 15 de noviembre (30 piezas)
+- **Lo que rindió:** Helian Evans × LADYBABY (collab con helianevans) 8.161 de alcance y 295 likes; reel de ano 311;
+  reel de Helian 178; reel de Steel Ball Run 128. Todo lo demás, 2-88.
+- **Lo que no:** resúmenes del domingo (2 y 21, segunda semana mala) y el reel de My Crush's Crush (0). Los carruseles
+  de franja fija se quedan en 7-20 aunque el nombre sea grande.
+- **Decisiones:** collab siempre que se pueda; reel solo con video oficial; retirar los resúmenes de los domingos.
+- **Fijados:** Helian Evans × LADYBABY, reel de ano, Kyary/Otoboke/Hitsujibungaku en Londres (primera lista).
+
 ## 2026-11-09 · informe de la semana del 2 al 8 de noviembre (38 piezas)
 - **Lo que rindió:** reel de Hump Back 1.090 de alcance (su carrusel, 17), Nanase Aikawa 1.024 (collab), Yoko Takahashi
   en Bogotá 679, Chainsaw Man (reel) 484. Todo lo demás, 7-116.

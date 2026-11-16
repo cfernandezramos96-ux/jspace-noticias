@@ -1,0 +1,34 @@
+{
+ "titular": "MUCC celebra 30 años con el álbum «LOTUS»",
+ "link": "https://barks.jp/news/1104832",
+ "formato": "carrusel",
+ "franja": "jmusic",
+ "tema": "jmusic",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "c1.jpg",
+   "encuadre": "50% 30%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "etiqueta": "Álbum · 24 feb 2027",
+   "titulo": "**MUCC** celebra sus 30 años con el álbum «LOTUS»",
+   "texto": "Será su 18.º álbum de estudio."
+  },
+  {
+   "tipo": "poster",
+   "imagen": "flyerL.jpg"
+  },
+  {
+   "tipo": "historia",
+   "imagen": "c2.jpg",
+   "encuadre": "50% 30%",
+   "texto": "Su **sencillo n.º 50**, «Love Letter», sale **mañana, 17 de noviembre**, y en marzo comenzará la gira **LOTUS**",
+   "nota": "Gira desde el 26 de marzo de 2027 en Osaka"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
