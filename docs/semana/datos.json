@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-17T20:05:26.269Z",
+  "actualizado": "2026-11-17T20:07:36.212Z",
   "posts": [
     {
       "externo": true,
@@ -1236,15 +1236,20 @@
       "carpeta": "noticias/2026-11-17-lisa-grammy",
       "titular": "LiSA y BABYMETAL, nominadas al nuevo Grammy de pop asiático",
       "franja": "jmusic",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic"
       ],
-      "hora": "2026-11-17T17:30:00.000Z",
+      "hora": "2026-11-17T20:06:54.979Z",
       "programado": "2026-11-17T17:30:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-17-lisa-grammy/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/Df2wCpvjGxQ/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1875535620895235",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": true
     },
     {
       "carpeta": "noticias/2026-11-17-eternal-fool",
