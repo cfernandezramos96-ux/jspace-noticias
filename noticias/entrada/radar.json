@@ -26,7 +26,8 @@
     "55b6f2a12f": "2026-11-16T02:05:38.397Z",
     "cbad0e4e6c": "2026-11-16T02:05:38.397Z",
     "b7747a93c2": "2026-11-16T03:44:03.818Z",
-    "22aaba9036": "2026-11-17T17:42:01.408Z"
+    "22aaba9036": "2026-11-17T17:42:01.408Z",
+    "1ad0a8713c": "2026-11-17T23:30:02.516Z"
   },
   "pendientes": {
     "55b6f2a12f": {
@@ -52,8 +53,14 @@
       "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPX19xQm1hWVVMMVZlRVh1eFdCQVItbnpndi03ZTVWNDREMlVvNFk3cmdTVno5dlRzdmREa25RTzIxUkgtUmQ0WlBURjROZ0dLbWM5M1AyTmlxOWxiUVpibFFKZmt0QVJMXzdobzFvMXAyMlV4alRHcnJ4LTlGOFhuVUlzel9SUUdPRUgyMlNOQzFtd3Y2aWpSSFNrSUpRdWZTTHhQaE1OV2ROdDh1TWh5V2t4NEw0YUFEZzJNTEJvc2VyRDREVVF3ZFRWOVVOZm8?oc=5",
       "fuente": "Prensa de Colombia",
       "fecha": "2026-11-17T17:42:01.409Z"
+    },
+    "1ad0a8713c": {
+      "titulo": "Así formará la Selección Colombia frente a Chile en Santiago: este es el as bajo la manga de Lorenzo - Minuto60",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQaTBuRmZVZGxGWXVNN0lfM2IxZmdTcGRLemhZNnhlb2RvV3BIaXNJUGI2RmVrVm9mb3ZXOHFyVEVFRW8tOTh1RldTRldOb3NfdGk1U2VaY1loUGM5M1VQTk9ZR0ROWnpKSVp2V3pYcVFiZE1sdFlZREpxX3YtSF9KaXlHbEtfdktKcEQ1M0JCRmtJUQ?oc=5",
+      "fuente": "Prensa de Colombia",
+      "fecha": "2026-11-17T23:30:02.517Z"
     }
   },
   "dia": "2026-11-17",
-  "avisos": 1
+  "avisos": 2
 }
