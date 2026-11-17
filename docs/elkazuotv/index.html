@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ElKazuoTV Uploader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #0A0A0A; --acento: #FF3636; --gris: #b9b9b9; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--bg); color: #fff; font-family: 'Poppins', sans-serif; font-weight: 500; line-height: 1.6; }
+  main { max-width: 760px; margin: 0 auto; padding: 56px 24px; }
+  h1 { font-weight: 900; text-transform: uppercase; font-size: 32px; line-height: 1.15; }
+  .linea { width: 72px; height: 4px; background: var(--acento); margin: 22px 0; }
+  h2 { font-weight: 700; font-size: 19px; margin: 32px 0 10px; }
+  p, li { color: var(--gris); margin-bottom: 12px; }
+  ul { padding-left: 20px; }
+  a { color: var(--acento); }
+  .yt { display: inline-flex; align-items: center; gap: 10px; margin-top: 8px; padding: 10px 14px; border: 1px solid #333; border-radius: 10px; color: #fff; }
+  .yt svg { width: 34px; height: 24px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid #222; font-size: 14px; }
+  footer a { margin-right: 18px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>ElKazuoTV Uploader</h1>
+  <div class="linea"></div>
+  <p>ElKazuoTV Uploader is a private, internal tool used by the creator of the YouTube channel
+    <a href="https://www.youtube.com/channel/UCq25fUukr2mw7E5bqqRXUnQ">ElKazuoTV</a> to upload his own
+    finished Shorts (Japanese music and anime content) to his own channel.</p>
+
+  <span class="yt" aria-label="Uses YouTube API Services">
+    <svg viewBox="0 0 34 24" aria-hidden="true"><rect width="34" height="24" rx="6" fill="#FF0000"/><path d="M13.5 7v10l9-5z" fill="#fff"/></svg>
+    Uses YouTube API Services
+  </span>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>Uploads videos that the channel owner made himself to the ElKazuoTV channel, using the YouTube Data API v3 (<code>videos.insert</code>).</li>
+    <li>Sets the title, description, tags, category and privacy status of those uploads.</li>
+    <li>Reads basic information about the owner's own channel to confirm it is uploading to the right place.</li>
+  </ul>
+
+  <h2>Who can use it</h2>
+  <p>Only the owner of the ElKazuoTV channel. The tool is not offered to the public, has no other users and does not
+    access any other person's YouTube account or data. It runs on the owner's own computer.</p>
+
+  <h2>Terms and privacy</h2>
+  <p>By using this tool you agree to be bound by the
+    <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Please also read our
+    <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</p>
+
+  <footer>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Use</a>
+    <a href="mailto:c.fernandezramos96@gmail.com">Contact</a>
+  </footer>
+</main>
+</body>
+</html>
