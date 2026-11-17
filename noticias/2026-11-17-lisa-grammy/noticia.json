@@ -1,0 +1,17 @@
+{
+ "titular": "LiSA y BABYMETAL, nominadas al nuevo Grammy de pop asiático",
+ "link": "https://www.grammy.com/artists/lisa/",
+ "formato": "carrusel",
+ "franja": "jmusic",
+ "tema": "jmusic",
+ "slides": [
+  {"tipo":"portada","imagen":"f1.jpg","encuadre":"50% 30%","posicion":"abajo","sombra":1,"tema":"oscuro",
+   "titulo":"**LiSA** competirá por un Grammy con «YES»",
+   "texto":"Está nominada a Mejor Interpretación de Pop Asiático."},
+  {"tipo":"historia","imagen":"g1.jpg","encuadre":"50% 30%",
+   "texto":"«**YES**», tema de la película «The Irregular at Magic High School: Yotsuba Succession Arc», fue lanzada el **8 de mayo**",
+   "nota":"La letra es de la propia LiSA"},
+  {"tipo":"dato","antes":"Son seis los nominados en la nueva categoría, entre ellos BABYMETAL","dato":"6","texto":"BINI, SB19, IVE, KiiiKiii, LiSA y BABYMETAL. La ceremonia será el 7 de febrero de 2027 en Los Ángeles."},
+  {"tipo":"cierre"}
+ ]
+}

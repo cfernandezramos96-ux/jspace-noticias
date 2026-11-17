@@ -1,0 +1,18 @@
+{
+ "titular": "The Eternal Fool's Words of Wisdom se estrenará el 9 de enero",
+ "link": "https://animecorner.me/the-eternal-fools-words-of-wisdom-a-pawsitively-fantastic-adventure-anime-unveils-main-trailer-january-9-premiere-additional-cast-theme-songs/",
+ "formato": "carrusel",
+ "franja": "anime",
+ "slides": [
+  {"tipo":"portada","imagen":"kv.png","encuadre":"35% 50%","posicion":"abajo","sombra":1,"tema":"oscuro",
+   "titulo":"**The Eternal Fool's Words of Wisdom** se estrenará el 9 de enero",
+   "texto":"Llegará por Crunchyroll, con animación de Studio Elle."},
+  {"tipo":"historia","imagen":"nako.jpg","encuadre":"50% 30%",
+   "texto":"Su opening, «**321 Smiling**», será interpretado por **Nako Misaki × sajou no hana**",
+   "nota":"Reparto: Toshiyuki Toyonaga, Yoko Hikasa, Minori Fujidera y Rie Kugimiya"},
+  {"tipo":"historia","imagen":"arcana.jpg","encuadre":"50% 40%",
+   "texto":"El ending, «**Mirai no Vision**», estará a cargo de **ARCANA PROJECT**",
+   "nota":"Dirige Keisuke Onishi"},
+  {"tipo":"cierre"}
+ ]
+}
