@@ -36,6 +36,10 @@ Kazuo (`E:\Claudio\jspace-noticias`) o en una sesión en la nube de Claude Code,
   (`noticias/entrada/<id>.espera.json`), manda al grupo el enlace exacto del video y pide que se lo devuelvan; con el
   video manda el preview con las piezas terminadas. Las rutinas de las 12:30, 15:00, 18:30 y 21:00 solo publican lo
   aprobado (`programado.json`). El bot recuerda 1 h antes lo que nadie ha aprobado y avisa si no salió.
+  **Única excepción (Kazuo, 17 nov 2026): el de mediodía** (`"franja": "jmusic"`) sale aunque nadie lo apruebe, si no
+  lleva video (`slide-NN.mp4` o `reel.mp4`). A su hora, si nadie lo aprobó ni lo descartó, el bot lo aprueba solo y
+  avisa al grupo; con video sigue necesitando aprobación. Por eso la J-music de las 12:30 tiene que salir lista y
+  revisada como si nadie fuera a mirarla. El de anime, los extras y los resúmenes nunca salen sin aprobar.
 - **Dos posts automáticos al día, todos los días (también el domingo)** (decidido con Kazuo el 2 nov 2026):
   - **12:30 · `"franja": "jmusic"`** · J-music y cultura japonesa: bandas, idols, openings, giras por
     Latinoamérica, curiosidades. Es lo que mejor funciona en la cuenta (Atarashii Gakko ×20, BBTS ×3, Yokai ×3).

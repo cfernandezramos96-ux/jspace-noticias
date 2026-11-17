@@ -1,7 +1,7 @@
 # JSpace · noticias diarias
 
 Posts y carruseles de noticias para @jspaceco_ (anime, manga, J-music, cultura japonesa), dos automáticos al día (J-music
-12:30, anime 18:30) más extras a las 15:00 y 21:00 (pedidos del equipo y resúmenes de los domingos), publicados en Instagram y Facebook con la API oficial. **Nada sale sin aprobación del grupo de Telegram**: a las 8:00 se arman los posts del día y se mandan al grupo como preview; las rutinas de publicar solo publican lo aprobado. El flujo completo está en la
+12:30, anime 18:30) más extras a las 15:00 y 21:00 (pedidos del equipo y resúmenes de los domingos), publicados en Instagram y Facebook con la API oficial. **Nada sale sin aprobación del grupo de Telegram**: a las 8:00 se arman los posts del día y se mandan al grupo como preview; las rutinas de publicar solo publican lo aprobado. Única excepción (Kazuo, 17 nov 2026): el de mediodía (J-music, 12:30) sale aunque nadie lo apruebe si no lleva video; el bot lo aprueba solo a su hora. El flujo completo está en la
 skill **/jspace** (`.claude/skills/jspace/SKILL.md`).
 
 - `plantilla/noticia.html`: la slide (1080×1350) dibujada desde `noticia.json`. Portada = imagen oficial a sangre con

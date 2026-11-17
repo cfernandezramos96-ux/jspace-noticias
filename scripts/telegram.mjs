@@ -75,6 +75,13 @@ const slidesDe = (carpeta) => {
   return [...porNum.keys()].sort().map((n) => porNum.get(n));
 };
 const escribe = (f, datos) => writeFileSync(join(DIR, f), JSON.stringify(datos, null, 2));
+// 17 nov 2026 (Kazuo): el post de mediodía (franja jmusic, 12:30) sale aunque nadie lo apruebe, salvo que lleve video
+// (slide-NN.mp4 o reel.mp4): esos siguen necesitando aprobación. Los demás (anime, extras) nunca salen sin aprobar.
+function saleSolo(p) {
+  if (p?.franja !== 'jmusic' || !p.carpeta) return false;
+  const c = join(RAIZ, p.carpeta);
+  return existsSync(c) && !existsSync(join(c, 'reel.mp4')) && !readdirSync(c).some((n) => /^slide-\d+\.mp4$/.test(n));
+}
 const hora = (iso) => new Date(iso).toLocaleString('es-CO', { timeZone: 'America/Bogota', weekday: 'short', day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' });
 
 const estado = existsSync(ESTADO) ? lee('estado.json') : { offset: 0 };
@@ -403,7 +410,7 @@ for (const f of readdirSync(DIR).filter((n) => /^\d+\.preview\.json$/.test(n))) 
   // el reel (Facebook y reel de prueba de Instagram) NO se manda al preview: sale igual que el carrusel aprobado y solo
   // llenaría el chat y demoraría el preview (Kazuo, 4 nov 2026)
   const leyenda = existsSync(join(carpeta, 'leyenda.txt')) ? readFileSync(join(carpeta, 'leyenda.txt'), 'utf8').trim() : '(sin leyenda)';
-  const texto = `👀 Preview: ${prev.titular || basename(carpeta)}\n🕒 Si lo aprueban sale el ${hora(prev.hora)} (${{ jmusic: 'J-music', anime: 'anime', extra: 'extra, aparte de los dos automáticos' }[prev.franja] || prev.franja}), en Instagram y Facebook${existsSync(join(carpeta, 'reel.mp4')) ? ' (con video: también sale como reel en Facebook e Instagram)' : ''}.\n${prev.nota ? `📝 ${prev.nota}\n` : ''}\n—— Leyenda ——\n${leyenda}`;
+  const texto = `👀 Preview: ${prev.titular || basename(carpeta)}\n🕒 ${saleSolo(prev) ? 'Sale' : 'Si lo aprueban sale'} el ${hora(prev.hora)} (${{ jmusic: 'J-music', anime: 'anime', extra: 'extra, aparte de los dos automáticos' }[prev.franja] || prev.franja}), en Instagram y Facebook${existsSync(join(carpeta, 'reel.mp4')) ? ' (con video: también sale como reel en Facebook e Instagram)' : ''}.${saleSolo(prev) ? '\n🤖 Es el de mediodía y no lleva video: sale aunque nadie lo apruebe. Si no debe salir, descártenlo.' : ''}\n${prev.nota ? `📝 ${prev.nota}\n` : ''}\n—— Leyenda ——\n${leyenda}`;
   const msj = await tg('sendMessage', {
     chat_id: chat, text: texto.slice(0, 4000), disable_web_page_preview: true,
     reply_markup: { inline_keyboard: [[
@@ -435,7 +442,7 @@ for (const f of readdirSync(DIR).filter((n) => n.endsWith('.resultado.txt'))) {
   console.log(`resultado enviado: ${id}`);
 }
 
-// 5. nada sale sin aprobación: 1 h antes de la hora de un preview sin decidir, recordatorio; si pasa la hora, aviso.
+// 5. nada sale sin aprobación, salvo el de mediodía sin video (saleSolo): 1 h antes de la hora de un preview sin decidir, recordatorio; si pasa la hora, aviso.
 // Solo el preview más reciente de cada carpeta y solo los de las últimas 12 h (los viejos no se reavisan).
 const ultimoDe = {};
 for (const f of readdirSync(DIR).filter((n) => /^\d+\.preview\.enviado\.json$/.test(n))) {
@@ -448,8 +455,20 @@ for (const { f, p } of Object.values(ultimoDe)) {
   const falta = new Date(p.hora) - Date.now(), chat = p.chat || GRUPO;
   if (!chat || falta < -12 * 3600e3) continue;
   const responder = p.mensaje ? { reply_to_message_id: p.mensaje, allow_sending_without_reply: 'true' } : {};
+  const solo = saleSolo(p);
+  if (solo && falta <= 0 && falta > -60 * 60e3) {
+    // el de mediodía sin video: llegó su hora y nadie decidió; se aprueba solo (como el botón ✅) y la sección 6 lo publica
+    writeFileSync(join(RAIZ, p.carpeta, 'programado.json'), JSON.stringify({ hora: p.hora }, null, 2));
+    escribe(`${id}.aprobado.json`, { modo: 'cola', por: 'automático', fecha: new Date().toISOString(), carpeta: p.carpeta, hora: p.hora });
+    movimiento = true;
+    await tg('sendMessage', { chat_id: chat, ...responder, text: `🤖 Nadie aprobó «${p.titular}», pero es el de mediodía y no lleva video: sale ahora en Instagram y Facebook.` }).catch((e) => console.log(`aviso del automático: ${e.message}`));
+    console.log(`aprobado solo (mediodía sin video): ${id}`);
+    continue;
+  }
   if (falta > 0 && falta <= 3600e3 && !p.recordado) {
-    await tg('sendMessage', { chat_id: chat, ...responder, text: `⏰ A las ${hora(p.hora)} toca «${p.titular}» y nadie lo ha aprobado. Si no lo aprueban, no sale.` });
+    await tg('sendMessage', { chat_id: chat, ...responder, text: solo
+      ? `⏰ A las ${hora(p.hora)} toca «${p.titular}» y nadie lo ha aprobado. Es el de mediodía y no lleva video, así que sale igual; si no debe salir, descártenlo.`
+      : `⏰ A las ${hora(p.hora)} toca «${p.titular}» y nadie lo ha aprobado. Si no lo aprueban, no sale.` });
     escribe(f, { ...p, recordado: true }); movimiento = true;
   } else if (falta < -10 * 60e3 && !p.vencido) {
     await tg('sendMessage', { chat_id: chat, ...responder, text: `⚠️ «${p.titular}» no salió a su hora porque nadie lo aprobó. Si lo aprueban ahora, sale en la próxima publicación.` });
