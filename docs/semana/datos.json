@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-17T02:02:57.387Z",
+  "actualizado": "2026-11-17T13:17:38.217Z",
   "posts": [
     {
       "externo": true,
@@ -1231,6 +1231,32 @@
       "fb_tipo": null,
       "reel_prueba": false,
       "historia": true
+    },
+    {
+      "carpeta": "noticias/2026-11-17-lisa-grammy",
+      "titular": "LiSA y BABYMETAL, nominadas al nuevo Grammy de pop asiático",
+      "franja": "jmusic",
+      "estado": "pendiente",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-17T17:30:00.000Z",
+      "programado": "2026-11-17T17:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-17-lisa-grammy/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-17-eternal-fool",
+      "titular": "The Eternal Fool's Words of Wisdom se estrenará el 9 de enero",
+      "franja": "anime",
+      "estado": "pendiente",
+      "temas": [],
+      "hora": "2026-11-17T23:30:00.000Z",
+      "programado": "2026-11-17T23:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-17-eternal-fool/slide-01.jpg",
+      "video": false
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
