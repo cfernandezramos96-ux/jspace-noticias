@@ -1,6 +1,5 @@
 {
   "vistos": {
-    "9a4e67fc2f": "2026-11-11T13:53:12.023Z",
     "6d8700bc85": "2026-11-11T21:57:48.059Z",
     "6549ca4118": "2026-11-12T07:57:02.805Z",
     "1cbc925de2": "2026-11-12T17:31:51.755Z",
@@ -30,7 +29,8 @@
     "3369e6553f": "2026-11-18T03:34:08.645Z",
     "29ae156155": "2026-11-18T03:34:08.645Z",
     "fa2e78ad48": "2026-11-18T05:42:21.351Z",
-    "efe518ad4c": "2026-11-18T07:57:02.457Z"
+    "efe518ad4c": "2026-11-18T07:57:02.457Z",
+    "67576be32b": "2026-11-18T13:55:36.012Z"
   },
   "pendientes": {
     "22aaba9036": {
@@ -68,8 +68,14 @@
       "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9tZ001Y3g3ZkVDemlqdmZyVG5rNjRjZ0dFeXpHZU9pZHFLZzg4Q3g0RUphVEp6N3QxZWw1V29JSDJwcjVpNFVBWjFkR18?oc=5",
       "fuente": "Natalie",
       "fecha": "2026-11-18T07:57:02.458Z"
+    },
+    "67576be32b": {
+      "titulo": "Jhon Álex Castaño y Álex Manga encabezan Cartel del Chupe y Guaro en Soacha: fecha y boletería - Pulzo",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNMEMyd2J6NkxTaV9CNGpmelA2MWNvdThHWnJqSlNNcXhxZjNwYWtQcjJsMUFCRk5GWUlxVVhnVGhyeWRleHN2ZGlWOWUtVFdfWmdzeHhDRWZIbGE2Y0NSdjZSTm10VlYzWXcxazFBcGVsSnY3X1NIbVFwZThWMVZyN1FpdTNqUHJDQzNGbm5pTnJaQmZsV1lkWEVYY0dTRm93Qi1kT9IBqgFBVV95cUxQSV9LOGo2UVdUQXBxQmpTRWR3cjJWOVVpRjlFTnhtejVtZ2xvU2tzR2pzNDlvbUZQdlV1ZlV0Qm92NGwxN183NkY0ZEp4Wi1HeTg1MF8xNjAxZnNtVVRyRUU5U0lnU2ZZcFc0MURwNktDS2s3c3pIRmJEbV83Z3BZQllPLV96YUhmWmNXbzJjYWRMRi1Sek1TUDBteElOSVpycldKTEliN3R0dw?oc=5",
+      "fuente": "Prensa de Colombia",
+      "fecha": "2026-11-18T13:55:36.012Z"
     }
   },
   "dia": "2026-11-18",
-  "avisos": 2
+  "avisos": 3
 }
