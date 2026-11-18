@@ -1,6 +1,5 @@
 {
   "vistos": {
-    "1a452a5434": "2026-11-11T03:31:31.553Z",
     "c794adb507": "2026-11-11T09:34:57.430Z",
     "9a4e67fc2f": "2026-11-11T13:53:12.023Z",
     "6d8700bc85": "2026-11-11T21:57:48.059Z",
@@ -28,21 +27,11 @@
     "b7747a93c2": "2026-11-16T03:44:03.818Z",
     "22aaba9036": "2026-11-17T17:42:01.408Z",
     "1ad0a8713c": "2026-11-17T23:30:02.516Z",
-    "cf13b59b16": "2026-11-18T01:57:59.262Z"
+    "cf13b59b16": "2026-11-18T01:57:59.262Z",
+    "3369e6553f": "2026-11-18T03:34:08.645Z",
+    "29ae156155": "2026-11-18T03:34:08.645Z"
   },
   "pendientes": {
-    "55b6f2a12f": {
-      "titulo": "Canela.TV estrena microseries de fantasía, ciencia ficción y romance anime en video vertical - Noticias CLAVE",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxON1JadmE0M3VQN1ZXZVUzdnYxb1NXT24tX044MF92SUxyYUZ6VjRBS1pzWG84bXpuT1pZc2hZaTVMNmpkbzFXaXB6b3p3YktmdXlOemlfYTNla0Zjd3djSzBtdzRNenpxNDh2aVhRS09Ud3R0cGo1UkZJMWFsV21la3dTN2VYNzVoSnJNa2ZSUm56eFktbFZaejMyYlo?oc=5",
-      "fuente": "Prensa de Colombia",
-      "fecha": "2026-11-16T02:05:38.397Z"
-    },
-    "cbad0e4e6c": {
-      "titulo": "LUNA SEA「TO RISE」ツアーの有明アリーナ公演を生中継、過去のライブ7本もオンエア - ナタリー",
-      "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBhSGlOOWxHTlJ6REU3eFJTZmtkZ01YdnY5Z0NuM1dhQVdVbEdWeVBUVG9OclJSX3pubzdHalpQZEkwbFAtWnhGMUUzaWs?oc=5",
-      "fuente": "Natalie",
-      "fecha": "2026-11-16T02:05:39.103Z"
-    },
     "b7747a93c2": {
       "titulo": "ミュージカル「進撃の巨人」バンコク公演決定、エレン役に佐藤知恩 - ナタリー",
       "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBISHMtaGYta1d3enRFVUp5SEZoWGp3dXZyUzhXcHZsdmhqb0ZJbE5oSHZsT1hfdlNuTGtTVHctTUhoOTNETUpSeVdmV2M?oc=5",
@@ -66,8 +55,14 @@
       "link": "https://animecorner.me/sakamoto-days-season-2-reveals-key-visual-main-trailer-january-18-premiere-creepy-nuts-theme-song-artist/",
       "fuente": "Anime Corner",
       "fecha": "2026-11-18T01:57:59.263Z"
+    },
+    "3369e6553f": {
+      "titulo": "Sakamoto Days Season 2's Trailer Unveils More Cast, Opening Song, January 18 Debut",
+      "link": "https://www.animenewsnetwork.com/news/2026-11-17/sakamoto-days-season-2-trailer-unveils-more-cast-opening-song-january-18-debut/.243925",
+      "fuente": "Anime News Network",
+      "fecha": "2026-11-18T03:34:08.646Z"
     }
   },
   "dia": "2026-11-17",
-  "avisos": 3
+  "avisos": 4
 }
