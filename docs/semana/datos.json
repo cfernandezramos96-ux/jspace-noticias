@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-18T17:31:40.644Z",
+  "actualizado": "2026-11-18T17:32:52.762Z",
   "posts": [
     {
       "externo": true,
@@ -1267,15 +1267,20 @@
       "carpeta": "noticias/2026-11-18-utada-intentions",
       "titular": "Utada Hikaru lanzará «Intentions» el 25 de noviembre",
       "franja": "jmusic",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic"
       ],
-      "hora": "2026-11-18T17:30:00Z",
+      "hora": "2026-11-18T17:32:21.413Z",
       "programado": "2026-11-18T17:30:00Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-18-utada-intentions/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/Df5DJ0SHfGx/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1876493337466130",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": false
     },
     {
       "carpeta": "noticias/2026-11-17-sakamoto-days-2",
