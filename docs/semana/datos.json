@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-18T02:00:21.116Z",
+  "actualizado": "2026-11-18T13:17:52.430Z",
   "posts": [
     {
       "externo": true,
@@ -1264,6 +1264,20 @@
       "video": false
     },
     {
+      "carpeta": "noticias/2026-11-18-utada-intentions",
+      "titular": "Utada Hikaru lanzará «Intentions» el 25 de noviembre",
+      "franja": "jmusic",
+      "estado": "pendiente",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-18T17:30:00Z",
+      "programado": "2026-11-18T17:30:00Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-18-utada-intentions/slide-01.jpg",
+      "video": false
+    },
+    {
       "carpeta": "noticias/2026-11-17-sakamoto-days-2",
       "titular": "Sakamoto Days temporada 2 se estrenará el 18 de enero",
       "franja": "extra",
@@ -1275,6 +1289,18 @@
       "programado": "2026-11-18T20:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-17-sakamoto-days-2/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-18-spice-wolf-t2",
+      "titular": "Spice and Wolf tendrá temporada 2 en enero de 2027",
+      "franja": "anime",
+      "estado": "pendiente",
+      "temas": [],
+      "hora": "2026-11-18T23:30:00Z",
+      "programado": "2026-11-18T23:30:00Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-18-spice-wolf-t2/slide-01.jpg",
       "video": false
     },
     {
