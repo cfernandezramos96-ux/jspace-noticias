@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-18T20:10:06.364Z",
+  "actualizado": "2026-11-18T23:31:32.786Z",
   "posts": [
     {
       "externo": true,
@@ -1300,13 +1300,18 @@
       "carpeta": "noticias/2026-11-18-spice-wolf-t2",
       "titular": "Spice and Wolf tendrá temporada 2 en enero de 2027",
       "franja": "anime",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [],
-      "hora": "2026-11-18T23:30:00Z",
+      "hora": "2026-11-18T23:31:02.529Z",
       "programado": "2026-11-18T23:30:00Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-18-spice-wolf-t2/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/Df5sMToFy76/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1876783524103778",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": false
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
