@@ -1,0 +1,31 @@
+{
+ "titular": "Spice and Wolf tendrá temporada 2 en enero de 2027",
+ "link": "https://animecorner.me/spice-and-wolf-season-2-announces-january-2027-premiere/",
+ "formato": "carrusel",
+ "franja": "anime",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "kv.jpg",
+   "encuadre": "50% 100%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "titulo": "**Spice and Wolf** estrenará su temporada 2 en enero de 2027",
+   "texto": "Holo y Lawrence regresan con nuevo visual y reparto completo."
+  },
+  {
+   "tipo": "poster",
+   "imagen": "feat.png"
+  },
+  {
+   "tipo": "texto",
+   "titulo": "El **equipo**",
+   "subtitulo": "Spice and Wolf: Merchant Meets the Wise Wolf",
+   "texto": "**Estudio:** Passione\n**Dirigen:** Nobuyoshi Nagayama y Takahiro Majima\n**Música:** Kevin Penkin\n**Holo:** Ami Koshimizu\n**Lawrence:** Jun Fukuyama"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}

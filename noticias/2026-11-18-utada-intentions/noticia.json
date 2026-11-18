@@ -1,0 +1,35 @@
+{
+ "titular": "Utada Hikaru lanzará «Intentions» el 25 de noviembre",
+ "link": "https://www.thefirsttimes.jp/news/0000921521/",
+ "formato": "carrusel",
+ "franja": "jmusic",
+ "tema": "jmusic",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "u1.jpg",
+   "encuadre": "58% 50%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "titulo": "**Utada Hikaru** lanzará «Intentions» el 25 de noviembre",
+   "texto": "El sencillo digital es el tema de «GOOD DAY EXPRESS», de JR Central."
+  },
+  {
+   "tipo": "historia",
+   "imagen": "u2.jpg",
+   "encuadre": "50% 50%",
+   "texto": "La **ilustración** de la portada es de Yukiko Noritake, artista japonesa radicada en París",
+   "nota": "«Intentions» · Utada Hikaru"
+  },
+  {
+   "tipo": "dato",
+   "antes": "Escucha anticipada en MUTEK.JP, en Tokio",
+   "dato": "20-22 nov",
+   "texto": "La canción podrá oírse en MoN Takanawa con equipos de alta fidelidad; desde el 6 de noviembre, cinco tiendas Sony de Japón ofrecen otra preescucha."
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
