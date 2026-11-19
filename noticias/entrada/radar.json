@@ -29,7 +29,8 @@
     "67576be32b": "2026-11-18T13:55:36.012Z",
     "7415ef4b04": "2026-11-19T05:40:40.662Z",
     "aa0efa5e8f": "2026-11-19T15:38:09.746Z",
-    "fb083d8d66": "2026-11-19T17:35:19.770Z"
+    "fb083d8d66": "2026-11-19T17:35:19.770Z",
+    "dfa5403af8": "2026-11-19T21:29:24.506Z"
   },
   "pendientes": {
     "1ad0a8713c": {
@@ -85,8 +86,14 @@
       "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQYlFtR3RFa0ltN09BOVprTUt0REVBZmRjT21vTFBLV2g2M200VV9leVhGLTFfZ1JEYkZzTThtenpFb1VneW9zaGZaelVPcERHN20yTVFPTS10b09aTWFfWDdOUTE0MnBHUnc1cTFhZG5CdUVVLXByQ1JNVXZ0YzBQMUNIVGpUN2hsMlVtWGdvODZuc3luVlZycElGNjB5d1o3R05ZRk1mMHctSHl3aHlJSC1fVDZ0dWJKM2VMVzNpYXNnZw?oc=5",
       "fuente": "Prensa de Colombia",
       "fecha": "2026-11-19T17:35:19.770Z"
+    },
+    "dfa5403af8": {
+      "titulo": "Una pasarela de anime en Bogotá: La moda se transforma con ‘Tributo’ - Universidad Distrital Francisco José de Caldas",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOb3NsaFRILU5qOW5MSW14c2pBV1BudWNHcU0xT3lzUDFXRGlkelp1emprb1poQkt2eWlnTE11a0d4Q2FqbUF2YUdUWEh0RlJQYzJMYmVBaUZteGdkczQ3V0I3am1fcDlfRzgtSHFQRHV0TVpSMWNmQlN2cDgxMG5qcXlUcjF3M3NQYVJCT1IweGVJSHprM0NyZDIxMEZSNkNWX2ZzOEFkeGlKNDE0b1RVN2ZlOXM?oc=5",
+      "fuente": "Prensa de Colombia",
+      "fecha": "2026-11-19T21:29:24.506Z"
     }
   },
   "dia": "2026-11-19",
-  "avisos": 3
+  "avisos": 4
 }
