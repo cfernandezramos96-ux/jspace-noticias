@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-19T20:10:45.711Z",
+  "actualizado": "2026-11-19T20:12:39.489Z",
   "posts": [
     {
       "externo": true,
@@ -1336,15 +1336,20 @@
       "carpeta": "noticias/2026-11-19-sailor-moon-usj",
       "titular": "Sailor Moon × USJ: comida y mercancía del Universal Cool Japan 2027",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "anime"
       ],
-      "hora": "2026-11-19T20:00:00.000Z",
+      "hora": "2026-11-19T20:12:03.918Z",
       "programado": "2026-11-19T20:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-19-sailor-moon-usj/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/Df76OlDF_JH/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1877903180658479",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": false
     },
     {
       "carpeta": "noticias/2026-11-19-kukuloop",
