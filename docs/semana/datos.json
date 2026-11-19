@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-19T20:14:26.023Z",
+  "actualizado": "2026-11-19T23:31:10.162Z",
   "posts": [
     {
       "externo": true,
@@ -1360,15 +1360,20 @@
       "carpeta": "noticias/2026-11-19-kukuloop",
       "titular": "KUKU-LOOP: The 100th Time's the Charm tendrá anime en 2027",
       "franja": "anime",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "anime"
       ],
-      "hora": "2026-11-19T23:30:00Z",
+      "hora": "2026-11-19T23:30:44.795Z",
       "programado": "2026-11-19T23:30:00Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-19-kukuloop/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/Df8Q9t6Car2/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1878051570643640",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": false
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
