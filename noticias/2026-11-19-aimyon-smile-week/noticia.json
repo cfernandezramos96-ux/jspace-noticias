@@ -1,0 +1,42 @@
+{
+ "titular": "Aimyon lanzará «Smile Week», su sexto álbum, el 27 de enero de 2027",
+ "link": "https://barks.jp/news/1105436",
+ "formato": "carrusel",
+ "franja": "jmusic",
+ "tema": "jmusic",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "a1.jpg",
+   "encuadre": "50% 30%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "titulo": "**Aimyon** lanzará «Smile Week», su sexto álbum",
+   "texto": "Llegará el 27 de enero de 2027, con 13 canciones."
+  },
+  {
+   "tipo": "historia",
+   "imagen": "a2.jpg",
+   "encuadre": "40% 30%",
+   "texto": "Será su primer **álbum de estudio** en dos años y cuatro meses, tras «Neko ni Jealousy»",
+   "nota": "«Smile Week» · Aimyon"
+  },
+  {
+   "tipo": "historia",
+   "imagen": "a3.jpg",
+   "encuadre": "50% 60%",
+   "texto": "La edición limitada incluirá un **CD acústico** grabado en el Museo Taro Okamoto",
+   "nota": "«Kaze to Ribbon 2» · Octubre de 2026"
+  },
+  {
+   "tipo": "dato",
+   "antes": "Antes del álbum, su concierto por los 10 años en el Nippon Budokan",
+   "dato": "30 nov y 1 dic",
+   "texto": "En febrero comenzará, además, la gira AIMYON TOUR 2027 – cosmic % –, que recorrerá Japón hasta julio."
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}

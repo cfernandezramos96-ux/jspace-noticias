@@ -1,0 +1,38 @@
+{
+ "titular": "KUKU-LOOP: The 100th Time's the Charm tendrá anime en 2027",
+ "link": "https://animecorner.me/kuku-loop-the-100th-times-the-charm-anime-announced-for-2027-reveals-main-cast-and-teaser-visual/",
+ "formato": "carrusel",
+ "franja": "anime",
+ "tema": "anime",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "frame.png",
+   "encuadre": "58% 50%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "etiqueta": "Anime · 2027",
+   "titulo": "**KUKU-LOOP** tendrá anime en 2027",
+   "texto": "Una joven revive su vida 99 veces antes de lograr cambiar su destino."
+  },
+  {
+   "tipo": "poster",
+   "imagen": "poster.png"
+  },
+  {
+   "tipo": "dato",
+   "antes": "Alphina es ejecutada una y otra vez. En su vida número",
+   "dato": "100",
+   "texto": "obtiene el poder de oír los pensamientos de quienes la rodean, y descubre que no todos la odian."
+  },
+  {
+   "tipo": "texto",
+   "titulo": "El **equipo**",
+   "texto": "**Animación:** XINGFU\n**Producción:** GOOD SMILE FILM\n**Director:** Baoning Wen\n**Alphina:** Ikumi Hasegawa\n**Lionett:** Kazuki Ura"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
