@@ -1,0 +1,44 @@
+{
+ "titular": "Golden Bomber estrena el MV de «Byoumei wo Tsukete kure»",
+ "link": "https://barks.jp/news/1105526",
+ "formato": "carrusel",
+ "franja": "extra",
+ "tema": "jmusic",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "portada.jpg",
+   "encuadre": "50% 0%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "etiqueta": "J-Music · Nuevo single",
+   "titulo": "**Golden Bomber** estrena el MV de «Byoumei wo Tsukete kure»",
+   "texto": "El single sale el 2 de diciembre."
+  },
+  {
+   "tipo": "video",
+   "imagen": "video1.jpg",
+   "encuadre": "50% 50%",
+   "titulo": "Así es el **video** de la canción",
+   "creditos": "Video: Golden Bomber"
+  },
+  {
+   "tipo": "historia",
+   "imagen": "grupo.jpg",
+   "encuadre": "50% 30%",
+   "texto": "Kiryuin sufre buscando **ponerle nombre a lo que siente**, mientras los otros tres bailan como locos",
+   "nota": "Sale como doble A con «Zandaka Zero», el 2 de diciembre"
+  },
+  {
+   "tipo": "historia",
+   "imagen": "video1.jpg",
+   "encuadre": "50% 40%",
+   "texto": "Las dos canciones llegan a **Taiko no Tatsujin** (arcade) el 2 de diciembre",
+   "nota": "El 4 de diciembre hay show gratis en Sunshine City, Ikebukuro"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
