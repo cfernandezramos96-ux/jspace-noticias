@@ -1,0 +1,39 @@
+{
+ "titular": "Sailor Moon × USJ: comida y mercancía del Universal Cool Japan 2027",
+ "link": "https://prtimes.jp/main/html/rd/p/000000890.000005761.html",
+ "formato": "carrusel",
+ "franja": "extra",
+ "tema": "anime",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "img1.jpg",
+   "encuadre": "62% 50%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "etiqueta": "",
+   "titulo": "Sailor Moon estrena **comida y mercancía** en USJ",
+   "texto": "Del 2 de diciembre al 5 de abril de 2027."
+  },
+  {
+   "tipo": "texto",
+   "titulo": "La **comida**",
+   "subtitulo": "Beverly Hills Boulangerie",
+   "texto": "Plato café de las guardianas, tiramisú de Tuxedo Mask, pastel del Cosmic Heart Compact y churritos de Sailor Moon y Luna.",
+   "imagen": "img6.jpg",
+   "proporcion": 1.2
+  },
+  {
+   "tipo": "texto",
+   "titulo": "La **mercancía**",
+   "subtitulo": "Tienda del Cinema 4-D",
+   "texto": "Camisetas, bolso con correa, set de bolsitas y el regreso del Universal Heart Compact y otros objetos de ediciones pasadas.",
+   "imagen": "img7.jpg",
+   "proporcion": 0.85
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
