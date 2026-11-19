@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-18T23:31:32.786Z",
+  "actualizado": "2026-11-19T05:57:59.456Z",
   "posts": [
     {
       "externo": true,
@@ -1312,6 +1312,20 @@
       "fb_tipo": null,
       "reel_prueba": false,
       "historia": false
+    },
+    {
+      "carpeta": "noticias/2026-11-19-sailor-moon-usj",
+      "titular": "Sailor Moon × USJ: comida y mercancía del Universal Cool Japan 2027",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-11-19T20:00:00.000Z",
+      "programado": "2026-11-19T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-19-sailor-moon-usj/slide-01.jpg",
+      "video": false
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
