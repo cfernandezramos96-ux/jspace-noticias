@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-19T20:12:39.489Z",
+  "actualizado": "2026-11-19T20:14:26.023Z",
   "posts": [
     {
       "externo": true,
@@ -1252,18 +1252,6 @@
       "historia": true
     },
     {
-      "carpeta": "noticias/2026-11-17-eternal-fool",
-      "titular": "The Eternal Fool's Words of Wisdom se estrenará el 9 de enero",
-      "franja": "anime",
-      "estado": "aprobado",
-      "temas": [],
-      "hora": "2026-11-17T23:30:00.000Z",
-      "programado": "2026-11-17T23:30:00.000Z",
-      "colaboradores": [],
-      "portada": "noticias/2026-11-17-eternal-fool/slide-01.jpg",
-      "video": false
-    },
-    {
       "carpeta": "noticias/2026-11-18-utada-intentions",
       "titular": "Utada Hikaru lanzará «Intentions» el 25 de noviembre",
       "franja": "jmusic",
@@ -1347,6 +1335,23 @@
       "video": false,
       "ig": "https://www.instagram.com/p/Df76OlDF_JH/",
       "fb": "https://www.facebook.com/100053164456324/posts/1877903180658479",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": false
+    },
+    {
+      "carpeta": "noticias/2026-11-17-eternal-fool",
+      "titular": "The Eternal Fool's Words of Wisdom se estrenará el 9 de enero",
+      "franja": "anime",
+      "estado": "publicado",
+      "temas": [],
+      "hora": "2026-11-19T20:12:42.594Z",
+      "programado": "2026-11-17T23:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-17-eternal-fool/slide-01.jpg",
+      "video": false,
+      "ig": "https://www.instagram.com/p/Df76TKXDwLI/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1877903923991738",
       "fb_tipo": null,
       "reel_prueba": false,
       "historia": false
