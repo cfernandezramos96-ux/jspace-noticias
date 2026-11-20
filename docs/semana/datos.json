@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-20T20:10:59.223Z",
+  "actualizado": "2026-11-20T23:31:14.064Z",
   "posts": [
     {
       "externo": true,
@@ -1398,15 +1398,20 @@
       "carpeta": "noticias/2026-11-20-bleach-fes",
       "titular": "BLEACH FES.: el evento por el final del anime será el 27 y 28 de febrero de 2027",
       "franja": "anime",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "anime"
       ],
-      "hora": "2026-11-20T23:30:00Z",
+      "hora": "2026-11-20T23:30:43.752Z",
       "programado": "2026-11-20T23:30:00Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-20-bleach-fes/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/Df-1wgajZzC/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1879268223855308",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": false
     },
     {
       "carpeta": "noticias/2026-11-20-fujii-recital-day2",
