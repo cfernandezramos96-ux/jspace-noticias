@@ -1,0 +1,43 @@
+{
+ "titular": "Fujii Kaze transmitirá también el Day 2 de su recital de piano; el Day 1 alcanzó unos 660 mil espectadores simultáneos",
+ "link": "https://www.oricon.co.jp/news/2494433/full/",
+ "formato": "carrusel",
+ "franja": "extra",
+ "tema": "jmusic",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "perfil.jpg",
+   "encuadre": "66% 50%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "etiqueta": "En vivo · YouTube",
+   "titulo": "**Fujii Kaze** transmitirá en vivo su recital de piano",
+   "texto": "La primera noche reunió a unos 660 mil espectadores a la vez."
+  },
+  {
+   "tipo": "historia",
+   "imagen": "domo.jpg",
+   "encuadre": "50% 50%",
+   "texto": "El **20 de noviembre** abrió en el **Tokyo Dome** un recital con su piano como único acompañante",
+   "nota": "Fujii Kaze Piano Recital · Day 1"
+  },
+  {
+   "tipo": "dato",
+   "antes": "Pico de espectadores simultáneos en el canal oficial de YouTube durante el Day 1",
+   "dato": "660 mil",
+   "texto": "Ante esa respuesta, la segunda noche también será transmitida."
+  },
+  {
+   "tipo": "historia",
+   "imagen": "panoramica.jpg",
+   "encuadre": "72% 50%",
+   "texto": "El **Day 2** comenzará el 21 de noviembre a las **4:00 a. m. en Colombia**, por YouTube",
+   "nota": "6:00 p. m. en Japón"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
