@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-20T17:30:06.290Z",
+  "actualizado": "2026-11-20T20:05:02.959Z",
   "posts": [
     {
       "externo": true,
@@ -1379,15 +1379,20 @@
       "carpeta": "noticias/2026-11-20-suchmos-autobahn",
       "titular": "Suchmos lanzará «Autobahn», su nuevo EP, el 3 de febrero de 2027",
       "franja": "jmusic",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic"
       ],
-      "hora": "2026-11-20T17:30:00Z",
+      "hora": "2026-11-20T20:04:26.046Z",
       "programado": "2026-11-20T17:30:00Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-20-suchmos-autobahn/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/Df-eJDCDwMq/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1879121493869981",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": false
     },
     {
       "carpeta": "noticias/2026-11-20-bleach-fes",
