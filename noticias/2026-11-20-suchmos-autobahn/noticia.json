@@ -1,0 +1,41 @@
+{
+ "titular": "Suchmos lanzará «Autobahn», su nuevo EP, el 3 de febrero de 2027",
+ "link": "https://www.billboard-japan.com/d_news/detail/167621",
+ "formato": "carrusel",
+ "franja": "jmusic",
+ "tema": "jmusic",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "banda-alta.jpg",
+   "encuadre": "45% 50%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "titulo": "**Suchmos** lanzará el EP «Autobahn»",
+   "texto": "Llegará el 3 de febrero de 2027."
+  },
+  {
+   "tipo": "poster",
+   "imagen": "autobahn.jpg"
+  },
+  {
+   "tipo": "texto",
+   "titulo": "«hi-liter», en el **cine**",
+   "subtitulo": "Tema de apertura de la película sobre la Selección de Japón",
+   "texto": "Se estrenó el 20 de noviembre, junto con su lanzamiento en plataformas.",
+   "imagen": "seleccion.jpg",
+   "proporcion": 1.78,
+   "encuadre": "50% 50%"
+  },
+  {
+   "tipo": "dato",
+   "antes": "Después llegará la gira de arenas BAY SIDE TOUR 2027, la primera en ocho años",
+   "dato": "8 shows",
+   "texto": "Desde marzo de 2027 recorrerá Sendai, Yokohama, Fukuoka y Kobe."
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "titular": "BLEACH FES.: el evento por el final del anime será el 27 y 28 de febrero de 2027",
+ "link": "https://www.thefirsttimes.jp/news/0000923342/",
+ "formato": "carrusel",
+ "franja": "anime",
+ "tema": "anime",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "kv.jpg",
+   "encuadre": "55% 50%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "etiqueta": "Evento final · Febrero 2027",
+   "titulo": "**BLEACH FES.** celebrará el final del anime",
+   "texto": "Será el 27 y 28 de febrero en Makuhari Messe, Chiba."
+  },
+  {
+   "tipo": "poster",
+   "imagen": "poster.jpg"
+  },
+  {
+   "tipo": "poster",
+   "imagen": "reparto.jpg"
+  },
+  {
+   "tipo": "dato",
+   "antes": "Será el evento de cierre más grande en la historia del anime",
+   "dato": "2 días",
+   "texto": "Con las voces de Ichigo, Rukia y Aizen, y la música de Tatsuya Kitani y jo0ji, entre otros."
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
