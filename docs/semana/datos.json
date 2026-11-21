@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-21T13:14:27.248Z",
+  "actualizado": "2026-11-21T17:31:09.086Z",
   "posts": [
     {
       "externo": true,
@@ -1436,15 +1436,20 @@
       "carpeta": "noticias/2026-11-21-creepynuts-album",
       "titular": "Creepy Nuts lanzará su nuevo álbum el 10 de febrero de 2027",
       "franja": "jmusic",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic"
       ],
-      "hora": "2026-11-21T17:30:00Z",
+      "hora": "2026-11-21T17:30:37.581Z",
       "programado": "2026-11-21T17:30:00Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-21-creepynuts-album/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DgAxV12lqW2/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1880166563765474",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": false
     },
     {
       "carpeta": "noticias/2026-11-21-tamon-t2",
