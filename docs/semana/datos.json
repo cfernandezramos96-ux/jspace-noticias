@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-21T17:31:09.086Z",
+  "actualizado": "2026-11-21T23:42:12.372Z",
   "posts": [
     {
       "externo": true,
@@ -1455,15 +1455,20 @@
       "carpeta": "noticias/2026-11-21-tamon-t2",
       "titular": "Tamon's B-Side tendrá temporada 2",
       "franja": "anime",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "anime"
       ],
-      "hora": "2026-11-21T23:30:00Z",
+      "hora": "2026-11-21T23:41:47.970Z",
       "programado": "2026-11-21T23:30:00Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-21-tamon-t2/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DgBb0Z1DfDg/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1880465220402275",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": false
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
