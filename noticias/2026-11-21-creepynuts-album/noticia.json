@@ -1,0 +1,17 @@
+{
+ "titular": "Creepy Nuts lanzará su nuevo álbum el 10 de febrero de 2027",
+ "link": "https://www.thefirsttimes.jp/news/0000923574/",
+ "formato": "carrusel",
+ "franja": "jmusic",
+ "tema": "jmusic",
+ "slides": [
+  {"tipo":"portada","imagen":"artista.jpg","encuadre":"52% 50%","posicion":"abajo","sombra":1,"tema":"oscuro","etiqueta":"Nuevo álbum · 2027",
+   "titulo":"**Creepy Nuts** lanzará nuevo álbum el 10 de febrero",
+   "texto":"Será el primero en casi dos años."},
+  {"tipo":"texto","titulo":"El tema de **Sakamoto Days**","subtitulo":"«Papa wa Imada ni Juvenile» llegará el 19 de enero",
+   "texto":"El sencillo digital será el opening de la segunda temporada, que se estrenará el 18 de enero.",
+   "imagen":"sakamoto.jpg","proporcion":0.72,"encuadre":"50% 30%"},
+  {"tipo":"dato","antes":"Lo anunciaron en el estreno de su primera película. Después, la gira nacional de arenas","dato":"12 shows","texto":"Comenzará el 27 de febrero de 2027 en Sendai."},
+  {"tipo":"cierre"}
+ ]
+}

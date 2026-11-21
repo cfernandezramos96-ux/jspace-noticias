@@ -1,0 +1,27 @@
+{
+ "titular": "Tamon's B-Side tendrá temporada 2",
+ "link": "https://animecorner.me/tamons-b-side-gets-season-2/",
+ "formato": "post",
+ "franja": "anime",
+ "tema": "anime",
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "mal.jpg",
+   "encuadre": "58% 50%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "titulo": "**Tamon's B-Side** tendrá temporada 2",
+   "subtitulo": "/Tamon-kun Ima Docchi!?/",
+   "texto": "La fecha de estreno aún no se ha anunciado."
+  },
+  {
+   "tipo": "poster",
+   "imagen": "ac.png"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}

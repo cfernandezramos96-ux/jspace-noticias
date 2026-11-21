@@ -14,3 +14,4 @@ artistas muy conocidos. Antes de añadir una, mira que no esté ya.
 - 11-16 · 2026 · (revisado) sin aniversario redondo verificado para el 16-19 de nov; Code Geass y Reborn! celebran 20 años en 2026 (sin fecha exacta confirmada)
 - 11-19 · 2026 · (revisado) sin aniversario redondo verificado para el 19-26 de nov
 - 11-20 · 2026 · (revisado) sin aniversario redondo verificado para el 20-27 de nov
+- 11-21 · 2026 · (revisado) sin aniversario redondo verificado para el 21-28 de nov
