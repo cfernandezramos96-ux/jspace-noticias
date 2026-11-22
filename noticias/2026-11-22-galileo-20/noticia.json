@@ -1,0 +1,14 @@
+{
+ "titular": "Galileo Galilei celebrará sus 20 años con un concierto en Zepp Haneda el 21 de marzo de 2027",
+ "link": "https://barks.jp/news/1106016",
+ "formato": "post",
+ "franja": "jmusic",
+ "tema": "jmusic",
+ "slides": [
+  {"tipo":"portada","imagen":"artista.jpg","encuadre":"26% 50%","posicion":"abajo","sombra":1,"tema":"oscuro","etiqueta":"20 años · Concierto",
+   "titulo":"**Galileo Galilei** celebrará sus 20 años con un concierto en Tokio",
+   "texto":"Será el 21 de marzo de 2027, en Zepp Haneda."},
+  {"tipo":"dato","antes":"El anuncio llegó en la última fecha de su gira «Rise of The Man». Habrá dos funciones, a las 17:00 y a las 18:00, y será el inicio de una gira nacional por el aniversario","dato":"21 mar 2027","texto":"Zepp Haneda, Tokio."},
+  {"tipo":"cierre"}
+ ]
+}

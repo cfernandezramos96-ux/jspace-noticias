@@ -1,0 +1,90 @@
+{
+ "titular": "anime",
+ "link": "",
+ "formato": "semanal",
+ "franja": "extra",
+ "tema": "anime",
+ "slides": [
+  {
+   "tipo": "semanal",
+   "imagen": "n1.jpg",
+   "encuadre": "50% 30%",
+   "titulo": "Lo más\n**destacado**\nde la semana",
+   "tema": "Anime",
+   "rango": "Semana 47 · 16 al 22 de noviembre"
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n0.jpg",
+   "encuadre": "30% 50%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "titulo": "Tite Kubo despide el anime de **Bleach** con un nuevo Ichigo",
+   "texto": "Un dibujo inédito para cerrar la adaptación."
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n1.jpg",
+   "encuadre": "50% 30%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "claro",
+   "titulo": "**Skip and Loafer** revela visual y tráiler de su temporada 2",
+   "texto": "Mitsumi y Shima regresarán en abril de 2027."
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n2.jpg",
+   "encuadre": "50% 100%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "titulo": "**Spice and Wolf** estrenará su temporada 2 en enero de 2027",
+   "texto": "Holo y Lawrence regresan con nuevo visual."
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n3.png",
+   "encuadre": "35% 50%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "titulo": "**The Eternal Fool's Words of Wisdom** se estrenará el 9 de enero",
+   "texto": "Llegará por Crunchyroll, con animación de Studio Elle."
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n4.jpg",
+   "encuadre": "55% 50%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "titulo": "**BLEACH FES.** celebrará el final del anime",
+   "texto": "Será el 27 y 28 de febrero en Makuhari Messe."
+  },
+  {
+   "tipo": "portada",
+   "imagen": "n5.png",
+   "encuadre": "58% 50%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "titulo": "**KUKU-LOOP** tendrá anime en 2027",
+   "texto": "Una joven revive su vida 99 veces antes de cambiar su destino."
+  },
+  {
+   "tipo": "mosaico",
+   "imagenes": [
+    "n1.jpg",
+    "n2.jpg",
+    "n4.jpg",
+    "n0.jpg"
+   ],
+   "texto": "¿Cuál fue tu **favorita**?"
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}

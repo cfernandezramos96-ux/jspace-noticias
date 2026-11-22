@@ -1,0 +1,15 @@
+{
+ "titular": "Bride of the Barrier Master se estrenará el 6 de enero con opening de Naniwa Danshi",
+ "link": "https://animecorner.me/bride-of-the-barrier-master-anime-reveals-main-trailer-visual-additional-cast-opening-theme-song-artist/",
+ "formato": "post",
+ "franja": "anime",
+ "tema": "anime",
+ "temas": ["anime","jmusic"],
+ "slides": [
+  {"tipo":"portada","imagen":"visual.jpg","encuadre":"50% 30%","posicion":"abajo","sombra":1,"tema":"oscuro","etiqueta":"Estreno · 6 de enero",
+   "titulo":"**Bride of the Barrier Master** se estrenará el 6 de enero",
+   "texto":"Naniwa Danshi interpretará el opening, «Ichirinka»."},
+  {"tipo":"poster","imagen":"escena.png"},
+  {"tipo":"cierre"}
+ ]
+}
