@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-22T23:42:49.416Z",
+  "actualizado": "2026-11-22T23:43:13.555Z",
   "posts": [
     {
       "externo": true,
@@ -1490,20 +1490,6 @@
       "historia": false
     },
     {
-      "carpeta": "noticias/2026-11-22-resumen-jmusic",
-      "titular": "jmusic",
-      "franja": "extra",
-      "estado": "aprobado",
-      "temas": [
-        "jmusic"
-      ],
-      "hora": "2026-11-22T20:00:00Z",
-      "programado": "2026-11-22T20:00:00Z",
-      "colaboradores": [],
-      "portada": "noticias/2026-11-22-resumen-jmusic/slide-01.jpg",
-      "video": false
-    },
-    {
       "carpeta": "noticias/2026-11-22-kekkaishi",
       "titular": "Bride of the Barrier Master se estrenará el 6 de enero con opening de Naniwa Danshi",
       "franja": "anime",
@@ -1519,6 +1505,25 @@
       "video": false,
       "ig": "https://www.instagram.com/p/DgEAlhvFGmF/",
       "fb": "https://www.facebook.com/100053164456324/posts/1881685743613556",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": false
+    },
+    {
+      "carpeta": "noticias/2026-11-22-resumen-jmusic",
+      "titular": "jmusic",
+      "franja": "extra",
+      "estado": "publicado",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-22T23:42:34.382Z",
+      "programado": "2026-11-22T20:00:00Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-22-resumen-jmusic/slide-01.jpg",
+      "video": false,
+      "ig": "https://www.instagram.com/p/DgEAsh4F0Vt/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1881687006946763",
       "fb_tipo": null,
       "reel_prueba": false,
       "historia": false
