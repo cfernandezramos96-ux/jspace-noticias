@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-22T23:40:31.442Z",
+  "actualizado": "2026-11-22T23:42:49.416Z",
   "posts": [
     {
       "externo": true,
@@ -1507,16 +1507,21 @@
       "carpeta": "noticias/2026-11-22-kekkaishi",
       "titular": "Bride of the Barrier Master se estrenará el 6 de enero con opening de Naniwa Danshi",
       "franja": "anime",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "anime",
         "jmusic"
       ],
-      "hora": "2026-11-22T23:30:00Z",
+      "hora": "2026-11-22T23:41:32.855Z",
       "programado": "2026-11-22T23:30:00Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-22-kekkaishi/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DgEAlhvFGmF/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1881685743613556",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": false
     },
     {
       "carpeta": "noticias/2026-11-22-resumen-anime",
