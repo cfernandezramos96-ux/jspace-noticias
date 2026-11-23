@@ -19,7 +19,8 @@
     "a40a94c6d7": "2026-11-21T15:25:56.100Z",
     "d778823b16": "2026-11-23T03:38:00.177Z",
     "b639cb0cc1": "2026-11-23T19:43:00.477Z",
-    "3feac50271": "2026-11-23T21:30:05.473Z"
+    "3feac50271": "2026-11-23T21:30:05.473Z",
+    "bd28d6b1c4": "2026-11-23T23:30:25.773Z"
   },
   "pendientes": {
     "d778823b16": {
@@ -39,8 +40,14 @@
       "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQcV9nOFNyNllrR2Z4NFdhdjNHNUptd0paOGo0Z2lxM19UQzd1Q1o4MUJKaWtXeWM2ZXFXVWhvTUExUG1ISkhuZTgxcmcwSlRmRHdjQjZhb0UyT1dMZWVkNGJlOFMyVl84cHlwclYxd0RSLUwwaTVteEZnMkdDT1hoRDJWNGQzMTYwZjhzWWw4ZG9kaVhiWHhsZmxST0s5SGs5UFZQZTlQV0NiaUI0UXNlUU1IbkI2T0lxZVE?oc=5",
       "fuente": "Prensa de Colombia",
       "fecha": "2026-11-23T21:30:05.473Z"
+    },
+    "bd28d6b1c4": {
+      "titulo": "Prometió no ver anime, pero llama a hijos por ‘Black Clover’ - Uruguay Al Día",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNSGFMZTU3OU5lNWtKSUkyZHZDZGxiR1ZKU1Q3VHI5dzVCMi0yRWpxRlREOUhCNjJxLWpmcnpBZXotb3JhaVRyY2pNM1czdnoyTVFUSDQyOVZvME9nYjRob2owTUFvT214ODFlMGNFMmVNVlUzMWRnRHdDeXBLVHByUG1rOGtUaWF3b1N2V29Oaw?oc=5",
+      "fuente": "Prensa de Colombia",
+      "fecha": "2026-11-23T23:30:25.773Z"
     }
   },
   "dia": "2026-11-23",
-  "avisos": 2
+  "avisos": 3
 }
