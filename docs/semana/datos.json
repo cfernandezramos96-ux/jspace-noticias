@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-23T02:02:09.068Z",
+  "actualizado": "2026-11-23T13:23:51.250Z",
   "posts": [
     {
       "externo": true,
@@ -1546,6 +1546,36 @@
       "fb_tipo": null,
       "reel_prueba": false,
       "historia": false
+    },
+    {
+      "carpeta": "noticias/2026-11-23-spitz-kettle",
+      "titular": "Spitz lanzará «kettle», su álbum número 18, el 25 de noviembre",
+      "franja": "jmusic",
+      "estado": "pendiente",
+      "temas": [
+        "jmusic",
+        "anime"
+      ],
+      "hora": "2026-11-23T17:30:00Z",
+      "programado": "2026-11-23T17:30:00Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-23-spitz-kettle/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-23-sakamoto-t2",
+      "titular": "Sakamoto Days temporada 2 se estrenará el 18 de enero con opening de Creepy Nuts",
+      "franja": "anime",
+      "estado": "pendiente",
+      "temas": [
+        "anime",
+        "jmusic"
+      ],
+      "hora": "2026-11-23T23:30:00Z",
+      "programado": "2026-11-23T23:30:00Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-23-sakamoto-t2/slide-01.jpg",
+      "video": false
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
