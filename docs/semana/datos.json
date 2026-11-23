@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-23T21:30:36.507Z",
+  "actualizado": "2026-11-23T23:31:19.896Z",
   "posts": [
     {
       "externo": true,
@@ -1571,16 +1571,21 @@
       "carpeta": "noticias/2026-11-23-sakamoto-t2",
       "titular": "Sakamoto Days temporada 2 se estrenará el 18 de enero con opening de Creepy Nuts",
       "franja": "anime",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "anime",
         "jmusic"
       ],
-      "hora": "2026-11-23T23:30:00Z",
+      "hora": "2026-11-23T23:30:45.718Z",
       "programado": "2026-11-23T23:30:00Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-23-sakamoto-t2/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DgGkIxjlICY/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1882864733495657",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": false
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
