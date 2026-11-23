@@ -8,6 +8,11 @@ instagram_manage_insights).
 su alcance viene en parte de la otra cuenta) y los reels de prueba (`tipo: VIDEO`; solo los ven no seguidores). Compara
 carruseles sin collab contra carruseles sin collab. No juzgues los posts con menos de un día.
 
+## 2026-11-23 · informe de la semana del 16 al 22 de noviembre (22 piezas)
+- **Lo que rindió:** reel de Skip and Loafer T2 341 de alcance; MUCC 30 años 82; Tite Kubo 33. Todo lo demás, 4-16.
+- **Lo que no:** resúmenes del domingo (8 y 4; tercera semana mala) y los carruseles de nombres grandes sin video ni collab.
+- **Decisiones:** retirar resúmenes; reel solo con video oficial; collab y aniversarios redondos primero.
+
 ## 2026-11-16 · informe de la semana del 9 al 15 de noviembre (30 piezas)
 - **Lo que rindió:** Helian Evans × LADYBABY (collab con helianevans) 8.161 de alcance y 295 likes; reel de ano 311;
   reel de Helian 178; reel de Steel Ball Run 128. Todo lo demás, 2-88.
