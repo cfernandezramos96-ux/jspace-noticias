@@ -1,0 +1,15 @@
+{
+ "titular": "Spitz lanzará «kettle», su álbum número 18, el 25 de noviembre",
+ "link": "https://barks.jp/news/1106351",
+ "formato": "carrusel",
+ "franja": "jmusic",
+ "temas": ["jmusic", "anime"],
+ "slides": [
+  {"tipo":"portada","imagen":"jacket.jpg","encuadre":"100% 40%","posicion":"abajo","sombra":1,"tema":"oscuro","etiqueta":"Nuevo álbum · 25 nov",
+   "titulo":"**Spitz** lanzará «kettle», su álbum número 18",
+   "texto":"Llegará el 25 de noviembre, con trece canciones."},
+  {"tipo":"poster","imagen":"artista.jpg"},
+  {"tipo":"dato","antes":"Entre sus trece temas figura el opening de SPY×FAMILY Temporada 3. La gira «SPITZ JAMBOREE TOUR 2027» comenzará el 6 de marzo en Yokohama Arena","dato":"28 funciones","texto":"En 13 ciudades de Japón, hasta el 20 de junio."},
+  {"tipo":"cierre"}
+ ]
+}

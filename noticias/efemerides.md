@@ -16,3 +16,4 @@ artistas muy conocidos. Antes de añadir una, mira que no esté ya.
 - 11-20 · 2026 · (revisado) sin aniversario redondo verificado para el 20-27 de nov
 - 11-21 · 2026 · (revisado) sin aniversario redondo verificado para el 21-28 de nov
 - 11-22 · 2026 · (revisado) sin aniversario redondo verificado para el 22-29 de nov; Paprika (Satoshi Kon) cumple 20 años el 25 de nov (estreno en cines de Japón 25-11-2006, por confirmar con fuente primaria)
+- 11-23 · 2026 · (revisado) sin aniversario redondo verificado para hoy; Paprika (25 nov, 20 años) por confirmar
