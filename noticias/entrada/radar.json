@@ -1,7 +1,5 @@
 {
   "vistos": {
-    "55b6f2a12f": "2026-11-16T02:05:38.397Z",
-    "cbad0e4e6c": "2026-11-16T02:05:38.397Z",
     "b7747a93c2": "2026-11-16T03:44:03.818Z",
     "22aaba9036": "2026-11-17T17:42:01.408Z",
     "1ad0a8713c": "2026-11-17T23:30:02.516Z",
@@ -19,7 +17,8 @@
     "820b734f96": "2026-11-20T05:41:14.170Z",
     "79c2ef2dd3": "2026-11-20T15:36:36.783Z",
     "bc67ec2422": "2026-11-20T15:36:36.783Z",
-    "a40a94c6d7": "2026-11-21T15:25:56.100Z"
+    "a40a94c6d7": "2026-11-21T15:25:56.100Z",
+    "d778823b16": "2026-11-23T03:38:00.177Z"
   },
   "pendientes": {
     "a40a94c6d7": {
@@ -27,8 +26,14 @@
       "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9TajFQeS1pVTVNSUk5UFhtaUFCeFNkRVZnQS1fWWF6UktteUUxMzd4dm1GT1RUQjJWSWk5ZG92eklMZmNyWURpR2wxQUI?oc=5",
       "fuente": "Natalie",
       "fecha": "2026-11-21T15:25:56.101Z"
+    },
+    "d778823b16": {
+      "titulo": "MAN WITH A MISSIONの新アルバム内容解禁、Tokyo Tanakaはサーカス団の座長 - ナタリー",
+      "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE8weWRfaFR1dDVmdERRd09DNjhSZzJiVktKdVBnYmw3SkZBSGM4d3YydWNqM2FRcWstajdJTXBHWkFWSzU4ZllmT2ZrUWM?oc=5",
+      "fuente": "Natalie",
+      "fecha": "2026-11-23T03:38:00.177Z"
     }
   },
   "dia": "2026-11-22",
-  "avisos": 0
+  "avisos": 1
 }
