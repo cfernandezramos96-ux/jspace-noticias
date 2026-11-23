@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-23T17:30:26.596Z",
+  "actualizado": "2026-11-23T17:32:30.217Z",
   "posts": [
     {
       "externo": true,
@@ -1551,16 +1551,21 @@
       "carpeta": "noticias/2026-11-23-spitz-kettle",
       "titular": "Spitz lanzará «kettle», su álbum número 18, el 25 de noviembre",
       "franja": "jmusic",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic",
         "anime"
       ],
-      "hora": "2026-11-23T17:30:00Z",
+      "hora": "2026-11-23T17:32:06.609Z",
       "programado": "2026-11-23T17:30:00Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-23-spitz-kettle/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DgF7GlklMbU/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1882583700190427",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": false
     },
     {
       "carpeta": "noticias/2026-11-23-sakamoto-t2",
