@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-24T17:30:11.347Z",
+  "actualizado": "2026-11-24T17:32:16.270Z",
   "posts": [
     {
       "externo": true,
@@ -1591,16 +1591,21 @@
       "carpeta": "noticias/2026-11-24-higedan-pokemon",
       "titular": "Official HIGE DANdism escribe «Evergreen» para el MV de los 30 años de Pokémon",
       "franja": "jmusic",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "jmusic",
         "anime"
       ],
-      "hora": "2026-11-24T17:30:00Z",
+      "hora": "2026-11-24T17:31:46.549Z",
       "programado": "2026-11-24T17:30:00Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-24-higedan-pokemon/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DgIf28gF5ih/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1883841546731309",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": false
     },
     {
       "carpeta": "noticias/2026-11-24-mahoyo-secuela",
