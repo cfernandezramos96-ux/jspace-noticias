@@ -1,0 +1,46 @@
+{
+ "titular": "Official HIGE DANdism escribe «Evergreen» para el MV de los 30 años de Pokémon",
+ "link": "https://www.thefirsttimes.jp/news/0000924900/",
+ "formato": "carrusel",
+ "franja": "jmusic",
+ "temas": [
+  "jmusic",
+  "anime"
+ ],
+ "reel_prueba": false,
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "grupo.jpg",
+   "encuadre": "50% 50%",
+   "posicion": "abajo",
+   "sombra": 1,
+   "tema": "oscuro",
+   "titulo": "**HIGE DANdism** escribe «Evergreen» para Pokémon",
+   "texto": "Naoko Yamada dirigirá el MV; llegará el 30 de noviembre."
+  },
+  {
+   "tipo": "historia",
+   "imagen": "amarillo.jpg",
+   "encuadre": "40% 30%",
+   "texto": "El video será animado por **MADHOUSE** y dirigido por **Naoko Yamada**",
+   "nota": "Pokémon Special Music Video"
+  },
+  {
+   "tipo": "historia",
+   "imagen": "jacket.jpg",
+   "encuadre": "50% 50%",
+   "texto": "La canción llegará a las plataformas el **1 de diciembre**, como sencillo digital",
+   "nota": "«Evergreen» · Official HIGE DANdism"
+  },
+  {
+   "tipo": "dato",
+   "antes": "El MV se estrenará en el canal oficial de Pokémon en YouTube el 30 de noviembre, a las 23:00 en Japón; es decir, a las",
+   "dato": "9:00 a. m.",
+   "texto": "en Colombia."
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}

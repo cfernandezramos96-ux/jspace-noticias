@@ -1,0 +1,40 @@
+{
+ "titular": "Witch on the Holy Night tendrá secuela en anime",
+ "link": "https://www.oricon.co.jp/news/2494865/full/",
+ "formato": "carrusel",
+ "franja": "anime",
+ "reel_prueba": false,
+ "slides": [
+  {
+   "tipo": "portada",
+   "imagen": "noche.jpg",
+   "encuadre": "50% 50%",
+   "posicion": "arriba",
+   "sombra": 1,
+   "tema": "oscuro",
+   "etiqueta": "Secuela confirmada",
+   "titulo": "**Witch on the Holy Night** tendrá secuela en anime",
+   "texto": "La anunciaron cuatro días después del estreno de la película."
+  },
+  {
+   "tipo": "poster",
+   "imagen": "poster.jpg"
+  },
+  {
+   "tipo": "historia",
+   "imagen": "rayos.jpg",
+   "encuadre": "50% 40%",
+   "texto": "La película de **ufotable** se estrenó en Japón el **20 de noviembre**",
+   "nota": "Mahoutsukai no Yoru | 2026"
+  },
+  {
+   "tipo": "dato",
+   "antes": "La primera película reunió a 301.630 espectadores en sus cuatro primeros días y recaudó",
+   "dato": "¥526 M",
+   "texto": "La secuela aún no tiene fecha ni más detalles."
+  },
+  {
+   "tipo": "cierre"
+  }
+ ]
+}
