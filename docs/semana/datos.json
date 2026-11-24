@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-23T23:31:19.896Z",
+  "actualizado": "2026-11-24T13:20:11.941Z",
   "posts": [
     {
       "externo": true,
@@ -1586,6 +1586,33 @@
       "fb_tipo": null,
       "reel_prueba": false,
       "historia": false
+    },
+    {
+      "carpeta": "noticias/2026-11-24-higedan-pokemon",
+      "titular": "Official HIGE DANdism escribe «Evergreen» para el MV de los 30 años de Pokémon",
+      "franja": "jmusic",
+      "estado": "pendiente",
+      "temas": [
+        "jmusic",
+        "anime"
+      ],
+      "hora": "2026-11-24T17:30:00Z",
+      "programado": "2026-11-24T17:30:00Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-24-higedan-pokemon/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-24-mahoyo-secuela",
+      "titular": "Witch on the Holy Night tendrá secuela en anime",
+      "franja": "anime",
+      "estado": "pendiente",
+      "temas": [],
+      "hora": "2026-11-24T23:30:00Z",
+      "programado": "2026-11-24T23:30:00Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-24-mahoyo-secuela/slide-01.jpg",
+      "video": false
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
