@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-24T23:30:13.329Z",
+  "actualizado": "2026-11-24T23:32:31.229Z",
   "posts": [
     {
       "externo": true,
@@ -1611,13 +1611,18 @@
       "carpeta": "noticias/2026-11-24-mahoyo-secuela",
       "titular": "Witch on the Holy Night tendrá secuela en anime",
       "franja": "anime",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [],
-      "hora": "2026-11-24T23:30:00Z",
+      "hora": "2026-11-24T23:31:49.176Z",
       "programado": "2026-11-24T23:30:00Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-24-mahoyo-secuela/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DgJJDcQjItm/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1884133383368792",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": false
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
