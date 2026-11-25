@@ -1,0 +1,21 @@
+{
+  "formato": "imagen",
+  "franja": "extra",
+  "efemeride": true,
+  "reel_prueba": false,
+  "titular": "Feliz cumpleaños, Kazuya Nakai, la voz de Zoro",
+  "link": "https://www.crank-in.net/person/8607",
+  "temas": [
+    "anime"
+  ],
+  "slides": [
+    {
+      "tipo": "efemeride",
+      "imagen": "nakai.jpg",
+      "encuadre": "50% 8%",
+      "etiqueta": "Cumpleaños",
+      "titulo": "Feliz cumpleaños, **Kazuya Nakai**",
+      "subtitulo": "la voz de Roronoa Zoro · cumple 59 años"
+    }
+  ]
+}

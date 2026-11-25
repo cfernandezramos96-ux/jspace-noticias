@@ -1,0 +1,21 @@
+{
+  "formato": "imagen",
+  "franja": "extra",
+  "efemeride": true,
+  "reel_prueba": false,
+  "titular": "Feliz cumpleaños, Ringo Sheena",
+  "link": "https://www.billboard-japan.com/d_news/detail/156366/2",
+  "temas": [
+    "jmusic"
+  ],
+  "slides": [
+    {
+      "tipo": "efemeride",
+      "imagen": "ringo.jpg",
+      "encuadre": "50% 10%",
+      "etiqueta": "Cumpleaños",
+      "titulo": "Feliz cumpleaños, **Ringo Sheena**",
+      "subtitulo": "Tokyo Jihen · cumple 48 años"
+    }
+  ]
+}

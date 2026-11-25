@@ -7,8 +7,8 @@
    "tipo": "aniversario",
    "que": "Paprika de Satoshi Kon cumple 20 años",
    "detalle": "estreno en cines de Japón, 25-11-2006",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "programada",
+   "carpeta": "noticias/2026-11-25-paprika-20"
   },
   {
    "fecha": "2026-11-25",
@@ -16,8 +16,8 @@
    "tipo": "cantante",
    "que": "cumpleaños de Ringo Sheena",
    "detalle": "cumple 48 años · cantante y líder de Tokyo Jihen",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "programada",
+   "carpeta": "noticias/2026-11-25-ringo-sheena-cumple"
   },
   {
    "fecha": "2026-11-25",
@@ -25,8 +25,8 @@
    "tipo": "seiyuu",
    "que": "cumpleaños de Kazuya Nakai",
    "detalle": "cumple 59 años · seiyuu de Roronoa Zoro",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "programada",
+   "carpeta": "noticias/2026-11-25-kazuya-nakai-cumple"
   },
   {
    "fecha": "2026-11-29",

@@ -1,0 +1,21 @@
+{
+  "formato": "imagen",
+  "franja": "extra",
+  "efemeride": true,
+  "reel_prueba": false,
+  "titular": "Paprika, de Satoshi Kon, cumple 20 años",
+  "link": "https://animeanime.jp/article/2026/06/01/99533.html",
+  "temas": [
+    "anime"
+  ],
+  "slides": [
+    {
+      "tipo": "efemeride",
+      "imagen": "paprika.jpg",
+      "encuadre": "50% 15%",
+      "etiqueta": "Aniversario",
+      "titulo": "**Paprika** cumple 20 años",
+      "subtitulo": "Satoshi Kon · se estrenó el 25 de noviembre de 2006"
+    }
+  ]
+}
