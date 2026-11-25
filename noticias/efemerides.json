@@ -46,8 +46,8 @@
    "pendiente": true,
    "fuente": "The First Times, Renote",
    "confianza": "media",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "programada",
+   "carpeta": "noticias/2026-11-29-suzuka-cumple"
   },
   {
    "fecha": "2026-11-30",
@@ -85,8 +85,8 @@
    "tipo": "seiyuu",
    "que": "cumpleaños de Inori Minase",
    "detalle": "cumple 31 años · seiyuu de Rem (Re:Zero)",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "programada",
+   "carpeta": "noticias/2026-12-02-inori-minase-cumple"
   },
   {
    "fecha": "2026-12-04",
@@ -232,8 +232,8 @@
    "pendiente": true,
    "fuente": "The First Times, kprofiles",
    "confianza": "media",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "programada",
+   "carpeta": "noticias/2026-12-22-mizyu-cumple"
   },
   {
    "fecha": "2026-12-24",
@@ -241,8 +241,8 @@
    "tipo": "personaje",
    "que": "cumpleaños de Tony Tony Chopper",
    "detalle": "One Piece",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "programada",
+   "carpeta": "noticias/2026-12-24-chopper-cumple"
   },
   {
    "fecha": "2026-12-25",

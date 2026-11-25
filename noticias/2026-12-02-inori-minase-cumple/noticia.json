@@ -1,0 +1,22 @@
+{
+  "formato": "imagen",
+  "franja": "extra",
+  "efemeride": true,
+  "reel_prueba": false,
+  "titular": "Feliz cumpleaños, Inori Minase",
+  "link": "https://www.inoriminase.com/profile/",
+  "temas": [
+    "anime",
+    "jmusic"
+  ],
+  "slides": [
+    {
+      "tipo": "efemeride",
+      "imagen": "inori.jpg",
+      "encuadre": "50% 0%",
+      "etiqueta": "Cumpleaños",
+      "titulo": "Feliz cumpleaños, **Inori Minase**",
+      "subtitulo": "Seiyuu · cumple 31 años"
+    }
+  ]
+}

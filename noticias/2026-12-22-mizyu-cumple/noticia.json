@@ -1,0 +1,21 @@
+{
+  "formato": "imagen",
+  "franja": "extra",
+  "efemeride": true,
+  "reel_prueba": false,
+  "titular": "Feliz cumpleaños, MIZYU",
+  "link": "https://atarashiigakko.com/profile/",
+  "temas": [
+    "jmusic"
+  ],
+  "slides": [
+    {
+      "tipo": "efemeride",
+      "imagen": "mizyu.jpg",
+      "arriba": 0,
+      "etiqueta": "Cumpleaños",
+      "titulo": "Feliz cumpleaños, **MIZYU**",
+      "subtitulo": "Atarashii Gakko! · cumple 28 años"
+    }
+  ]
+}

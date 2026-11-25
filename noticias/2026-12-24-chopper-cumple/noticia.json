@@ -1,0 +1,21 @@
+{
+  "formato": "imagen",
+  "franja": "extra",
+  "efemeride": true,
+  "reel_prueba": false,
+  "titular": "Feliz cumpleaños, Tony Tony Chopper",
+  "link": "https://animecorner.me/chopper-lives-in-the-modern-world-through-new-one-piece-project-choppers/",
+  "temas": [
+    "anime"
+  ],
+  "slides": [
+    {
+      "tipo": "efemeride",
+      "imagen": "chopper.jpg",
+      "arriba": 0,
+      "etiqueta": "Cumpleaños",
+      "titulo": "Feliz cumpleaños, **Tony Tony Chopper**",
+      "subtitulo": "One Piece · 24 de diciembre"
+    }
+  ]
+}
