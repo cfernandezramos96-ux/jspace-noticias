@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-25T11:11:02.353Z",
+  "actualizado": "2026-11-25T13:18:44.824Z",
   "posts": [
     {
       "externo": true,
@@ -1639,6 +1639,18 @@
       "video": false
     },
     {
+      "carpeta": "noticias/2026-11-25-bandmaid-budokan",
+      "titular": "BAND-MAID cierra su gira en el Budokan y pausará los conciertos en 2027",
+      "franja": "jmusic",
+      "estado": "pendiente",
+      "temas": [],
+      "hora": "2026-11-25T17:30:00Z",
+      "programado": "2026-11-25T17:30:00Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-25-bandmaid-budokan/slide-01.jpg",
+      "video": false
+    },
+    {
       "carpeta": "noticias/2026-11-25-ringo-sheena-cumple",
       "titular": "Feliz cumpleaños, Ringo Sheena",
       "franja": "extra",
@@ -1650,6 +1662,21 @@
       "programado": "2026-11-25T20:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-25-ringo-sheena-cumple/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-25-historie",
+      "titular": "Historie llegará en enero con opening de Yorushika",
+      "franja": "anime",
+      "estado": "pendiente",
+      "temas": [
+        "anime",
+        "jmusic"
+      ],
+      "hora": "2026-11-25T23:30:00Z",
+      "programado": "2026-11-25T23:30:00Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-25-historie/slide-01.jpg",
       "video": false
     },
     {
