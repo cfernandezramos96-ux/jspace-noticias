@@ -131,15 +131,14 @@ diseñar, confirma la fecha en una fuente seria (Wikipedia en japonés, web ofic
 márcala `"estado": "descartada"` con una `nota` y avísalo en el mensaje del día. Nunca más «por confirmar» sin hacer
 nada: se confirma ese mismo día o se descarta (25 nov 2026: Paprika 20 años se quedó en «por confirmar» y no salió). Horas, en este orden, la primera libre: entre semana 15:00, 21:00, 10:30, 13:30, 17:00; los domingos (15:00 y
 21:00 son de los resúmenes) 10:30, 13:30, 17:00, 20:00, 11:30. Nunca una hora que ya pasó ni a menos de una hora. Al programarla, `"estado": "programada"` y su `carpeta` en el json.
-**Formato de las efemérides (Kazuo, 25 nov 2026): NO son carruseles.** Es UNA sola imagen, un montaje con la slide
-`efemeride`: la foto o el visual oficial de la persona o el personaje en un círculo grande (`"imagen"`, `"encuadre"`)
-sobre su misma imagen difuminada, `"etiqueta"` (CUMPLEAÑOS, ANIVERSARIO u HOMENAJE), `"titulo"` corto con la parte
+**Formato de las efemérides (Kazuo, 25 nov 2026): NO son carruseles.** Es UNA sola imagen con la slide `efemeride`:
+la foto o el visual oficial del protagonista (persona o personaje) GRANDE, a sangre, sin círculo ni marco (`"imagen"`,
+`"encuadre"`; mejor vertical), `"etiqueta"` (CUMPLEAÑOS, ANIVERSARIO u HOMENAJE), `"titulo"` corto con la parte
 importante en rojo («Feliz cumpleaños, **Satoru Gojo**») y `"subtitulo"` de una línea (obra, o edad y fecha).
-**Si es un autor** (mangaka, director, compositor, ilustrador), van círculos alrededor de su foto con sus obras:
-`"circulos": [{"imagen": "bleach.jpg", "nombre": "Bleach"}, …]`, de 3 a 6, con portadas o visuales oficiales (el
-nombre corto sale en una etiqueta roja). Personajes y cantantes, sin círculos (a un cantante se le pueden poner sus
-discos más conocidos si suma). SIN slide de cierre ni ninguna otra. Lo que haya que contar va en la leyenda. Sin
-reel de prueba aparte (`"reel_prueba": false`).
+**Si es un autor** (mangaka, director, compositor, ilustrador), sus obras más importantes van abajo en burbujas
+pequeñas, sin nombre: `"circulos": ["bleach.jpg", "burn-the-witch.jpg", …]` (3 a 6 portadas o visuales oficiales).
+Las burbujas son solo para las obras, nunca para el protagonista. SIN slide de cierre ni ninguna otra. Lo que haya
+que contar va en la leyenda. Sin reel de prueba aparte (`"reel_prueba": false`).
 
 **Sin prioridad para Colombia (Kazuo, 25 nov 2026):** las noticias de Colombia no van primero ni tienen regla
 especial; se eligen por lo mismo que las demás (interés para el público y que sea anime, manga o J-music de verdad).
