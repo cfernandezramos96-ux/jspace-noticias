@@ -1,7 +1,7 @@
 # JSpace · noticias diarias
 
 Posts y carruseles de noticias para @jspaceco_ (anime, manga, J-music, cultura japonesa), dos automáticos al día (J-music
-12:30, anime 18:30) más extras a las 15:00 y 21:00 (pedidos del equipo y resúmenes de los domingos), publicados en Instagram y Facebook con la API oficial. **Nada sale sin aprobación del grupo de Telegram**: a las 8:00 se arman los posts del día y se mandan al grupo como preview; las rutinas de publicar solo publican lo aprobado. Única excepción (Kazuo, 17 nov 2026): el de mediodía (J-music, 12:30) sale aunque nadie lo apruebe si no lleva video; el bot lo aprueba solo a su hora. El flujo completo está en la
+12:30, anime 18:30) más extras a las 15:00 y 21:00 (pedidos del equipo y resúmenes de los domingos), publicados en Instagram y Facebook con la API oficial. **Nada sale sin aprobación del grupo de Telegram**: a las 8:00 se arman los posts del día y se mandan al grupo como preview; las rutinas de publicar solo publican lo aprobado. Excepciones: el de mediodía (J-music, 12:30) sale aunque nadie lo apruebe si no lleva video (Kazuo, 17 nov 2026; el bot lo aprueba solo a su hora), y las efemérides del calendario aprobado (`noticias/efemerides.json`, Kazuo, 25 nov 2026), que se programan solas. El flujo completo está en la
 skill **/jspace** (`.claude/skills/jspace/SKILL.md`).
 
 - `plantilla/noticia.html`: la slide (1080×1350) dibujada desde `noticia.json`. Portada = imagen oficial a sangre con
@@ -88,8 +88,7 @@ si seguimos. El 18 se apagan solas.
 cuenta; los seguidores ven el carrusel. NUNCA se gradúan para que los vean todos: se quedan como reels de prueba.
 - **Post con video:** automático. `publicar.mjs` sube el `reel.mp4` (el mismo de Facebook) como reel de prueba
   después del carrusel. No admite collab; `"reel_prueba": false` en noticia.json lo apaga.
-- **Post sin video que lo valga** (artista o banda con una canción conocida, anime con un opening famoso, sobre todo
-  si es de Colombia): corre `node scripts/portada-animada.mjs noticias/<carpeta>` (sale `reel-cancion.mp4`, 8 s, sin
+- **Post sin video que lo valga** (artista o banda con una canción conocida, anime con un opening famoso): corre `node scripts/portada-animada.mjs noticias/<carpeta>` (sale `reel-cancion.mp4`, 8 s, sin
   música) y pon en noticia.json `"cancion": "<artista – canción>"` con la canción que mejor le queda. Cuando el post
   sale, el bot se lo manda a Kazuo POR PRIVADO (no al grupo) y él le pone la canción desde la app. Nunca pegues tú
   música con derechos al video. Máximo uno al día.
@@ -118,13 +117,27 @@ etiquetas de un post publicado, Instagram le quita la collab (pasó con Otoboke,
 
 **Fijados del perfil (Kazuo, 4 nov 2026):** cada lunes, en el informe «📊 Cómo nos fue», añade una línea «📌 Para
 fijar esta semana:» con los 3 posts que conviene fijar en el perfil (`node scripts/publicar.mjs --informe 30`: los de
-más alcance del último mes, sin repetir tema, mejor si uno es de Colombia), con sus links y cuáles se cambian
+más alcance del último mes, sin repetir tema), con sus links y cuáles se cambian
 respecto a la semana anterior (anótalos en noticias/rendimiento.md). La API de Instagram no deja fijar posts: los
 fija Kazuo desde la app («…» → «Fijar en tu perfil»).
 
+**Efemérides: calendario aprobado, sin aprobación del grupo (Kazuo, 25 nov 2026).** Está en `noticias/efemerides.json`
+(25 nov 2026 → 31 dic 2027: cumpleaños de mangakas, cantantes, seiyuus y personajes, y aniversarios redondos de
+obras; lo genera `scripts/efemerides-base.py`). Kazuo aprobó la lista completa, así que NO se manda a aprobar: la
+rutina de las 8:00 arma y programa sola cada una **una semana antes** (y pone al día las de los próximos 7 días que no
+tengan carpeta). Sale la de `orden` 1 de cada fecha; las demás del mismo día, solo si el equipo las pide. Antes de
+diseñar, confirma la fecha en una fuente seria (Wikipedia en japonés, web oficial, agencia, fanbook); si no cuadra,
+márcala `"estado": "descartada"` con una `nota` y avísalo en el mensaje del día. Nunca más «por confirmar» sin hacer
+nada: se confirma ese mismo día o se descarta (25 nov 2026: Paprika 20 años se quedó en «por confirmar» y no salió). Hora: 15:00 de Bogotá; si ya hay algo programado a esa hora, 21:00; los domingos (15:00 y 21:00 son de los
+resúmenes), 10:30. Al programarla, `"estado": "programada"` y su `carpeta` en el json.
+
+**Sin prioridad para Colombia (Kazuo, 25 nov 2026):** las noticias de Colombia no van primero ni tienen regla
+especial; se eligen por lo mismo que las demás (interés para el público y que sea anime, manga o J-music de verdad).
+Nada de notas de prensa local que solo mencionan «manga» o «anime» de pasada (p. ej. «alias Manga»).
+
 **Radar de noticias (Kazuo, 4 nov 2026):** `.github/workflows/radar.yml` corre `scripts/radar.mjs` cada 2 horas, gratis
-(sin Claude): lee Anime News Network, Anime Corner, MyAnimeList, Natalie y prensa colombiana (por Google Noticias) y
-avisa al grupo «🔥 ¿Lo armo?» cuando sale algo de los nombres de `noticias/radar.json` o de Colombia (máx. 6 al día).
+(sin Claude): lee Anime News Network, Anime Corner, MyAnimeList y Natalie y
+avisa al grupo «🔥 ¿Lo armo?» cuando sale algo de los nombres de `noticias/radar.json` (máx. 6 al día).
 Si alguien toca «Ármalo», llega como un pedido normal (tipo noticia): ármalo con la skill y manda el preview. Los links
 de Google Noticias redirigen: si no abren, busca la nota por el titular. Los lunes, con el informe, ajusta la lista de
 nombres de `noticias/radar.json` según lo que funcione.

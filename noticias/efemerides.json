@@ -1,0 +1,1724 @@
+{
+ "nota": "Calendario de efemérides APROBADO por Kazuo el 25 nov 2026: no necesita aprobación del grupo. La rutina de las 8:00 arma y programa sola cada fecha una semana antes (orden 1 = la que sale; las demás del mismo día, solo si el equipo las pide). Antes de diseñar, confirma la fecha en una fuente seria; si no cuadra, estado «descartada» con la nota del porqué. Estados: aprobada → programada (con carpeta) → publicada, o descartada.",
+ "lista": [
+  {
+   "fecha": "2026-11-25",
+   "orden": 1,
+   "tipo": "aniversario",
+   "que": "Paprika de Satoshi Kon cumple 20 años",
+   "detalle": "estreno en cines de Japón, 25-11-2006",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-11-25",
+   "orden": 2,
+   "tipo": "cantante",
+   "que": "cumpleaños de Ringo Sheena",
+   "detalle": "cumple 48 años · cantante y líder de Tokyo Jihen",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-11-25",
+   "orden": 3,
+   "tipo": "seiyuu",
+   "que": "cumpleaños de Kazuya Nakai",
+   "detalle": "cumple 59 años · seiyuu de Roronoa Zoro",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-11-29",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Sanemi Shinazugawa",
+   "detalle": "Demon Slayer",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-11-30",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de Eir Aoi",
+   "detalle": "cumple 38 años · cantante de «Ignite» (SAO)",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-12-01",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "natalicio de Fujiko F. Fujio (homenaje)",
+   "detalle": "habría cumplido 93 años · creador de Doraemon",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-12-02",
+   "orden": 1,
+   "tipo": "seiyuu",
+   "que": "cumpleaños de Inori Minase",
+   "detalle": "cumple 31 años · seiyuu de Rem (Re:Zero)",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-12-04",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Asuka Langley",
+   "detalle": "Evangelion",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-12-04",
+   "orden": 2,
+   "tipo": "personaje",
+   "que": "cumpleaños de Megumin",
+   "detalle": "KonoSuba",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-12-05",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Lelouch Lamperouge",
+   "detalle": "Code Geass",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-12-06",
+   "orden": 1,
+   "tipo": "músico",
+   "que": "cumpleaños de Joe Hisaishi",
+   "detalle": "cumple 76 años · compositor de Studio Ghibli",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-12-07",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Satoru Gojo",
+   "detalle": "Jujutsu Kaisen",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-12-10",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Masakazu Katsura",
+   "detalle": "cumple 64 años · autor de Video Girl Ai e I\"s",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-12-13",
+   "orden": 1,
+   "tipo": "músico",
+   "que": "natalicio de hide (homenaje)",
+   "detalle": "habría cumplido 62 años · guitarrista de X JAPAN",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-12-19",
+   "orden": 1,
+   "tipo": "seiyuu",
+   "que": "cumpleaños de Sumire Uesaka",
+   "detalle": "cumple 35 años · seiyuu y cantante",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-12-20",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de SU-METAL",
+   "detalle": "cumple 29 años · voz de BABYMETAL",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-12-22",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Megumi Fushiguro",
+   "detalle": "Jujutsu Kaisen",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-12-22",
+   "orden": 2,
+   "tipo": "personaje",
+   "que": "cumpleaños de Tobio Kageyama",
+   "detalle": "Haikyu!!",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-12-24",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Tony Tony Chopper",
+   "detalle": "One Piece",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-12-25",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Levi Ackerman",
+   "detalle": "Attack on Titan",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-12-27",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Hinata Hyuga",
+   "detalle": "Naruto",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-12-28",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Sui Ishida",
+   "detalle": "cumple 40 años · autor de Tokyo Ghoul",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-12-28",
+   "orden": 2,
+   "tipo": "personaje",
+   "que": "cumpleaños de Nezuko Kamado",
+   "detalle": "Demon Slayer",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-01-01",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Eiichiro Oda",
+   "detalle": "cumple 52 años · creador de One Piece",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-01-01",
+   "orden": 2,
+   "tipo": "personaje",
+   "que": "cumpleaños de Kaguya Shinomiya",
+   "detalle": "Kaguya-sama: Love is War",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-01-02",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Naoki Urasawa",
+   "detalle": "cumple 67 años · autor de Monster y 20th Century Boys",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-01-05",
+   "orden": 1,
+   "tipo": "director",
+   "que": "cumpleaños de Hayao Miyazaki",
+   "detalle": "cumple 86 años · director y cofundador de Studio Ghibli",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-01-11",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Shoto Todoroki",
+   "detalle": "My Hero Academia",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-01-12",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Takehiko Inoue",
+   "detalle": "cumple 60 años · autor de Slam Dunk y Vagabond",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-01-17",
+   "orden": 1,
+   "tipo": "músico",
+   "que": "natalicio de Ryuichi Sakamoto (homenaje)",
+   "detalle": "habría cumplido 75 años · compositor (Merry Christmas Mr. Lawrence, The Last Emperor)",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-01-19",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de Hikaru Utada",
+   "detalle": "cumple 44 años · cantante de «First Love» y los temas de Kingdom Hearts y Evangelion",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-01-20",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Maki Zenin",
+   "detalle": "Jujutsu Kaisen",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-01-21",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de Nana Mizuki",
+   "detalle": "cumple 47 años · cantante y seiyuu (Hinata Hyuga en Naruto)",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-01-25",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "natalicio de Leiji Matsumoto (homenaje)",
+   "detalle": "habría cumplido 89 años · creador de Galaxy Express 999 y Capitán Harlock",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-01-25",
+   "orden": 2,
+   "tipo": "mangaka",
+   "que": "natalicio de Shotaro Ishinomori (homenaje)",
+   "detalle": "habría cumplido 89 años · creador de Cyborg 009 y Kamen Rider",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-01-28",
+   "orden": 1,
+   "tipo": "seiyuu",
+   "que": "cumpleaños de Hiroshi Kamiya",
+   "detalle": "cumple 52 años · seiyuu de Levi (Attack on Titan)",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-01-29",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de HYDE",
+   "detalle": "cumple 58 años · vocalista de L'Arc~en~Ciel",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-01-29",
+   "orden": 2,
+   "tipo": "cantante",
+   "que": "cumpleaños de Kyary Pamyu Pamyu",
+   "detalle": "cumple 34 años · cantante e ícono de Harajuku",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-01-31",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Tetsuya Kuroko",
+   "detalle": "Kuroko no Basket",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-02-02",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Rem y Ram",
+   "detalle": "Re:Zero",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-02-03",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Suguru Geto",
+   "detalle": "Jujutsu Kaisen",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-02-06",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Nico Robin",
+   "detalle": "One Piece",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-02-08",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Giyu Tomioka",
+   "detalle": "Demon Slayer",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-02-09",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Mitsuru Adachi",
+   "detalle": "cumple 76 años · autor de Touch y H2",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-02-09",
+   "orden": 2,
+   "tipo": "director",
+   "que": "cumpleaños de Makoto Shinkai",
+   "detalle": "cumple 54 años · director de Your Name y Suzume",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-02-10",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Mikasa Ackerman",
+   "detalle": "Attack on Titan",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-02-11",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Takeshi Obata",
+   "detalle": "cumple 58 años · dibujante de Death Note y Bakuman",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-02-15",
+   "orden": 1,
+   "tipo": "aniversario",
+   "que": "Naruto Shippuden cumple 20 años",
+   "detalle": "estreno del anime, 15-02-2007",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-02-16",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de Nanase Aikawa",
+   "detalle": "cumple 52 años · cantante de «Yume Miru Shoujo ja Irarenai»",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-02-19",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de Mika Nakashima",
+   "detalle": "cumple 44 años · cantante y protagonista de NANA",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-02-21",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Hitori Gotoh (Bocchi)",
+   "detalle": "Bocchi the Rock!",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-02-24",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Shinobu Kocho",
+   "detalle": "Demon Slayer",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-02-25",
+   "orden": 1,
+   "tipo": "seiyuu",
+   "que": "cumpleaños de Kana Hanazawa",
+   "detalle": "cumple 38 años · seiyuu de Mitsuri Kanroji y Nadeko Sengoku",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-02-26",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Gege Akutami",
+   "detalle": "cumple 35 años · autor de Jujutsu Kaisen",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-02-27",
+   "orden": 1,
+   "tipo": "seiyuu",
+   "que": "cumpleaños de Rie Takahashi",
+   "detalle": "cumple 33 años · seiyuu de Megumin y Emilia",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-02-28",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Light Yagami",
+   "detalle": "Death Note",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-03-02",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Sanji",
+   "detalle": "One Piece",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-03-03",
+   "orden": 1,
+   "tipo": "aniversario",
+   "que": "5 Centímetros por Segundo cumple 20 años",
+   "detalle": "estreno en Japón, 03-03-2007",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-03-05",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Tsukasa Hojo",
+   "detalle": "cumple 68 años · autor de City Hunter",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-03-07",
+   "orden": 1,
+   "tipo": "aniversario",
+   "que": "el anime de Sailor Moon cumple 35 años",
+   "detalle": "estreno, 07-03-1992",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-03-07",
+   "orden": 2,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Ai Yazawa",
+   "detalle": "cumple 60 años · autora de NANA y Paradise Kiss",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-03-07",
+   "orden": 3,
+   "tipo": "personaje",
+   "que": "cumpleaños de Yuta Okkotsu",
+   "detalle": "Jujutsu Kaisen",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-03-09",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Franky",
+   "detalle": "One Piece",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-03-10",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de Kenshi Yonezu",
+   "detalle": "cumple 36 años · cantante de «Lemon» y «KICK BACK»",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-03-15",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Naoko Takeuchi",
+   "detalle": "cumple 60 años · creadora de Sailor Moon",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-03-18",
+   "orden": 1,
+   "tipo": "músico",
+   "que": "cumpleaños de Yoko Kanno",
+   "detalle": "cumple 64 años · compositora de Cowboy Bebop y Macross Frontier",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-03-20",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Yukito Kishiro",
+   "detalle": "cumple 60 años · autor de Battle Angel Alita",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-03-20",
+   "orden": 2,
+   "tipo": "personaje",
+   "que": "cumpleaños de Yuji Itadori",
+   "detalle": "Jujutsu Kaisen",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-03-26",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de YUI",
+   "detalle": "cumple 40 años · cantante de «Rolling Star» (Bleach) y «Again» (FMA Brotherhood)",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-03-30",
+   "orden": 1,
+   "tipo": "seiyuu",
+   "que": "cumpleaños de Megumi Hayashibara",
+   "detalle": "cumple 60 años · seiyuu de Rei Ayanami",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-03-30",
+   "orden": 2,
+   "tipo": "personaje",
+   "que": "cumpleaños de Eren Yeager",
+   "detalle": "Attack on Titan",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-03-30",
+   "orden": 3,
+   "tipo": "personaje",
+   "que": "cumpleaños de Rei Ayanami",
+   "detalle": "Evangelion",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-04-01",
+   "orden": 1,
+   "tipo": "aniversario",
+   "que": "el anime de Pokémon cumple 30 años",
+   "detalle": "estreno, 01-04-1997",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-04-01",
+   "orden": 2,
+   "tipo": "aniversario",
+   "que": "Tengen Toppa Gurren Lagann cumple 20 años",
+   "detalle": "estreno, 01-04-2007",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-04-01",
+   "orden": 3,
+   "tipo": "personaje",
+   "que": "cumpleaños de Usopp",
+   "detalle": "One Piece",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-04-02",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Jinbe",
+   "detalle": "One Piece",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-04-03",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Brook",
+   "detalle": "One Piece",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-04-04",
+   "orden": 1,
+   "tipo": "músico",
+   "que": "cumpleaños de Ayase",
+   "detalle": "cumple 33 años · compositor de YOASOBI",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-04-05",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "natalicio de Akira Toriyama (homenaje)",
+   "detalle": "habría cumplido 72 años · creador de Dragon Ball",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-04-13",
+   "orden": 1,
+   "tipo": "aniversario",
+   "que": "el anime de Crayon Shin-chan cumple 35 años",
+   "detalle": "estreno, 13-04-1992",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-04-14",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Katsuhiro Otomo",
+   "detalle": "cumple 73 años · autor y director de Akira",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-04-17",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de Taka",
+   "detalle": "cumple 39 años · vocalista de ONE OK ROCK",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-04-20",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Katsuki Bakugo",
+   "detalle": "My Hero Academia",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-04-21",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Ikuyo Kita",
+   "detalle": "Bocchi the Rock!",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-04-22",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Inosuke Hashibira",
+   "detalle": "Demon Slayer",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-04-26",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de Yoko Takahashi",
+   "detalle": "cumple 61 años · cantante de «A Cruel Angel's Thesis» (Evangelion)",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-04-27",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Yoshihiro Togashi",
+   "detalle": "cumple 61 años · autor de Hunter x Hunter y Yu Yu Hakusho",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-05-03",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Hiro Mashima",
+   "detalle": "cumple 50 años · autor de Fairy Tail y Rave",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-05-04",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Shinichi Kudo",
+   "detalle": "Detective Conan",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-05-05",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Koyoharu Gotouge",
+   "detalle": "cumple 38 años · autora de Demon Slayer",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-05-05",
+   "orden": 2,
+   "tipo": "personaje",
+   "que": "cumpleaños de Monkey D. Luffy",
+   "detalle": "One Piece",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-05-05",
+   "orden": 3,
+   "tipo": "personaje",
+   "que": "cumpleaños de Gon Freecss",
+   "detalle": "Hunter x Hunter",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-05-08",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Hiromu Arakawa",
+   "detalle": "cumple 54 años · autora de Fullmetal Alchemist",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-05-09",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Goku (Día de Goku)",
+   "detalle": "Dragon Ball",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-05-10",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Kyojuro Rengoku",
+   "detalle": "Demon Slayer",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-05-22",
+   "orden": 1,
+   "tipo": "director",
+   "que": "cumpleaños de Hideaki Anno",
+   "detalle": "cumple 67 años · creador de Evangelion",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-05-26",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "natalicio de Monkey Punch (homenaje)",
+   "detalle": "habría cumplido 90 años · creador de Lupin III",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-05-29",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Nijika Ijichi",
+   "detalle": "Bocchi the Rock!",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-06-01",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Mitsuri Kanroji",
+   "detalle": "Demon Slayer",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-06-06",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Shinji Ikari",
+   "detalle": "Evangelion",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-06-07",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Hirohiko Araki",
+   "detalle": "cumple 67 años · autor de JoJo's Bizarre Adventure",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-06-08",
+   "orden": 1,
+   "tipo": "seiyuu",
+   "que": "cumpleaños de Mamoru Miyano",
+   "detalle": "cumple 44 años · seiyuu de Light Yagami",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-06-10",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de All Might",
+   "detalle": "My Hero Academia",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-06-14",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de Fujii Kaze",
+   "detalle": "cumple 30 años · cantante de «Shinunoga E-Wa»",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-06-21",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Shoyo Hinata",
+   "detalle": "Haikyu!!",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-06-24",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de LiSA",
+   "detalle": "cumple 40 años · cantante de «Gurenge» y «Crossing Field»",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-06-26",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Tite Kubo",
+   "detalle": "cumple 50 años · creador de Bleach",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-06-26",
+   "orden": 2,
+   "tipo": "personaje",
+   "que": "cumpleaños de Spike Spiegel",
+   "detalle": "Cowboy Bebop",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-06-30",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Usagi Tsukino",
+   "detalle": "Sailor Moon",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-07-03",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Nami",
+   "detalle": "One Piece",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-07-03",
+   "orden": 2,
+   "tipo": "personaje",
+   "que": "cumpleaños de Kento Nanami",
+   "detalle": "Jujutsu Kaisen",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-07-04",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Yusuke Murata",
+   "detalle": "cumple 49 años · dibujante de One Punch Man y Eyeshield 21",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-07-04",
+   "orden": 2,
+   "tipo": "cantante",
+   "que": "cumpleaños de Gackt",
+   "detalle": "cumple 54 años · cantante (ex Malice Mizer)",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-07-05",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Ken Akamatsu",
+   "detalle": "cumple 59 años · autor de Love Hina y Negima",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-07-05",
+   "orden": 2,
+   "tipo": "cantante",
+   "que": "cumpleaños de Yojiro Noda",
+   "detalle": "cumple 42 años · vocalista de RADWIMPS (Your Name)",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-07-07",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Killua Zoldyck",
+   "detalle": "Hunter x Hunter",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-07-09",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de Aimer",
+   "detalle": "cumple 37 años · cantante de «Zankyosanka» y «Kataomoi»",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-07-11",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "natalicio de Kentaro Miura (homenaje)",
+   "detalle": "habría cumplido 61 años · creador de Berserk",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-07-12",
+   "orden": 1,
+   "tipo": "aniversario",
+   "que": "La Princesa Mononoke cumple 30 años",
+   "detalle": "estreno en Japón, 12-07-1997",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-07-14",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Tanjiro Kamado",
+   "detalle": "Demon Slayer",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-07-15",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Izuku Midoriya",
+   "detalle": "My Hero Academia",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-07-15",
+   "orden": 2,
+   "tipo": "personaje",
+   "que": "cumpleaños de Ichigo Kurosaki",
+   "detalle": "Bleach",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-07-18",
+   "orden": 1,
+   "tipo": "aniversario",
+   "que": "Porco Rosso cumple 35 años",
+   "detalle": "estreno en Japón, 18-07-1992",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-07-19",
+   "orden": 1,
+   "tipo": "aniversario",
+   "que": "The End of Evangelion cumple 30 años",
+   "detalle": "estreno en Japón, 19-07-1997",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-07-22",
+   "orden": 1,
+   "tipo": "aniversario",
+   "que": "el manga de One Piece cumple 30 años",
+   "detalle": "primer capítulo en Weekly Shonen Jump, 22-07-1997",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-07-23",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Sasuke Uchiha",
+   "detalle": "Naruto",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-07-26",
+   "orden": 1,
+   "tipo": "ilustrador",
+   "que": "cumpleaños de Yoshitaka Amano",
+   "detalle": "cumple 75 años · ilustrador de Final Fantasy y Vampire Hunter D",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-07-31",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Junji Ito",
+   "detalle": "cumple 64 años · maestro del manga de terror (Uzumaki, Tomie)",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-08-06",
+   "orden": 1,
+   "tipo": "músico",
+   "que": "cumpleaños de Yuki Kajiura",
+   "detalle": "cumple 62 años · compositora de Demon Slayer, SAO y Madoka",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-08-07",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Nobara Kugisaki",
+   "detalle": "Jujutsu Kaisen",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-08-08",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Muichiro Tokito",
+   "detalle": "Demon Slayer",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-08-10",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de HARUNA",
+   "detalle": "cumple 39 años · vocalista de SCANDAL",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-08-29",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Hajime Isayama",
+   "detalle": "cumple 41 años · creador de Attack on Titan",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-08-31",
+   "orden": 1,
+   "tipo": "aniversario",
+   "que": "Hatsune Miku cumple 20 años",
+   "detalle": "lanzamiento, 31-08-2007",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-09-03",
+   "orden": 1,
+   "tipo": "seiyuu",
+   "que": "cumpleaños de Yuki Kaji",
+   "detalle": "cumple 42 años · seiyuu de Eren Yeager",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-09-03",
+   "orden": 2,
+   "tipo": "personaje",
+   "que": "cumpleaños de Zenitsu Agatsuma",
+   "detalle": "Demon Slayer",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-09-03",
+   "orden": 3,
+   "tipo": "personaje",
+   "que": "cumpleaños de Doraemon",
+   "detalle": "Doraemon",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-09-06",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Go Nagai",
+   "detalle": "cumple 82 años · creador de Mazinger Z y Devilman",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-09-12",
+   "orden": 1,
+   "tipo": "músico",
+   "que": "cumpleaños de Hiroyuki Sawano",
+   "detalle": "cumple 47 años · compositor de Attack on Titan",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-09-14",
+   "orden": 1,
+   "tipo": "aniversario",
+   "que": "Millennium Actress cumple 25 años",
+   "detalle": "estreno en Japón, 14-09-2002",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-09-14",
+   "orden": 2,
+   "tipo": "cantante",
+   "que": "cumpleaños de MIYAVI",
+   "detalle": "cumple 46 años · guitarrista y cantante",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-09-15",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Kakashi Hatake",
+   "detalle": "Naruto",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-09-15",
+   "orden": 2,
+   "tipo": "personaje",
+   "que": "cumpleaños de Obanai Iguro",
+   "detalle": "Demon Slayer",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-09-18",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Ryo Yamada",
+   "detalle": "Bocchi the Rock!",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-09-19",
+   "orden": 1,
+   "tipo": "director",
+   "que": "cumpleaños de Mamoru Hosoda",
+   "detalle": "cumple 60 años · director de Summer Wars y Belle",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-09-20",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de Namie Amuro",
+   "detalle": "cumple 50 años · la reina del J-pop",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-09-25",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de Ikura (Lilas Ikuta)",
+   "detalle": "cumple 27 años · voz de YOASOBI",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-09-30",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Asuna",
+   "detalle": "Sword Art Online",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-10-02",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de Ayumi Hamasaki",
+   "detalle": "cumple 49 años · cantante, emperatriz del J-pop",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-10-03",
+   "orden": 1,
+   "tipo": "aniversario",
+   "que": "el anime de Naruto cumple 25 años",
+   "detalle": "estreno, 03-10-2002",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-10-05",
+   "orden": 1,
+   "tipo": "aniversario",
+   "que": "Mobile Suit Gundam SEED cumple 25 años",
+   "detalle": "estreno, 05-10-2002",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-10-07",
+   "orden": 1,
+   "tipo": "aniversario",
+   "que": "el anime de Berserk (1997) cumple 30 años",
+   "detalle": "estreno, 07-10-1997",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-10-07",
+   "orden": 2,
+   "tipo": "personaje",
+   "que": "cumpleaños de Kirito",
+   "detalle": "Sword Art Online",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-10-10",
+   "orden": 1,
+   "tipo": "aniversario",
+   "que": "el anime de Yu Yu Hakusho cumple 35 años",
+   "detalle": "estreno, 10-10-1992",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-10-10",
+   "orden": 2,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Rumiko Takahashi",
+   "detalle": "cumple 70 años · autora de Ranma ½ e Inuyasha",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-10-10",
+   "orden": 3,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Tatsuki Fujimoto",
+   "detalle": "cumple 35 años · autor de Chainsaw Man",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-10-10",
+   "orden": 4,
+   "tipo": "cantante",
+   "que": "cumpleaños de Toshl",
+   "detalle": "cumple 62 años · vocalista de X JAPAN",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-10-10",
+   "orden": 5,
+   "tipo": "personaje",
+   "que": "cumpleaños de Naruto Uzumaki",
+   "detalle": "Naruto",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-10-12",
+   "orden": 1,
+   "tipo": "director",
+   "que": "natalicio de Satoshi Kon (homenaje)",
+   "detalle": "habría cumplido 64 años · director de Perfect Blue y Paprika",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-10-24",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de Ado",
+   "detalle": "cumple 25 años · cantante de «Usseewa» y One Piece Film Red",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-10-25",
+   "orden": 1,
+   "tipo": "seiyuu",
+   "que": "cumpleaños de Masako Nozawa",
+   "detalle": "cumple 91 años · la voz de Goku",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-10-29",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de ONE",
+   "detalle": "cumple 41 años · autor de One Punch Man y Mob Psycho 100",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-10-31",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de L",
+   "detalle": "Death Note",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-11-03",
+   "orden": 1,
+   "tipo": "aniversario",
+   "que": "Morning Musume cumple 30 años",
+   "detalle": "single indie «Ai no Tane», 03-11-1997",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-11-03",
+   "orden": 2,
+   "tipo": "mangaka",
+   "que": "natalicio de Osamu Tezuka (homenaje)",
+   "detalle": "habría cumplido 99 años · el dios del manga (Astro Boy)",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-11-08",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Masashi Kishimoto",
+   "detalle": "cumple 53 años · creador de Naruto",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-11-11",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Roronoa Zoro",
+   "detalle": "One Piece",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-11-20",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Kohei Horikoshi",
+   "detalle": "cumple 41 años · autor de My Hero Academia",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-11-20",
+   "orden": 2,
+   "tipo": "músico",
+   "que": "cumpleaños de YOSHIKI",
+   "detalle": "cumple 62 años · líder de X JAPAN",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-11-25",
+   "orden": 1,
+   "tipo": "seiyuu",
+   "que": "cumpleaños de Kazuya Nakai",
+   "detalle": "cumple 60 años · seiyuu de Roronoa Zoro",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-11-25",
+   "orden": 2,
+   "tipo": "cantante",
+   "que": "cumpleaños de Ringo Sheena",
+   "detalle": "cumple 49 años · cantante y líder de Tokyo Jihen",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-11-29",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Sanemi Shinazugawa",
+   "detalle": "Demon Slayer",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-11-30",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de Eir Aoi",
+   "detalle": "cumple 39 años · cantante de «Ignite» (SAO)",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-12-01",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "natalicio de Fujiko F. Fujio (homenaje)",
+   "detalle": "habría cumplido 94 años · creador de Doraemon",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-12-02",
+   "orden": 1,
+   "tipo": "seiyuu",
+   "que": "cumpleaños de Inori Minase",
+   "detalle": "cumple 32 años · seiyuu de Rem (Re:Zero)",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-12-04",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Asuka Langley",
+   "detalle": "Evangelion",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-12-04",
+   "orden": 2,
+   "tipo": "personaje",
+   "que": "cumpleaños de Megumin",
+   "detalle": "KonoSuba",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-12-05",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Lelouch Lamperouge",
+   "detalle": "Code Geass",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-12-06",
+   "orden": 1,
+   "tipo": "músico",
+   "que": "cumpleaños de Joe Hisaishi",
+   "detalle": "cumple 77 años · compositor de Studio Ghibli",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-12-07",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Satoru Gojo",
+   "detalle": "Jujutsu Kaisen",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-12-10",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Masakazu Katsura",
+   "detalle": "cumple 65 años · autor de Video Girl Ai e I\"s",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-12-13",
+   "orden": 1,
+   "tipo": "músico",
+   "que": "natalicio de hide (homenaje)",
+   "detalle": "habría cumplido 63 años · guitarrista de X JAPAN",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-12-19",
+   "orden": 1,
+   "tipo": "seiyuu",
+   "que": "cumpleaños de Sumire Uesaka",
+   "detalle": "cumple 36 años · seiyuu y cantante",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-12-20",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de SU-METAL",
+   "detalle": "cumple 30 años · voz de BABYMETAL",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-12-22",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Megumi Fushiguro",
+   "detalle": "Jujutsu Kaisen",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-12-22",
+   "orden": 2,
+   "tipo": "personaje",
+   "que": "cumpleaños de Tobio Kageyama",
+   "detalle": "Haikyu!!",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-12-24",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Tony Tony Chopper",
+   "detalle": "One Piece",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-12-25",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Levi Ackerman",
+   "detalle": "Attack on Titan",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-12-27",
+   "orden": 1,
+   "tipo": "personaje",
+   "que": "cumpleaños de Hinata Hyuga",
+   "detalle": "Naruto",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-12-28",
+   "orden": 1,
+   "tipo": "mangaka",
+   "que": "cumpleaños de Sui Ishida",
+   "detalle": "cumple 41 años · autor de Tokyo Ghoul",
+   "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-12-28",
+   "orden": 2,
+   "tipo": "personaje",
+   "que": "cumpleaños de Nezuko Kamado",
+   "detalle": "Demon Slayer",
+   "estado": "aprobada",
+   "carpeta": null
+  }
+ ]
+}

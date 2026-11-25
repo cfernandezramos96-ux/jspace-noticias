@@ -1,5 +1,5 @@
 {
-  "nota": "Lista del radar de noticias (scripts/radar.mjs). Lo de Colombia va primero. Los nombres son los que le funcionan a la cuenta (noticias/rendimiento.md) y los muy conocidos; la rutina de los lunes puede añadir o quitar según el informe. Mayúsculas y tildes no importan.",
+  "nota": "Lista del radar de noticias (scripts/radar.mjs). Sin prioridad para Colombia (Kazuo, 25 nov 2026); la lista «colombia» ya no se usa. Los nombres son los que le funcionan a la cuenta (noticias/rendimiento.md) y los muy conocidos; la rutina de los lunes puede añadir o quitar según el informe. Mayúsculas y tildes no importan.",
   "colombia": [
     "colombia",
     "bogotá",

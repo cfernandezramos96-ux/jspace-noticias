@@ -1,8 +1,7 @@
 // radar.mjs · JSpace · vigía de noticias grandes, gratis (Kazuo, 4 nov 2026). Lo corre .github/workflows/radar.yml
-// cada 2 horas, sin Claude: lee RSS (Anime News Network, Anime Corner, MyAnimeList, Natalie y prensa colombiana por
-// Google Noticias) y busca los nombres de noticias/radar.json. Si encuentra algo nuevo, avisa al grupo con «🔥 ¿Lo
+// cada 2 horas, sin Claude: lee RSS (Anime News Network, Anime Corner, MyAnimeList y Natalie) y busca los nombres de noticias/radar.json. Si encuentra algo nuevo, avisa al grupo con «🔥 ¿Lo
 // armo?» y un botón; solo si alguien toca «Ármalo» trabaja Claude (el bot lo manda a la rutina como un link más).
-// Lo de Colombia va primero. Máximo 3 avisos por vuelta y 6 al día, para no llenar el chat.
+// Sin prioridad para Colombia ni prensa colombiana (Kazuo, 25 nov 2026: llegaban notas como «alias Manga»). Máximo 3 avisos por vuelta y 6 al día, para no llenar el chat.
 //   node scripts/radar.mjs            → avisa al grupo (necesita TELEGRAM_TOKEN y TELEGRAM_CHAT_ID)
 //   node scripts/radar.mjs --prueba   → solo muestra lo que avisaría
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
@@ -22,7 +21,6 @@ const FUENTES = [
   ['Anime Corner', 'https://animecorner.me/feed/'],
   ['MyAnimeList', 'https://myanimelist.net/rss/news.xml'],
   ['Natalie', gn('site:natalie.mu when:1d', 'ja', 'JP')],
-  ['Prensa de Colombia', gn('(anime OR manga OR J-pop OR otaku OR cosplay OR "concierto japonés" OR "banda japonesa") (Bogotá OR Colombia OR Medellín OR Cali) when:2d', 'es-419', 'CO')],
 ];
 const norm = (t) => t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 // palabras latinas con límite de palabra («Ado» no debe salir de «eliminados»); japonés, por coincidencia simple
@@ -52,16 +50,13 @@ for (const [fuente, url] of FUENTES) {
     if (!titulo || Date.now() - fecha > 12 * 3600e3) continue; // solo lo de las últimas 12 h
     const clave = createHash('sha1').update(titulo.replace(/ - [^-]+$/, '')).digest('hex').slice(0, 10);
     if (estado.vistos[clave] || ya.includes(link.toLowerCase())) continue;
-    // de Colombia cuenta si es anime, manga, J-pop… o un nombre de la lista (no cualquier cosa japonesa: comida, danza)
-    const local = (fuente === 'Prensa de Colombia' || tiene(titulo, LISTA.colombia)) && (tiene(titulo, LISTA.cultura) || tiene(titulo, LISTA.nombres));
     const nombre = tiene(titulo, LISTA.nombres);
-    // de Colombia: basta con que sea de cultura japonesa; de fuera: un nombre de la lista y algo que pase de verdad
-    if (!local && !(nombre && tiene(titulo, LISTA.importante))) continue;
-    hallazgos.push({ clave, titulo, link, fuente, local: !!local, nombre });
+    // solo un nombre de la lista y algo que pase de verdad (sin regla especial para Colombia)
+    if (!(nombre && tiene(titulo, LISTA.importante))) continue;
+    hallazgos.push({ clave, titulo, link, fuente, nombre });
   }
 }
-// Colombia primero; un solo aviso por nombre en cada vuelta
-hallazgos.sort((a, b) => b.local - a.local);
+// un solo aviso por nombre en cada vuelta
 const vistos = new Set(), avisar = [];
 // 9 nov 2026: la misma noticia con otro titular en otra fuente salía como aviso nuevo en la vuelta siguiente
 const palabras = (t) => new Set(norm(t.replace(/ - [^-]+$/, '')).split(/[^p{L}p{N}]+/u).filter((p) => p.length > 2 || /d/.test(p)));
@@ -77,7 +72,7 @@ for (const h of hallazgos) {
 }
 for (const h of avisar) {
   // los links de Google Noticias son larguísimos: en el chat va solo la fuente (la rutina sí recibe el link)
-  const texto = `🔥 ${h.local ? 'Noticia de Colombia' : `Salió algo de ${h.nombre}`}\n${h.titulo}\n(${h.fuente})${h.link.includes('news.google.com') ? '' : ` ${h.link}`}\n¿Lo armo?`;
+  const texto = `🔥 Salió algo de ${h.nombre}\n${h.titulo}\n(${h.fuente})${h.link.includes('news.google.com') ? '' : ` ${h.link}`}\n¿Lo armo?`;
   console.log(texto.replace(/\n/g, ' · '));
   if (PRUEBA || !TOKEN || !GRUPO) continue;
   estado.pendientes[h.clave] = { titulo: h.titulo, link: h.link, fuente: h.fuente, fecha: new Date().toISOString() };
