@@ -226,8 +226,8 @@ tráiler oficial** y revisa el resultado con cuidado (hojas de fotogramas con ff
 - Efemérides (cumpleaños de personajes, autores y artistas, aniversarios; Kazuo, 25 nov 2026): NO son carrusel.
   Una sola imagen con la slide `efemeride`: el protagonista en foto grande sin círculo (sin escenas del anime), y su
   cara NUNCA cortada; etiqueta CUMPLEAÑOS/ANIVERSARIO/HOMENAJE, título corto y una línea, sin slide de cierre. Si es
-  un autor, 3-6 obras en burbujas a los lados con el nombre debajo (`"circulos": [{"imagen", "nombre"}]`). El resto
-  va en la leyenda.
+  un autor, 3-6 obras en burbujas sin nombre en arco alrededor de su cabeza (`"circulos": [rutas]`, `"cabeza": [x, y]`)
+  y abajo `"texto"` «Autor de **X**, **Y** y **Z»** (máximo 3). El resto va en la leyenda.
 
 ### Resumen de la semana (domingos)
 

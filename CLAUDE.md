@@ -139,9 +139,12 @@ Gojo**») y `"subtitulo"` de una línea (obra, o edad y fecha).
   cara de Ichigo). Busca una imagen vertical o cuadrada; si solo hay horizontal, la plantilla la muestra entera, a
   todo el ancho, fundida con su fondo difuminado (no la recorta). Revisa la imagen con Read: cara completa, ojos y
   barbilla dentro, nada tapado por el texto ni por las burbujas.
-- **Si es un autor** (mangaka, director, compositor, ilustrador): sus obras más importantes en burbujas grandes a los
-  lados de su foto, con el nombre en texto debajo: `"circulos": [{"imagen": "bleach.jpg", "nombre": "Bleach"}, …]`
-  (3 a 6 portadas o visuales oficiales). Las burbujas son solo para las obras, nunca para el protagonista.
+- **Si es un autor** (mangaka, director, compositor, ilustrador; boceto de Kazuo, 25 nov 2026): sus obras principales
+  en burbujas, sin nombre, en arco alrededor de su cabeza (arriba y a los lados, nunca encima de la cara):
+  `"circulos": ["bleach.jpg", "burn-the-witch.jpg", …]` (3 a 6 portadas o visuales oficiales). Ajusta `"cabeza": [x, y]`
+  (centro de su cabeza en la slide; por defecto [540, 400]) y, si hace falta, `"radio"` (por defecto 370) para que el
+  arco rodee la cabeza. Debajo del subtítulo, `"texto"` con MÁXIMO 3 obras: «Autor de **Bleach**, **Burn the Witch**
+  y **Klub**». Las burbujas son solo para las obras, nunca para el protagonista.
 - SIN slide de cierre ni ninguna otra. Lo que haya que contar va en la leyenda. Sin reel de prueba aparte
   (`"reel_prueba": false`).
 
