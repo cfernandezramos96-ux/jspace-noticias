@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-25T20:01:03.630Z",
+  "actualizado": "2026-11-25T23:30:58.228Z",
   "posts": [
     {
       "externo": true,
@@ -1683,16 +1683,21 @@
       "carpeta": "noticias/2026-11-25-historie",
       "titular": "Historie llegará en enero con opening de Yorushika",
       "franja": "anime",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "anime",
         "jmusic"
       ],
-      "hora": "2026-11-25T23:30:00Z",
+      "hora": "2026-11-25T23:30:28.991Z",
       "programado": "2026-11-25T23:30:00Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-25-historie/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DgLttEnEfwK/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1885343109914486",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": false
     },
     {
       "carpeta": "noticias/2026-11-25-kazuya-nakai-cumple",
