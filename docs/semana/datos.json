@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-25T16:34:30.405Z",
+  "actualizado": "2026-11-25T17:31:16.996Z",
   "posts": [
     {
       "externo": true,
@@ -1647,13 +1647,18 @@
       "carpeta": "noticias/2026-11-25-bandmaid-budokan",
       "titular": "BAND-MAID cierra su gira en el Budokan y pausará los conciertos en 2027",
       "franja": "jmusic",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [],
-      "hora": "2026-11-25T17:30:00Z",
+      "hora": "2026-11-25T17:30:48.487Z",
       "programado": "2026-11-25T17:30:00Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-25-bandmaid-budokan/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DgLEivljH2m/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1885046863277444",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": false
     },
     {
       "carpeta": "noticias/2026-11-25-ringo-sheena-cumple",
