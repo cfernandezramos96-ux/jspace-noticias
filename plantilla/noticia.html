@@ -7,6 +7,7 @@
      todo el texto va en .centro (90 px de margen). DATA.alto = 1440 la deja en 3:4 para subirla a mano. Tipos:
        portada · la imagen oficial a sangre + logo, titular y una línea, arriba o abajo (como Koryugi y el post de Ao no Hako)
        poster  · la imagen oficial completa, sin recortar, sobre su versión desenfocada
+       efemeride · UNA imagen: la persona o el personaje en un círculo grande; si es autor, sus obras en círculos alrededor
        texto · dato · cierre · slides de diseño con el estilo de los carruseles de ElKazuoTV (negro con rayos, rojo, línea roja)
      Poppins Black en mayúsculas para titulares, Poppins Medium para el texto. Solo el logo NUEVO de JSpace.
      Texto entre **dobles asteriscos** = rojo.
@@ -131,6 +132,42 @@
     if (S.texto) { const e = el('div', 'abs medium centro', { lineHeight: '1.25', color: tx }); e.innerHTML = rico(S.texto); encaja(e, 34, 130, 26); bl.push([e, 18]); }
     if (D.total > 1 && D.indice === 1) { const e = el('div', 'abs black centro', { fontSize: '26px', color: tx }, 'Desliza <span class="r">→</span>'); bl.push([e, 28]); }
     if (arriba) apila(bl, { top: 64 }); else apila(bl, { bottom: H - 60 });
+  } else if (tipo === 'efemeride') {
+    // efemérides (Kazuo, 25 nov 2026): UNA imagen. La foto de la persona o el personaje en un círculo grande sobre su
+    // propia imagen difuminada y, si es un autor, círculos con sus obras alrededor («circulos»: rutas o
+    // {imagen, nombre}, hasta 6). Texto abajo: logo, etiqueta, título con lo importante en rojo y una línea.
+    const fondo = el('div', 'foto', { left: '-80px', top: '-80px', width: (W + 160) + 'px', height: (H + 160) + 'px', filter: 'blur(34px) brightness(.38) saturate(1.2)' });
+    const fi = document.createElement('img'); fi.src = src(S.fondo || S.imagen); fondo.appendChild(fi);
+    rayos();
+    el('div', 'abs', { left: '0', top: '0', width: W + 'px', height: H + 'px', background: 'radial-gradient(ellipse 70% 55% at 50% 36%, rgba(10,10,10,0) 0%, rgba(10,10,10,.55) 100%), linear-gradient(180deg, rgba(10,10,10,0) 52%, rgba(10,10,10,.92) 70%, rgba(10,10,10,1) 84%)' });
+    // primero el texto (abajo), luego los círculos llenan el espacio de arriba hasta 40 px del texto
+    const bl = [[logo(S.logo || 62), 0]];
+    if (S.etiqueta) bl.push([el('div', 'abs black centro', { fontSize: '30px', letterSpacing: '.08em', color: 'var(--rojo)' }, rico(S.etiqueta)), 16]);
+    const T = el('div', 'abs black centro', { lineHeight: '1.0' }, rico(S.titulo)); encaja(T, S.tamano || 84, 260, 52); bl.push([T, 8]);
+    if (S.subtitulo) { const e = el('div', 'abs black centro', { lineHeight: '1.15', opacity: '.92' }); e.innerHTML = rico(S.subtitulo); encaja(e, 36, 90, 26); bl.push([e, 14]); }
+    const arribaTexto = H - 56 - alto(bl);
+    apila(bl, { bottom: H - 56 });
+    const obras = (S.circulos || []).slice(0, 6).map((c) => typeof c === 'string' ? { imagen: c } : c);
+    const n = obras.length, cx = 540, DG = n ? 580 : 700, rg = DG / 2, cy = arribaTexto - 44 - rg;
+    const circulo = (x, y, d, img, pos, borde, anillo) => {
+      const k = el('div', 'abs', { left: (x - d / 2) + 'px', top: (y - d / 2) + 'px', width: d + 'px', height: d + 'px', borderRadius: '50%', overflow: 'hidden',
+        border: borde + 'px solid #fff', boxShadow: `0 0 0 ${anillo}px var(--rojo), 0 28px 60px -18px rgba(0,0,0,.8)`, background: '#111' });
+      const i = document.createElement('img'); i.src = src(img); Object.assign(i.style, { width: '100%', height: '100%', objectFit: 'cover', objectPosition: pos || '50% 30%' }); k.appendChild(i);
+      return k;
+    };
+    // las obras van en arco por arriba y a los lados; nunca abajo, donde va el texto
+    const ANG = { 1: [30], 2: [155, 25], 3: [165, 90, 15], 4: [192, 138, 42, -12], 5: [198, 150, 90, 30, -18], 6: [202, 158, 112, 68, 22, -22] }[n] || [];
+    const dc = n > 4 ? 184 : 210, R = rg + dc / 2 - 8;
+    circulo(cx, cy, DG, S.imagen, S.encuadre, 12, 8).style.zIndex = '1';
+    ANG.forEach((a, i) => {
+      const r = a * Math.PI / 180, x = Math.max(dc / 2 + 30, Math.min(W - dc / 2 - 30, cx + R * Math.cos(r))), y = cy - R * Math.sin(r);
+      circulo(x, y, dc, obras[i].imagen, obras[i].encuadre, 7, 0).style.zIndex = '2';
+      if (obras[i].nombre) {
+        // la etiqueta, encima de todo, pegada al borde de abajo del círculo
+        const t = el('div', 'abs black', { fontSize: '19px', letterSpacing: '.03em', background: 'var(--rojo)', color: '#fff', padding: '4px 12px', borderRadius: '6px', whiteSpace: 'nowrap', boxShadow: '0 8px 18px -8px rgba(0,0,0,.7)', zIndex: '3' }, rico(obras[i].nombre));
+        t.style.left = Math.max(20, Math.min(W - 20 - t.offsetWidth, x - t.offsetWidth / 2)) + 'px'; t.style.top = (y + dc / 2 - 20) + 'px';
+      }
+    });
   } else if (tipo === 'historia') {
     // contar la noticia en varias slides con poco texto (referencia: Tanuki Media): foto a sangre, UNA frase abajo,
     // opcionalmente una fila de círculos con personajes o portadas, y el logo pequeño al pie
