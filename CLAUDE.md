@@ -129,8 +129,11 @@ tengan carpeta). Salen TODAS las de `"estado": "aprobada"` (Kazuo eligió en la 
 `"no va"` no se arma; sus decisiones están en `noticias/efemerides-decisiones.json`). Antes de
 diseñar, confirma la fecha en una fuente seria (Wikipedia en japonés, web oficial, agencia, fanbook); si no cuadra,
 márcala `"estado": "descartada"` con una `nota` y avísalo en el mensaje del día. Nunca más «por confirmar» sin hacer
-nada: se confirma ese mismo día o se descarta (25 nov 2026: Paprika 20 años se quedó en «por confirmar» y no salió). Horas, en este orden, la primera libre: entre semana 15:00, 21:00, 10:30, 13:30, 17:00; los domingos (15:00 y
-21:00 son de los resúmenes) 10:30, 13:30, 17:00, 20:00, 11:30. Nunca una hora que ya pasó ni a menos de una hora. Al programarla, `"estado": "programada"` y su `carpeta` en el json.
+nada: se confirma ese mismo día o se descarta (25 nov 2026: Paprika 20 años se quedó en «por confirmar» y no salió). **La efeméride es lo primero que sale en el día** (Kazuo, 25 nov 2026): la primera a las **9:00**. Si hay más de
+una, se reparten y tienen prioridad sobre las noticias extra (pedidos del equipo): la 2.ª a las 15:00 y la 3.ª a las
+21:00 (si ahí había un extra, el extra se corre a otra hora o al día siguiente y se avisa); desde la 4.ª, 10:30, 17:00
+y 13:30. Los domingos, las 15:00 y las 21:00 siguen siendo de los resúmenes: 9:00, 10:30, 13:30, 17:00, 20:00. Nunca
+a las 12:30 ni a las 18:30 (los automáticos), ni una hora que ya pasó o a menos de una hora. Al programarla, `"estado": "programada"` y su `carpeta` en el json.
 **Formato de las efemérides (Kazuo, 25 nov 2026): NO son carruseles.** Es UNA sola imagen con la slide `efemeride`:
 el protagonista (persona o personaje) en foto grande, sin círculo ni marco (`"imagen"`, `"encuadre"`), `"etiqueta"`
 (CUMPLEAÑOS, ANIVERSARIO u HOMENAJE), `"titulo"` corto con la parte importante en rojo («Feliz cumpleaños, **Satoru
