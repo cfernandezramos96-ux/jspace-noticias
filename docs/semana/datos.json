@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-25T14:00:47.045Z",
+  "actualizado": "2026-11-25T16:34:30.405Z",
   "posts": [
     {
       "externo": true,
@@ -1647,7 +1647,7 @@
       "carpeta": "noticias/2026-11-25-bandmaid-budokan",
       "titular": "BAND-MAID cierra su gira en el Budokan y pausará los conciertos en 2027",
       "franja": "jmusic",
-      "estado": "pendiente",
+      "estado": "aprobado",
       "temas": [],
       "hora": "2026-11-25T17:30:00Z",
       "programado": "2026-11-25T17:30:00Z",
@@ -1673,7 +1673,7 @@
       "carpeta": "noticias/2026-11-25-historie",
       "titular": "Historie llegará en enero con opening de Yorushika",
       "franja": "anime",
-      "estado": "pendiente",
+      "estado": "aprobado",
       "temas": [
         "anime",
         "jmusic"
