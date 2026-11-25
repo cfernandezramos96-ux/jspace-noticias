@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-24T23:32:31.229Z",
+  "actualizado": "2026-11-25T06:41:35.436Z",
   "posts": [
     {
       "externo": true,
@@ -1623,6 +1623,48 @@
       "fb_tipo": null,
       "reel_prueba": false,
       "historia": false
+    },
+    {
+      "carpeta": "noticias/2026-11-25-paprika-20",
+      "titular": "Paprika, de Satoshi Kon, cumple 20 años",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-11-25T14:00:00.000Z",
+      "programado": "2026-11-25T14:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-25-paprika-20/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-25-ringo-sheena-cumple",
+      "titular": "Feliz cumpleaños, Ringo Sheena",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-11-25T20:00:00.000Z",
+      "programado": "2026-11-25T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-25-ringo-sheena-cumple/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-25-kazuya-nakai-cumple",
+      "titular": "Feliz cumpleaños, Kazuya Nakai, la voz de Zoro",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-11-26T02:00:00.000Z",
+      "programado": "2026-11-26T02:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-25-kazuya-nakai-cumple/slide-01.jpg",
+      "video": false
     },
     {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
