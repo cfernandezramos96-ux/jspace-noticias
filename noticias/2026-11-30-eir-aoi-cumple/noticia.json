@@ -1,0 +1,22 @@
+{
+  "formato": "imagen",
+  "franja": "extra",
+  "efemeride": true,
+  "reel_prueba": false,
+  "titular": "Feliz cumpleaños, Eir Aoi",
+  "link": "https://www.sonymusic.co.jp/artist/aoieir/profile/",
+  "temas": [
+    "anime",
+    "jmusic"
+  ],
+  "slides": [
+    {
+      "tipo": "efemeride",
+      "imagen": "eir.jpg",
+      "arriba": 0,
+      "etiqueta": "Cumpleaños",
+      "titulo": "Feliz cumpleaños, **Eir Aoi**",
+      "subtitulo": "Cantante de anisong · cumple 38 años"
+    }
+  ]
+}

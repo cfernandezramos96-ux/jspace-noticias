@@ -1,0 +1,21 @@
+{
+  "formato": "imagen",
+  "franja": "extra",
+  "efemeride": true,
+  "reel_prueba": false,
+  "titular": "Feliz cumpleaños, SU-METAL",
+  "link": "https://www.toysfactory.co.jp/artist/babymetal",
+  "temas": [
+    "jmusic"
+  ],
+  "slides": [
+    {
+      "tipo": "efemeride",
+      "imagen": "sumetal.jpg",
+      "arriba": 0,
+      "etiqueta": "Cumpleaños",
+      "titulo": "Feliz cumpleaños, **SU-METAL**",
+      "subtitulo": "BABYMETAL · cumple 29 años"
+    }
+  ]
+}
