@@ -1,7 +1,5 @@
 {
   "vistos": {
-    "1ad0a8713c": "2026-11-17T23:30:02.516Z",
-    "cf13b59b16": "2026-11-18T01:57:59.262Z",
     "3369e6553f": "2026-11-18T03:34:08.645Z",
     "29ae156155": "2026-11-18T03:34:08.645Z",
     "fa2e78ad48": "2026-11-18T05:42:21.351Z",
@@ -23,7 +21,8 @@
     "30079efad0": "2026-11-24T01:57:35.579Z",
     "f57ac96517": "2026-11-24T05:38:46.821Z",
     "e098787cf4": "2026-11-24T08:03:49.988Z",
-    "83f6f7a04f": "2026-11-24T23:29:54.173Z"
+    "83f6f7a04f": "2026-11-24T23:29:54.173Z",
+    "70f7cf1a8b": "2026-11-25T02:00:27.880Z"
   },
   "pendientes": {
     "d778823b16": {
@@ -73,8 +72,14 @@
       "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPRVQ3Tm0wREpHa2tXT3VGT1pac1hnWFZiOUljdjRvanFDTU9VSUdrS1pQNTc3bkVRS0wtbTRXYm1udmZDZEZ3a1gzTjI0RHY1T3pMLVVVd0w0UWl1UkVUMGNYUkRsaFNhZC1OeE9YTHhtYk9FMWZxLS1OTkFyeVFmSUU4OVZOcTBHMi1Jc1JVcmRYVVJqTXlMRnNyeWZPV3FHSEVhcll0N0RTMzdkMVhvVWV1QmVEWEZqSjBFeVJQRnlsR3VxaFE?oc=5",
       "fuente": "Prensa de Colombia",
       "fecha": "2026-11-24T23:29:54.174Z"
+    },
+    "70f7cf1a8b": {
+      "titulo": "宇多田ヒカル「Intentions」リリックビデオ公開、Floating Points共同プロデュース曲（動画あり） - ナタリー",
+      "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE93UXZrYVFuNlhsUWVVcjYyN2ZJc01PWC1fcDl6RThSbm9NR3BZMFY1RHNSVVBndkpyTHozNFAzMGxoMEZJRVhuOEw5ZHA?oc=5",
+      "fuente": "Natalie",
+      "fecha": "2026-11-25T02:00:27.880Z"
     }
   },
   "dia": "2026-11-24",
-  "avisos": 3
+  "avisos": 4
 }
