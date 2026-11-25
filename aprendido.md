@@ -44,3 +44,4 @@ sección, y haz commit junto con la corrección. Si ya estaba, refuérzala con �
 
 ## Etiquetas
 - **Estrenos de películas en cines de Colombia: etiqueta a Cinépolis Colombia y a las cadenas que podrían tenerla** (`cinepolis.co`, `cinecolombia`, `cinemarkcol`, `procinal`) más al estudio o distribuidora; verifica cada usuario con business_discovery antes (Kazuo, 5 nov 2026; One Piece Doble Aventura).
+- **Nunca cortar la cara del protagonista** de una foto o visual (ojos, frente y barbilla siempre dentro del encuadre); si la imagen es horizontal, mejor otra vertical o mostrarla entera, nunca recortarla para llenar (Kazuo, 25 nov 2026; efeméride de prueba de Ichigo).

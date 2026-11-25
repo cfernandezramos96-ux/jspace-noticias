@@ -7,7 +7,7 @@
      todo el texto va en .centro (90 px de margen). DATA.alto = 1440 la deja en 3:4 para subirla a mano. Tipos:
        portada · la imagen oficial a sangre + logo, titular y una línea, arriba o abajo (como Koryugi y el post de Ao no Hako)
        poster  · la imagen oficial completa, sin recortar, sobre su versión desenfocada
-       efemeride · UNA imagen: el protagonista en foto grande a sangre; si es autor, sus obras en burbujas pequeñas abajo
+       efemeride · UNA imagen: el protagonista en foto grande (la cara nunca se corta); si es autor, sus obras en burbujas a los lados
        texto · dato · cierre · slides de diseño con el estilo de los carruseles de ElKazuoTV (negro con rayos, rojo, línea roja)
      Poppins Black en mayúsculas para titulares, Poppins Medium para el texto. Solo el logo NUEVO de JSpace.
      Texto entre **dobles asteriscos** = rojo.
@@ -133,28 +133,59 @@
     if (D.total > 1 && D.indice === 1) { const e = el('div', 'abs black centro', { fontSize: '26px', color: tx }, 'Desliza <span class="r">→</span>'); bl.push([e, 28]); }
     if (arriba) apila(bl, { top: 64 }); else apila(bl, { bottom: H - 60 });
   } else if (tipo === 'efemeride') {
-    // efemérides (Kazuo, 25 nov 2026): UNA imagen. La foto del protagonista (persona o personaje) grande, a sangre, sin
-    // círculo ni marco; abajo el texto y, si es un autor, sus obras más importantes en burbujas pequeñas, sin nombre
-    // («circulos»: rutas o {imagen, encuadre}, hasta 6).
-    const f = el('div', 'foto', { left: '0', top: '0', width: W + 'px', height: H + 'px' });
-    const im = document.createElement('img'); im.src = src(S.imagen); im.style.objectPosition = S.encuadre || '50% 25%'; f.appendChild(im);
-    if (S.subir) im.style.transform = `translateY(-${S.subir}px)`;
-    const obras = (S.circulos || []).slice(0, 6).map((c) => typeof c === 'string' ? { imagen: c } : c);
+    // efemérides (Kazuo, 25 nov 2026): UNA imagen. El protagonista (persona o personaje) en foto grande, sin círculo
+    // ni marco. Si es un autor, sus obras van en burbujas a los lados de la foto (enmarcándolo, nunca encima de la
+    // cara) con el nombre en texto debajo («circulos»: rutas o {imagen, nombre, encuadre}, hasta 6).
+    // LA CARA NUNCA SE CORTA (Kazuo, 25 nov 2026): si la foto es apaisada no se recorta a lo alto; se muestra entera
+    // arriba, a todo el ancho, sobre su misma imagen difuminada.
+    const im0 = new Image(); im0.src = src(S.imagen); await im0.decode().catch(() => {});
+    const asp = im0.naturalWidth && im0.naturalHeight ? im0.naturalWidth / im0.naturalHeight : 0.8;
+    const apaisada = !S.recortar && asp > 0.95;
+    let fotoApaisada = null;
+    if (apaisada) {
+      const fondo = el('div', 'foto', { left: '-80px', top: '-80px', width: (W + 160) + 'px', height: (H + 160) + 'px', filter: 'blur(34px) brightness(.45) saturate(1.15)' });
+      const fi = document.createElement('img'); fi.src = src(S.imagen); fondo.appendChild(fi);
+      const hf = Math.round(W / asp);
+      // entera, a todo el ancho; los bordes de arriba y abajo se funden con el fondo (se centra cuando ya se sabe dónde va el texto)
+      fotoApaisada = el('div', 'foto', { left: '0', top: '0', width: W + 'px', height: hf + 'px',
+        WebkitMaskImage: 'linear-gradient(180deg, transparent 0, #000 9%, #000 88%, transparent 100%)', maskImage: 'linear-gradient(180deg, transparent 0, #000 9%, #000 88%, transparent 100%)' });
+      fotoApaisada.dataset.h = hf;
+      const im = document.createElement('img'); im.src = src(S.imagen); im.style.objectFit = 'contain'; fotoApaisada.appendChild(im);
+    } else {
+      const f = el('div', 'foto', { left: '0', top: '0', width: W + 'px', height: H + 'px' });
+      const im = document.createElement('img'); im.src = src(S.imagen); im.style.objectPosition = S.encuadre || '50% 20%'; f.appendChild(im);
+      if (S.subir) im.style.transform = `translateY(-${S.subir}px)`;
+    }
     const fuerza = S.sombra != null ? S.sombra : 1;
     el('div', 'abs', { left: '0', top: '0', width: W + 'px', height: H + 'px',
-      background: `linear-gradient(180deg, rgba(10,10,10,0) ${obras.length ? 40 : 46}%, rgba(10,10,10,${0.84 * fuerza}) ${obras.length ? 62 : 68}%, rgba(10,10,10,${0.97 * fuerza}) 84%)` });
+      background: `linear-gradient(180deg, rgba(10,10,10,0) 48%, rgba(10,10,10,${0.84 * fuerza}) 68%, rgba(10,10,10,${0.97 * fuerza}) 84%)` });
     const bl = [[logo(S.logo || 66), 0]];
     if (S.etiqueta) bl.push([el('div', 'abs black centro', { fontSize: '30px', letterSpacing: '.08em', color: 'var(--rojo)' }, rico(S.etiqueta)), 18]);
-    const T = el('div', 'abs black centro', { lineHeight: '1.0' }, rico(S.titulo)); encaja(T, S.tamano || (obras.length ? 80 : 88), 260, 52); bl.push([T, 8]);
+    const T = el('div', 'abs black centro', { lineHeight: '1.0' }, rico(S.titulo)); encaja(T, S.tamano || 86, 260, 52); bl.push([T, 8]);
     if (S.subtitulo) { const e = el('div', 'abs black centro', { lineHeight: '1.15', opacity: '.92' }); e.innerHTML = rico(S.subtitulo); encaja(e, 36, 90, 26); bl.push([e, 14]); }
+    const arribaTexto = H - 56 - alto(bl);
+    apila(bl, { bottom: H - 56 });
+    if (fotoApaisada) fotoApaisada.style.top = (S.arriba != null ? S.arriba : Math.max(0, Math.round((arribaTexto + 40 - Number(fotoApaisada.dataset.h)) / 2))) + 'px';
+    // las obras: burbujas grandes en dos columnas, a la izquierda y a la derecha de la foto, entre el borde de arriba
+    // y el texto; la del medio de la foto queda libre para la cara
+    const obras = (S.circulos || []).slice(0, 6).map((c) => typeof c === 'string' ? { imagen: c } : c);
     if (obras.length) {
-      // las obras: una fila de burbujas pequeñas, debajo de todo el texto
-      const d = obras.length > 5 ? 112 : 124, fila = el('div', 'abs', { left: '0', width: W + 'px', height: d + 'px', display: 'flex', justifyContent: 'center', gap: '18px' });
-      obras.forEach((o) => { const k = document.createElement('div'); Object.assign(k.style, { width: d + 'px', height: d + 'px', borderRadius: '50%', overflow: 'hidden', border: '5px solid #fff', boxShadow: '0 12px 26px -10px rgba(0,0,0,.8)', flex: '0 0 auto', background: '#111' });
-        const i = document.createElement('img'); i.src = src(o.imagen); Object.assign(i.style, { width: '100%', height: '100%', objectFit: 'cover', objectPosition: o.encuadre || '50% 30%' }); k.appendChild(i); fila.appendChild(k); });
-      bl.push([fila, 26]);
+      const n = obras.length, d = n > 4 ? 178 : 196, cols = [d / 2 + 34, W - d / 2 - 34];
+      const izq = obras.filter((_, i) => i % 2 === 0), der = obras.filter((_, i) => i % 2 === 1);
+      const lado = (lista, x) => {
+        const libre = arribaTexto - 70, paso = Math.min(d + 70, (libre - 60) / Math.max(lista.length, 1));
+        const y0 = 60 + (libre - 60 - paso * lista.length) / 2 + paso / 2;
+        lista.forEach((o, i) => {
+          const y = y0 + i * paso;
+          const k = el('div', 'abs', { left: (x - d / 2) + 'px', top: (y - d / 2) + 'px', width: d + 'px', height: d + 'px', borderRadius: '50%', overflow: 'hidden', border: '7px solid #fff', boxShadow: '0 0 0 5px var(--rojo), 0 24px 50px -16px rgba(0,0,0,.85)', background: '#111' });
+          const i2 = document.createElement('img'); i2.src = src(o.imagen); Object.assign(i2.style, { width: '100%', height: '100%', objectFit: 'cover', objectPosition: o.encuadre || '50% 30%' }); k.appendChild(i2);
+          if (o.nombre) {
+            const t = el('div', 'abs black', { width: (d + 60) + 'px', left: (x - d / 2 - 30) + 'px', top: (y + d / 2 + 14) + 'px', fontSize: '22px', lineHeight: '1.05', textAlign: 'center', textShadow: '0 2px 10px rgba(0,0,0,.95), 0 0 2px rgba(0,0,0,.9)' }, rico(o.nombre));
+          }
+        });
+      };
+      lado(izq, cols[0]); lado(der, cols[1]);
     }
-    apila(bl, { bottom: H - 54 });
   } else if (tipo === 'historia') {
     // contar la noticia en varias slides con poco texto (referencia: Tanuki Media): foto a sangre, UNA frase abajo,
     // opcionalmente una fila de círculos con personajes o portadas, y el logo pequeño al pie

@@ -224,9 +224,10 @@ tráiler oficial** y revisa el resultado con cuidado (hojas de fotogramas con ff
 - El tráiler: `pip install yt-dlp` y bájalo del canal oficial. Si YouTube bloquea la nube, búscalo en la web
   oficial o en la cuenta oficial; si no se consigue, haz el post con imágenes y dilo.
 - Efemérides (cumpleaños de personajes, autores y artistas, aniversarios; Kazuo, 25 nov 2026): NO son carrusel.
-  Una sola imagen con la slide `efemeride`: el protagonista en foto grande a sangre, sin círculo (sin escenas del
-  anime), etiqueta CUMPLEAÑOS/ANIVERSARIO/HOMENAJE, título corto y una línea, sin slide de cierre. Si es un autor,
-  3-6 obras abajo en burbujas pequeñas sin nombre (`"circulos": [rutas]`). El resto va en la leyenda.
+  Una sola imagen con la slide `efemeride`: el protagonista en foto grande sin círculo (sin escenas del anime), y su
+  cara NUNCA cortada; etiqueta CUMPLEAÑOS/ANIVERSARIO/HOMENAJE, título corto y una línea, sin slide de cierre. Si es
+  un autor, 3-6 obras en burbujas a los lados con el nombre debajo (`"circulos": [{"imagen", "nombre"}]`). El resto
+  va en la leyenda.
 
 ### Resumen de la semana (domingos)
 

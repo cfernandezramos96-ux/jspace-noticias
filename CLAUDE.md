@@ -132,13 +132,18 @@ márcala `"estado": "descartada"` con una `nota` y avísalo en el mensaje del d�
 nada: se confirma ese mismo día o se descarta (25 nov 2026: Paprika 20 años se quedó en «por confirmar» y no salió). Horas, en este orden, la primera libre: entre semana 15:00, 21:00, 10:30, 13:30, 17:00; los domingos (15:00 y
 21:00 son de los resúmenes) 10:30, 13:30, 17:00, 20:00, 11:30. Nunca una hora que ya pasó ni a menos de una hora. Al programarla, `"estado": "programada"` y su `carpeta` en el json.
 **Formato de las efemérides (Kazuo, 25 nov 2026): NO son carruseles.** Es UNA sola imagen con la slide `efemeride`:
-la foto o el visual oficial del protagonista (persona o personaje) GRANDE, a sangre, sin círculo ni marco (`"imagen"`,
-`"encuadre"`; mejor vertical), `"etiqueta"` (CUMPLEAÑOS, ANIVERSARIO u HOMENAJE), `"titulo"` corto con la parte
-importante en rojo («Feliz cumpleaños, **Satoru Gojo**») y `"subtitulo"` de una línea (obra, o edad y fecha).
-**Si es un autor** (mangaka, director, compositor, ilustrador), sus obras más importantes van abajo en burbujas
-pequeñas, sin nombre: `"circulos": ["bleach.jpg", "burn-the-witch.jpg", …]` (3 a 6 portadas o visuales oficiales).
-Las burbujas son solo para las obras, nunca para el protagonista. SIN slide de cierre ni ninguna otra. Lo que haya
-que contar va en la leyenda. Sin reel de prueba aparte (`"reel_prueba": false`).
+el protagonista (persona o personaje) en foto grande, sin círculo ni marco (`"imagen"`, `"encuadre"`), `"etiqueta"`
+(CUMPLEAÑOS, ANIVERSARIO u HOMENAJE), `"titulo"` corto con la parte importante en rojo («Feliz cumpleaños, **Satoru
+Gojo**») y `"subtitulo"` de una línea (obra, o edad y fecha).
+- **La cara del protagonista NUNCA puede quedar cortada** (Kazuo, 25 nov 2026: en una de prueba de Bleach se salía la
+  cara de Ichigo). Busca una imagen vertical o cuadrada; si solo hay horizontal, la plantilla la muestra entera, a
+  todo el ancho, fundida con su fondo difuminado (no la recorta). Revisa la imagen con Read: cara completa, ojos y
+  barbilla dentro, nada tapado por el texto ni por las burbujas.
+- **Si es un autor** (mangaka, director, compositor, ilustrador): sus obras más importantes en burbujas grandes a los
+  lados de su foto, con el nombre en texto debajo: `"circulos": [{"imagen": "bleach.jpg", "nombre": "Bleach"}, …]`
+  (3 a 6 portadas o visuales oficiales). Las burbujas son solo para las obras, nunca para el protagonista.
+- SIN slide de cierre ni ninguna otra. Lo que haya que contar va en la leyenda. Sin reel de prueba aparte
+  (`"reel_prueba": false`).
 
 **Sin prioridad para Colombia (Kazuo, 25 nov 2026):** las noticias de Colombia no van primero ni tienen regla
 especial; se eligen por lo mismo que las demás (interés para el público y que sea anime, manga o J-music de verdad).
