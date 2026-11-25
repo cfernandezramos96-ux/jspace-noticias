@@ -1,0 +1,22 @@
+{
+ "titular": "Kindergarten WARS (Yōchien WARS) llegará en abril de 2027 con Ado en el opening",
+ "link": "https://www.famitsu.com/article/202611/95048",
+ "formato": "carrusel",
+ "franja": "extra",
+ "tema": "anime",
+ "temas": ["anime", "jmusic"],
+ "reel_prueba": false,
+ "slides": [
+  {"tipo": "portada", "imagen": "poster.jpg", "encuadre": "50% 50%", "posicion": "abajo", "sombra": 1, "tema": "oscuro",
+   "etiqueta": "Anime · Abril 2027",
+   "titulo": "**Kindergarten WARS** llegará en abril con Ado en el opening",
+   "texto": "Nuevo visual y primer avance del anime de Sunrise."},
+  {"tipo": "historia", "imagen": "rita.jpg", "encuadre": "55% 40%",
+   "texto": "**Ado** interpretará el opening, «ビバヤタラメッタ», compuesto por **Takeaki Wada**",
+   "nota": "Kindergarten WARS · Opening"},
+  {"tipo": "historia", "imagen": "sumire.jpg", "encuadre": "50% 40%",
+   "texto": "El anime será producido por **Sunrise** y **FelixFilm**, y se emitirá en **TV Tokyo**",
+   "nota": "Estreno: abril de 2027"},
+  {"tipo": "cierre"}
+ ]
+}

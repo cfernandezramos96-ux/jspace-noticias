@@ -1,0 +1,17 @@
+{
+ "titular": "Frieren tendrá un spin-off manga, «Betsutan», desde el 2 de diciembre en Weekly Shonen Sunday",
+ "link": "https://finalweapon.net/2026/11/24/frieren-beyond-journeys-end-another-story-spinoff-manga-announced/",
+ "formato": "carrusel",
+ "franja": "extra",
+ "tema": "anime",
+ "reel_prueba": false,
+ "slides": [
+  {"tipo": "portada", "imagen": "visual.jpg", "encuadre": "50% 50%", "posicion": "abajo", "sombra": 1, "tema": "oscuro",
+   "etiqueta": "Manga · Spin-off",
+   "titulo": "**Frieren** tendrá un spin-off en manga desde el 2 de diciembre",
+   "texto": "«Sōsō no Frieren: Betsutan» se publicará en Weekly Shonen Sunday."},
+  {"tipo": "dato", "antes": "El spin-off comenzará a publicarse en la revista de Shogakukan el", "dato": "2 DIC",
+   "texto": "Será una serie corta, dibujada por Tsukasa Abe y ambientada entre el primer y el segundo capítulo."},
+  {"tipo": "cierre"}
+ ]
+}
