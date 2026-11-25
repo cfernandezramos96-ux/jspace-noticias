@@ -1,0 +1,21 @@
+{
+  "formato": "imagen",
+  "franja": "extra",
+  "efemeride": true,
+  "reel_prueba": false,
+  "titular": "Feliz cumpleaños, Megumin",
+  "link": "https://animecorner.me/konosuba-an-explosion-on-this-wonderful-world-gets-second-trailer-on-megumins-birthday/",
+  "temas": [
+    "anime"
+  ],
+  "slides": [
+    {
+      "tipo": "efemeride",
+      "imagen": "megumin.jpg",
+      "arriba": 0,
+      "etiqueta": "Cumpleaños",
+      "titulo": "Feliz cumpleaños, **Megumin**",
+      "subtitulo": "KonoSuba · 4 de diciembre"
+    }
+  ]
+}

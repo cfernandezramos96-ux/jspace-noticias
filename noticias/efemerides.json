@@ -103,8 +103,8 @@
    "tipo": "personaje",
    "que": "cumpleaños de Megumin",
    "detalle": "KonoSuba",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "programada",
+   "carpeta": "noticias/2026-12-04-megumin-cumple"
   },
   {
    "fecha": "2026-12-05",
@@ -112,8 +112,8 @@
    "tipo": "personaje",
    "que": "cumpleaños de Lelouch Lamperouge",
    "detalle": "Code Geass",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "programada",
+   "carpeta": "noticias/2026-12-05-lelouch-cumple"
   },
   {
    "fecha": "2026-12-05",
@@ -220,8 +220,8 @@
    "tipo": "personaje",
    "que": "cumpleaños de Tobio Kageyama",
    "detalle": "Haikyu!!",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "programada",
+   "carpeta": "noticias/2026-12-22-kageyama-cumple"
   },
   {
    "fecha": "2026-12-22",
@@ -250,8 +250,8 @@
    "tipo": "personaje",
    "que": "cumpleaños de Levi Ackerman",
    "detalle": "Attack on Titan",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "programada",
+   "carpeta": "noticias/2026-12-25-levi-cumple"
   },
   {
    "fecha": "2026-12-27",

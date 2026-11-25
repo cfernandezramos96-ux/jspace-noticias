@@ -1,0 +1,21 @@
+{
+  "formato": "imagen",
+  "franja": "extra",
+  "efemeride": true,
+  "reel_prueba": false,
+  "titular": "Feliz cumpleaños, Tobio Kageyama",
+  "link": "https://animecorner.me/haikyu-manga-reveals-birthday-trailer-for-tobio-kageyama-and-collab-trailer-with-hinata/",
+  "temas": [
+    "anime"
+  ],
+  "slides": [
+    {
+      "tipo": "efemeride",
+      "imagen": "kageyama.jpg",
+      "arriba": 0,
+      "etiqueta": "Cumpleaños",
+      "titulo": "Feliz cumpleaños, **Tobio Kageyama**",
+      "subtitulo": "Haikyu!! · 22 de diciembre"
+    }
+  ]
+}

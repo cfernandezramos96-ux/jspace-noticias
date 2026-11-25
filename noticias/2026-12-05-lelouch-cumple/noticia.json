@@ -1,0 +1,21 @@
+{
+  "formato": "imagen",
+  "franja": "extra",
+  "efemeride": true,
+  "reel_prueba": false,
+  "titular": "Feliz cumpleaños, Lelouch Lamperouge",
+  "link": "https://animecorner.me/code-geass-lelouch-of-the-rebellion-gets-a-re-broadcast-with-new-songs/",
+  "temas": [
+    "anime"
+  ],
+  "slides": [
+    {
+      "tipo": "efemeride",
+      "imagen": "lelouch.jpg",
+      "arriba": 0,
+      "etiqueta": "Cumpleaños",
+      "titulo": "Feliz cumpleaños, **Lelouch Lamperouge**",
+      "subtitulo": "Code Geass · 5 de diciembre"
+    }
+  ]
+}
