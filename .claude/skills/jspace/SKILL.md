@@ -223,8 +223,9 @@ tráiler oficial** y revisa el resultado con cuidado (hojas de fotogramas con ff
   portada como miniatura.
 - El tráiler: `pip install yt-dlp` y bájalo del canal oficial. Si YouTube bloquea la nube, búscalo en la web
   oficial o en la cuenta oficial; si no se consigue, haz el post con imágenes y dilo.
-- Efemérides (cumpleaños de personajes, aniversarios): como carrusel de slides `historia`, no con escenas del
-  anime (no hay clips oficiales y es donde más riesgo de derechos hay), salvo que exista un clip oficial.
+- Efemérides (cumpleaños de personajes, autores y artistas, aniversarios; Kazuo, 25 nov 2026): NO son carrusel.
+  Una sola imagen, una slide `portada` con el visual o la foto oficial (sin escenas del anime), etiqueta
+  CUMPLEAÑOS/ANIVERSARIO/HOMENAJE, título corto y una línea, sin slide de cierre. El resto va en la leyenda.
 
 ### Resumen de la semana (domingos)
 
