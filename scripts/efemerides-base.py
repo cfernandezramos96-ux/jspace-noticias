@@ -148,6 +148,33 @@ PENDIENTES = [
     ('06-06', 2000, 'Vaundy', 'cantante de «Kaiju no Hanauta» y temas de Chainsaw Man', 'cantante', 'web oficial (vaundy.jp), Last.fm', 'alta'),
     ('03-06', 1995, 'Aimyon', 'cantautora de «Marigold»', 'cantante', 'de memoria, sin fuente todavía', 'baja'),
     ('02-08', None, 'SAIKI (BAND-MAID)', 'voz de BAND-MAID', 'cantante', 'Moegirl (wiki de fans)', 'baja'),
+    # animes muy queridos en Latinoamérica (Kazuo, 25 nov 2026)
+    ('12-06', 1953, 'Masami Kurumada', 'creador de Los Caballeros del Zodiaco (Saint Seiya)', 'mangaka', 'allcinema', 'alta'),
+    ('06-21', 1963, 'Gosho Aoyama', 'creador de Detective Conan', 'mangaka', 'Anime News Network, MyAnimeList', 'alta'),
+    ('07-28', 1960, 'Yoichi Takahashi', 'creador de Supercampeones (Captain Tsubasa)', 'mangaka', 'de memoria, sin fuente todavía', 'baja'),
+    ('05-26', 1970, 'Nobuhiro Watsuki', 'creador de Samurai X (Rurouni Kenshin)', 'mangaka', 'de memoria, sin fuente todavía', 'baja'),
+    ('08-28', 1965, 'Satoshi Tajiri', 'creador de Pokémon', 'director', 'de memoria, sin fuente todavía', 'baja'),
+    ('06-29', 1962, 'Mario Castañeda', 'la voz de Goku en el doblaje latino', 'seiyuu', 'Anime News Network, Wikipedia', 'alta'),
+]
+# (MM-DD, personaje, obra, fuente, confianza)
+PEND_PERSONAJES = [
+    ('12-01', 'Seiya de Pegaso', 'Los Caballeros del Zodiaco', 'de memoria (enciclopedia oficial), sin fuente todavía', 'baja'),
+    ('10-04', 'Shiryu de Dragón', 'Los Caballeros del Zodiaco', 'de memoria, sin fuente todavía', 'baja'),
+    ('01-23', 'Hyoga de Cisne', 'Los Caballeros del Zodiaco', 'de memoria, sin fuente todavía', 'baja'),
+    ('09-09', 'Shun de Andrómeda', 'Los Caballeros del Zodiaco', 'de memoria, sin fuente todavía', 'baja'),
+    ('08-15', 'Ikki de Fénix', 'Los Caballeros del Zodiaco', 'de memoria, sin fuente todavía', 'baja'),
+    ('07-28', 'Tsubasa Ozora (Oliver Atom)', 'Supercampeones', 'Anime! Anime! (lista de cumpleaños)', 'media'),
+    ('09-10', 'Ami Mizuno (Sailor Mercury)', 'Sailor Moon', 'de memoria, sin fuente todavía', 'media'),
+    ('04-17', 'Rei Hino (Sailor Mars)', 'Sailor Moon', 'de memoria, sin fuente todavía', 'media'),
+    ('12-05', 'Makoto Kino (Sailor Jupiter)', 'Sailor Moon', 'de memoria, sin fuente todavía', 'media'),
+    ('10-22', 'Minako Aino (Sailor Venus)', 'Sailor Moon', 'de memoria, sin fuente todavía', 'media'),
+    ('08-03', 'Mamoru Chiba (Tuxedo Mask)', 'Sailor Moon', 'de memoria, sin fuente todavía', 'media'),
+    ('04-01', 'Sakura Kinomoto', 'Sakura Card Captor', 'de memoria, sin fuente todavía', 'media'),
+]
+# (AAAA-MM-DD, qué, detalle, fuente, confianza)
+PEND_ANIV = [
+    ('2027-06-26', 'Digimon cumple 30 años', 'el primer Digital Monster (V-Pet) salió el 26-06-1997', 'Famitsu, Dengeki Online (Toei ya anunció el proyecto 30 aniversario)', 'alta'),
+    ('2027-11-03', 'MAN WITH A MISSION cumple 17 años de su debut', 'mini álbum «Welcome to the New World», 03-11-2010 (los lobos no tienen cumpleaños públicos)', 'Billboard Japan, Generasia', 'alta'),
 ]
 
 # (AAAA-MM-DD, qué, fecha original): aniversarios redondos que caen en el rango
@@ -202,6 +229,12 @@ for d in dias():
         if f == md:
             det = (f'cumple {d.year - nac} años · {de}' if nac else de)
             cands.append((0, {'tipo': tipo, 'que': f'cumpleaños de {nom}', 'detalle': det, 'pendiente': True, 'fuente': fuente, 'confianza': conf}))
+    for f, nom, obra, fuente, conf in PEND_PERSONAJES:
+        if f == md:
+            cands.append((0, {'tipo': 'personaje', 'que': f'cumpleaños de {nom}', 'detalle': obra, 'pendiente': True, 'fuente': fuente, 'confianza': conf}))
+    for f, q, det, fuente, conf in PEND_ANIV:
+        if f == d.isoformat():
+            cands.append((0, {'tipo': 'aniversario', 'que': q, 'detalle': det, 'pendiente': True, 'fuente': fuente, 'confianza': conf}))
     for i, (_, c) in enumerate(cands):
         lista.append({'fecha': d.isoformat(), 'orden': i + 1, **c, 'estado': 'aprobada', 'carpeta': None})
 
