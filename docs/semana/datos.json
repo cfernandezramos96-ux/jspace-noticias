@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-25T06:57:29.535Z",
+  "actualizado": "2026-11-25T07:04:25.558Z",
   "posts": [
     {
       "externo": true,
@@ -1667,6 +1667,20 @@
       "video": false
     },
     {
+      "carpeta": "noticias/2026-11-29-sanemi-cumple",
+      "titular": "Feliz cumpleaños, Sanemi Shinazugawa",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-11-29T14:00:00.000Z",
+      "programado": "2026-11-29T14:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-29-sanemi-cumple/slide-01.jpg",
+      "video": false
+    },
+    {
       "carpeta": "noticias/2026-12-06-joe-hisaishi-cumple",
       "titular": "Feliz cumpleaños, Joe Hisaishi",
       "franja": "extra",
@@ -1723,6 +1737,34 @@
       "programado": "2026-12-13T14:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-12-13-hide-homenaje/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-12-22-megumi-fushiguro-cumple",
+      "titular": "Feliz cumpleaños, Megumi Fushiguro",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-12-22T14:00:00.000Z",
+      "programado": "2026-12-22T14:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-12-22-megumi-fushiguro-cumple/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-12-28-nezuko-cumple",
+      "titular": "Feliz cumpleaños, Nezuko Kamado",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-12-28T20:00:00.000Z",
+      "programado": "2026-12-28T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-12-28-nezuko-cumple/slide-01.jpg",
       "video": false
     }
   ]
