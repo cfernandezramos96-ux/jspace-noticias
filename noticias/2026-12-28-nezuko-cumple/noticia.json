@@ -1,0 +1,21 @@
+{
+  "formato": "imagen",
+  "franja": "extra",
+  "efemeride": true,
+  "reel_prueba": false,
+  "titular": "Feliz cumpleaños, Nezuko Kamado",
+  "link": "https://animecorner.me/nezuko-from-demon-slayer-gets-adorable-2024-birthday-illustration-by-ufotable/",
+  "temas": [
+    "anime"
+  ],
+  "slides": [
+    {
+      "tipo": "efemeride",
+      "imagen": "nezuko.jpg",
+      "arriba": 0,
+      "etiqueta": "Cumpleaños",
+      "titulo": "Feliz cumpleaños, **Nezuko Kamado**",
+      "subtitulo": "Demon Slayer · 28 de diciembre"
+    }
+  ]
+}

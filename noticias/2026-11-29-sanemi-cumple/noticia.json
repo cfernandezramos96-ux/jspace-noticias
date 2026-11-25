@@ -1,0 +1,21 @@
+{
+  "formato": "imagen",
+  "franja": "extra",
+  "efemeride": true,
+  "reel_prueba": false,
+  "titular": "Feliz cumpleaños, Sanemi Shinazugawa",
+  "link": "https://animecorner.me/demon-slayer-sanemi-shinazugawa-gets-birthday-illustration-by-ufotable/",
+  "temas": [
+    "anime"
+  ],
+  "slides": [
+    {
+      "tipo": "efemeride",
+      "imagen": "sanemi.jpg",
+      "arriba": 0,
+      "etiqueta": "Cumpleaños",
+      "titulo": "Feliz cumpleaños, **Sanemi Shinazugawa**",
+      "subtitulo": "Demon Slayer · 29 de noviembre"
+    }
+  ]
+}

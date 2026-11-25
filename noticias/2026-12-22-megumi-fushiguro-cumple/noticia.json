@@ -1,0 +1,21 @@
+{
+  "formato": "imagen",
+  "franja": "extra",
+  "efemeride": true,
+  "reel_prueba": false,
+  "titular": "Feliz cumpleaños, Megumi Fushiguro",
+  "link": "https://animecorner.me/megumi-fushiguro-from-jujutsu-kaisen-gets-new-2025-birthday-illustration-featuring-yuji-nobara/",
+  "temas": [
+    "anime"
+  ],
+  "slides": [
+    {
+      "tipo": "efemeride",
+      "imagen": "megumi.jpg",
+      "arriba": 0,
+      "etiqueta": "Cumpleaños",
+      "titulo": "Feliz cumpleaños, **Megumi Fushiguro**",
+      "subtitulo": "Jujutsu Kaisen · 22 de diciembre"
+    }
+  ]
+}

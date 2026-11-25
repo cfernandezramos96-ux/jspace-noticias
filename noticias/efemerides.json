@@ -34,8 +34,8 @@
    "tipo": "personaje",
    "que": "cumpleaños de Sanemi Shinazugawa",
    "detalle": "Demon Slayer",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "programada",
+   "carpeta": "noticias/2026-11-29-sanemi-cumple"
   },
   {
    "fecha": "2026-11-29",
@@ -211,8 +211,8 @@
    "tipo": "personaje",
    "que": "cumpleaños de Megumi Fushiguro",
    "detalle": "Jujutsu Kaisen",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "programada",
+   "carpeta": "noticias/2026-12-22-megumi-fushiguro-cumple"
   },
   {
    "fecha": "2026-12-22",
@@ -277,8 +277,8 @@
    "tipo": "personaje",
    "que": "cumpleaños de Nezuko Kamado",
    "detalle": "Demon Slayer",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "programada",
+   "carpeta": "noticias/2026-12-28-nezuko-cumple"
   },
   {
    "fecha": "2027-01-01",
