@@ -1,0 +1,19 @@
+{
+  "formato": "imagen",
+  "franja": "extra",
+  "efemeride": true,
+  "reel_prueba": false,
+  "titular": "Recordamos a hide",
+  "link": "https://www.hide-city.com/",
+  "temas": ["jmusic"],
+  "slides": [
+    {
+      "tipo": "efemeride",
+      "imagen": "hide.jpg",
+      "encuadre": "50% 0%",
+      "etiqueta": "Homenaje",
+      "titulo": "Hoy cumpliría 62 años **hide**",
+      "subtitulo": "X JAPAN · 13 dic 1964 – 2 may 1998"
+    }
+  ]
+}

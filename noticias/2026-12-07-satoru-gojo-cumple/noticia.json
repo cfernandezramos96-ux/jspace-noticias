@@ -1,0 +1,19 @@
+{
+  "formato": "imagen",
+  "franja": "extra",
+  "efemeride": true,
+  "reel_prueba": false,
+  "titular": "Feliz cumpleaños, Satoru Gojo",
+  "link": "https://animecorner.me/satoru-gojo-from-jujutsu-kaisen-celebrates-birthday-with-friends-in-new-2024-illustration-by-mappa/",
+  "temas": ["anime"],
+  "slides": [
+    {
+      "tipo": "efemeride",
+      "imagen": "gojo.jpg",
+      "arriba": 0,
+      "etiqueta": "Cumpleaños",
+      "titulo": "Feliz cumpleaños, **Satoru Gojo**",
+      "subtitulo": "Jujutsu Kaisen · 7 de diciembre"
+    }
+  ]
+}

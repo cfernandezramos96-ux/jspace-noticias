@@ -133,8 +133,8 @@
    "tipo": "músico",
    "que": "cumpleaños de Joe Hisaishi",
    "detalle": "cumple 76 años · compositor de Studio Ghibli",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "programada",
+   "carpeta": "noticias/2026-12-06-joe-hisaishi-cumple"
   },
   {
    "fecha": "2026-12-06",
@@ -154,8 +154,8 @@
    "tipo": "personaje",
    "que": "cumpleaños de Satoru Gojo",
    "detalle": "Jujutsu Kaisen",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "programada",
+   "carpeta": "noticias/2026-12-07-satoru-gojo-cumple"
   },
   {
    "fecha": "2026-12-10",
@@ -172,8 +172,8 @@
    "tipo": "músico",
    "que": "natalicio de hide (homenaje)",
    "detalle": "habría cumplido 62 años · guitarrista de X JAPAN",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "programada",
+   "carpeta": "noticias/2026-12-13-hide-homenaje"
   },
   {
    "fecha": "2026-12-13",
