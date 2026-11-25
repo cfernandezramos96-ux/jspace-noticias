@@ -14,7 +14,7 @@
       "imagen": "fujiko.jpg",
       "etiqueta": "Homenaje",
       "titulo": "Hoy cumpliría 93 años **Fujiko F. Fujio**",
-      "subtitulo": "Creador de Doraemon · 1933 – 1996",
+      "subtitulo": "Mangaka · 1933 – 1996",
       "circulos": [
         "doraemon.jpg",
         "perman.jpg",
@@ -23,8 +23,8 @@
       ],
       "texto": "Creador de **Doraemon**, **Perman** y **Kiteretsu**",
       "cabeza": [
-        520,
-        440
+        540,
+        400
       ],
       "radio": 400,
       "tamano": 72,
