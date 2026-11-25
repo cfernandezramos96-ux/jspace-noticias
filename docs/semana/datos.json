@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-25T13:18:44.824Z",
+  "actualizado": "2026-11-25T14:00:47.045Z",
   "posts": [
     {
       "externo": true,
@@ -1628,15 +1628,20 @@
       "carpeta": "noticias/2026-11-25-paprika-20",
       "titular": "Paprika, de Satoshi Kon, cumple 20 años",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "anime"
       ],
-      "hora": "2026-11-25T14:00:00.000Z",
+      "hora": "2026-11-25T14:00:14.770Z",
       "programado": "2026-11-25T14:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-25-paprika-20/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DgKscnPjORn/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1884830229965774",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": false
     },
     {
       "carpeta": "noticias/2026-11-25-bandmaid-budokan",
