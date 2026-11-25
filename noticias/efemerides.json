@@ -1,5 +1,5 @@
 {
- "nota": "Calendario de efemérides APROBADO por Kazuo el 25 nov 2026: no necesita aprobación del grupo. La rutina de las 8:00 arma y programa sola, una semana antes, TODAS las de estado «aprobada» (puede haber varias el mismo día; «no va» = Kazuo no la quiere). Antes de diseñar, confirma la fecha en una fuente seria; si no cuadra, estado «descartada» con la nota del porqué. Estados: aprobada → programada (con carpeta) → publicada; no va; descartada.",
+ "nota": "Calendario de efemérides APROBADO por Kazuo el 25 nov 2026: no necesita aprobación del grupo. La rutina de las 8:00 arma y programa sola, una semana antes, TODAS las de estado «aprobada» (puede haber varias el mismo día; «no va» = Kazuo no la quiere). Antes de diseñar, confirma la fecha en una fuente seria; si no cuadra, estado «descartada» con la nota del porqué. Estados: aprobada → programada (con carpeta) → publicada; no va; descartada; por revisar (aún sin aprobar: no se arma).",
  "lista": [
   {
    "fecha": "2026-11-25",
@@ -35,6 +35,18 @@
    "que": "cumpleaños de Sanemi Shinazugawa",
    "detalle": "Demon Slayer",
    "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-11-29",
+   "orden": 2,
+   "tipo": "cantante",
+   "que": "cumpleaños de SUZUKA (Atarashii Gakko!)",
+   "detalle": "cumple 25 años · líder y voz de Atarashii Gakko!",
+   "pendiente": true,
+   "fuente": "The First Times, Renote",
+   "confianza": "media",
+   "estado": "por revisar",
    "carpeta": null
   },
   {
@@ -128,6 +140,18 @@
    "carpeta": null
   },
   {
+   "fecha": "2026-12-13",
+   "orden": 2,
+   "tipo": "músico",
+   "que": "cumpleaños de Maximum the Ryo-kun (Maximum The Hormone)",
+   "detalle": "cumple 48 años · guitarra, voz y compositor de Maximum The Hormone",
+   "pendiente": true,
+   "fuente": "Ticketjam, Niconico Daihyakka",
+   "confianza": "media",
+   "estado": "por revisar",
+   "carpeta": null
+  },
+  {
    "fecha": "2026-12-19",
    "orden": 1,
    "tipo": "seiyuu",
@@ -161,6 +185,18 @@
    "que": "cumpleaños de Tobio Kageyama",
    "detalle": "Haikyu!!",
    "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2026-12-22",
+   "orden": 3,
+   "tipo": "cantante",
+   "que": "cumpleaños de MIZYU (Atarashii Gakko!)",
+   "detalle": "cumple 28 años · integrante de Atarashii Gakko!",
+   "pendiente": true,
+   "fuente": "The First Times, kprofiles",
+   "confianza": "media",
+   "estado": "por revisar",
    "carpeta": null
   },
   {
@@ -269,6 +305,18 @@
    "que": "natalicio de Ryuichi Sakamoto (homenaje)",
    "detalle": "habría cumplido 75 años · compositor (Merry Christmas Mr. Lawrence, The Last Emperor)",
    "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-01-18",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de KANON (Atarashii Gakko!)",
+   "detalle": "cumple 25 años · integrante de Atarashii Gakko!",
+   "pendiente": true,
+   "fuente": "The First Times",
+   "confianza": "media",
+   "estado": "por revisar",
    "carpeta": null
   },
   {
@@ -386,6 +434,18 @@
    "que": "cumpleaños de Giyu Tomioka",
    "detalle": "Demon Slayer",
    "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-02-08",
+   "orden": 2,
+   "tipo": "cantante",
+   "que": "cumpleaños de SAIKI (BAND-MAID)",
+   "detalle": "voz de BAND-MAID",
+   "pendiente": true,
+   "fuente": "Moegirl (wiki de fans)",
+   "confianza": "baja",
+   "estado": "por revisar",
    "carpeta": null
   },
   {
@@ -530,6 +590,18 @@
    "que": "cumpleaños de Tsukasa Hojo",
    "detalle": "cumple 68 años · autor de City Hunter",
    "estado": "no va",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-03-06",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de Aimyon",
+   "detalle": "cumple 32 años · cantautora de «Marigold»",
+   "pendiente": true,
+   "fuente": "de memoria, sin fuente todavía",
+   "confianza": "baja",
+   "estado": "por revisar",
    "carpeta": null
   },
   {
@@ -902,6 +974,18 @@
    "carpeta": null
   },
   {
+   "fecha": "2027-06-06",
+   "orden": 2,
+   "tipo": "cantante",
+   "que": "cumpleaños de Vaundy",
+   "detalle": "cumple 27 años · cantante de «Kaiju no Hanauta» y temas de Chainsaw Man",
+   "pendiente": true,
+   "fuente": "web oficial (vaundy.jp), Last.fm",
+   "confianza": "alta",
+   "estado": "por revisar",
+   "carpeta": null
+  },
+  {
    "fecha": "2027-06-07",
    "orden": 1,
    "tipo": "mangaka",
@@ -1190,6 +1274,18 @@
    "carpeta": null
   },
   {
+   "fecha": "2027-08-23",
+   "orden": 1,
+   "tipo": "músico",
+   "que": "cumpleaños de DJ Matsunaga (Creepy Nuts)",
+   "detalle": "cumple 37 años · DJ de Creepy Nuts («Bling-Bang-Bang-Born»)",
+   "pendiente": true,
+   "fuente": "perfil oficial de Sony Music",
+   "confianza": "alta",
+   "estado": "por revisar",
+   "carpeta": null
+  },
+  {
    "fecha": "2027-08-29",
    "orden": 1,
    "tipo": "mangaka",
@@ -1235,6 +1331,18 @@
    "carpeta": null
   },
   {
+   "fecha": "2027-09-04",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de ano (あの)",
+   "detalle": "cantante y actriz (ex Yurumeru Mo!), «Chu, Tayousei.»",
+   "pendiente": true,
+   "fuente": "Niconico Daihyakka, Moegirl (año no público)",
+   "confianza": "media",
+   "estado": "por revisar",
+   "carpeta": null
+  },
+  {
    "fecha": "2027-09-06",
    "orden": 1,
    "tipo": "mangaka",
@@ -1244,12 +1352,36 @@
    "carpeta": null
   },
   {
+   "fecha": "2027-09-10",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de R-Shitei (Creepy Nuts)",
+   "detalle": "cumple 36 años · MC de Creepy Nuts («Bling-Bang-Bang-Born», «Otonoke»)",
+   "pendiente": true,
+   "fuente": "perfil oficial de Sony Music",
+   "confianza": "alta",
+   "estado": "por revisar",
+   "carpeta": null
+  },
+  {
    "fecha": "2027-09-12",
    "orden": 1,
    "tipo": "músico",
    "que": "cumpleaños de Hiroyuki Sawano",
    "detalle": "cumple 47 años · compositor de Attack on Titan",
    "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-09-13",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de Daisuke-han (Maximum The Hormone)",
+   "detalle": "cumple 50 años · voz de Maximum The Hormone",
+   "pendiente": true,
+   "fuente": "Ticketjam, Niconico Daihyakka",
+   "confianza": "media",
+   "estado": "por revisar",
    "carpeta": null
   },
   {
@@ -1289,12 +1421,36 @@
    "carpeta": null
   },
   {
+   "fecha": "2027-09-17",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de Mona (Phantom Siita)",
+   "detalle": "cumple 20 años · integrante de Phantom Siita, el grupo producido por Ado",
+   "pendiente": true,
+   "fuente": "UtaTen (una sola fuente)",
+   "confianza": "baja",
+   "estado": "por revisar",
+   "carpeta": null
+  },
+  {
    "fecha": "2027-09-18",
    "orden": 1,
    "tipo": "personaje",
    "que": "cumpleaños de Ryo Yamada",
    "detalle": "Bocchi the Rock!",
    "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-09-18",
+   "orden": 2,
+   "tipo": "cantante",
+   "que": "cumpleaños de Seiko Oomori",
+   "detalle": "cumple 40 años · cantautora y productora (ZOC)",
+   "pendiente": true,
+   "fuente": "Anime News Network, Last.fm",
+   "confianza": "alta",
+   "estado": "por revisar",
    "carpeta": null
   },
   {
@@ -1505,6 +1661,18 @@
    "carpeta": null
   },
   {
+   "fecha": "2027-11-17",
+   "orden": 1,
+   "tipo": "cantante",
+   "que": "cumpleaños de Miu (Phantom Siita)",
+   "detalle": "cumple 23 años · integrante de Phantom Siita, el grupo producido por Ado",
+   "pendiente": true,
+   "fuente": "UtaTen (una sola fuente)",
+   "confianza": "baja",
+   "estado": "por revisar",
+   "carpeta": null
+  },
+  {
    "fecha": "2027-11-20",
    "orden": 1,
    "tipo": "mangaka",
@@ -1547,6 +1715,18 @@
    "que": "cumpleaños de Sanemi Shinazugawa",
    "detalle": "Demon Slayer",
    "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-11-29",
+   "orden": 2,
+   "tipo": "cantante",
+   "que": "cumpleaños de SUZUKA (Atarashii Gakko!)",
+   "detalle": "cumple 26 años · líder y voz de Atarashii Gakko!",
+   "pendiente": true,
+   "fuente": "The First Times, Renote",
+   "confianza": "media",
+   "estado": "por revisar",
    "carpeta": null
   },
   {
@@ -1640,6 +1820,18 @@
    "carpeta": null
   },
   {
+   "fecha": "2027-12-13",
+   "orden": 2,
+   "tipo": "músico",
+   "que": "cumpleaños de Maximum the Ryo-kun (Maximum The Hormone)",
+   "detalle": "cumple 49 años · guitarra, voz y compositor de Maximum The Hormone",
+   "pendiente": true,
+   "fuente": "Ticketjam, Niconico Daihyakka",
+   "confianza": "media",
+   "estado": "por revisar",
+   "carpeta": null
+  },
+  {
    "fecha": "2027-12-19",
    "orden": 1,
    "tipo": "seiyuu",
@@ -1673,6 +1865,18 @@
    "que": "cumpleaños de Tobio Kageyama",
    "detalle": "Haikyu!!",
    "estado": "aprobada",
+   "carpeta": null
+  },
+  {
+   "fecha": "2027-12-22",
+   "orden": 3,
+   "tipo": "cantante",
+   "que": "cumpleaños de MIZYU (Atarashii Gakko!)",
+   "detalle": "cumple 29 años · integrante de Atarashii Gakko!",
+   "pendiente": true,
+   "fuente": "The First Times, kprofiles",
+   "confianza": "media",
+   "estado": "por revisar",
    "carpeta": null
   },
   {

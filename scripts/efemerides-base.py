@@ -131,6 +131,25 @@ PERSONAJES = [
     ('12-27', 'Hinata Hyuga', 'Naruto'), ('12-28', 'Nezuko Kamado', 'Demon Slayer'),
 ]
 
+# Por revisar (Kazuo pidió estos artistas el 25 nov 2026): NO salen hasta que él los apruebe en la página.
+# (MM-DD, año o None si no es público, nombre, de qué lo conocen, tipo, fuente, confianza)
+PENDIENTES = [
+    ('09-04', None, 'ano (あの)', 'cantante y actriz (ex Yurumeru Mo!), «Chu, Tayousei.»', 'cantante', 'Niconico Daihyakka, Moegirl (año no público)', 'media'),
+    ('11-29', 2001, 'SUZUKA (Atarashii Gakko!)', 'líder y voz de Atarashii Gakko!', 'cantante', 'The First Times, Renote', 'media'),
+    ('12-22', 1998, 'MIZYU (Atarashii Gakko!)', 'integrante de Atarashii Gakko!', 'cantante', 'The First Times, kprofiles', 'media'),
+    ('01-18', 2002, 'KANON (Atarashii Gakko!)', 'integrante de Atarashii Gakko!', 'cantante', 'The First Times', 'media'),
+    ('09-17', 2007, 'Mona (Phantom Siita)', 'integrante de Phantom Siita, el grupo producido por Ado', 'cantante', 'UtaTen (una sola fuente)', 'baja'),
+    ('11-17', 2004, 'Miu (Phantom Siita)', 'integrante de Phantom Siita, el grupo producido por Ado', 'cantante', 'UtaTen (una sola fuente)', 'baja'),
+    ('09-13', 1977, 'Daisuke-han (Maximum The Hormone)', 'voz de Maximum The Hormone', 'cantante', 'Ticketjam, Niconico Daihyakka', 'media'),
+    ('12-13', 1978, 'Maximum the Ryo-kun (Maximum The Hormone)', 'guitarra, voz y compositor de Maximum The Hormone', 'músico', 'Ticketjam, Niconico Daihyakka', 'media'),
+    ('09-18', 1987, 'Seiko Oomori', 'cantautora y productora (ZOC)', 'cantante', 'Anime News Network, Last.fm', 'alta'),
+    ('08-23', 1990, 'DJ Matsunaga (Creepy Nuts)', 'DJ de Creepy Nuts («Bling-Bang-Bang-Born»)', 'músico', 'perfil oficial de Sony Music', 'alta'),
+    ('09-10', 1991, 'R-Shitei (Creepy Nuts)', 'MC de Creepy Nuts («Bling-Bang-Bang-Born», «Otonoke»)', 'cantante', 'perfil oficial de Sony Music', 'alta'),
+    ('06-06', 2000, 'Vaundy', 'cantante de «Kaiju no Hanauta» y temas de Chainsaw Man', 'cantante', 'web oficial (vaundy.jp), Last.fm', 'alta'),
+    ('03-06', 1995, 'Aimyon', 'cantautora de «Marigold»', 'cantante', 'de memoria, sin fuente todavía', 'baja'),
+    ('02-08', None, 'SAIKI (BAND-MAID)', 'voz de BAND-MAID', 'cantante', 'Moegirl (wiki de fans)', 'baja'),
+]
+
 # (AAAA-MM-DD, qué, fecha original): aniversarios redondos que caen en el rango
 ANIVERSARIOS = [
     ('2026-11-25', 'Paprika de Satoshi Kon cumple 20 años', 'estreno en cines de Japón, 25-11-2006'),
@@ -178,7 +197,12 @@ for d in dias():
     for f, nom, obra in PERSONAJES:
         if f == md:
             cands.append((1, {'tipo': 'personaje', 'que': f'cumpleaños de {nom}', 'detalle': obra}))
-    for i, (_, c) in enumerate(sorted(cands, key=lambda x: -x[0])):
+    cands = sorted(cands, key=lambda x: -x[0])
+    for f, nac, nom, de, tipo, fuente, conf in PENDIENTES:
+        if f == md:
+            det = (f'cumple {d.year - nac} años · {de}' if nac else de)
+            cands.append((0, {'tipo': tipo, 'que': f'cumpleaños de {nom}', 'detalle': det, 'pendiente': True, 'fuente': fuente, 'confianza': conf}))
+    for i, (_, c) in enumerate(cands):
         lista.append({'fecha': d.isoformat(), 'orden': i + 1, **c, 'estado': 'aprobada', 'carpeta': None})
 
 RUTA = os.path.join(os.path.dirname(__file__), '..', 'noticias', 'efemerides.json')
@@ -190,8 +214,11 @@ if os.path.exists(RUTA):
 DEC = os.path.join(os.path.dirname(__file__), '..', 'noticias', 'efemerides-decisiones.json')
 dec = json.load(open(DEC, encoding='utf-8'))['decisiones'] if os.path.exists(DEC) else {}
 for e in lista:
-    va = dec.get(f"{e['fecha']}_{e['orden']}", 'va' if e['orden'] == 1 else 'no') == 'va'
-    e['estado'] = 'aprobada' if va else 'no va'
+    k = f"{e['fecha']}_{e['orden']}"
+    if e.get('pendiente'):
+        e['estado'] = {'va': 'aprobada', 'no': 'no va'}.get(dec.get(k), 'por revisar')
+    else:
+        e['estado'] = 'aprobada' if dec.get(k, 'va' if e['orden'] == 1 else 'no') == 'va' else 'no va'
     v = viejo.get((e['fecha'], e['que']))
     if v and v.get('estado') in ('programada', 'publicada', 'descartada'):
         e.update({k: v[k] for k in ('estado', 'carpeta', 'nota') if k in v})
@@ -200,7 +227,7 @@ out = {
     'nota': ('Calendario de efemérides APROBADO por Kazuo el 25 nov 2026: no necesita aprobación del grupo. La rutina de '
              'las 8:00 arma y programa sola, una semana antes, TODAS las de estado «aprobada» (puede haber varias el mismo día; '
              '«no va» = Kazuo no la quiere). Antes de diseñar, confirma la fecha en una fuente seria; si no cuadra, '
-             'estado «descartada» con la nota del porqué. Estados: aprobada → programada (con carpeta) → publicada; no va; descartada.'),
+             'estado «descartada» con la nota del porqué. Estados: aprobada → programada (con carpeta) → publicada; no va; descartada; por revisar (aún sin aprobar: no se arma).'),
     'lista': lista,
 }
 json.dump(out, open(RUTA, 'w', encoding='utf-8', newline='\n'), ensure_ascii=False, indent=1)
