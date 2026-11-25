@@ -1,0 +1,21 @@
+{
+  "formato": "imagen",
+  "franja": "extra",
+  "efemeride": true,
+  "reel_prueba": false,
+  "titular": "Feliz cumpleaños, Asuka Langley",
+  "link": "https://www.evangelion.co.jp/",
+  "temas": [
+    "anime"
+  ],
+  "slides": [
+    {
+      "tipo": "efemeride",
+      "imagen": "asuka.jpg",
+      "etiqueta": "Cumpleaños",
+      "titulo": "Feliz cumpleaños, **Asuka Langley**",
+      "subtitulo": "Evangelion · 4 de diciembre",
+      "encuadre": "50% 0%"
+    }
+  ]
+}

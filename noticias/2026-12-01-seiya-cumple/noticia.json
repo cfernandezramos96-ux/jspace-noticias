@@ -1,0 +1,21 @@
+{
+  "formato": "imagen",
+  "franja": "extra",
+  "efemeride": true,
+  "reel_prueba": false,
+  "titular": "Feliz cumpleaños, Seiya de Pegaso",
+  "link": "https://www.toei-anim.co.jp/",
+  "temas": [
+    "anime"
+  ],
+  "slides": [
+    {
+      "tipo": "efemeride",
+      "imagen": "seiya.jpg",
+      "etiqueta": "Cumpleaños",
+      "titulo": "Feliz cumpleaños, **Seiya de Pegaso**",
+      "subtitulo": "Los Caballeros del Zodiaco · 1 de diciembre",
+      "encuadre": "50% 0%"
+    }
+  ]
+}

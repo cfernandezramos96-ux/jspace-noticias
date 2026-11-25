@@ -64,9 +64,8 @@
    "tipo": "mangaka",
    "que": "natalicio de Fujiko F. Fujio (homenaje)",
    "detalle": "habría cumplido 93 años · creador de Doraemon",
-   "estado": "falta imagen",
-   "carpeta": null,
-   "nota": "No encontré un retrato de prensa bueno de Fujiko F. Fujio."
+   "estado": "programada",
+   "carpeta": "noticias/2026-12-01-fujiko-f-fujio-homenaje"
   },
   {
    "fecha": "2026-12-01",
@@ -77,9 +76,8 @@
    "pendiente": true,
    "fuente": "de memoria (enciclopedia oficial), sin fuente todavía",
    "confianza": "baja",
-   "estado": "falta imagen",
-   "carpeta": null,
-   "nota": "Solo hay imágenes chicas o borrosas de Seiya (y las del CG de Netflix)."
+   "estado": "programada",
+   "carpeta": "noticias/2026-12-01-seiya-cumple"
   },
   {
    "fecha": "2026-12-02",
@@ -96,9 +94,8 @@
    "tipo": "personaje",
    "que": "cumpleaños de Asuka Langley",
    "detalle": "Evangelion",
-   "estado": "falta imagen",
-   "carpeta": null,
-   "nota": "La web de Evangelion no deja bajar visuales; no encontré una imagen de Asuka en alta."
+   "estado": "programada",
+   "carpeta": "noticias/2026-12-04-asuka-cumple"
   },
   {
    "fecha": "2026-12-04",
@@ -148,9 +145,8 @@
    "pendiente": true,
    "fuente": "allcinema",
    "confianza": "alta",
-   "estado": "falta imagen",
-   "carpeta": null,
-   "nota": "No encontré ninguna foto de prensa buena de Masami Kurumada."
+   "estado": "programada",
+   "carpeta": "noticias/2026-12-06-masami-kurumada-cumple"
   },
   {
    "fecha": "2026-12-07",

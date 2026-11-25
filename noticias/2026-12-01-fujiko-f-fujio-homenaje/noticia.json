@@ -1,0 +1,34 @@
+{
+  "formato": "imagen",
+  "franja": "extra",
+  "efemeride": true,
+  "reel_prueba": false,
+  "titular": "Hoy cumpliría 93 años Fujiko F. Fujio",
+  "link": "https://www.fujiko-museum.com/",
+  "temas": [
+    "anime"
+  ],
+  "slides": [
+    {
+      "tipo": "efemeride",
+      "imagen": "fujiko.jpg",
+      "etiqueta": "Homenaje",
+      "titulo": "Hoy cumpliría 93 años **Fujiko F. Fujio**",
+      "subtitulo": "Creador de Doraemon · 1933 – 1996",
+      "circulos": [
+        "doraemon.jpg",
+        "perman.jpg",
+        "kiteretsu.jpg",
+        "esper-mami.jpg"
+      ],
+      "texto": "Creador de **Doraemon**, **Perman** y **Kiteretsu**",
+      "cabeza": [
+        520,
+        440
+      ],
+      "radio": 400,
+      "tamano": 72,
+      "encuadre": "50% 0%"
+    }
+  ]
+}

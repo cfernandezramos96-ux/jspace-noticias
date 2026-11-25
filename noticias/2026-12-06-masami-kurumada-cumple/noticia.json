@@ -1,0 +1,34 @@
+{
+  "formato": "imagen",
+  "franja": "extra",
+  "efemeride": true,
+  "reel_prueba": false,
+  "titular": "Feliz cumpleaños, Masami Kurumada",
+  "link": "https://www.shueisha.co.jp/",
+  "temas": [
+    "anime"
+  ],
+  "slides": [
+    {
+      "tipo": "efemeride",
+      "imagen": "kurumada.jpg",
+      "etiqueta": "Cumpleaños",
+      "titulo": "Feliz cumpleaños, **Masami Kurumada**",
+      "subtitulo": "Mangaka · cumple 73 años",
+      "circulos": [
+        "seiya.jpg",
+        "ring-ni-kakero.jpg",
+        "fuma.jpg",
+        "btx.jpg"
+      ],
+      "texto": "Autor de **Los Caballeros del Zodiaco**, **Ring ni Kakero** y **Fūma no Kojirō**",
+      "cabeza": [
+        525,
+        520
+      ],
+      "radio": 400,
+      "tamano": 74,
+      "encuadre": "50% 0%"
+    }
+  ]
+}
