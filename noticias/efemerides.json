@@ -1,5 +1,5 @@
 {
- "nota": "Calendario de efemérides APROBADO por Kazuo el 25 nov 2026: no necesita aprobación del grupo. La rutina de las 8:00 arma y programa sola cada fecha una semana antes (orden 1 = la que sale; las demás del mismo día, solo si el equipo las pide). Antes de diseñar, confirma la fecha en una fuente seria; si no cuadra, estado «descartada» con la nota del porqué. Estados: aprobada → programada (con carpeta) → publicada, o descartada.",
+ "nota": "Calendario de efemérides APROBADO por Kazuo el 25 nov 2026: no necesita aprobación del grupo. La rutina de las 8:00 arma y programa sola, una semana antes, TODAS las de estado «aprobada» (puede haber varias el mismo día; «no va» = Kazuo no la quiere). Antes de diseñar, confirma la fecha en una fuente seria; si no cuadra, estado «descartada» con la nota del porqué. Estados: aprobada → programada (con carpeta) → publicada; no va; descartada.",
  "lista": [
   {
    "fecha": "2026-11-25",
@@ -115,7 +115,7 @@
    "tipo": "mangaka",
    "que": "cumpleaños de Masakazu Katsura",
    "detalle": "cumple 64 años · autor de Video Girl Ai e I\"s",
-   "estado": "aprobada",
+   "estado": "no va",
    "carpeta": null
   },
   {
@@ -304,7 +304,7 @@
    "tipo": "mangaka",
    "que": "natalicio de Leiji Matsumoto (homenaje)",
    "detalle": "habría cumplido 89 años · creador de Galaxy Express 999 y Capitán Harlock",
-   "estado": "aprobada",
+   "estado": "no va",
    "carpeta": null
   },
   {
@@ -394,7 +394,7 @@
    "tipo": "mangaka",
    "que": "cumpleaños de Mitsuru Adachi",
    "detalle": "cumple 76 años · autor de Touch y H2",
-   "estado": "aprobada",
+   "estado": "no va",
    "carpeta": null
   },
   {
@@ -529,7 +529,7 @@
    "tipo": "mangaka",
    "que": "cumpleaños de Tsukasa Hojo",
    "detalle": "cumple 68 años · autor de City Hunter",
-   "estado": "aprobada",
+   "estado": "no va",
    "carpeta": null
   },
   {
@@ -1213,7 +1213,7 @@
    "tipo": "seiyuu",
    "que": "cumpleaños de Yuki Kaji",
    "detalle": "cumple 42 años · seiyuu de Eren Yeager",
-   "estado": "aprobada",
+   "estado": "no va",
    "carpeta": null
   },
   {

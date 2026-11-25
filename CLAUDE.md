@@ -125,11 +125,12 @@ fija Kazuo desde la app («…» → «Fijar en tu perfil»).
 (25 nov 2026 → 31 dic 2027: cumpleaños de mangakas, cantantes, seiyuus y personajes, y aniversarios redondos de
 obras; lo genera `scripts/efemerides-base.py`). Kazuo aprobó la lista completa, así que NO se manda a aprobar: la
 rutina de las 8:00 arma y programa sola cada una **una semana antes** (y pone al día las de los próximos 7 días que no
-tengan carpeta). Sale la de `orden` 1 de cada fecha; las demás del mismo día, solo si el equipo las pide. Antes de
+tengan carpeta). Salen TODAS las de `"estado": "aprobada"` (Kazuo eligió en la página cuáles van; puede haber varias el mismo día;
+`"no va"` no se arma; sus decisiones están en `noticias/efemerides-decisiones.json`). Antes de
 diseñar, confirma la fecha en una fuente seria (Wikipedia en japonés, web oficial, agencia, fanbook); si no cuadra,
 márcala `"estado": "descartada"` con una `nota` y avísalo en el mensaje del día. Nunca más «por confirmar» sin hacer
-nada: se confirma ese mismo día o se descarta (25 nov 2026: Paprika 20 años se quedó en «por confirmar» y no salió). Hora: 15:00 de Bogotá; si ya hay algo programado a esa hora, 21:00; los domingos (15:00 y 21:00 son de los
-resúmenes), 10:30. Al programarla, `"estado": "programada"` y su `carpeta` en el json.
+nada: se confirma ese mismo día o se descarta (25 nov 2026: Paprika 20 años se quedó en «por confirmar» y no salió). Horas, en este orden, la primera libre: entre semana 15:00, 21:00, 10:30, 13:30, 17:00; los domingos (15:00 y
+21:00 son de los resúmenes) 10:30, 13:30, 17:00, 20:00, 11:30. Nunca una hora que ya pasó ni a menos de una hora. Al programarla, `"estado": "programada"` y su `carpeta` en el json.
 
 **Sin prioridad para Colombia (Kazuo, 25 nov 2026):** las noticias de Colombia no van primero ni tienen regla
 especial; se eligen por lo mismo que las demás (interés para el público y que sea anime, manga o J-music de verdad).

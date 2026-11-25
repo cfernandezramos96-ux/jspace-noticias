@@ -186,15 +186,21 @@ viejo = {}
 if os.path.exists(RUTA):
     for e in json.load(open(RUTA, encoding='utf-8'))['lista']:
         viejo[(e['fecha'], e['que'])] = e
+# decisiones de Kazuo en la página (fecha_orden → va / no): mandan sobre «sale la de orden 1»
+DEC = os.path.join(os.path.dirname(__file__), '..', 'noticias', 'efemerides-decisiones.json')
+dec = json.load(open(DEC, encoding='utf-8'))['decisiones'] if os.path.exists(DEC) else {}
 for e in lista:
+    va = dec.get(f"{e['fecha']}_{e['orden']}", 'va' if e['orden'] == 1 else 'no') == 'va'
+    e['estado'] = 'aprobada' if va else 'no va'
     v = viejo.get((e['fecha'], e['que']))
-    if v: e.update({k: v[k] for k in ('estado', 'carpeta', 'nota') if k in v})
+    if v and v.get('estado') in ('programada', 'publicada', 'descartada'):
+        e.update({k: v[k] for k in ('estado', 'carpeta', 'nota') if k in v})
 
 out = {
     'nota': ('Calendario de efemérides APROBADO por Kazuo el 25 nov 2026: no necesita aprobación del grupo. La rutina de '
-             'las 8:00 arma y programa sola cada fecha una semana antes (orden 1 = la que sale; las demás del mismo día, '
-             'solo si el equipo las pide). Antes de diseñar, confirma la fecha en una fuente seria; si no cuadra, '
-             'estado «descartada» con la nota del porqué. Estados: aprobada → programada (con carpeta) → publicada, o descartada.'),
+             'las 8:00 arma y programa sola, una semana antes, TODAS las de estado «aprobada» (puede haber varias el mismo día; '
+             '«no va» = Kazuo no la quiere). Antes de diseñar, confirma la fecha en una fuente seria; si no cuadra, '
+             'estado «descartada» con la nota del porqué. Estados: aprobada → programada (con carpeta) → publicada; no va; descartada.'),
     'lista': lista,
 }
 json.dump(out, open(RUTA, 'w', encoding='utf-8', newline='\n'), ensure_ascii=False, indent=1)
