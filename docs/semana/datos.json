@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-25T07:42:31.780Z",
+  "actualizado": "2026-11-25T07:59:53.148Z",
   "posts": [
     {
       "externo": true,
@@ -1710,6 +1710,34 @@
       "video": false
     },
     {
+      "carpeta": "noticias/2026-12-01-fujiko-f-fujio-homenaje",
+      "titular": "Hoy cumpliría 93 años Fujiko F. Fujio",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-12-01T14:00:00.000Z",
+      "programado": "2026-12-01T14:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-12-01-fujiko-f-fujio-homenaje/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-12-01-seiya-cumple",
+      "titular": "Feliz cumpleaños, Seiya de Pegaso",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-12-01T20:00:00.000Z",
+      "programado": "2026-12-01T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-12-01-seiya-cumple/slide-01.jpg",
+      "video": false
+    },
+    {
       "carpeta": "noticias/2026-12-02-inori-minase-cumple",
       "titular": "Feliz cumpleaños, Inori Minase",
       "franja": "extra",
@@ -1722,6 +1750,20 @@
       "programado": "2026-12-02T14:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-12-02-inori-minase-cumple/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-12-04-asuka-cumple",
+      "titular": "Feliz cumpleaños, Asuka Langley",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-12-04T14:00:00.000Z",
+      "programado": "2026-12-04T14:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-12-04-asuka-cumple/slide-01.jpg",
       "video": false
     },
     {
@@ -1765,6 +1807,20 @@
       "programado": "2026-12-06T14:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-12-06-joe-hisaishi-cumple/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-12-06-masami-kurumada-cumple",
+      "titular": "Feliz cumpleaños, Masami Kurumada",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-12-06T15:30:00.000Z",
+      "programado": "2026-12-06T15:30:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-12-06-masami-kurumada-cumple/slide-01.jpg",
       "video": false
     },
     {
