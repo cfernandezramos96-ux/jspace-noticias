@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-25T07:22:38.058Z",
+  "actualizado": "2026-11-25T07:42:31.780Z",
   "posts": [
     {
       "externo": true,
@@ -1809,20 +1809,6 @@
       "programado": "2026-12-13T14:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-12-13-hide-homenaje/slide-01.jpg",
-      "video": false
-    },
-    {
-      "carpeta": "noticias/2026-12-20-su-metal-cumple",
-      "titular": "Feliz cumpleaños, SU-METAL",
-      "franja": "extra",
-      "estado": "aprobado",
-      "temas": [
-        "jmusic"
-      ],
-      "hora": "2026-12-20T14:00:00.000Z",
-      "programado": "2026-12-20T14:00:00.000Z",
-      "colaboradores": [],
-      "portada": "noticias/2026-12-20-su-metal-cumple/slide-01.jpg",
       "video": false
     },
     {
