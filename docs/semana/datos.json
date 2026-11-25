@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-25T06:41:35.436Z",
+  "actualizado": "2026-11-25T06:57:29.535Z",
   "posts": [
     {
       "externo": true,
@@ -1667,6 +1667,35 @@
       "video": false
     },
     {
+      "carpeta": "noticias/2026-12-06-joe-hisaishi-cumple",
+      "titular": "Feliz cumpleaños, Joe Hisaishi",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "anime",
+        "jmusic"
+      ],
+      "hora": "2026-12-06T14:00:00.000Z",
+      "programado": "2026-12-06T14:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-12-06-joe-hisaishi-cumple/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-12-07-satoru-gojo-cumple",
+      "titular": "Feliz cumpleaños, Satoru Gojo",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-12-07T14:00:00.000Z",
+      "programado": "2026-12-07T14:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-12-07-satoru-gojo-cumple/slide-01.jpg",
+      "video": false
+    },
+    {
       "carpeta": "noticias/2026-12-07-shonenknife-aniversario",
       "titular": "Se cumple un año del debut de Shonen Knife en Colombia",
       "franja": "extra",
@@ -1681,6 +1710,20 @@
       ],
       "portada": "noticias/2026-12-07-shonenknife-aniversario/slide-01.jpg",
       "video": true
+    },
+    {
+      "carpeta": "noticias/2026-12-13-hide-homenaje",
+      "titular": "Recordamos a hide",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-12-13T14:00:00.000Z",
+      "programado": "2026-12-13T14:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-12-13-hide-homenaje/slide-01.jpg",
+      "video": false
     }
   ]
 }
