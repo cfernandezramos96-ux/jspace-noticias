@@ -1,0 +1,31 @@
+{
+  "titular": "Historie llegará en enero con opening de Yorushika",
+  "link": "https://myanimelist.net/news/74978922",
+  "formato": "post",
+  "franja": "anime",
+  "temas": [
+    "anime",
+    "jmusic"
+  ],
+  "reel_prueba": false,
+  "slides": [
+    {
+      "tipo": "portada",
+      "imagen": "t2.png",
+      "encuadre": "38% 50%",
+      "posicion": "abajo",
+      "sombra": 1,
+      "tema": "oscuro",
+      "titulo": "**Historie** llegará en enero con opening de Yorushika",
+      "texto": "El manga del autor de Parasyte se estrenará con dos episodios seguidos.",
+      "etiqueta": "Nuevo tráiler"
+    },
+    {
+      "tipo": "poster",
+      "imagen": "kv.jpg"
+    },
+    {
+      "tipo": "cierre"
+    }
+  ]
+}

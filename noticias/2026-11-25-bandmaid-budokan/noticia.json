@@ -1,0 +1,42 @@
+{
+  "titular": "BAND-MAID cierra su gira en el Budokan y pausará los conciertos en 2027",
+  "link": "https://barks.jp/news/1106773",
+  "formato": "carrusel",
+  "franja": "jmusic",
+  "reel_prueba": false,
+  "slides": [
+    {
+      "tipo": "portada",
+      "imagen": "budokan.jpg",
+      "encuadre": "50% 50%",
+      "posicion": "abajo",
+      "sombra": 1,
+      "tema": "oscuro",
+      "titulo": "BAND-MAID pausará los conciertos en **2027**",
+      "texto": "Cierra su gira en el Budokan y volverá en 2028, por su 15.º aniversario."
+    },
+    {
+      "tipo": "poster",
+      "imagen": "promo.jpg"
+    },
+    {
+      "tipo": "texto",
+      "titulo": "Dos noches en el **Budokan**",
+      "subtitulo": "13 y 14 de noviembre",
+      "texto": "Un escenario pendiente desde que la pandemia canceló el concierto de 2021: **53 canciones** en el final de la gira.",
+      "imagen": "backstage.jpg",
+      "proporcion": 1.5,
+      "encuadre": "50% 50%"
+    },
+    {
+      "tipo": "historia",
+      "imagen": "spin.jpg",
+      "encuadre": "50% 50%",
+      "texto": "En 2027 anunciaron un **video del concierto** y **nuevas canciones**; antes lanzaron «SPIN»",
+      "nota": "«SPIN» · ending de BEYBLADE X"
+    },
+    {
+      "tipo": "cierre"
+    }
+  ]
+}
