@@ -21,7 +21,8 @@
     "424daf01d3": "2026-11-25T08:07:31.946Z",
     "92b0bea14c": "2026-11-25T09:51:09.418Z",
     "b6562658ad": "2026-11-25T09:51:09.419Z",
-    "01839a4a52": "2026-11-25T13:57:41.651Z"
+    "01839a4a52": "2026-11-25T13:57:41.651Z",
+    "673ec02f03": "2026-11-25T17:28:59.437Z"
   },
   "pendientes": {
     "b639cb0cc1": {
@@ -95,8 +96,14 @@
       "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5vekFxVDhIRFRMSzNUVm5UQ3pGSmpaNGY1cWVDdjZmMXh0eHp6ak9fREh4V1g1LTF5WG1OVFdXc19mM09PRzFSUFdqUHc?oc=5",
       "fuente": "Natalie",
       "fecha": "2026-11-25T13:57:41.652Z"
+    },
+    "673ec02f03": {
+      "titulo": "Kindergarten WARS Unveils New Visual and Trailer, Opening Theme Song Artist Ado",
+      "link": "https://animecorner.me/kindergarten-wars-unveils-new-visual-and-trailer-opening-theme-song-artist-ado/",
+      "fuente": "Anime Corner",
+      "fecha": "2026-11-25T17:28:59.437Z"
     }
   },
   "dia": "2026-11-25",
-  "avisos": 4
+  "avisos": 5
 }
