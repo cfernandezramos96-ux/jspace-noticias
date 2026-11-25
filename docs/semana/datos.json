@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-25T07:18:22.961Z",
+  "actualizado": "2026-11-25T07:22:38.058Z",
   "posts": [
     {
       "externo": true,
@@ -1695,6 +1695,21 @@
       "video": false
     },
     {
+      "carpeta": "noticias/2026-11-30-eir-aoi-cumple",
+      "titular": "Feliz cumpleaños, Eir Aoi",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "anime",
+        "jmusic"
+      ],
+      "hora": "2026-11-30T14:00:00.000Z",
+      "programado": "2026-11-30T14:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-30-eir-aoi-cumple/slide-01.jpg",
+      "video": false
+    },
+    {
       "carpeta": "noticias/2026-12-02-inori-minase-cumple",
       "titular": "Feliz cumpleaños, Inori Minase",
       "franja": "extra",
@@ -1794,6 +1809,20 @@
       "programado": "2026-12-13T14:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-12-13-hide-homenaje/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-12-20-su-metal-cumple",
+      "titular": "Feliz cumpleaños, SU-METAL",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "jmusic"
+      ],
+      "hora": "2026-12-20T14:00:00.000Z",
+      "programado": "2026-12-20T14:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-12-20-su-metal-cumple/slide-01.jpg",
       "video": false
     },
     {
