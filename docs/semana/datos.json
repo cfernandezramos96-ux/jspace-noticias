@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-25T07:59:53.148Z",
+  "actualizado": "2026-11-25T11:10:25.820Z",
   "posts": [
     {
       "externo": true,
@@ -1664,6 +1664,35 @@
       "programado": "2026-11-26T02:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-25-kazuya-nakai-cumple/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-25-frieren-betsutan",
+      "titular": "Frieren tendrá un spin-off manga, «Betsutan», desde el 2 de diciembre en Weekly Shonen Sunday",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-11-26T20:00:00.000Z",
+      "programado": "2026-11-26T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-25-frieren-betsutan/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-25-youchien-wars",
+      "titular": "Kindergarten WARS (Yōchien WARS) llegará en abril de 2027 con Ado en el opening",
+      "franja": "extra",
+      "estado": "pendiente",
+      "temas": [
+        "anime",
+        "jmusic"
+      ],
+      "hora": "2026-11-27T02:00:00.000Z",
+      "programado": "2026-11-27T02:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-25-youchien-wars/slide-01.jpg",
       "video": false
     },
     {
