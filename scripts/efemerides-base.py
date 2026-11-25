@@ -253,14 +253,15 @@ for e in lista:
     else:
         e['estado'] = 'aprobada' if dec.get(k, 'va' if e['orden'] == 1 else 'no') == 'va' else 'no va'
     v = viejo.get((e['fecha'], e['que']))
-    if v and v.get('estado') in ('programada', 'publicada', 'descartada'):
-        e.update({k: v[k] for k in ('estado', 'carpeta', 'nota') if k in v})
+    if v and v.get('estado') in ('programada', 'publicada', 'descartada', 'falta imagen'):
+        e.update({k: v[k] for k in ('estado', 'carpeta', 'nota', 'alertado') if k in v})
 
 out = {
     'nota': ('Calendario de efemérides APROBADO por Kazuo el 25 nov 2026: no necesita aprobación del grupo. La rutina de '
              'las 8:00 arma y programa sola, una semana antes, TODAS las de estado «aprobada» (puede haber varias el mismo día; '
              '«no va» = Kazuo no la quiere). Antes de diseñar, confirma la fecha en una fuente seria; si no cuadra, '
-             'estado «descartada» con la nota del porqué. Estados: aprobada → programada (con carpeta) → publicada; no va; descartada; por revisar (aún sin aprobar: no se arma).'),
+             'estado «descartada» con la nota del porqué. Estados: aprobada → programada (con carpeta) → publicada; no va; descartada; por revisar (aún sin aprobar: no se arma); '
+             'falta imagen (no hay foto buena: NO se arma; el bot le avisa a Kazuo por privado 2 días antes para que mande la foto).'),
     'lista': lista,
 }
 json.dump(out, open(RUTA, 'w', encoding='utf-8', newline='\n'), ensure_ascii=False, indent=1)

@@ -5,7 +5,9 @@
   "reel_prueba": false,
   "titular": "Recordamos a hide",
   "link": "https://www.hide-city.com/",
-  "temas": ["jmusic"],
+  "temas": [
+    "jmusic"
+  ],
   "slides": [
     {
       "tipo": "efemeride",
@@ -13,7 +15,7 @@
       "encuadre": "50% 0%",
       "etiqueta": "Homenaje",
       "titulo": "Hoy cumpliría 62 años **hide**",
-      "subtitulo": "X JAPAN · 13 dic 1964 – 2 may 1998"
+      "subtitulo": "Guitarrista de X JAPAN · 1964 – 1998"
     }
   ]
 }

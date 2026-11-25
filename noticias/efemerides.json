@@ -64,8 +64,9 @@
    "tipo": "mangaka",
    "que": "natalicio de Fujiko F. Fujio (homenaje)",
    "detalle": "habría cumplido 93 años · creador de Doraemon",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "falta imagen",
+   "carpeta": null,
+   "nota": "No encontré un retrato de prensa bueno de Fujiko F. Fujio."
   },
   {
    "fecha": "2026-12-01",
@@ -76,8 +77,9 @@
    "pendiente": true,
    "fuente": "de memoria (enciclopedia oficial), sin fuente todavía",
    "confianza": "baja",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "falta imagen",
+   "carpeta": null,
+   "nota": "Solo hay imágenes chicas o borrosas de Seiya (y las del CG de Netflix)."
   },
   {
    "fecha": "2026-12-02",
@@ -94,8 +96,9 @@
    "tipo": "personaje",
    "que": "cumpleaños de Asuka Langley",
    "detalle": "Evangelion",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "falta imagen",
+   "carpeta": null,
+   "nota": "La web de Evangelion no deja bajar visuales; no encontré una imagen de Asuka en alta."
   },
   {
    "fecha": "2026-12-04",
@@ -145,8 +148,9 @@
    "pendiente": true,
    "fuente": "allcinema",
    "confianza": "alta",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "falta imagen",
+   "carpeta": null,
+   "nota": "No encontré ninguna foto de prensa buena de Masami Kurumada."
   },
   {
    "fecha": "2026-12-07",
@@ -184,8 +188,9 @@
    "pendiente": true,
    "fuente": "Ticketjam, Niconico Daihyakka",
    "confianza": "media",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "falta imagen",
+   "carpeta": null,
+   "nota": "La web de Maximum The Hormone no tiene fotos que se puedan bajar."
   },
   {
    "fecha": "2026-12-19",
@@ -193,8 +198,9 @@
    "tipo": "seiyuu",
    "que": "cumpleaños de Sumire Uesaka",
    "detalle": "cumple 35 años · seiyuu y cantante",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "falta imagen",
+   "carpeta": null,
+   "nota": "La web de Sumire Uesaka no tiene fotos que se puedan bajar."
   },
   {
    "fecha": "2026-12-20",
@@ -202,8 +208,9 @@
    "tipo": "cantante",
    "que": "cumpleaños de SU-METAL",
    "detalle": "cumple 29 años · voz de BABYMETAL",
-   "estado": "programada",
-   "carpeta": "noticias/2026-12-20-su-metal-cumple"
+   "estado": "falta imagen",
+   "carpeta": null,
+   "nota": "Kazuo descartó las fotos de las portadas de BABYMETAL (poca calidad estética): manda una mejor."
   },
   {
    "fecha": "2026-12-22",
@@ -259,8 +266,9 @@
    "tipo": "personaje",
    "que": "cumpleaños de Hinata Hyuga",
    "detalle": "Naruto",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "falta imagen",
+   "carpeta": null,
+   "nota": "Solo encontré viñetas del manga y una ilustración chica de Hinata."
   },
   {
    "fecha": "2026-12-28",
@@ -268,8 +276,9 @@
    "tipo": "mangaka",
    "que": "cumpleaños de Sui Ishida",
    "detalle": "cumple 40 años · autor de Tokyo Ghoul",
-   "estado": "aprobada",
-   "carpeta": null
+   "estado": "falta imagen",
+   "carpeta": null,
+   "nota": "Sui Ishida nunca muestra la cara: hace falta su autorretrato dibujado u otra idea."
   },
   {
    "fecha": "2026-12-28",

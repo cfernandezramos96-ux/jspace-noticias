@@ -526,6 +526,21 @@ ${ley}`.slice(0, 4000) });
   }
 }
 
+// 6b. efemérides sin imagen buena (Kazuo, 25 nov 2026): no se arman ni se publican; 2 días antes de su fecha el bot le
+// avisa a Kazuo POR PRIVADO para que él busque la foto y la mande por el chat. El aviso queda anotado en efemerides.json.
+{
+  const fe = join(NOTICIAS, 'efemerides.json'), cal = leeJson(fe);
+  const hoyBog = new Date(Date.now() - 5 * 3600e3).toISOString().slice(0, 10);
+  const enDias = (f) => Math.round((new Date(f + 'T00:00:00Z') - new Date(hoyBog + 'T00:00:00Z')) / 864e5);
+  const toca = (cal?.lista || []).filter((e) => e.estado === 'falta imagen' && !e.alertado && enDias(e.fecha) <= 2 && enDias(e.fecha) >= 0);
+  if (toca.length && KAZUO) {
+    for (const e of toca) e.alertado = new Date().toISOString();
+    writeFileSync(fe, JSON.stringify(cal, null, 1)); movimiento = true; // antes de mandar, para no repetir el aviso
+    const lineas = toca.map((e) => `• ${e.fecha.slice(8, 10)}/${e.fecha.slice(5, 7)} — ${e.que}${e.detalle ? ` (${e.detalle})` : ''}${e.nota ? `\n  ${e.nota}` : ''}`).join('\n');
+    await tg('sendMessage', { chat_id: KAZUO, disable_web_page_preview: true, text: `🖼️ Efemérides sin foto buena (no las armé):\n${lineas}\n\nMándame por aquí la foto (o el link) diciendo de cuál es y la armo y la programo. Si no llega nada, no sale.`.slice(0, 4000) }).catch((err) => console.log(`no pude avisar a Kazuo: ${err.message}`));
+  }
+}
+
 // 7. tiempo máximo: un pedido sin respuesta a los 20 min (la rutina se trabó) se relanza una vez; si a los otros 20
 // sigue igual, se avisa al chat. <id>.reintento.json guarda cuándo se relanzó y si ya se avisó.
 const LIMITE = 20 * 60 * 1000;

@@ -5,7 +5,10 @@
   "reel_prueba": false,
   "titular": "Feliz cumpleaños, Joe Hisaishi",
   "link": "https://joehisaishi.com/biography",
-  "temas": ["anime", "jmusic"],
+  "temas": [
+    "anime",
+    "jmusic"
+  ],
   "slides": [
     {
       "tipo": "efemeride",
@@ -13,10 +16,20 @@
       "encuadre": "50% 0%",
       "etiqueta": "Cumpleaños",
       "titulo": "Feliz cumpleaños, **Joe Hisaishi**",
-      "subtitulo": "Studio Ghibli · cumple 76 años",
-      "circulos": ["totoro.jpg", "chihiro.jpg", "mononoke.jpg", "howl.jpg", "nausicaa.jpg", "laputa.jpg"],
-      "texto": "Compositor de **Mi vecino Totoro**, **El viaje de Chihiro** y **La princesa Mononoke**",
-      "cabeza": [477, 517]
+      "subtitulo": "Compositor de Studio Ghibli · 76 años",
+      "circulos": [
+        "totoro.jpg",
+        "chihiro.jpg",
+        "mononoke.jpg",
+        "howl.jpg",
+        "nausicaa.jpg",
+        "laputa.jpg"
+      ],
+      "texto": "La música de **Mi vecino Totoro**, **El viaje de Chihiro** y **La princesa Mononoke**",
+      "cabeza": [
+        477,
+        517
+      ]
     }
   ]
 }

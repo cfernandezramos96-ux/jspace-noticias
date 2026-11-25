@@ -148,6 +148,18 @@ Gojo**») y `"subtitulo"` de una línea (obra, o edad y fecha).
   (centro de su cabeza en la slide; por defecto [540, 400]) y, si hace falta, `"radio"` (por defecto 370) para que el
   arco rodee la cabeza. Debajo del subtítulo, `"texto"` con MÁXIMO 3 obras: «Autor de **Bleach**, **Burn the Witch**
   y **Klub**». Las burbujas son solo para las obras, nunca para el protagonista.
+- **El protagonista SIEMPRE centrado** (Kazuo, 25 nov 2026: Megumin quedó cargada a un lado). Antes de dar por buena
+  la imagen, ubica el centro de su cara en la foto original (con una cuadrícula si hace falta) y recorta para que quede
+  en el centro horizontal de la slide. Si la foto no deja centrarla sin cortar la cara, busca otra.
+- **La bajada dice qué es el protagonista** respecto a la obra o el grupo: «Compositor de Studio Ghibli · 76 años»,
+  «Guitarrista de X JAPAN · 1964 – 1998», nunca solo «Studio Ghibli · cumple 76 años» (parece que cumple el estudio). En
+  aniversarios, el crédito va integrado en el título («**Paprika**, de Satoshi Kon, cumple 20 años») y la bajada lleva
+  el dato del estreno. Bajadas de UNA línea: si se parte, acórtala.
+- **Sin imagen buena, no se arma** (Kazuo, 25 nov 2026). Si después de buscar no hay una foto o visual oficial en alta,
+  bien encuadrada y con buena estética, NO la armes ni la programes: ponle `"estado": "falta imagen"` y una `nota` con lo
+  que buscaste. El bot le escribe a Kazuo por privado 2 días antes de la fecha para que él mande la foto; cuando llegue
+  por el chat, ármala con esa foto y prográmala. Si Kazuo descarta las fotos de una ya armada, borra su carpeta y
+  pásala a «falta imagen».
 - SIN slide de cierre ni ninguna otra. Lo que haya que contar va en la leyenda. Sin reel de prueba aparte
   (`"reel_prueba": false`).
 

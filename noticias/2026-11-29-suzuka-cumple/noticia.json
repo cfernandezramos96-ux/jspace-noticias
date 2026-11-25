@@ -12,10 +12,10 @@
     {
       "tipo": "efemeride",
       "imagen": "suzuka.jpg",
-      "arriba": 0,
       "etiqueta": "Cumpleaños",
       "titulo": "Feliz cumpleaños, **SUZUKA**",
-      "subtitulo": "Atarashii Gakko! · cumple 25 años"
+      "subtitulo": "Atarashii Gakko! · cumple 25 años",
+      "encuadre": "50% 0%"
     }
   ]
 }
