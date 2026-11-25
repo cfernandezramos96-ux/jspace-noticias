@@ -1,6 +1,5 @@
 {
   "vistos": {
-    "efe518ad4c": "2026-11-18T07:57:02.457Z",
     "67576be32b": "2026-11-18T13:55:36.012Z",
     "7415ef4b04": "2026-11-19T05:40:40.662Z",
     "aa0efa5e8f": "2026-11-19T15:38:09.746Z",
@@ -19,7 +18,8 @@
     "f57ac96517": "2026-11-24T05:38:46.821Z",
     "e098787cf4": "2026-11-24T08:03:49.988Z",
     "83f6f7a04f": "2026-11-24T23:29:54.173Z",
-    "70f7cf1a8b": "2026-11-25T02:00:27.880Z"
+    "70f7cf1a8b": "2026-11-25T02:00:27.880Z",
+    "424daf01d3": "2026-11-25T08:07:31.946Z"
   },
   "pendientes": {
     "b639cb0cc1": {
@@ -69,8 +69,14 @@
       "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE93UXZrYVFuNlhsUWVVcjYyN2ZJc01PWC1fcDl6RThSbm9NR3BZMFY1RHNSVVBndkpyTHozNFAzMGxoMEZJRVhuOEw5ZHA?oc=5",
       "fuente": "Natalie",
       "fecha": "2026-11-25T02:00:27.880Z"
+    },
+    "424daf01d3": {
+      "titulo": "山田尚子とMADHOUSEが制作したヒゲダン×ポケモンのMV、11月30日にプレミア公開 - ナタリー",
+      "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1HRzFmSlNWSTZ3cVdVV3JnUHRoVHJfOHVnOWFmT19mMGdTNWlGQjJ0dUl4NXh0RGVGdVcxWGt0VkRoanNrS0NyZmhleXI?oc=5",
+      "fuente": "Natalie",
+      "fecha": "2026-11-25T08:07:31.946Z"
     }
   },
   "dia": "2026-11-25",
-  "avisos": 0
+  "avisos": 1
 }
