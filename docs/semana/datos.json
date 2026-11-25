@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-25T07:04:25.558Z",
+  "actualizado": "2026-11-25T07:10:27.478Z",
   "posts": [
     {
       "externo": true,
@@ -1681,6 +1681,34 @@
       "video": false
     },
     {
+      "carpeta": "noticias/2026-12-04-megumin-cumple",
+      "titular": "Feliz cumpleaños, Megumin",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-12-04T20:00:00.000Z",
+      "programado": "2026-12-04T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-12-04-megumin-cumple/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-12-05-lelouch-cumple",
+      "titular": "Feliz cumpleaños, Lelouch Lamperouge",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-12-05T14:00:00.000Z",
+      "programado": "2026-12-05T14:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-12-05-lelouch-cumple/slide-01.jpg",
+      "video": false
+    },
+    {
       "carpeta": "noticias/2026-12-06-joe-hisaishi-cumple",
       "titular": "Feliz cumpleaños, Joe Hisaishi",
       "franja": "extra",
@@ -1751,6 +1779,34 @@
       "programado": "2026-12-22T14:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-12-22-megumi-fushiguro-cumple/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-12-22-kageyama-cumple",
+      "titular": "Feliz cumpleaños, Tobio Kageyama",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-12-22T20:00:00.000Z",
+      "programado": "2026-12-22T20:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-12-22-kageyama-cumple/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-12-25-levi-cumple",
+      "titular": "Feliz cumpleaños, Levi Ackerman",
+      "franja": "extra",
+      "estado": "aprobado",
+      "temas": [
+        "anime"
+      ],
+      "hora": "2026-12-25T14:00:00.000Z",
+      "programado": "2026-12-25T14:00:00.000Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-12-25-levi-cumple/slide-01.jpg",
       "video": false
     },
     {
