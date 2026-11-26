@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-26T02:00:41.271Z",
+  "actualizado": "2026-11-26T20:01:07.076Z",
   "posts": [
     {
       "externo": true,
@@ -1722,15 +1722,20 @@
       "carpeta": "noticias/2026-11-25-frieren-betsutan",
       "titular": "Frieren tendrá un spin-off manga, «Betsutan», desde el 2 de diciembre en Weekly Shonen Sunday",
       "franja": "extra",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [
         "anime"
       ],
-      "hora": "2026-11-26T20:00:00.000Z",
+      "hora": "2026-11-26T20:00:28.552Z",
       "programado": "2026-11-26T20:00:00.000Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-25-frieren-betsutan/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DgN6d7aG_ht/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1886431906472273",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": false
     },
     {
       "carpeta": "noticias/2026-11-25-youchien-wars",
