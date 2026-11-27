@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-26T23:31:08.927Z",
+  "actualizado": "2026-11-27T13:15:17.247Z",
   "posts": [
     {
       "externo": true,
@@ -1756,6 +1756,30 @@
       "fb_tipo": null,
       "reel_prueba": false,
       "historia": false
+    },
+    {
+      "carpeta": "noticias/2026-11-27-ado-covers-2",
+      "titular": "Ado lanzará su segundo álbum de covers",
+      "franja": "jmusic",
+      "estado": "pendiente",
+      "temas": [],
+      "hora": "2026-11-27T17:30:00Z",
+      "programado": "2026-11-27T17:30:00Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-27-ado-covers-2/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-27-daisys-life",
+      "titular": "Masaaki Yuasa estrenará «Daisy's Life» en 2027",
+      "franja": "anime",
+      "estado": "pendiente",
+      "temas": [],
+      "hora": "2026-11-27T23:30:00Z",
+      "programado": "2026-11-27T23:30:00Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-27-daisys-life/slide-01.jpg",
+      "video": false
     },
     {
       "carpeta": "noticias/2026-11-29-sanemi-cumple",
