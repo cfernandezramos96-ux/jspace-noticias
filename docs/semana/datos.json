@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-27T17:30:11.663Z",
+  "actualizado": "2026-11-27T17:31:58.379Z",
   "posts": [
     {
       "externo": true,
@@ -1761,13 +1761,18 @@
       "carpeta": "noticias/2026-11-27-ado-covers-2",
       "titular": "Ado lanzará su segundo álbum de covers",
       "franja": "jmusic",
-      "estado": "aprobado",
+      "estado": "publicado",
       "temas": [],
-      "hora": "2026-11-27T17:30:00Z",
+      "hora": "2026-11-27T17:31:31.021Z",
       "programado": "2026-11-27T17:30:00Z",
       "colaboradores": [],
       "portada": "noticias/2026-11-27-ado-covers-2/slide-01.jpg",
-      "video": false
+      "video": false,
+      "ig": "https://www.instagram.com/p/DgQONO0DQq7/",
+      "fb": "https://www.facebook.com/100053164456324/posts/1887547093027421",
+      "fb_tipo": null,
+      "reel_prueba": false,
+      "historia": false
     },
     {
       "carpeta": "noticias/2026-11-27-daisys-life",
