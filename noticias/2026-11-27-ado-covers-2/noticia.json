@@ -1,0 +1,27 @@
+{
+  "titular": "Ado lanzará su segundo álbum de covers",
+  "link": "https://www.thefirsttimes.jp/news/0000927438/",
+  "formato": "post",
+  "franja": "jmusic",
+  "reel_prueba": false,
+  "slides": [
+    {
+      "tipo": "portada",
+      "imagen": "portada.jpg",
+      "encuadre": "50% 30%",
+      "posicion": "abajo",
+      "sombra": 1,
+      "tema": "oscuro",
+      "titulo": "**Ado** lanzará su segundo álbum de covers",
+      "texto": "El 23 de diciembre, con «Enter Sandman» de Metallica.",
+      "etiqueta": "Nuevo álbum"
+    },
+    {
+      "tipo": "texto",
+      "titulo": "Del **metal** al clásico en español",
+      "subtitulo": "Adoの歌ってみたアルバム その2",
+      "texto": "Nueve canciones, de «Enter Sandman» (1991) a «La gata bajo la lluvia» (1981), más un bonus **solo en CD** en versión en vivo."
+    },
+    { "tipo": "cierre" }
+  ]
+}

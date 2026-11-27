@@ -1,0 +1,22 @@
+{
+  "titular": "Masaaki Yuasa estrenará «Daisy's Life» en 2027",
+  "link": "https://www.asmik-ace.co.jp/news/contents/19688/",
+  "formato": "post",
+  "franja": "anime",
+  "reel_prueba": false,
+  "slides": [
+    {
+      "tipo": "portada",
+      "imagen": "visual.jpg",
+      "encuadre": "50% 60%",
+      "posicion": "arriba",
+      "sombra": 0.8,
+      "tema": "oscuro",
+      "titulo": "**Masaaki Yuasa** estrenará su nueva película en 2027",
+      "texto": "«Daisy's Life» adapta la novela de Banana Yoshimoto, con diseños de Yoshitomo Nara.",
+      "etiqueta": "Película · 2027"
+    },
+    { "tipo": "poster", "imagen": "still.jpg" },
+    { "tipo": "cierre" }
+  ]
+}
