@@ -1,0 +1,22 @@
+{
+  "titular": "The Eminence in Shadow tendrá película en cines de Japón en mayo de 2027",
+  "link": "https://animecorner.me/the-eminence-in-shadow-lost-echoes-reveals-main-visual-and-trailer-hidive-confirms-2027-release-and-ongoing-production/",
+  "formato": "post",
+  "franja": "anime",
+  "reel_prueba": false,
+  "slides": [
+    {
+      "tipo": "portada",
+      "imagen": "visual.jpg",
+      "encuadre": "50% 50%",
+      "posicion": "arriba",
+      "sombra": 0.9,
+      "tema": "oscuro",
+      "etiqueta": "Película · mayo de 2027",
+      "titulo": "**The Eminence in Shadow** estrenará su película en mayo de 2027",
+      "texto": "«Lost Echoes» revela su visual y su tráiler principal."
+    },
+    { "tipo": "poster", "imagen": "still.jpg" },
+    { "tipo": "cierre" }
+  ]
+}

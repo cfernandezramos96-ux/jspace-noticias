@@ -1,0 +1,23 @@
+{
+  "titular": "Nishikawa y Komuro se reúnen con «ABSOLUTE ZERO» para Gundam SEED Freedom Zero",
+  "link": "https://www.thefirsttimes.jp/news/0000927766/",
+  "formato": "post",
+  "franja": "jmusic",
+  "temas": ["anime", "jmusic"],
+  "reel_prueba": false,
+  "slides": [
+    {
+      "tipo": "portada",
+      "imagen": "nishikawa.jpg",
+      "encuadre": "50% 20%",
+      "posicion": "abajo",
+      "sombra": 1,
+      "tema": "oscuro",
+      "etiqueta": "Nuevo single · Gundam SEED",
+      "titulo": "**Takanori Nishikawa** y Tetsuya Komuro vuelven a unirse para Gundam SEED",
+      "texto": "«ABSOLUTE ZERO» será el tema de la película Freedom Zero."
+    },
+    { "tipo": "poster", "imagen": "visual.jpg" },
+    { "tipo": "cierre" }
+  ]
+}
