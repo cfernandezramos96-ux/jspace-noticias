@@ -18,7 +18,11 @@
     "867ee1a671": "2026-11-27T13:58:05.201Z",
     "b06a59ee68": "2026-11-28T09:32:29.656Z",
     "3be5959216": "2026-11-28T09:32:29.657Z",
-    "9d9b92ceb3": "2026-11-28T09:32:29.657Z"
+    "9d9b92ceb3": "2026-11-28T09:32:29.657Z",
+    "b238d97f6c": "2026-11-28T11:29:32.350Z",
+    "a193ecc0b6": "2026-11-28T11:29:32.350Z",
+    "1d9508eb10": "2026-11-28T11:29:32.350Z",
+    "fb63088448": "2026-11-28T11:29:32.350Z"
   },
   "pendientes": {
     "867ee1a671": {
@@ -32,8 +36,20 @@
       "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1rYzIyRVRUNW5iaDJKMXhkS3dIamRFTURHSlVqcG53YTAzdk1FUWVhdEJ1OU1jRFI1c3RSMWlTNnV5R2p3bmo5bHVfU2c?oc=5",
       "fuente": "Natalie",
       "fecha": "2026-11-28T09:32:29.657Z"
+    },
+    "b238d97f6c": {
+      "titulo": "Gundam Seed Freedom Zero Anime's Trailer Unveils Theme Songs",
+      "link": "https://www.animenewsnetwork.com/news/2026-11-28/gundam-seed-freedom-zero-anime-trailer-unveils-theme-songs/.244270",
+      "fuente": "Anime News Network",
+      "fecha": "2026-11-28T11:29:32.350Z"
+    },
+    "a193ecc0b6": {
+      "titulo": "LiSA and Tatsuhisa Suzuki Announce Divorce",
+      "link": "https://animecorner.me/lisa-and-tatsuhisa-suzuki-announce-divorce/",
+      "fuente": "Anime Corner",
+      "fecha": "2026-11-28T11:29:32.898Z"
     }
   },
   "dia": "2026-11-28",
-  "avisos": 1
+  "avisos": 3
 }
