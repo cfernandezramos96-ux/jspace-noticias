@@ -1,6 +1,5 @@
 {
   "vistos": {
-    "a40a94c6d7": "2026-11-21T15:25:56.100Z",
     "d778823b16": "2026-11-23T03:38:00.177Z",
     "b639cb0cc1": "2026-11-23T19:43:00.477Z",
     "3feac50271": "2026-11-23T21:30:05.473Z",
@@ -25,7 +24,8 @@
     "fb63088448": "2026-11-28T11:29:32.350Z",
     "3981b06d35": "2026-11-28T13:46:30.431Z",
     "ada92efd10": "2026-11-28T13:46:30.431Z",
-    "59b1d6d0c3": "2026-11-28T13:46:30.431Z"
+    "59b1d6d0c3": "2026-11-28T13:46:30.431Z",
+    "86816cc195": "2026-11-28T15:26:53.975Z"
   },
   "pendientes": {
     "867ee1a671": {
@@ -63,8 +63,14 @@
       "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFB0d1l2aHdRMWRIM05qSHVxVzhrSjN6ZTdTRlNKRVNscDIzV0Nva3poYVJLbnNYdnU2eEExUElRdkdqaFpMbVE4WWQ3LW4?oc=5",
       "fuente": "Natalie",
       "fecha": "2026-11-28T13:46:30.997Z"
+    },
+    "86816cc195": {
+      "titulo": "YOASOBIが「KILLA」MV公開、原作小説ヒロインの“センパイ”描く（動画あり） - ナタリー",
+      "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9PZ01HN0paU3pTVmtManZrc0ZDZVd6ZDZNVkpieUp4QjNEWVNtSGE2QzBnMnh3UURtX1cyc3B0Z1pqWDFGVHllbmtJMEs?oc=5",
+      "fuente": "Natalie",
+      "fecha": "2026-11-28T15:26:53.975Z"
     }
   },
   "dia": "2026-11-28",
-  "avisos": 5
+  "avisos": 6
 }
