@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-27T23:31:00.546Z",
+  "actualizado": "2026-11-28T13:12:10.855Z",
   "posts": [
     {
       "externo": true,
@@ -1790,6 +1790,33 @@
       "fb_tipo": null,
       "reel_prueba": false,
       "historia": false
+    },
+    {
+      "carpeta": "noticias/2026-11-28-gundam-seed-zero-absolute-zero",
+      "titular": "Nishikawa y Komuro se reúnen con «ABSOLUTE ZERO» para Gundam SEED Freedom Zero",
+      "franja": "jmusic",
+      "estado": "pendiente",
+      "temas": [
+        "anime",
+        "jmusic"
+      ],
+      "hora": "2026-11-28T17:30:00Z",
+      "programado": "2026-11-28T17:30:00Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-28-gundam-seed-zero-absolute-zero/slide-01.jpg",
+      "video": false
+    },
+    {
+      "carpeta": "noticias/2026-11-28-eminence-in-shadow-pelicula",
+      "titular": "The Eminence in Shadow tendrá película en cines de Japón en mayo de 2027",
+      "franja": "anime",
+      "estado": "pendiente",
+      "temas": [],
+      "hora": "2026-11-28T23:30:00Z",
+      "programado": "2026-11-28T23:30:00Z",
+      "colaboradores": [],
+      "portada": "noticias/2026-11-28-eminence-in-shadow-pelicula/slide-01.jpg",
+      "video": false
     },
     {
       "carpeta": "noticias/2026-11-29-sanemi-cumple",
